@@ -114,7 +114,7 @@ window.ERG_ARTWORKS = [
     },
     year: "2023",
     priceEur: 2600,
-    status: "reserved",
+    status: "available",
     image: "images/tectonic-memory.jpg",
     desc: {
       fr: "Panoramique matérique capturant la friction des plaques minérales.",

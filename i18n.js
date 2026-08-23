@@ -98,7 +98,11 @@ window.ERG_I18N = {
     cart_checkout_btn: "Passerelle de paiement bientôt disponible",
     toast_added: "ajouté à votre sélection.",
     protect_alert:
-      "© Reproduction et téléchargement des œuvres protégés par le droit d'auteur."
+      "© Reproduction et téléchargement des œuvres protégés par le droit d'auteur.",
+    room_scale_ref: "Échelle Salon • Studio ERG",
+    badge_original: "Œuvre<br>Originale",
+    badge_unique: "Pièce<br>Unique",
+    badge_cert: "Certificat<br>Inclus"
   },
   en: {
     nav_statement: "Statement",
@@ -197,7 +201,11 @@ window.ERG_I18N = {
     cart_checkout_btn: "Online Checkout Coming Soon",
     toast_added: "added to your selection.",
     protect_alert:
-      "© Artwork protected by copyright. Image downloading is restricted."
+      "© Artwork protected by copyright. Image downloading is restricted.",
+    room_scale_ref: "Room Scale • ERG Studio",
+    badge_original: "Original<br>Artwork",
+    badge_unique: "One-of-a-Kind<br>Piece",
+    badge_cert: "Certificate<br>Included"
   },
   it: {
     nav_statement: "Poetica",
@@ -298,7 +306,11 @@ window.ERG_I18N = {
     cart_checkout_btn: "Pagamenti online disponibili a breve",
     toast_added: "aggiunto alla tua selezione.",
     protect_alert:
-      "© Riproduzione e download delle opere protetti da copyright."
+      "© Riproduzione e download delle opere protetti da copyright.",
+    room_scale_ref: "Scala Salone • ERG Studio",
+    badge_original: "Opera<br>Originale",
+    badge_unique: "Pezzo<br>Unico",
+    badge_cert: "Certificato<br>Incluso"
   },
   es: {
     nav_statement: "Statement",
@@ -335,14 +347,14 @@ window.ERG_I18N = {
       "Combinando técnicas al óleo tradicionales con pigmentos de tierra puros, arenas de cuarzo y pan de oro fino, sus lienzos actúan como receptáculos ópticos donde la luz se refracta según la posición del espectador.",
     bio_btn_dossier: "Solicitar Dossier de Artista PDF",
     cv_exhibitions_title: "Exposiciones Seleccionadas",
-    cv_publications_title: "Publicaciones & Documentación",
+    cv_publications_title: "Publicaciones & Documentation",
     collection_tag: "Pinturas Originales",
     collection_title: "El Porfolio de la Colección",
     collection_subtitle:
       "Obras originales únicas creadas con óleo, tierras naturales, lapislázuli y pan de oro sobre lino belga.",
     filter_all: "Todas las Obras",
     window_badge_1: "Estudio ERG • Exploración de la Materia en Bruto",
-    window_badge_2: "De la materia en bruto al espacio arquitectónicooooooo",
+    window_badge_2: "De la materia en bruto al espacio arquitectónico",
     prints_tag: "Ediciones Limitadas",
     prints_title: "Prints de Edición (Giclée)",
     prints_subtitle:
@@ -355,7 +367,7 @@ window.ERG_I18N = {
     comm_feat_2:
       "✓ Cuaderno de bitácora fotográfico de la evolución del lienzo",
     comm_feat_3:
-      "✓ Certificado de Autenticidad oficial y registro de procedencia",
+      "✓ Certificado de Autenticitud oficial y registro de procedencia",
     form_dim_placeholder: "Dimensiones deseadas",
     form_dim_opt1: "Mediano (80 × 60 cm a 100 × 80 cm)",
     form_dim_opt2: "Grande (120 × 100 cm a 160 × 120 cm)",
@@ -388,7 +400,7 @@ window.ERG_I18N = {
     status_reserved: "Reservada",
     status_print: "Edición Print",
     modal_tech_label: "Técnica:",
-    modal_dim_label: "Dimensiones:",
+    modal_dim_label: "Dimensions:",
     modal_year_label: "Año:",
     modal_cert_label: "Certificado:",
     modal_cert_val: "Certificado oficial firmado incluido",
@@ -400,6 +412,10 @@ window.ERG_I18N = {
     cart_checkout_btn: "Pasarela de pago próxima disponible",
     toast_added: "añadido a tu selección.",
     protect_alert:
-      "© Obra protegida por derechos de autor. Descarga de imágenes restringida."
+      "© Obra protegida por derechos de autor. Descarga de imágenes restringida.",
+    room_scale_ref: "Escala Salón • Studio ERG",
+    badge_original: "Obra<br>Original",
+    badge_unique: "Pieza<br>Única",
+    badge_cert: "Certificado<br>Incluido"
   }
 };
