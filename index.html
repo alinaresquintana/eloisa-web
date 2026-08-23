@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     
     <!-- SEO & Metadata -->
-    <meta name="version" content="2.1.0">
+    <meta name="version" content="2.4.0">
     <meta name="description" content="Official website and studio of contemporary visual artist Eloísa Rodríguez (ERG). Exploration of nebulae, sediments, texture, and the beauty of the unknown.">
     <meta name="keywords" content="Eloísa Rodríguez, ERG Art, Contemporary Painting, Abstract Art, Fine Art Studio, Mineral Pigments, Swiss Art Gallery">
     <meta name="author" content="Eloísa Rodríguez">
@@ -959,12 +959,12 @@
             background: var(--bg-modal);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-md);
-            max-width: 980px;
+            max-width: 1200px;
             width: 100%;
-            max-height: 92vh;
+            max-height: 95vh;
             overflow-y: auto;
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
+            grid-template-columns: 1.4fr 1fr;
             position: relative;
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
         }
@@ -988,11 +988,11 @@
 
         .modal-view-btn.active { background: var(--accent-gold); color: #0c0f15; font-weight: 700; border-color: var(--accent-gold); }
 
-        .modal-visual { padding: 24px; display: flex; align-items: center; justify-content: center; position: relative; min-height: 420px; flex-grow: 1; }
+        .modal-visual { padding: 24px; display: flex; align-items: center; justify-content: center; position: relative; min-height: 480px; flex-grow: 1; }
 
         .zoom-box-container {
             width: 100%;
-            height: 380px;
+            height: 480px;
             overflow: hidden;
             position: relative;
             cursor: crosshair;
@@ -1006,26 +1006,59 @@
         }
 
         .zoom-box-container img { max-width: 100%; max-height: 100%; object-fit: contain; transform-origin: center center; transition: transform 0.1s ease-out; pointer-events: none; filter: none !important; }
-        .zoom-hint { position: absolute; bottom: 10px; background: rgba(0,0,0,0.7); color: #fff; font-size: 10px; padding: 4px 10px; border-radius: 12px; pointer-events: none; letter-spacing: 0.05em; }
+        .zoom-hint { position: absolute; bottom: 10px; background: rgba(0,0,0,0.7); color: #fff; font-size: 10px; padding: 4px 10px; border-radius: 12px; pointer-events: none; letter-spacing: 0.05em; z-index: 5; }
 
+        /* VISTA SALÓN CON FOTO REAL DE FONDO */
         .room-sim-wrap {
             width: 100%;
-            height: 380px;
+            height: 480px;
             border-radius: var(--radius-sm);
             position: relative;
-            background: linear-gradient(to bottom, #dedede 0%, #b8b8b8 70%, #5e4838 70%, #3d2d22 100%);
+            background: url('images/room-bg.jpg') center/cover no-repeat;
             display: none;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            box-shadow: inset 0 0 40px rgba(0,0,0,0.3);
+            box-shadow: inset 0 0 40px rgba(0,0,0,0.4);
+            border: 1px solid var(--border-color);
         }
 
-        .room-artwork-frame { position: absolute; top: 22%; max-width: 180px; max-height: 140px; background: #fff; padding: 4px; box-shadow: 0 16px 30px rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center; }
-        .room-artwork-frame img { max-width: 100%; max-height: 100%; object-fit: contain; filter: none !important; }
-        .room-sofa-silhouette { position: absolute; bottom: 18%; width: 250px; height: 65px; background: #2a2c33; border-radius: 12px 12px 0 0; box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
-        .room-lamp-silhouette { position: absolute; bottom: 18%; right: 14%; width: 3px; height: 170px; background: #111; }
-        .room-lamp-silhouette::after { content: ''; position: absolute; top: 0; left: -18px; width: 40px; height: 25px; background: #e2c178; border-radius: 5px 5px 0 0; opacity: 0.8; box-shadow: 0 0 35px #ffeaa7; }
+		.room-artwork-frame { 
+            position: absolute; 
+            top: 8%; 
+            max-width: 200px; 
+            max-height: 150px; 
+            background: transparent; 
+            padding: 0; /* Sin margen interior para que la obra llegue hasta el borde */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Sombra elegante de perfil sobre el muro */
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            transition: max-width 0.3s ease; 
+            z-index: 2;
+        }
+		
+		.room-artwork-frame img { 
+            max-width: 100%; 
+            max-height: 100%; 
+            object-fit: contain; 
+            filter: none !important; 
+            border: none; /* Sin bordes */
+        }     
+		
+        .room-scale-reference { 
+            position: absolute; 
+            bottom: 12px; 
+            right: 16px;
+            background: rgba(12, 15, 21, 0.85); 
+            color: var(--text-muted); 
+            padding: 4px 12px; 
+            border-radius: 12px; 
+            font-size: 10px; 
+            letter-spacing: 0.05em; 
+            border: 1px solid var(--border-color);
+            z-index: 5;
+        }
 
         .modal-text { padding: 36px 30px; display: flex; flex-direction: column; justify-content: space-between; }
         .modal-specs-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 18px 0; font-size: 13px; color: var(--text-muted); }
@@ -1132,9 +1165,7 @@
             </ul>
 
             <div class="nav-controls">
-                <div class="social-icons-group" id="socialIconsContainer">
-                    <!-- Inyectado dinámicamente desde metadata.js -->
-                </div>
+                <div class="social-icons-group" id="socialIconsContainer"></div>
 
                 <div class="controls-divider"></div>
 
@@ -1229,7 +1260,6 @@
                 <div class="bio-details-block">
                     <div>
                         <h4 class="cv-column-header" data-i18n="cv_exhibitions_title">Expositions Sélectionnées</h4>
-                        <!-- Renderizado dinámico de exposiciones desde metadata.js -->
                         <ul class="cv-timeline" id="exhibitionsListContainer"></ul>
                     </div>
                 </div>
@@ -1372,7 +1402,7 @@
             <div class="footer-brand-wrap">
                 <span class="serif-font" style="font-size: 17px; font-weight: 600; color: var(--text-heading);" id="footerBrandName">ERG – Eloísa Rodríguez</span>
                 <p style="font-size: 12px;" data-i18n="footer_rights">© 2026 Eloísa Rodríguez. Tous droits réservés.</p>
-                <span class="footer-version-tag" id="footerVersionTag">Edition v2.1.0</span>
+                <span class="footer-version-tag" id="footerVersionTag">Edition v2.4.0</span>
             </div>
         </div>
     </footer>
@@ -1395,11 +1425,10 @@
                     </div>
 
                     <div class="room-sim-wrap" id="roomSimWrap">
-                        <div class="room-lamp-silhouette"></div>
-                        <div class="room-artwork-frame">
+                        <div class="room-artwork-frame" id="roomArtworkFrame">
                             <img id="roomArtImg" src="" alt="Room Preview" decoding="async">
                         </div>
-                        <div class="room-sofa-silhouette"></div>
+                        <div class="room-scale-reference">Échelle Salon • Studio ERG</div>
                     </div>
                 </div>
             </div>
@@ -1449,7 +1478,7 @@
     <!-- Application Script -->
     <script>
         const meta = window.ERG_METADATA || {};
-        const APP_VERSION = meta.version || "2.1.0";
+        const APP_VERSION = meta.version || "2.4.0";
         console.info(`[ERG Gallery] Loaded Version: v${APP_VERSION}`);
 
         let currentLang = localStorage.getItem('erg_lang') || 'fr';
@@ -1464,7 +1493,6 @@
         const i18n = window.ERG_I18N || {};
         let artworks = window.ERG_ARTWORKS || [];
 
-	// Inyectar metadatos estáticos y exposiciones multilingües en el DOM
         function applyMetadata() {
             if (!meta.artistName) return;
             document.getElementById('brandMainName').textContent = meta.artistName;
@@ -1734,7 +1762,7 @@
             const y = Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100));
 
             img.style.transformOrigin = `${x}% ${y}%`;
-            img.style.transform = 'scale(2.2)';
+            img.style.transform = 'scale(3.5)';
         }
 
         function resetZoom() {
@@ -1917,7 +1945,7 @@
             const checkoutMsgs = {
                 fr: "Les acquisitions en ligne directes seront bientôt disponibles. Veuillez utiliser le formulaire de contact pour réserver.",
                 en: "Direct online checkouts will be available soon. Please use the contact form to reserve.",
-                it: "I pagamenti online diretti saranno presto disponibili. Si prega di utilizzare il modulo di contatto per prenotare.",
+                it: "I pagamenti online directas saranno presto disponibili. Si prega di utilizzare il modulo di contatto per prenotare.",
                 es: "Las adquisiciones online directas estarán disponibles próximamente. Utiliza el formulario de contacto para reservar."
             };
             alert(checkoutMsgs[currentLang]);
@@ -1926,8 +1954,8 @@
             contactSection.scrollIntoView({ behavior: 'smooth' });
         }
 
-	function handleFormSubmit(e) {
-            e.preventDefault(); // Evita que el formulario recargue la página y la rompa
+        function handleFormSubmit(e) {
+            e.preventDefault();
             const form = e.target;
             const formData = new FormData(form);
 
@@ -1944,7 +1972,7 @@
                     es: "Solicitud enviada con éxito al estudio. Nos pondremos en contacto con usted en breve."
                 };
                 showToast(successMsgs[currentLang]);
-                form.reset(); // Limpia los campos tras el envío exitoso
+                form.reset();
             })
             .catch((error) => {
                 console.error("Form error:", error);
