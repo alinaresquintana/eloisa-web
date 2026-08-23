@@ -737,8 +737,8 @@
 
         .art-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 24px;
             transition: opacity 0.25s ease, transform 0.25s ease;
         }
 
@@ -988,7 +988,7 @@
 
         .modal-view-btn.active { background: var(--accent-gold); color: #0c0f15; font-weight: 700; border-color: var(--accent-gold); }
 
-        .modal-visual { padding: 24px; display: flex; align-items: center; justify-content: center; position: relative; min-height: 480px; flex-grow: 1; }
+        .modal-visual { padding: 24px 24px 12px; display: flex; align-items: center; justify-content: center; position: relative; min-height: 480px; flex-grow: 1; }
 
         .zoom-box-container {
             width: 100%;
@@ -1008,7 +1008,79 @@
         .zoom-box-container img { max-width: 100%; max-height: 100%; object-fit: contain; transform-origin: center center; transition: transform 0.1s ease-out; pointer-events: none; filter: none !important; }
         .zoom-hint { position: absolute; bottom: 10px; background: rgba(0,0,0,0.7); color: #fff; font-size: 10px; padding: 4px 10px; border-radius: 12px; pointer-events: none; letter-spacing: 0.05em; z-index: 5; }
 
-        /* VISTA SALÓN CON FOTO REAL DE FONDO (SIN MARCO) */
+        /* Carrusel Modal */
+        .modal-carousel-nav {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 12px;
+            z-index: 6;
+        }
+
+        .carousel-btn {
+            pointer-events: auto;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(12, 15, 21, 0.8);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            transition: var(--transition);
+            backdrop-filter: blur(8px);
+        }
+
+        .carousel-btn:hover {
+            background: var(--accent-gold);
+            color: #0c0f15;
+            border-color: var(--accent-gold);
+            transform: scale(1.08);
+        }
+
+        .carousel-thumbs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px 16px 18px;
+            overflow-x: auto;
+        }
+
+        .carousel-thumb-btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: var(--transition);
+            flex-shrink: 0;
+            background: #080a0e;
+            padding: 2px;
+        }
+
+        .carousel-thumb-btn.active {
+            border-color: var(--accent-gold);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .carousel-thumb-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: none !important;
+        }
+
+        /* VISTA SALÓN */
         .room-sim-wrap {
             width: 100%;
             height: 480px;
@@ -1053,7 +1125,7 @@
             z-index: 5;
         }
 
-        /* TRUST BADGES (Insignias de Autenticidad) */
+        /* TRUST BADGES */
         .trust-badges-container {
             display: flex;
             align-items: center;
@@ -1462,6 +1534,11 @@
                     <div class="zoom-box-container" id="zoomContainer">
                         <img id="modalArtImg" src="" alt="Artwork Preview" decoding="async">
                         <span class="zoom-hint" data-i18n="zoom_hint">Survoler pour zoomer sur la matière</span>
+                        
+                        <div class="modal-carousel-nav" id="carouselNav" style="display: none;">
+                            <button class="carousel-btn" onclick="prevCarouselImage(event)" aria-label="Previous Image">‹</button>
+                            <button class="carousel-btn" onclick="nextCarouselImage(event)" aria-label="Next Image">›</button>
+                        </div>
                     </div>
 
                     <div class="room-sim-wrap" id="roomSimWrap">
@@ -1471,6 +1548,8 @@
                         <div class="room-scale-reference" data-i18n="room_scale_ref">Échelle Salon • Studio ERG</div>
                     </div>
                 </div>
+
+                <div class="carousel-thumbs" id="modalCarouselThumbs" style="display: none;"></div>
             </div>
 
             <div class="modal-text">
@@ -1523,7 +1602,7 @@
                 <span data-i18n="cart_total_label">Total Estimé :</span>
                 <span class="art-card-price" id="cartTotalDisplay">€0</span>
             </div>
-            <button class="btn-primary" style="width: 100%;" onclick="proceedCheckout()" data-i18n="cart_checkout_btn">Procéder à l'Acquisition Sécurisée</button>
+            <button class="btn-primary" style="width: 100%;" onclick="proceedCheckout()" data-i18n="cart_checkout_btn">Passerelle de paiement bientôt disponible</button>
         </div>
     </div>
 
@@ -1541,12 +1620,35 @@
         let currentCurrency = localStorage.getItem('erg_currency') || 'EUR';
         let cart = JSON.parse(localStorage.getItem('erg_cart') || '[]');
 
-        let activeSeriesFilter = 'all';
+        let activeSeriesFilter = 'nebula-sediment';
         let onlyAvailable = false;
+
+        let currentModalArtwork = null;
+        let currentModalImageIndex = 0;
 
         const exchangeRates = { EUR: 1.0, USD: 1.08, CHF: 0.97 };
         const i18n = window.ERG_I18N || {};
         let artworks = window.ERG_ARTWORKS || [];
+
+        function getSeriesName(seriesKey) {
+            if (!seriesKey) return '';
+            const key = `series_${seriesKey.replace(/-/g, '_')}`;
+            return (i18n[currentLang] && i18n[currentLang][key]) || seriesKey;
+        }
+
+        function getArtworkMainImage(art) {
+            if (art.images && Array.isArray(art.images) && art.images.length > 0) {
+                return art.images[0];
+            }
+            return art.image || '';
+        }
+
+        function getArtworkImages(art) {
+            if (art.images && Array.isArray(art.images) && art.images.length > 0) {
+                return art.images;
+            }
+            return art.image ? [art.image] : [];
+        }
 
         function applyMetadata() {
             if (!meta.artistName) return;
@@ -1625,14 +1727,14 @@
 
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (i18n[lang][key]) {
+                if (i18n[lang] && i18n[lang][key]) {
                     el.innerHTML = i18n[lang][key];
                 }
             });
 
             document.querySelectorAll('[data-i18n-ph]').forEach(el => {
                 const key = el.getAttribute('data-i18n-ph');
-                if (i18n[lang][key]) {
+                if (i18n[lang] && i18n[lang][key]) {
                     el.setAttribute('placeholder', i18n[lang][key]);
                 }
             });
@@ -1688,18 +1790,19 @@
             const isAvailable = art.status === 'available';
             const badgeText = art.category === 'print' ? i18n[currentLang].status_print : (isAvailable ? i18n[currentLang].status_available : i18n[currentLang].status_reserved);
             const badgeClass = art.category === 'print' ? 'badge-print' : (isAvailable ? 'badge-available' : 'badge-reserved');
+            const mainImg = getArtworkMainImage(art);
 
             return `
                 <div class="art-card">
                     <div class="art-card-thumb" onclick="openArtworkModal('${art.id}')">
                         <span class="art-badge ${badgeClass}">${badgeText}</span>
-                        <img src="${art.image}" alt="${art.title}" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
+                        <img src="${mainImg}" alt="${art.title}" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
                         <div class="art-hover-prompt">
                             <button class="btn-outline" style="background:#fff; color:#000;" onclick="event.stopPropagation(); openArtworkModal('${art.id}')">${i18n[currentLang].btn_inspect}</button>
                         </div>
                     </div>
                     <div class="art-card-body">
-                        <span class="art-card-series">${art.seriesLabel[currentLang] || art.series}</span>
+                        <span class="art-card-series">${getSeriesName(art.series)}</span>
                         <h4 class="art-card-title serif-font">${art.title}</h4>
                         <p class="art-card-specs">${art.dimensions} • ${art.medium[currentLang] || art.medium.fr} (${art.year})</p>
                         <div class="art-card-bottom">
@@ -1717,18 +1820,21 @@
             const bar = document.getElementById('dynamicFilterBar');
             if (!bar) return;
 
-            const uniqueSeries = [...new Set(artworks.map(a => a.series))];
+            let uniqueSeries = [...new Set(artworks.map(a => a.series))];
+            uniqueSeries = uniqueSeries.filter(s => s !== 'all');
+            uniqueSeries.sort((a, b) => (a === 'nebula-sediment' ? -1 : 1));
 
-            let html = `<button class="filter-btn ${activeSeriesFilter === 'all' ? 'active' : ''}" onclick="filterGallery('all', this)">${i18n[currentLang].filter_all || 'Toutes les Œuvres'}</button>`;
+            let html = '';
 
             uniqueSeries.forEach(seriesKey => {
-                const sampleArt = artworks.find(a => a.series === seriesKey);
-                const labelObj = sampleArt ? sampleArt.seriesLabel : null;
-                const label = labelObj ? (labelObj[currentLang] || labelObj['fr'] || seriesKey) : seriesKey;
+                const label = getSeriesName(seriesKey);
                 const isActive = activeSeriesFilter === seriesKey ? 'active' : '';
 
                 html += `<button class="filter-btn ${isActive}" onclick="filterGallery('${seriesKey}', this)">${label}</button>`;
             });
+
+            const allActive = activeSeriesFilter === 'all' ? 'active' : '';
+            html += `<button class="filter-btn ${allActive}" onclick="filterGallery('all', this)">${i18n[currentLang].filter_all || 'Toutes les Œuvres'}</button>`;
 
             const availActive = onlyAvailable ? 'active' : '';
             html += `
@@ -1811,7 +1917,6 @@
         
         function updateZoomPosition(clientX, clientY) {
             const img = document.getElementById('modalArtImg');
-			document.getElementById('roomArtImg').src = art.image; // <--- ESTA LÍNEA ES LA QUE CARGA LA FOTO EN EL SALÓN
             const rect = zoomBox.getBoundingClientRect();
             
             const x = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
@@ -1840,19 +1945,18 @@
             const art = artworks.find(a => a.id === id);
             if (!art) return;
 
-            document.getElementById('modalSeries').textContent = art.seriesLabel[currentLang] || art.series;
+            currentModalArtwork = art;
+            currentModalImageIndex = 0;
+
+            document.getElementById('modalSeries').textContent = getSeriesName(art.series);
             document.getElementById('modalTitle').textContent = art.title;
             document.getElementById('modalPrice').textContent = formatPrice(art.priceEur);
             document.getElementById('modalMedium').textContent = art.medium[currentLang] || art.medium.fr;
             document.getElementById('modalDimensions').textContent = art.dimensions;
             document.getElementById('modalYear').textContent = art.year;
             document.getElementById('modalDesc').textContent = art.desc[currentLang] || art.desc.fr;
-            
-            document.getElementById('modalArtImg').src = art.image;
-            document.getElementById('roomArtImg').src = art.image;
-            document.getElementById('modalArtImg').classList.add('loaded');
-            document.getElementById('roomArtImg').classList.add('loaded');
 
+            renderModalCarousel();
             switchModalView('detail');
 
             const actions = document.getElementById('modalActionsWrap');
@@ -1869,6 +1973,71 @@
 
             document.getElementById('artworkModal').classList.add('open');
             document.body.style.overflow = 'hidden';
+        }
+
+        function renderModalCarousel() {
+            if (!currentModalArtwork) return;
+            const images = getArtworkImages(currentModalArtwork);
+            const nav = document.getElementById('carouselNav');
+            const thumbs = document.getElementById('modalCarouselThumbs');
+
+            if (images.length > 1) {
+                nav.style.display = 'flex';
+                thumbs.style.display = 'flex';
+                thumbs.innerHTML = images.map((src, idx) => `
+                    <button class="carousel-thumb-btn ${idx === currentModalImageIndex ? 'active' : ''}" onclick="setModalImageIndex(${idx})">
+                        <img src="${src}" alt="Thumb ${idx + 1}" decoding="async">
+                    </button>
+                `).join('');
+            } else {
+                nav.style.display = 'none';
+                thumbs.style.display = 'none';
+                thumbs.innerHTML = '';
+            }
+
+            updateModalActiveImage();
+        }
+
+        function updateModalActiveImage() {
+            if (!currentModalArtwork) return;
+            const images = getArtworkImages(currentModalArtwork);
+            const activeSrc = images[currentModalImageIndex] || getArtworkMainImage(currentModalArtwork);
+
+            const modalImg = document.getElementById('modalArtImg');
+            const roomImg = document.getElementById('roomArtImg');
+
+            modalImg.src = activeSrc;
+            roomImg.src = activeSrc;
+            modalImg.classList.add('loaded');
+            roomImg.classList.add('loaded');
+            resetZoom();
+
+            document.querySelectorAll('#modalCarouselThumbs .carousel-thumb-btn').forEach((btn, idx) => {
+                btn.classList.toggle('active', idx === currentModalImageIndex);
+            });
+        }
+
+        function setModalImageIndex(idx) {
+            currentModalImageIndex = idx;
+            updateModalActiveImage();
+        }
+
+        function prevCarouselImage(e) {
+            if (e) e.stopPropagation();
+            if (!currentModalArtwork) return;
+            const images = getArtworkImages(currentModalArtwork);
+            if (images.length <= 1) return;
+            currentModalImageIndex = (currentModalImageIndex - 1 + images.length) % images.length;
+            updateModalActiveImage();
+        }
+
+        function nextCarouselImage(e) {
+            if (e) e.stopPropagation();
+            if (!currentModalArtwork) return;
+            const images = getArtworkImages(currentModalArtwork);
+            if (images.length <= 1) return;
+            currentModalImageIndex = (currentModalImageIndex + 1) % images.length;
+            updateModalActiveImage();
         }
 
         function inquireDirectly(artworkTitle) {
@@ -1979,11 +2148,12 @@
                 const itemTotal = item.priceEur * (item.qty || 1);
                 total += itemTotal;
                 const qtyText = item.qty > 1 ? ` (×${item.qty})` : '';
+                const itemImg = getArtworkMainImage(item);
 
                 const div = document.createElement('div');
                 div.className = 'cart-drawer-item';
                 div.innerHTML = `
-                    <img src="${item.image}" class="cart-drawer-thumb" alt="${item.title}" decoding="async">
+                    <img src="${itemImg}" class="cart-drawer-thumb" alt="${item.title}" decoding="async">
                     <div style="flex-grow:1;">
                         <div style="font-size:13px; font-weight:600;">${item.title}${qtyText}</div>
                         <div style="font-size:13px; color:var(--accent-gold);">${formatPrice(itemTotal)}</div>
@@ -2001,7 +2171,7 @@
             const checkoutMsgs = {
                 fr: "Les acquisitions en ligne directes seront bientôt disponibles. Veuillez utiliser le formulaire de contact pour réserver.",
                 en: "Direct online checkouts will be available soon. Please use the contact form to reserve.",
-                it: "I pagamenti online directas saranno presto disponibili. Si prega di utilizzare il modulo di contatto per prenotare.",
+                it: "I pagamenti online diretti saranno presto disponibili. Si prega di utilizzare il modulo di contatto per prenotare.",
                 es: "Las adquisiciones online directas estarán disponibles próximamente. Utiliza el formulario de contacto para reservar."
             };
             alert(checkoutMsgs[currentLang]);
@@ -2048,6 +2218,10 @@
                 closeModal();
                 toggleCartDrawer(false);
                 closeMobileMenu();
+            } else if (e.key === 'ArrowLeft' && document.getElementById('artworkModal').classList.contains('open')) {
+                prevCarouselImage();
+            } else if (e.key === 'ArrowRight' && document.getElementById('artworkModal').classList.contains('open')) {
+                nextCarouselImage();
             }
         });
 

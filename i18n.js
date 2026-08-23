@@ -1,5 +1,7 @@
 window.ERG_I18N = {
   fr: {
+    series_nebula_sediment: "Nébuleuses & Sédiments",
+    series_otras: "Autres Œuvres",
     nav_statement: "Démarche",
     nav_bio: "Biographie",
     nav_collection: "Collection",
@@ -105,6 +107,8 @@ window.ERG_I18N = {
     badge_cert: "Certificat<br>Inclus"
   },
   en: {
+    series_nebula_sediment: "Nebulae & Sediments",
+    series_otras: "Other Works",
     nav_statement: "Statement",
     nav_bio: "Biography",
     nav_collection: "Collection",
@@ -208,6 +212,8 @@ window.ERG_I18N = {
     badge_cert: "Certificate<br>Included"
   },
   it: {
+    series_nebula_sediment: "Nebulose & Sedimenti",
+    series_otras: "Altre Opere",
     nav_statement: "Poetica",
     nav_bio: "Biografia",
     nav_collection: "Collezione",
@@ -293,7 +299,7 @@ window.ERG_I18N = {
     status_available: "Disponibile",
     status_reserved: "Riservata",
     status_print: "Tiratura d'Arte",
-    modal_tech_label: "Technique:",
+    modal_tech_label: "Tecnica:",
     modal_dim_label: "Dimensioni:",
     modal_year_label: "Anno:",
     modal_cert_label: "Certificato:",
@@ -313,6 +319,8 @@ window.ERG_I18N = {
     badge_cert: "Certificato<br>Incluso"
   },
   es: {
+    series_nebula_sediment: "Nebulosas y Sedimentos",
+    series_otras: "Otras Obras",
     nav_statement: "Statement",
     nav_bio: "Biografía",
     nav_collection: "Colección",
@@ -347,7 +355,7 @@ window.ERG_I18N = {
       "Combinando técnicas al óleo tradicionales con pigmentos de tierra puros, arenas de cuarzo y pan de oro fino, sus lienzos actúan como receptáculos ópticos donde la luz se refracta según la posición del espectador.",
     bio_btn_dossier: "Solicitar Dossier de Artista PDF",
     cv_exhibitions_title: "Exposiciones Seleccionadas",
-    cv_publications_title: "Publicaciones & Documentation",
+    cv_publications_title: "Publicaciones & Documentación",
     collection_tag: "Pinturas Originales",
     collection_title: "El Porfolio de la Colección",
     collection_subtitle:
@@ -367,7 +375,7 @@ window.ERG_I18N = {
     comm_feat_2:
       "✓ Cuaderno de bitácora fotográfico de la evolución del lienzo",
     comm_feat_3:
-      "✓ Certificado de Autenticitud oficial y registro de procedencia",
+      "✓ Certificado de Autenticidad oficial y registro de procedencia",
     form_dim_placeholder: "Dimensiones deseadas",
     form_dim_opt1: "Mediano (80 × 60 cm a 100 × 80 cm)",
     form_dim_opt2: "Grande (120 × 100 cm a 160 × 120 cm)",
@@ -400,7 +408,7 @@ window.ERG_I18N = {
     status_reserved: "Reservada",
     status_print: "Edición Print",
     modal_tech_label: "Técnica:",
-    modal_dim_label: "Dimensions:",
+    modal_dim_label: "Dimensiones:",
     modal_year_label: "Año:",
     modal_cert_label: "Certificado:",
     modal_cert_val: "Certificado oficial firmado incluido",

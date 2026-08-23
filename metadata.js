@@ -1,5 +1,5 @@
 window.ERG_METADATA = {
-  version: "2.1.0",
+  version: "2.5.0",
   artistName: "Eloísa Rodríguez",
   studioName: "ERG • Fine Art",
   email: "alinaresquintana@gmail.com",
@@ -42,9 +42,8 @@ window.ERG_METADATA = {
         fr: "[Détails d'exposition en cours d'archivage]",
         en: "[Exhibition details being archived]",
         it: "[Dettagli della mostra in fase di archiviazione]",
-        es: "[Detalles de exposición en curso de archivo]"
+        es: "[Detalles de la exposición en proceso de archivo]"
       }
     }
   ]
 };
-
