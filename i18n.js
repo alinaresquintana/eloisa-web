@@ -1,6 +1,7 @@
 window.ERG_I18N = {
   fr: {
-    series_nebula_sediment: "Nébuleuses & Sédiments",
+    series_nebula: "Série Nébuleuses",
+    series_sediment: "Série Sédiments",
     series_otras: "Autres Œuvres",
     nav_statement: "Démarche",
     nav_bio: "Biographie",
@@ -31,16 +32,16 @@ window.ERG_I18N = {
       "Parcours académique, expositions institutionnelles et documentation critique de l'œuvre d'Eloísa Rodríguez.",
     bio_heading: "La matière comme seuil vers l'infini",
     bio_p1:
-      "Eloísa Rodríguez (ERG) développe une pratique picturale axée sur la sédimentation géologique et les structures nébulaires. Son travail interroge la transition entre l'ordre géométrique latent et le chaos apparent de la matière brute.",
+      "Je puise mon inspiration dans les rythmes de la nature, des structures sédimentaires de la Terre à l'immensité chromatique des nébuleuses, traduisant ces phénomènes en œuvres riches en texture, matérialité et profondeur.",
     bio_p2:
-      "En combinant des techniques traditionnelles de détrempe à l'huile avec l'utilisation de pigments purs, sables de quartz et feuilles de métaux précieux, ses toiles agissent comme des réceptacles optiques où la lumière se diffracte en fonction de la perspective du regardeur.",
+      "Mon langage visuel s'est nourri d'une solide formation académique à Madrid et Florence, complétée par mon parcours dans les arts de la scène, explorant le volume, le comportement de la matière et le potentiel expressif de divers matériaux.",
     bio_btn_dossier: "Demander le Dossier d'Artiste PDF",
     cv_exhibitions_title: "Expositions Sélectionnées",
     cv_publications_title: "Publications & Documentation",
     collection_tag: "Peintures Originales",
     collection_title: "Le Portfolio de la Collection",
     collection_subtitle:
-      "Œuvres d'art uniques réalisées à l'huile, terres naturelles, lapis-lazuli et feuille d'or sur lin belge monté sur châssis.",
+      "Œuvres d'art originales uniques créées à l'huile, acrylique, terres naturelles et minéraux sur toile.",
     filter_all: "Toutes les Œuvres",
     window_badge_1: "Atelier ERG • Exploration de la Matière Brute",
     window_badge_2: "De la matière brute à l'espace habité",
@@ -52,7 +53,7 @@ window.ERG_I18N = {
     commissions_title: "Commandes Privées & Projets Spéciaux",
     commissions_desc:
       "Eloísa Rodríguez collabore directement avec les collectionneurs et ateliers d'architecture intérieure pour composer des créations adaptées au format, à la palette et à la lumière de vos espaces.",
-    comm_feat_1: "✓ Délai de création en atelier de 4 à 6 semaines",
+    comm_feat_1: "✓ Délai de création en atelier de 8 à 12 semaines",
     comm_feat_2: "✓ Carnet de bord photographique de l'évolution de la toile",
     comm_feat_3:
       "✓ Certificat d'Authenticité officiel et registre de provenance",
@@ -107,7 +108,8 @@ window.ERG_I18N = {
     badge_cert: "Certificat<br>Inclus"
   },
   en: {
-    series_nebula_sediment: "Nebulae & Sediments",
+    series_nebula: "Nebulae Series",
+    series_sediment: "Sediments Series",
     series_otras: "Other Works",
     nav_statement: "Statement",
     nav_bio: "Biography",
@@ -137,16 +139,16 @@ window.ERG_I18N = {
       "Academic background, institutional exhibitions, and critical documentation of the work of Eloísa Rodríguez.",
     bio_heading: "Matter as a threshold to infinity",
     bio_p1:
-      "Eloísa Rodríguez (ERG) develops a pictorial practice centered around geological sedimentation and nebular structures. Her work investigates the transition between latent geometric order and the apparent chaos of raw matter.",
+      "I find my inspiration in the rhythms of nature, from the sedimentary structures of the Earth to the chromatic vastness of nebulae, translating these phenomena into works rich in texture, materiality and depth.",
     bio_p2:
-      "Combining classical oil techniques with raw earth pigments, quartz sands, and precious gold leaf, her canvases function as optical receptors where light diffracts depending on the observer's vantage point.",
+      "My visual language has been nurtured by a solid academic background in Madrid and Florence, complemented by my experience in the performing arts exploring volume, matter behavior and the expressive potential of diverse materials.",
     bio_btn_dossier: "Request Artist Dossier PDF",
     cv_exhibitions_title: "Selected Exhibitions",
     cv_publications_title: "Publications & Documentation",
     collection_tag: "Original Paintings",
     collection_title: "The Porfolio Collection",
     collection_subtitle:
-      "Original one-of-a-kind artworks created with oil, raw earths, lapis lazuli and gold leaf on stretched Belgian linen.",
+      "Unique original artworks created with oil, acrylic, raw earths and mineral pigments on canvas.",
     filter_all: "All Originals",
     window_badge_1: "ERG Atelier • Exploration of Raw Matter",
     window_badge_2: "From raw minerals to living architectural spaces",
@@ -158,7 +160,7 @@ window.ERG_I18N = {
     commissions_title: "Custom Commissions & Special Projects",
     commissions_desc:
       "Eloísa Rodríguez collaborates directly with private collectors and interior design ateliers to create tailored pieces adapted in format, chromatic intensity and atmosphere to the architecture of your space.",
-    comm_feat_1: "✓ 4 to 6 weeks studio gestation period",
+    comm_feat_1: "✓ 8 to 12 weeks studio gestation period",
     comm_feat_2: "✓ Photographic work-in-progress journal",
     comm_feat_3: "✓ Includes Certificate of Authenticity & provenance",
     form_dim_placeholder: "Target Dimensions",
@@ -212,7 +214,8 @@ window.ERG_I18N = {
     badge_cert: "Certificate<br>Included"
   },
   it: {
-    series_nebula_sediment: "Nebulose & Sedimenti",
+    series_nebula: "Serie Nebulose",
+    series_sediment: "Serie Sedimenti",
     series_otras: "Altre Opere",
     nav_statement: "Poetica",
     nav_bio: "Biografia",
@@ -243,16 +246,16 @@ window.ERG_I18N = {
       "Percorso accademico, mostre istituzionali e documentazione critica sull'opera di Eloísa Rodríguez.",
     bio_heading: "La materia come soglia verso l'infinito",
     bio_p1:
-      "Eloísa Rodríguez (ERG) sviluppa una ricerca pittorica focalizzata sulla sedimentazione geologica e sulle strutture nebulari. La sua opera esplora il passaggio tra l'ordine geometrico latente e l'apparente caos della materia grezza.",
+      "Trovo la mia ispirazione nei ritmi della natura, dalle strutture sedimentarie della Terra alla vastità cromatica delle nebulose, traducendo questi fenomeni in opere ricche di materia, consistenza e profondità.",
     bio_p2:
-      "Accostando la pittura a olio a pigmenti naturali puri, sabbie di quarzo e foglia d'oro, le sue tele si trasformano in recettori ottici dove la luce si rifrange in base alla prospettiva dell'osservatore.",
+      "Il mio linguaggio visivo è maturato attraverso una solida formazione accademica a Madrid e Firenze, unita all'esperienza nelle arti sceniche esplorando il volume e la forza espressiva della materia.",
     bio_btn_dossier: "Richiedi Dossier Artista PDF",
     cv_exhibitions_title: "Mostre Selezionate",
     cv_publications_title: "Pubblicazioni & Documentazione",
     collection_tag: "Dipinti Originali",
     collection_title: "Il Portfolio della Collezione",
     collection_subtitle:
-      "Opere d'arte uniche realizzate a olio, terre naturali, lapislazzuli e foglia d'oro su lino belga intelaiato.",
+      "Opere d'arte uniche realizzate a olio, acrilico, terre naturali e pigmenti su lino e tela.",
     filter_all: "Tutte le Opere",
     window_badge_1: "Studio ERG • Esplorazione della Materia Grezza",
     window_badge_2: "Dalla materia grezza allo spazio architettonico",
@@ -264,7 +267,7 @@ window.ERG_I18N = {
     commissions_title: "Commissioni Private & Progetti Speciali",
     commissions_desc:
       "Eloísa Rodríguez collabora direttamente con collezionisti e studi di interior design per realizzare opere personalizzate in termini di formato, atmosfera e tavolozza cromatica.",
-    comm_feat_1: "✓ Tempo di realizzazione in studio di 4-6 settimane",
+    comm_feat_1: "✓ Tempo di realizzazione in studio di 8-12 settimane",
     comm_feat_2: "✓ Diario fotografico dell'evoluzione dell'opera",
     comm_feat_3:
       "✓ Certificato di Autenticità ufficiale e registro di provenienza",
@@ -308,7 +311,7 @@ window.ERG_I18N = {
     modal_view_room: "Vista in Salone",
     zoom_hint: "Passa o trascina il dito per ingrandire la trama",
     cart_title: "Selezione dello Studio",
-    cart_total_label: "Totale Stimato:",
+    cart_total_label: "Totale Estimato:",
     cart_checkout_btn: "Pagamenti online disponibili a breve",
     toast_added: "aggiunto alla tua selezione.",
     protect_alert:
@@ -319,7 +322,8 @@ window.ERG_I18N = {
     badge_cert: "Certificato<br>Incluso"
   },
   es: {
-    series_nebula_sediment: "Nebulosas y Sedimentos",
+    series_nebula: "Serie Nebulosas",
+    series_sediment: "Serie Sedimentos",
     series_otras: "Otras Obras",
     nav_statement: "Statement",
     nav_bio: "Biografía",
@@ -350,16 +354,16 @@ window.ERG_I18N = {
       "Formación académica, exposiciones institucionales y documentación crítica de la obra de Eloísa Rodríguez.",
     bio_heading: "La materia como umbral hacia lo infinito",
     bio_p1:
-      "Eloísa Rodríguez (ERG) desarrolla una investigación plástica centrada en la sedimentación geológica y las estructuras nebulares. Su trabajo cuestiona la transición entre el orden geométrico latente y el aparente caos de la materia en bruto.",
+      "Encuentro mi inspiración en los ritmos de la naturaleza, desde las estructuras sedimentarias de la Tierra hasta la inmensidad cromática de las nebulosas, traduciendo estos fenómenos en obras ricas en textura, materialidad y profundidad.",
     bio_p2:
-      "Combinando técnicas al óleo tradicionales con pigmentos de tierra puros, arenas de cuarzo y pan de oro fino, sus lienzos actúan como receptáculos ópticos donde la luz se refracta según la posición del espectador.",
+      "Mi lenguaje visual se ha nutrido de una sólida formación académica en la Universidad Complutense de Madrid y Florencia, complementada por mi experiencia en las artes escénicas explorando el volumen, el comportamiento de la materia y el potencial expresivo de diversos materiales.",
     bio_btn_dossier: "Solicitar Dossier de Artista PDF",
     cv_exhibitions_title: "Exposiciones Seleccionadas",
     cv_publications_title: "Publicaciones & Documentación",
     collection_tag: "Pinturas Originales",
     collection_title: "El Porfolio de la Colección",
     collection_subtitle:
-      "Obras originales únicas creadas con óleo, tierras naturales, lapislázuli y pan de oro sobre lino belga.",
+      "Obras originales únicas creadas con óleo, acrílico, tierras naturales y otros materiales sobre tela.",
     filter_all: "Todas las Obras",
     window_badge_1: "Estudio ERG • Exploración de la Materia en Bruto",
     window_badge_2: "De la materia en bruto al espacio arquitectónico",
@@ -371,7 +375,7 @@ window.ERG_I18N = {
     commissions_title: "Encargos Privados & Proyectos Especiales",
     commissions_desc:
       "Eloísa Rodríguez colabora directamente con coleccionistas privados y estudios de interiorismo para crear obras a medida adaptadas al formato, cromatismo y luz de sus espacios.",
-    comm_feat_1: "✓ Plazo de creación en estudio de 4 a 6 semanas",
+    comm_feat_1: "✓ Plazo de creación en estudio de 8 a 12 semanas",
     comm_feat_2:
       "✓ Cuaderno de bitácora fotográfico de la evolución del lienzo",
     comm_feat_3:
