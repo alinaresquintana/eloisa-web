@@ -14,6 +14,22 @@
     <meta name="keywords" content="Eloísa Rodríguez, ERG Art, artiste peintre Vich, atelier d'art Vaud, atelier d'artiste La Côte, peinture contemporaine Suisse, tableaux sur mesure, tirages d'art, art abstrait, acrylique sur toile, portraits">
     <meta name="author" content="Eloísa Rodríguez">
 
+    <!-- Open Graph / Redes Sociales (Facebook, WhatsApp, LinkedIn, iMessage) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eloisarg.com/">
+    <meta property="og:title" content="Eloísa Rodríguez (ERG) | Artiste Peintre & Atelier d'Art à Vich">
+    <meta property="og:description" content="Site officiel de l'artiste peintre contemporaine Eloísa Rodríguez. Exploration de la matière brute, peintures originales, tirages d'art et commandes privées à Vich (Vaud).">
+    <meta property="og:image" content="https://eloisarg.com/images/paintings/original-milky-way-centre-eloisa-rodriguez.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Eloísa Rodríguez (ERG) | Artiste Peintre & Atelier d'Art à Vich">
+    <meta name="twitter:description" content="Site officiel de l'artiste peintre contemporaine Eloísa Rodríguez. Peintures originales, tirages d'art et commandes privées à Vich (Suisse).">
+    <meta name="twitter:image" content="https://eloisarg.com/images/paintings/original-milky-way-centre-eloisa-rodriguez.webp">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1795,6 +1811,8 @@
     const isAvailable = art.status === 'available';
     const isPrint = art.category === 'print';
     const mainImg = getArtworkMainImage(art);
+    const mediumText = art.medium[currentLang] || art.medium.fr || '';
+    const dynamicAlt = `${art.title} – ${mediumText} – Eloísa Rodríguez`;
 
     let badgeText = '';
     let badgeClass = '';
@@ -1826,7 +1844,7 @@
                 <div class="art-card">
                     <div class="art-card-thumb" onclick="openArtworkModal('${art.id}')">
                         <span class="art-badge ${badgeClass}">${badgeText}</span>
-                        <img src="${mainImg}" alt="${art.title}" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
+                        <img src="${mainImg}" alt="${dynamicAlt}" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
                         <div class="art-hover-prompt">
                             <button class="btn-outline" style="background:#fff; color:#000;" onclick="event.stopPropagation(); openArtworkModal('${art.id}')">${i18n[currentLang].btn_inspect}</button>
                         </div>
@@ -1834,7 +1852,7 @@
                     <div class="art-card-body">
                         <span class="art-card-series">${getSeriesName(art.series)}</span>
                         <h4 class="art-card-title serif-font">${art.title}</h4>
-                        <p class="art-card-specs">${art.dimensions} • ${art.medium[currentLang] || art.medium.fr} (${art.year})</p>
+                        <p class="art-card-specs">${art.dimensions} • ${mediumText} (${art.year})</p>
                         <div class="art-card-bottom">
                             <span class="art-card-price">${formatPrice(art.priceEur)}</span>
                             ${actionButtonHtml}
@@ -2043,12 +2061,17 @@
     if (!currentModalArtwork) return;
     const images = getArtworkImages(currentModalArtwork);
     const activeSrc = images[currentModalImageIndex] || getArtworkMainImage(currentModalArtwork);
+    const mediumText = currentModalArtwork.medium[currentLang] || currentModalArtwork.medium.fr || '';
+    const dynamicAlt = `${currentModalArtwork.title} (Vue ${currentModalImageIndex + 1}) – ${mediumText} – Eloísa Rodríguez`;
 
     const modalImg = document.getElementById('modalArtImg');
     const roomImg = document.getElementById('roomArtImg');
 
     modalImg.src = activeSrc;
+    modalImg.alt = dynamicAlt;
     roomImg.src = activeSrc;
+    roomImg.alt = `${dynamicAlt} - Vue en salon`;
+
     modalImg.classList.add('loaded');
     roomImg.classList.add('loaded');
     resetZoom();
