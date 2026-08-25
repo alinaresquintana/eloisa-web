@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Ubicación del mapa del sitio (se activará cuando el dominio esté online)
+Sitemap: https://eloisarg.com/sitemap.xml

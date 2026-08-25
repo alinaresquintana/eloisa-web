@@ -794,6 +794,8 @@
 
         .badge-available { background: var(--accent-gold); color: #0c0f15; }
         .badge-reserved { background: #d46a4e; color: #ffffff; }
+        .badge-sold { background: #b83232; color: #ffffff; }
+        .badge-onloan { background: #6b5b95; color: #ffffff; }
         .badge-print { background: #3b74a8; color: #ffffff; }
 
         .art-hover-prompt {
@@ -1787,12 +1789,38 @@
         }
 
         function createCardHtml(art) {
-            const isAvailable = art.status === 'available';
-            const badgeText = art.category === 'print' ? i18n[currentLang].status_print : (isAvailable ? i18n[currentLang].status_available : i18n[currentLang].status_reserved);
-            const badgeClass = art.category === 'print' ? 'badge-print' : (isAvailable ? 'badge-available' : 'badge-reserved');
-            const mainImg = getArtworkMainImage(art);
+          const isAvailable = art.status === 'available';
+          const isPrint = art.category === 'print';
+          const mainImg = getArtworkMainImage(art);
 
-            return `
+          let badgeText = '';
+          let badgeClass = '';
+
+          if (isPrint) {
+            badgeText = i18n[currentLang].status_print;
+            badgeClass = 'badge-print';
+          } else if (art.status === 'available') {
+            badgeText = i18n[currentLang].status_available;
+            badgeClass = 'badge-available';
+          } else if (art.status === 'reserved') {
+            badgeText = i18n[currentLang].status_reserved;
+            badgeClass = 'badge-reserved';
+          } else if (art.status === 'sold') {
+            badgeText = i18n[currentLang].status_sold;
+            badgeClass = 'badge-sold';
+          } else if (art.status === 'on_loan') {
+            badgeText = i18n[currentLang].status_onloan;
+            badgeClass = 'badge-onloan';
+          }
+
+          // Solo mostramos botón si se puede adquirir o añadir a la selección
+          const actionButtonHtml = (isAvailable || isPrint)
+            ? `<button class="btn-outline" style="padding: 6px 14px; font-size: 11px;" onclick="addToBag('${art.id}')">
+                 ${i18n[currentLang].btn_acquire}
+               </button>`
+            : '';
+
+          return `
                 <div class="art-card">
                     <div class="art-card-thumb" onclick="openArtworkModal('${art.id}')">
                         <span class="art-badge ${badgeClass}">${badgeText}</span>
@@ -1807,9 +1835,7 @@
                         <p class="art-card-specs">${art.dimensions} • ${art.medium[currentLang] || art.medium.fr} (${art.year})</p>
                         <div class="art-card-bottom">
                             <span class="art-card-price">${formatPrice(art.priceEur)}</span>
-                            <button class="btn-outline" style="padding: 6px 14px; font-size: 11px;" ${!isAvailable ? 'disabled' : ''} onclick="addToBag('${art.id}')">
-                                ${isAvailable ? i18n[currentLang].btn_acquire : i18n[currentLang].status_reserved}
-                            </button>
+                            ${actionButtonHtml}
                         </div>
                     </div>
                 </div>
@@ -1817,34 +1843,46 @@
         }
 
         function renderDynamicFilterBar() {
-            const bar = document.getElementById('dynamicFilterBar');
-            if (!bar) return;
+          const bar = document.getElementById('dynamicFilterBar');
+          if (!bar) return;
 
-            let uniqueSeries = [...new Set(artworks.map(a => a.series))];
-            uniqueSeries = uniqueSeries.filter(s => s !== 'all');
-            uniqueSeries.sort((a, b) => (a === 'nebula-sediment' ? -1 : 1));
+          let uniqueSeries = [...new Set(artworks.map(a => a.series))];
+          uniqueSeries = uniqueSeries.filter(s => s !== 'all');
 
-            let html = '';
+          // Orden explícito: 1. Nébuleuses & Sédiments, 2. Portraits, 3. Autres Œuvres
+          const seriesPriority = {
+            'nebula-sediment': 1,
+            'portrait': 2,
+            'otras': 3
+          };
 
-            uniqueSeries.forEach(seriesKey => {
-                const label = getSeriesName(seriesKey);
-                const isActive = activeSeriesFilter === seriesKey ? 'active' : '';
+          uniqueSeries.sort((a, b) => {
+            const orderA = seriesPriority[a] || 99;
+            const orderB = seriesPriority[b] || 99;
+            return orderA - orderB;
+          });
 
-                html += `<button class="filter-btn ${isActive}" onclick="filterGallery('${seriesKey}', this)">${label}</button>`;
-            });
+          let html = '';
 
-            const allActive = activeSeriesFilter === 'all' ? 'active' : '';
-            html += `<button class="filter-btn ${allActive}" onclick="filterGallery('all', this)">${i18n[currentLang].filter_all || 'Toutes les Œuvres'}</button>`;
+          uniqueSeries.forEach(seriesKey => {
+            const label = getSeriesName(seriesKey);
+            const isActive = activeSeriesFilter === seriesKey ? 'active' : '';
 
-            const availActive = onlyAvailable ? 'active' : '';
-            html += `
-                <div class="filter-divider"></div>
-                <button class="filter-btn-avail ${availActive}" onclick="toggleAvailabilityFilter(this)">
-                    <span>✦</span> <span data-i18n="filter_avail">${i18n[currentLang].filter_avail}</span>
-                </button>
-            `;
+            html += `<button class="filter-btn ${isActive}" onclick="filterGallery('${seriesKey}', this)">${label}</button>`;
+          });
 
-            bar.innerHTML = html;
+          const allActive = activeSeriesFilter === 'all' ? 'active' : '';
+          html += `<button class="filter-btn ${allActive}" onclick="filterGallery('all', this)">${i18n[currentLang].filter_all || 'Toutes les Œuvres'}</button>`;
+
+          const availActive = onlyAvailable ? 'active' : '';
+          html += `
+        <div class="filter-divider"></div>
+        <button class="filter-btn-avail ${availActive}" onclick="toggleAvailabilityFilter(this)">
+            <span>✦</span> <span data-i18n="filter_avail">${i18n[currentLang].filter_avail}</span>
+        </button>
+    `;
+
+          bar.innerHTML = html;
         }
 
         function toggleAvailabilityFilter(btn) {
@@ -1942,37 +1980,39 @@
         zoomBox.addEventListener('touchend', resetZoom);
 
         function openArtworkModal(id) {
-            const art = artworks.find(a => a.id === id);
-            if (!art) return;
+          const art = artworks.find(a => a.id === id);
+          if (!art) return;
 
-            currentModalArtwork = art;
-            currentModalImageIndex = 0;
+          history.pushState({ artworkId: id }, '', `#artwork-${id}`);
 
-            document.getElementById('modalSeries').textContent = getSeriesName(art.series);
-            document.getElementById('modalTitle').textContent = art.title;
-            document.getElementById('modalPrice').textContent = formatPrice(art.priceEur);
-            document.getElementById('modalMedium').textContent = art.medium[currentLang] || art.medium.fr;
-            document.getElementById('modalDimensions').textContent = art.dimensions;
-            document.getElementById('modalYear').textContent = art.year;
-            document.getElementById('modalDesc').textContent = art.desc[currentLang] || art.desc.fr;
+          currentModalArtwork = art;
+          currentModalImageIndex = 0;
 
-            renderModalCarousel();
-            switchModalView('detail');
+          document.getElementById('modalSeries').textContent = getSeriesName(art.series);
+          document.getElementById('modalTitle').textContent = art.title;
+          document.getElementById('modalPrice').textContent = formatPrice(art.priceEur);
+          document.getElementById('modalMedium').textContent = art.medium[currentLang] || art.medium.fr;
+          document.getElementById('modalDimensions').textContent = art.dimensions;
+          document.getElementById('modalYear').textContent = art.year;
+          document.getElementById('modalDesc').textContent = art.desc[currentLang] || art.desc.fr;
 
-            const actions = document.getElementById('modalActionsWrap');
-            if (art.status === 'available') {
-                actions.innerHTML = `
-                    <button class="btn-primary" style="flex:1; min-width:140px;" onclick="addToBag('${art.id}'); closeModal();">${i18n[currentLang].btn_add_bag}</button>
-                    <button class="btn-outline" style="flex:1; min-width:140px;" onclick="inquireDirectly('${art.title}')">${i18n[currentLang].btn_inquire_piece}</button>
-                `;
-            } else {
-                actions.innerHTML = `
-                    <button class="btn-primary" style="flex:1;" onclick="inquireDirectly('${art.title}')">${i18n[currentLang].form_btn_commission}</button>
-                `;
-            }
+          renderModalCarousel();
+          switchModalView('detail');
 
-            document.getElementById('artworkModal').classList.add('open');
-            document.body.style.overflow = 'hidden';
+          const actions = document.getElementById('modalActionsWrap');
+          if (art.status === 'available' || art.category === 'print') {
+            actions.innerHTML = `
+              <button class="btn-primary" style="flex:1; min-width:140px;" onclick="addToBag('${art.id}'); closeModal();">${i18n[currentLang].btn_add_bag}</button>
+              <button class="btn-outline" style="flex:1; min-width:140px;" onclick="inquireDirectly('${art.title}')">${i18n[currentLang].btn_inquire_piece}</button>
+            `;
+          } else {
+            actions.innerHTML = `
+              <button class="btn-primary" style="flex:1;" onclick="inquireDirectly('${art.title}')">${i18n[currentLang].btn_ask_similar || i18n[currentLang].form_btn_commission}</button>
+            `;
+          }
+
+          document.getElementById('artworkModal').classList.add('open');
+          document.body.style.overflow = 'hidden';
         }
 
         function renderModalCarousel() {
@@ -2060,9 +2100,14 @@
         }
 
         function closeModal() {
-            document.getElementById('artworkModal').classList.remove('open');
-            document.body.style.overflow = 'auto';
-            resetZoom();
+          document.getElementById('artworkModal').classList.remove('open');
+          document.body.style.overflow = 'auto';
+          resetZoom();
+
+          // Si la URL tenía el hash de la obra, lo limpiamos limpiamente
+          if (window.location.hash.startsWith('#artwork-')) {
+            history.pushState(null, '', window.location.pathname + window.location.search);
+          }
         }
 
         function closeModalOutside(e) {
@@ -2214,25 +2259,44 @@
         }
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeModal();
-                toggleCartDrawer(false);
-                closeMobileMenu();
-            } else if (e.key === 'ArrowLeft' && document.getElementById('artworkModal').classList.contains('open')) {
-                prevCarouselImage();
-            } else if (e.key === 'ArrowRight' && document.getElementById('artworkModal').classList.contains('open')) {
-                nextCarouselImage();
-            }
+          if (e.key === 'Escape') {
+            closeModal();
+            toggleCartDrawer(false);
+            closeMobileMenu();
+          } else if (e.key === 'ArrowLeft' && document.getElementById('artworkModal').classList.contains('open')) {
+            prevCarouselImage();
+          } else if (e.key === 'ArrowRight' && document.getElementById('artworkModal').classList.contains('open')) {
+            nextCarouselImage();
+          }
+        });
+
+        // 1. Abre el modal automáticamente si la URL contiene un hash como #artwork-ID
+        function checkUrlHashForModal() {
+          const hash = window.location.hash;
+          if (hash && hash.startsWith('#artwork-')) {
+            const artId = hash.replace('#artwork-', '');
+            openArtworkModal(artId);
+          }
+        }
+
+        // 2. Gestiona la navegación con los botones Atrás / Adelante del navegador
+        window.addEventListener('popstate', (e) => {
+          if (e.state && e.state.artworkId) {
+            openArtworkModal(e.state.artworkId);
+          } else {
+            closeModal();
+          }
         });
 
         document.addEventListener('DOMContentLoaded', () => {
-            applyTheme();
-            applyMetadata();
-            setCurrency(currentCurrency);
-            setLanguage(currentLang);
-            updateCartUI();
-            renderDynamicFilterBar();
-            renderAllGrids();
+          applyTheme();
+          applyMetadata();
+          setCurrency(currentCurrency);
+          setLanguage(currentLang);
+          updateCartUI();
+          renderDynamicFilterBar();
+          renderAllGrids();
+          checkUrlHashForModal(); // <-- Ejecuta la comprobación al cargar la página
         });
     </script>
 </body>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://eloisarg.com/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- 1. Nébuleuse en bleu -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-nebuleuse-en-bleu-eloisa-rodriguez.webp</image:loc>
+      <image:title>Nébuleuse en bleu - Eloísa Rodríguez</image:title>
+      <image:caption>Technique mixte sur toile</image:caption>
+    </image:image>
+
+    <!-- 2. Sedimentum Stratum IV -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-sedimentum-iv-eloisa-rodriguez.webp</image:loc>
+      <image:title>Sedimentum Stratum IV - Eloísa Rodríguez</image:title>
+      <image:caption>Technique mixte, terres ocres et pigments sur toile</image:caption>
+    </image:image>
+
+    <!-- 3. Nebula Genesis: Horizon -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-nebula-genesis-eloisa-rodriguez.webp</image:loc>
+      <image:title>Nebula Genesis: Horizon - Eloísa Rodríguez</image:title>
+      <image:caption>Technique mixte sur toile</image:caption>
+    </image:image>
+
+    <!-- 4. Tectonic Memory & Earth -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-tectonic-memory-eloisa-rodriguez.webp</image:loc>
+      <image:title>Tectonic Memory &amp; Earth - Eloísa Rodríguez</image:title>
+      <image:caption>Technique mixte sur toile</image:caption>
+    </image:image>
+
+    <!-- 5. Sedimentum Quadrata -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-sedimentum-quadrata-eloisa-rodriguez.webp</image:loc>
+      <image:title>Sedimentum Quadrata - Eloísa Rodríguez</image:title>
+      <image:caption>Technique mixte sur toile</image:caption>
+    </image:image>
+
+    <!-- 6. Horizontal Sediment -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-horizontal-sediment-eloisa-rodriguez.webp</image:loc>
+      <image:title>Horizontal Sediment - Eloísa Rodríguez</image:title>
+      <image:caption>Technique mixte sur lin</image:caption>
+    </image:image>
+
+    <!-- 7. Cosmic Mineral Harmony -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-cosmic-harmony-eloisa-rodriguez.webp</image:loc>
+      <image:title>Cosmic Mineral Harmony - Eloísa Rodríguez</image:title>
+      <image:caption>Huile, pigments et feuille d'or sur lin</image:caption>
+    </image:image>
+
+    <!-- 8. Milky Way Centre -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-milky-way-centre-eloisa-rodriguez.webp</image:loc>
+      <image:title>Milky Way Centre - Eloísa Rodríguez</image:title>
+      <image:caption>Huile, pigments cosmiques et poudres métalliques sur lin</image:caption>
+    </image:image>
+
+    <!-- 9. Eternal Stop -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-eternal-stop-eloisa-rodriguez.webp</image:loc>
+      <image:title>Eternal Stop - Eloísa Rodríguez</image:title>
+      <image:caption>Huile sur toile</image:caption>
+    </image:image>
+
+    <!-- 10. Infinite Desert -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-infinite-desert-eloisa-rodriguez.webp</image:loc>
+      <image:title>Infinite Desert - Eloísa Rodríguez</image:title>
+      <image:caption>Sable, terres naturelles et huile sur lin</image:caption>
+    </image:image>
+
+    <!-- 11. Cosmic Mineral Harmony (Prints - 3 vistas) -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/print-cosmic-harmony-1-eloisa-rodriguez.webp</image:loc>
+      <image:title>Cosmic Mineral Harmony Fine Art Print (Vue Frontale) - Eloísa Rodríguez</image:title>
+      <image:caption>Giclée sur papier coton Hahnemühle 310g</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/print-cosmic-harmony-2-eloisa-rodriguez.webp</image:loc>
+      <image:title>Cosmic Mineral Harmony Fine Art Print (Détail) - Eloísa Rodríguez</image:title>
+      <image:caption>Giclée sur papier coton Hahnemühle 310g</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/print-cosmic-harmony-3-eloisa-rodriguez.webp</image:loc>
+      <image:title>Cosmic Mineral Harmony Fine Art Print (Mise en situation) - Eloísa Rodríguez</image:title>
+      <image:caption>Giclée sur papier coton Hahnemühle 310g</image:caption>
+    </image:image>
+
+    <!-- 12. Présence Silencieuse -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-presence-silencieuse-eloisa-rodriguez.webp</image:loc>
+      <image:title>Présence Silencieuse - Eloísa Rodríguez</image:title>
+      <image:caption>Acrylique sur toile</image:caption>
+    </image:image>
+
+    <!-- 13. Immersion Pourpre -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-immersion-pourpre-eloisa-rodriguez.webp</image:loc>
+      <image:title>Immersion Pourpre - Eloísa Rodríguez</image:title>
+      <image:caption>Acrylique sur toile</image:caption>
+    </image:image>
+
+    <!-- 14. Cosmos Éthéré -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-cosmos-ethere-eloisa-rodriguez.webp</image:loc>
+      <image:title>Cosmos Éthéré - Eloísa Rodríguez</image:title>
+      <image:caption>Acrylique sur toile</image:caption>
+    </image:image>
+
+  </url>
+</urlset>

@@ -15,7 +15,7 @@ window.ERG_ARTWORKS = [
     priceEur: 3200,
     status: "available",
     images: [
-      "images/paintings/nebuleuse-en-bleu.jpg"
+      "images/paintings/original-nebuleuse-en-bleu-eloisa-rodriguez.webp"
     ],
     desc: {
       fr: "Une composition cosmique immersive explorant la genèse stellaire et les nuances profondes de bleu.",
@@ -40,7 +40,7 @@ window.ERG_ARTWORKS = [
     priceEur: 3800,
     status: "available",
     images: [
-      "images/paintings/sedimentum-iv.jpg"
+      "images/paintings/original-sedimentum-iv-eloisa-rodriguez.webp"
     ],
     desc: {
       fr: "Strates géologiques et textures profondes évoquant le passage du temps.",
@@ -65,7 +65,7 @@ window.ERG_ARTWORKS = [
     priceEur: 2800,
     status: "available",
     images: [
-      "images/paintings/nebula-genesis.jpg"
+      "images/paintings/original-nebula-genesis-eloisa-rodriguez.webp"
     ],
     desc: {
       fr: "Fluidité chromatique et dialogue entre obscurité et matière lumineuse.",
@@ -90,7 +90,7 @@ window.ERG_ARTWORKS = [
     priceEur: 2600,
     status: "available",
     images: [
-      "images/paintings/tectonic-memory.jpg"
+      "images/paintings/original-tectonic-memory-eloisa-rodriguez.webp"
     ],
     desc: {
       fr: "Panoramique matérique capturant la friction des plaques minérales.",
@@ -115,7 +115,7 @@ window.ERG_ARTWORKS = [
     priceEur: 3100,
     status: "available",
     images: [
-      "images/paintings/sedimentum-quadrata.jpg"
+      "images/paintings/original-sedimentum-quadrata-eloisa-rodriguez.webp"
     ],
     desc: {
       fr: "Format carré explorant l'équilibre géométrique au sein du chaos de la terre.",
@@ -140,7 +140,7 @@ window.ERG_ARTWORKS = [
     priceEur: 2400,
     status: "available",
     images: [
-      "images/paintings/horizontal-sediment.jpg"
+      "images/paintings/original-horizontal-sediment-eloisa-rodriguez.webp"
     ],
     desc: {
       fr: "Composition horizontale structurée autour de sédimentations minérales et de terres naturelles.",
@@ -165,7 +165,7 @@ window.ERG_ARTWORKS = [
     priceEur: 3100,
     status: "available",
     images: [
-      "images/paintings/cosmic-harmony.jpg"
+      "images/paintings/original-cosmic-harmony-eloisa-rodriguez.webp"
     ],
     desc: {
       fr: "Équilibre entre pigments précieux, textures minérales et feuille d'or réfractant la lumière.",
@@ -190,7 +190,7 @@ window.ERG_ARTWORKS = [
     priceEur: 3900,
     status: "available",
     images: [
-      "images/paintings/milky_way_centre.jpg"
+      "images/paintings/original-milky-way-centre-eloisa-rodriguez.webp"
     ],
     desc: {
       fr: "Une immersion vibrante dans le cœur incandescent de la voie lactée, où les magentas profonds et les violets cosmiques dialoguent avec des milliards d'étoiles en suspension.",
@@ -213,9 +213,9 @@ window.ERG_ARTWORKS = [
     },
     year: "2024",
     priceEur: 3400,
-    status: "available",
+    status: "on_loan",
     images: [
-      "images/paintings/eternal_stop.jpg"
+      "images/paintings/original-eternal-stop-eloisa-rodriguez.webp"
     ],
     desc: {
       fr: "Une exploration introspective de la solitude contemporaine et de l'immobilité lumineuse sous un ciel infini.",
@@ -240,7 +240,7 @@ window.ERG_ARTWORKS = [
     priceEur: 4100,
     status: "available",
     images: [
-      "images/paintings/infinite_desert.jpg"
+      "images/paintings/original-infinite-desert-eloisa-rodriguez.webp"
     ],
     desc: {
       fr: "Une traversée texturée évoquant l'immensité silencieuse des dunes balayées par le vent.",
@@ -265,15 +265,90 @@ window.ERG_ARTWORKS = [
     priceEur: 420,
     status: "available",
     images: [
-      "images/paintings/cosmic-harmony-print1.jpg",
-      "images/paintings/cosmic-harmony-print2.jpg",
-      "images/paintings/cosmic-harmony-print3.jpg"
+      "images/paintings/print-cosmic-harmony-1-eloisa-rodriguez.webp",
+      "images/paintings/print-cosmic-harmony-2-eloisa-rodriguez.webp",
+      "images/paintings/print-cosmic-harmony-3-eloisa-rodriguez.webp"
     ],
     desc: {
       fr: "Édition d'art reproduisant les nuances les plus subtiles de la toile originale.",
       en: "Fine art edition capturing the most subtle nuances of the original canvas.",
       it: "Edizione d'arte che riproduce le sfumature più sottili della tela originale.",
       es: "Edición de arte que reproduce los matices más sutiles del lienzo original."
+    }
+  },
+  {
+    id: "art-13",
+    title: "Présence Silencieuse",
+    category: "original",
+    series: "portrait",
+    dimensions: "130 × 100 cm",
+    medium: {
+      fr: "Acrylique sur toile",
+      en: "Acrylic on canvas",
+      it: "Acrilico su tela",
+      es: "Acrílico sobre lienzo"
+    },
+    year: "2024",
+    priceEur: 6420,
+    status: "sold",
+    images: [
+      "images/paintings/original-presence-silencieuse-eloisa-rodriguez.webp"
+    ],
+    desc: {
+      fr: "Une étude intime sur la grâce et la sérénité, explorant les tonalités chaudes de la peau en contraste avec un arrière-plan épuré aux coups de brosse texturés.",
+      en: "An intimate study on grace and serenity, exploring warm skin tones in contrast with a minimalist textured brushstroke background.",
+      it: "Uno studio intimo sulla grazia e la serenità, che esplora i toni caldi della pelle in contrasto con uno sfondo minimale a pennellate materiche.",
+      es: "Un estudio íntimo sobre la calma y la serenidad, explorando las tonalidades cálidas de la piel en contraste con un fondo depurado de pinceladas texturizadas."
+    }
+  },
+  {
+    id: "art-14",
+    title: "Immersion Pourpre",
+    category: "original",
+    series: "portrait",
+    dimensions: "116 × 89 cm",
+    medium: {
+      fr: "Acrylique sur toile",
+      en: "Acrylic on canvas",
+      it: "Acrilico su tela",
+      es: "Acrílico sobre lienzo"
+    },
+    year: "2023",
+    priceEur: 5800,
+    status: "sold",
+    images: [
+      "images/paintings/original-immersion-pourpre-eloisa-rodriguez.webp"
+    ],
+    desc: {
+      fr: "Une composition sensorielle capturant l'instant suspendu où le visage s'abandonne à l'eau, entouré de reflets botaniques, de baies sombres et d'épices pourpres.",
+      en: "A sensory composition capturing the suspended moment where the face surrenders to water, surrounded by botanical reflections, dark berries and purple spices.",
+      it: "Una composizione sensoriale che cattura l'istante sospeso in cui il volto si abbandona all'acqua, circondato da riflessi botanici, bacche scure e spezie porpora.",
+      es: "Una composición sensorial que captura el instante suspendido donde el rostro se entrega al agua, rodeado de reflejos botánicos, bayas oscuras y especias púrpuras."
+    }
+  },
+  {
+    id: "art-15",
+    title: "Cosmos Éthéré",
+    category: "original",
+    series: "portrait",
+    dimensions: "80 × 80 cm",
+    medium: {
+      fr: "Acrylique sur toile",
+      en: "Acrylic on canvas",
+      it: "Acrilico su tela",
+      es: "Acrílico sobre lienzo"
+    },
+    year: "2023",
+    priceEur: 1600,
+    status: "available",
+    images: [
+      "images/paintings/original-cosmos-ethere-eloisa-rodriguez.webp"
+    ],
+    desc: {
+      fr: "Un portrait vibrant né de la fusion entre la matière picturale et l'espace cosmique, où les pigments indigo et les éclats violets enveloppent un regard profond.",
+      en: "A vibrant portrait born from the fusion of pictorial matter and cosmic space, where indigo pigments and violet bursts embrace a profound gaze.",
+      it: "Un ritratto vibrante nato dalla fusione tra materia pittorica e spazio cosmico, dove pigmenti indaco e bagliori viola avvolgono uno sguardo profondo.",
+      es: "Un retrato vibrante nacido de la fusión entre la materia pictórica y el espacio cósmico, donde los pigmentos índigo y los destellos violetas envuelven una mirada profunda."
     }
   }
 ];
