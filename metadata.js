@@ -2,7 +2,7 @@ window.ERG_METADATA = {
   version: "2.5.0",
   artistName: "Eloísa Rodríguez",
   studioName: "ERG • Fine Art",
-  email: "eloisa988@gmail.com",
+  email: "contact@eloisarg.com",
   domain: "www.eloisarg.com",
   socials: {
     instagram: "https://instagram.com",
