@@ -35,11 +35,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <style>
         :root {
             --bg-body: transparent;
@@ -1270,6 +1265,56 @@
     <script src="metadata.js"></script>
     <script src="i18n.js"></script>
     <script src="artworks.js"></script>
+    <!-- Schema.org JSON-LD (Datos Estructurados para Google) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Person",
+                    "@id": "https://eloisarg.com/#artist",
+                    "name": "Eloísa Rodríguez",
+                    "alternateName": "ERG",
+                    "jobTitle": "Artiste Peintre",
+                    "url": "https://eloisarg.com/",
+                    "image": "https://eloisarg.com/images/paintings/original-milky-way-centre-eloisa-rodriguez.webp",
+                    "description": "Artiste peintre contemporaine explorant la matière brute, les nébuleuses et les sédiments géologiques.",
+                    "sameAs": [
+                        "https://www.instagram.com/eloisarg",
+                        "https://www.facebook.com/eloisarg"
+                    ]
+                },
+                {
+                    "@type": "ArtGallery",
+                    "@id": "https://eloisarg.com/#atelier",
+                    "name": "Atelier d'Art ERG - Eloísa Rodríguez",
+                    "url": "https://eloisarg.com/",
+                    "logo": "https://eloisarg.com/favicon.svg",
+                    "image": "https://eloisarg.com/images/background.jpg",
+                    "description": "Atelier de création artistique et galerie d'art contemporain à Vich (Vaud, Suisse).",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Vich",
+                        "addressRegion": "VD",
+                        "addressCountry": "CH"
+                    },
+                    "founder": {
+                        "@id": "https://eloisarg.com/#artist"
+                    }
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://eloisarg.com/#website",
+                    "url": "https://eloisarg.com/",
+                    "name": "Eloísa Rodríguez - Artiste Peintre & Atelier d'Art",
+                    "inLanguage": ["fr", "en", "it", "es"],
+                    "publisher": {
+                        "@id": "https://eloisarg.com/#artist"
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
 <body oncontextmenu="return handleRightClick(event);">
 
