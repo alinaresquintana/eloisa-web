@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eloísa Rodríguez (ERG) | Contemporary Fine Art & Studio</title>
 
-	<!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    
+
     <!-- SEO & Metadata -->
     <meta name="version" content="2.5.0">
     <meta name="description" content="Official website and studio of contemporary visual artist Eloísa Rodríguez (ERG). Exploration of nebulae, sediments, texture, and the beauty of the unknown.">
@@ -68,7 +68,7 @@
         }
 
         body {
-            font-family: var(--font-sans);
+            font-family: var(--font-sans), sans-serif;
             background: transparent;
             color: var(--text-main);
             line-height: 1.65;
@@ -84,7 +84,6 @@
             max-width: 100%;
             display: block;
             -webkit-user-drag: none;
-            user-drag: none;
             pointer-events: auto;
             -webkit-touch-callout: none;
             filter: blur(10px);
@@ -129,7 +128,7 @@
         }
 
         button {
-            font-family: inherit;
+            font-family: inherit, sans-serif;
             cursor: pointer;
             border: none;
             background: none;
@@ -150,7 +149,7 @@
         }
 
         h1, h2, h3, h4, .serif-font {
-            font-family: var(--font-serif);
+            font-family: var(--font-serif), Georgia, serif;
             font-weight: 400;
             letter-spacing: 0.02em;
             color: var(--text-heading);
@@ -253,7 +252,7 @@
         }
 
         .brand-logo .logo-main {
-            font-family: var(--font-serif);
+            font-family: var(--font-serif), Georgia, serif;
             font-size: 21px;
             letter-spacing: 0.18em;
             font-weight: 600;
@@ -480,7 +479,6 @@
         .hero-split-section {
             margin-top: 84px;
             min-height: calc(100vh - 84px);
-            min-height: calc(100dvh - 84px);
             display: flex;
             align-items: center;
             position: relative;
@@ -565,7 +563,7 @@
         body.light-theme .statement-glass-box { background: rgba(255, 255, 255, 0.88); }
 
         .quote-glyph {
-            font-family: var(--font-serif);
+            font-family: var(--font-serif), Georgia, serif;
             font-size: 70px;
             color: var(--accent-gold);
             opacity: 0.8;
@@ -574,7 +572,7 @@
         }
 
         .statement-lead {
-            font-family: var(--font-serif);
+            font-family: var(--font-serif), Georgia, serif;
             font-size: clamp(24px, 3vw, 34px);
             line-height: 1.45;
             color: var(--text-heading);
@@ -660,7 +658,7 @@
 
         .cv-timeline { list-style: none; display: flex; flex-direction: column; gap: 14px; }
         .cv-item { display: grid; grid-template-columns: 70px 1fr; gap: 14px; font-size: 14px; }
-        .cv-year { font-family: var(--font-serif); font-weight: 700; color: var(--accent-gold); font-size: 16px; }
+        .cv-year { font-family: var(--font-serif), Georgia, serif; font-weight: 700; color: var(--accent-gold); font-size: 16px; }
         .cv-desc strong { color: var(--text-heading); font-weight: 600; }
         .cv-desc span { color: var(--text-muted); display: block; font-size: 13px; }
         .cv-placeholder-badge {
@@ -825,7 +823,7 @@
             border-top: 1px solid var(--border-color);
         }
 
-        .art-card-price { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--text-heading); }
+        .art-card-price { font-family: var(--font-serif), Georgia, serif; font-size: 20px; font-weight: 600; color: var(--text-heading); }
 
         .artwork-window-banner {
             padding: 95px 0;
@@ -885,7 +883,7 @@
             border-radius: var(--radius-sm);
             padding: 12px 14px;
             color: var(--text-main);
-            font-family: inherit;
+            font-family: inherit, sans-serif;
             font-size: 13px;
             outline: none;
             transition: var(--transition);
@@ -1097,32 +1095,32 @@
             border: 1px solid var(--border-color);
         }
 
-        .room-artwork-frame { 
-            position: absolute; 
-            top: 8%; 
-            max-width: 200px; 
-            max-height: 150px; 
-            background: transparent; 
-            padding: 0; 
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            transition: max-width 0.3s ease; 
+        .room-artwork-frame {
+            position: absolute;
+            top: 8%;
+            max-width: 200px;
+            max-height: 150px;
+            background: transparent;
+            padding: 0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: max-width 0.3s ease;
             z-index: 2;
         }
         .room-artwork-frame img { max-width: 100%; max-height: 100%; object-fit: contain; filter: none !important; border: none; }
-        
-        .room-scale-reference { 
-            position: absolute; 
-            bottom: 12px; 
+
+        .room-scale-reference {
+            position: absolute;
+            bottom: 12px;
             right: 16px;
-            background: rgba(12, 15, 21, 0.85); 
-            color: var(--text-muted); 
-            padding: 4px 12px; 
-            border-radius: 12px; 
-            font-size: 10px; 
-            letter-spacing: 0.05em; 
+            background: rgba(12, 15, 21, 0.85);
+            color: var(--text-muted);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 10px;
+            letter-spacing: 0.05em;
             border: 1px solid var(--border-color);
             z-index: 5;
         }
@@ -1254,420 +1252,420 @@
 </head>
 <body oncontextmenu="return handleRightClick(event);">
 
-    <!-- Fondo Principal Local -->
-    <div class="global-fixed-bg">
-        <img src="images/background.jpg" alt="Eloísa Rodríguez Master Background Canvas" decoding="async" onload="this.classList.add('loaded')">
-    </div>
+<!-- Fondo Principal Local -->
+<div class="global-fixed-bg">
+    <img src="images/background.jpg" alt="Eloísa Rodríguez Master Background Canvas" decoding="async" onload="this.classList.add('loaded')">
+</div>
 
-    <!-- Header Navigation -->
-    <header class="navbar">
-        <div class="container-wide nav-inner">
-            <div class="brand-logo-wrap">
-                <a href="#" class="brand-logo">
-                    <span class="logo-main" id="brandMainName">Eloísa Rodríguez</span>
-                    <span class="logo-sub" id="brandSubName">ERG • Fine Art</span>
-                </a>
-            </div>
-
-            <ul class="nav-links" id="navLinks" role="navigation">
-                <li><a href="#statement" data-i18n="nav_statement" onclick="closeMobileMenu()">Démarche</a></li>
-                <li><a href="#bio" data-i18n="nav_bio" onclick="closeMobileMenu()">Biographie</a></li>
-                <li><a href="#collection" data-i18n="nav_collection" onclick="closeMobileMenu()">Collection</a></li>
-                <li><a href="#prints" data-i18n="nav_prints" onclick="closeMobileMenu()">Estampes</a></li>
-                <li><a href="#commissions" data-i18n="nav_commissions" onclick="closeMobileMenu()">Commandes</a></li>
-                <li><a href="#contact" data-i18n="nav_contact" onclick="closeMobileMenu()">Contact</a></li>
-            </ul>
-
-            <div class="nav-controls">
-                <div class="social-icons-group" id="socialIconsContainer"></div>
-
-                <div class="controls-divider"></div>
-
-                <div class="lang-switch" role="group" aria-label="Language Selector">
-                    <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
-                    <button class="lang-btn" onclick="setLanguage('en')">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('it')">IT</button>
-                    <button class="lang-btn" onclick="setLanguage('es')">ES</button>
-                </div>
-
-                <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" title="Mode Sombre / Clair" aria-label="Toggle Theme">
-                    <span id="themeIcon">☀️</span>
-                </button>
-
-                <select class="currency-select" id="currencySelector" onchange="setCurrency(this.value)" aria-label="Currency Selector">
-                    <option value="EUR">EUR (€)</option>
-                    <option value="USD">USD ($)</option>
-                    <option value="CHF">CHF</option>
-                </select>
-
-                <button class="cart-pill-btn" onclick="toggleCartDrawer()" aria-haspopup="dialog" aria-expanded="false" id="cartOpenBtn">
-                    <span data-i18n="cart_label">Sélection</span>
-                    <span class="cart-badge" id="cartBadge">0</span>
-                </button>
-
-                <button class="mobile-hamburger" onclick="toggleMobileMenu()" aria-label="Toggle Navigation" aria-expanded="false" id="hamburgerBtn">☰</button>
-            </div>
+<!-- Header Navigation -->
+<header class="navbar">
+    <div class="container-wide nav-inner">
+        <div class="brand-logo-wrap">
+            <a href="#" class="brand-logo" aria-label="Eloísa Rodríguez Homepage">
+                <span class="logo-main" id="brandMainName">Eloísa Rodríguez</span>
+                <span class="logo-sub" id="brandSubName">ERG • Fine Art</span>
+            </a>
         </div>
-    </header>
 
-    <!-- 1. Hero Section -->
-    <section class="hero-split-section">
-        <div class="container">
-            <div class="hero-split-container">
-                <div class="hero-split-left">
-                    <span class="section-tag" data-i18n="hero_tag">Atelier d'Art Contemporain ERG</span>
-                    <h1 data-i18n="hero_title">L'œuvre qui explore la beauté de <em>l'inconnu</em>.</h1>
-                    <p data-i18n="hero_desc">
-                        Une œuvre qui oscille entre l'abstraction et les formes reconnaissables, invitant à s'immerger dans l'inexplicable à travers des textures minérales profondes et des harmonies cosmiques.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="#collection" class="btn-primary" data-i18n="hero_btn_explore">Explorer la Collection</a>
-                        <a href="#statement" class="btn-outline" data-i18n="hero_btn_statement">Lire la Démarche</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <ul class="nav-links" id="navLinks" role="navigation">
+            <li><a href="#statement" data-i18n="nav_statement" onclick="closeMobileMenu()">Démarche</a></li>
+            <li><a href="#bio" data-i18n="nav_bio" onclick="closeMobileMenu()">Biographie</a></li>
+            <li><a href="#collection" data-i18n="nav_collection" onclick="closeMobileMenu()">Collection</a></li>
+            <li><a href="#prints" data-i18n="nav_prints" onclick="closeMobileMenu()">Estampes</a></li>
+            <li><a href="#commissions" data-i18n="nav_commissions" onclick="closeMobileMenu()">Commandes</a></li>
+            <li><a href="#contact" data-i18n="nav_contact" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
 
-    <!-- 2. Statement Section -->
-    <section class="window-statement-section" id="statement">
-        <div class="container">
-            <div class="statement-glass-box">
-                <div class="quote-glyph">“</div>
-                <h2 class="statement-lead" data-i18n="statement_lead">
-                    Mon travail est une exploration de la beauté de l'inconnu.
-                </h2>
-                <div class="statement-body-text" id="statementFullText"></div>
-                <div class="statement-signature">
-                    <span class="statement-author" id="signatureArtistName">Eloísa Rodríguez</span>
-                    <span class="statement-role" data-i18n="statement_role">Artiste Peintre • ERG Studio</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        <div class="nav-controls">
+            <div class="social-icons-group" id="socialIconsContainer"></div>
 
-    <!-- 3. Biography Section -->
-    <section class="solid-section" id="bio">
-        <div class="container">
-            <div class="section-header-center">
-                <span class="section-tag" data-i18n="bio_tag">Profil & Parcours</span>
-                <h2 class="section-title" data-i18n="bio_title">Biographie & Registre Artistique</h2>
-                <p class="section-subtitle" data-i18n="bio_subtitle">
-                    Parcours académique, expositions institutionnelles et documentation critique de l'œuvre d'Eloísa Rodríguez.
-                </p>
+            <div class="controls-divider"></div>
+
+            <div class="lang-switch" role="group" aria-label="Language Selector">
+                <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Passer en Français">FR</button>
+                <button class="lang-btn" onclick="setLanguage('en')" aria-label="Switch to English">EN</button>
+                <button class="lang-btn" onclick="setLanguage('it')" aria-label="Passa all'Italiano">IT</button>
+                <button class="lang-btn" onclick="setLanguage('es')" aria-label="Cambiar a Español">ES</button>
             </div>
 
-            <div class="bio-grid">
-                <div class="bio-lead-text">
-                    <h3 class="serif-font" data-i18n="bio_heading">La matière comme seuil vers l'infini</h3>
-                    <p data-i18n="bio_p1">
-                        Eloísa Rodríguez (ERG) développe une pratique picturale axée sur la sédimentation géologique et les structures nébulaires. Son travail interroge la transition entre l'ordre géométrique latent et le chaos apparent de la matière brute.
-                    </p>
-                    <p data-i18n="bio_p2">
-                        En combinant des techniques traditionnelles de détrempe à l'huile avec l'utilisation de pigments purs, sables de quartz et feuilles de métaux précieux, ses toiles agissent comme des réceptacles optiques où la lumière se diffracte en fonction de la perspective du regardeur.
-                    </p>
-                    <div style="margin-top: 24px;">
-                        <a href="#commissions" class="btn-outline" data-i18n="bio_btn_dossier">Demander le Dossier d'Artiste PDF</a>
-                    </div>
-                </div>
+            <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" title="Mode Sombre / Clair" aria-label="Toggle Theme">
+                <span id="themeIcon">☀️</span>
+            </button>
 
-                <div class="bio-details-block">
-                    <div>
-                        <h4 class="cv-column-header" data-i18n="cv_exhibitions_title">Expositions Sélectionnées</h4>
-                        <ul class="cv-timeline" id="exhibitionsListContainer"></ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <select class="currency-select" id="currencySelector" onchange="setCurrency(this.value)" aria-label="Currency Selector">
+                <option value="EUR">EUR (€)</option>
+                <option value="USD">USD ($)</option>
+                <option value="CHF">CHF</option>
+            </select>
 
-    <!-- 4. Collection Portfolio -->
-    <section class="solid-section" id="collection" style="border-top: none;">
-        <div class="container">
-            <div class="section-header-center">
-                <span class="section-tag" data-i18n="collection_tag">Peintures Originales</span>
-                <h2 class="section-title" data-i18n="collection_title">Le Portfolio de la Collection</h2>
-                <p class="section-subtitle" data-i18n="collection_subtitle">
-                    Œuvres d'art uniques réalisées à l'huile, terres naturelles, lapis-lazuli et feuille d'or sur lin belge monté sur châssis.
-                </p>
-                <div class="filter-bar" role="tablist" id="dynamicFilterBar"></div>
-            </div>
-            <div class="art-grid" id="originalArtworksGrid"></div>
-        </div>
-    </section>
+            <button class="cart-pill-btn" onclick="toggleCartDrawer()" aria-haspopup="dialog" aria-expanded="false" id="cartOpenBtn" aria-label="Voir la sélection d'atelier">
+                <span data-i18n="cart_label">Sélection</span>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </button>
 
-    <!-- 5. Panorama Background Window Portal 1 -->
-    <div class="artwork-window-banner">
-        <div class="window-banner-badge">
-            <span style="font-size: 16px; color: var(--accent-gold);">◈</span>
-            <span class="serif-font" style="font-size: 19px; letter-spacing: 0.1em; color: var(--text-heading);" data-i18n="window_badge_1">Atelier ERG • Exploration de la Matière Brute</span>
+            <button class="mobile-hamburger" onclick="toggleMobileMenu()" aria-label="Toggle Navigation" aria-expanded="false" id="hamburgerBtn">☰</button>
         </div>
     </div>
+</header>
 
-    <!-- 6. Prints Section -->
-    <section class="solid-section" id="prints">
-        <div class="container">
-            <div class="section-header-center">
-                <span class="section-tag" data-i18n="prints_tag">Éditions Limitées</span>
-                <h2 class="section-title" data-i18n="prints_title">Tirages d'Art (Giclée)</h2>
-                <p class="section-subtitle" data-i18n="prints_subtitle">
-                    Impressions pigmentaires de qualité musée sur papier coton Hahnemühle 310g. Numérotées, titrées et signées à la main par l'artiste.
+<!-- 1. Hero Section -->
+<section class="hero-split-section">
+    <div class="container">
+        <div class="hero-split-container">
+            <div class="hero-split-left">
+                <span class="section-tag" data-i18n="hero_tag">Atelier d'Art Contemporain ERG</span>
+                <h1 data-i18n="hero_title">L'œuvre qui explore la beauté de <em>l'inconnu</em>.</h1>
+                <p data-i18n="hero_desc">
+                    Une œuvre qui oscille entre l'abstraction et les formes reconnaissables, invitant à s'immerger dans l'inexplicable à travers des textures minérales profondes et des harmonies cosmiques.
                 </p>
+                <div class="hero-cta">
+                    <a href="#collection" class="btn-primary" data-i18n="hero_btn_explore">Explorer la Collection</a>
+                    <a href="#statement" class="btn-outline" data-i18n="hero_btn_statement">Lire la Démarche</a>
+                </div>
             </div>
-            <div class="art-grid" id="printsGrid"></div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 7. Bespoke Commissions -->
-    <section class="solid-section" id="commissions" style="border-top: none;">
-        <div class="container">
-            <div class="commissions-wrapper">
-                <div class="commissions-info">
-                    <span class="section-tag" data-i18n="commissions_tag">Projets Sur Mesure</span>
-                    <h3 class="serif-font" data-i18n="commissions_title">Commandes Privées & Projets Spéciaux</h3>
-                    <p data-i18n="commissions_desc">
-                        Eloísa Rodríguez collabore directement avec les collectionneurs et ateliers d'architecture intérieure pour composer des créations adaptées au format, à la palette et à la lumière de vos espaces.
+<!-- 2. Statement Section -->
+<section class="window-statement-section" id="statement">
+    <div class="container">
+        <div class="statement-glass-box">
+            <div class="quote-glyph">“</div>
+            <h2 class="statement-lead" data-i18n="statement_lead">
+                Mon travail est une exploration de la beauté de l'inconnu.
+            </h2>
+            <div class="statement-body-text" id="statementFullText"></div>
+            <div class="statement-signature">
+                <span class="statement-author" id="signatureArtistName">Eloísa Rodríguez</span>
+                <span class="statement-role" data-i18n="statement_role">Artiste Peintre • ERG Studio</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. Biography Section -->
+<section class="solid-section" id="bio">
+    <div class="container">
+        <div class="section-header-center">
+            <span class="section-tag" data-i18n="bio_tag">Profil & Parcours</span>
+            <h2 class="section-title" data-i18n="bio_title">Biographie & Registre Artistique</h2>
+            <p class="section-subtitle" data-i18n="bio_subtitle">
+                Parcours académique, expositions institutionnelles et documentation critique de l'œuvre d'Eloísa Rodríguez.
+            </p>
+        </div>
+
+        <div class="bio-grid">
+            <div class="bio-lead-text">
+                <h3 class="serif-font" data-i18n="bio_heading">La matière comme seuil vers l'infini</h3>
+                <p data-i18n="bio_p1">
+                    Eloísa Rodríguez (ERG) développe une pratique picturale axée sur la sédimentation géologique et les structures nébulaires. Son travail interroge la transition entre l'ordre géométrique latent et le chaos apparent de la matière brute.
+                </p>
+                <p data-i18n="bio_p2">
+                    En combinant des techniques traditionnelles de détrempe à l'huile avec l'utilisation de pigments purs, sables de quartz et feuilles de métaux précieux, ses toiles agissent comme des réceptacles optiques où la lumière se diffracte en fonction de la perspective du regardeur.
+                </p>
+                <div style="margin-top: 24px;">
+                    <a href="#commissions" class="btn-outline" data-i18n="bio_btn_dossier">Demander le Dossier d'Artiste PDF</a>
+                </div>
+            </div>
+
+            <div class="bio-details-block">
+                <div>
+                    <h4 class="cv-column-header" data-i18n="cv_exhibitions_title">Expositions Sélectionnées</h4>
+                    <ul class="cv-timeline" id="exhibitionsListContainer"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. Collection Portfolio -->
+<section class="solid-section" id="collection" style="border-top: none;">
+    <div class="container">
+        <div class="section-header-center">
+            <span class="section-tag" data-i18n="collection_tag">Peintures Originales</span>
+            <h2 class="section-title" data-i18n="collection_title">Le Portfolio de la Collection</h2>
+            <p class="section-subtitle" data-i18n="collection_subtitle">
+                Œuvres d'art uniques réalisées à l'huile, terres naturelles, lapis-lazuli et feuille d'or sur lin belge monté sur châssis.
+            </p>
+            <div class="filter-bar" role="tablist" id="dynamicFilterBar"></div>
+        </div>
+        <div class="art-grid" id="originalArtworksGrid"></div>
+    </div>
+</section>
+
+<!-- 5. Panorama Background Window Portal 1 -->
+<div class="artwork-window-banner">
+    <div class="window-banner-badge">
+        <span style="font-size: 16px; color: var(--accent-gold);">◈</span>
+        <span class="serif-font" style="font-size: 19px; letter-spacing: 0.1em; color: var(--text-heading);" data-i18n="window_badge_1">Atelier ERG • Exploration de la Matière Brute</span>
+    </div>
+</div>
+
+<!-- 6. Prints Section -->
+<section class="solid-section" id="prints">
+    <div class="container">
+        <div class="section-header-center">
+            <span class="section-tag" data-i18n="prints_tag">Éditions Limitées</span>
+            <h2 class="section-title" data-i18n="prints_title">Tirages d'Art (Giclée)</h2>
+            <p class="section-subtitle" data-i18n="prints_subtitle">
+                Impressions pigmentaires de qualité musée sur papier coton Hahnemühle 310g. Numérotées, titrées et signées à la main par l'artiste.
+            </p>
+        </div>
+        <div class="art-grid" id="printsGrid"></div>
+    </div>
+</section>
+
+<!-- 7. Bespoke Commissions -->
+<section class="solid-section" id="commissions" style="border-top: none;">
+    <div class="container">
+        <div class="commissions-wrapper">
+            <div class="commissions-info">
+                <span class="section-tag" data-i18n="commissions_tag">Projets Sur Mesure</span>
+                <h3 class="serif-font" data-i18n="commissions_title">Commandes Privées & Projets Spéciaux</h3>
+                <p data-i18n="commissions_desc">
+                    Eloísa Rodríguez collabore directement avec les collectionneurs et ateliers d'architecture intérieure pour composer des créations adaptées au format, à la palette et à la lumière de vos espaces.
+                </p>
+                <ul class="commissions-highlights">
+                    <li data-i18n="comm_feat_1">✓ Délai de création en atelier de 8 à 12 semaines</li>
+                    <li data-i18n="comm_feat_2">✓ Carnet de bord photographique de l'évolution de la toile</li>
+                    <li data-i18n="comm_feat_3">✓ Certificat d'Authenticité officiel et registre de provenance</li>
+                </ul>
+            </div>
+
+            <form class="commissions-form" name="commissions" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)">
+                <input type="hidden" name="form-name" value="commissions">
+                <div class="form-grid-2">
+                    <input type="text" name="name" class="custom-input" data-i18n-ph="form_ph_name" placeholder="Nom complet / Full Name" aria-label="Nom complet / Full Name" required>
+                    <input type="email" name="email" class="custom-input" data-i18n-ph="form_ph_email" placeholder="Courriel / Email" aria-label="Courriel / Email" required>
+                </div>
+                <div class="form-grid-2">
+                    <select name="dimensions" class="custom-select" id="commDimensionsSelect" aria-label="Dimensions souhaitées">
+                        <option value="" disabled selected data-i18n="form_dim_placeholder">Dimensions souhaitées</option>
+                        <option value="M" data-i18n="form_dim_opt1">Moyen (80 × 60 cm à 100 × 80 cm)</option>
+                        <option value="L" data-i18n="form_dim_opt2">Grand (120 × 100 cm à 160 × 120 cm)</option>
+                        <option value="XL" data-i18n="form_dim_opt3">Monumental (> 180 cm)</option>
+                    </select>
+                    <select name="series" class="custom-select" id="commSeriesSelect" aria-label="Série d'inspiration">
+                        <option value="" disabled selected data-i18n="form_series_placeholder">Série d'inspiration</option>
+                        <option value="nebula" data-i18n="form_series_opt1">Nébuleuses & Sédiments (Teintes cosmiques & minérales)</option>
+                        <option value="portrait" data-i18n="series_portrait">Portraits</option>
+                        <option value="abstract" data-i18n="form_series_opt2">Autres créations & abstraction pure</option>
+                    </select>
+                </div>
+                <textarea name="message" class="custom-textarea" rows="3" data-i18n-ph="form_ph_comm_desc" placeholder="Décrivez votre espace ou votre vision pour l'œuvre..." aria-label="Description du projet"></textarea>
+                <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="form_btn_commission">Demander une consultation pour commande</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- 8. Panorama Background Window Portal 2 -->
+<div class="artwork-window-banner">
+    <div class="window-banner-badge">
+        <span style="font-size: 16px; color: var(--accent-gold);">◈</span>
+        <span class="serif-font" style="font-size: 19px; letter-spacing: 0.1em; color: var(--text-heading);" data-i18n="window_badge_2">De la matière brute à l'espace habité</span>
+    </div>
+</div>
+
+<!-- 9. Contact Section -->
+<section class="solid-section" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-details">
+                <div>
+                    <span class="section-tag" data-i18n="contact_tag">Contact Direct Atelier</span>
+                    <h2 class="section-title" style="font-size: 36px;" data-i18n="contact_title">Prendre Contact</h2>
+                    <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 24px;" data-i18n="contact_desc">
+                        Pour représentations en galerie, acquisitions, demandes de presse ou rendez-vous d'atelier.
                     </p>
-                    <ul class="commissions-highlights">
-                        <li data-i18n="comm_feat_1">✓ Délai de création en atelier de 4 à 6 semaines</li>
-                        <li data-i18n="comm_feat_2">✓ Carnet de bord photographique de l'évolution de la toile</li>
-                        <li data-i18n="comm_feat_3">✓ Certificat d'Authenticité officiel et registre de provenance</li>
-                    </ul>
                 </div>
 
-                <form class="commissions-form" name="commissions" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)">
-                    <input type="hidden" name="form-name" value="commissions">
+                <div class="contact-item">
+                    <h5 data-i18n="contact_email_label">Courriel</h5>
+                    <a href="mailto:studio@eloisarg.com" id="contactEmailLink">studio@eloisarg.com</a>
+                </div>
+                <div class="contact-item">
+                    <h5 data-i18n="contact_domain_label">Site Officiel</h5>
+                    <a href="https://eloisarg.com" target="_blank" rel="noopener noreferrer" id="contactDomainLink">eloisarg.com</a>
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+                <h3 class="serif-font" style="font-size: 26px; margin-bottom: 18px;" data-i18n="contact_form_title">Envoyer un Message Direct</h3>
+                <form class="commissions-form" name="contact" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)">
+                    <input type="hidden" name="form-name" value="contact">
                     <div class="form-grid-2">
-                        <input type="text" name="name" class="custom-input" data-i18n-ph="form_ph_name" placeholder="Nom complet / Full Name" required>
-                        <input type="email" name="email" class="custom-input" data-i18n-ph="form_ph_email" placeholder="Courriel / Email" required>
+                        <input type="text" name="name" class="custom-input" data-i18n-ph="form_ph_name" placeholder="Nom complet / Name" aria-label="Nom complet / Name" required>
+                        <input type="email" name="email" class="custom-input" data-i18n-ph="form_ph_email" placeholder="Courriel / Email" aria-label="Courriel / Email" required>
                     </div>
-                    <div class="form-grid-2">
-                        <select name="dimensions" class="custom-select" id="commDimensionsSelect">
-                            <option value="" disabled selected data-i18n="form_dim_placeholder">Dimensions souhaitées</option>
-                            <option value="M" data-i18n="form_dim_opt1">Moyen (80 × 60 cm à 100 × 80 cm)</option>
-                            <option value="L" data-i18n="form_dim_opt2">Grand (120 × 100 cm à 160 × 120 cm)</option>
-                            <option value="XL" data-i18n="form_dim_opt3">Monumental (> 180 cm)</option>
-                        </select>
-                        <select name="series" class="custom-select" id="commSeriesSelect">
-                            <option value="" disabled selected data-i18n="form_series_placeholder">Série d'inspiration</option>
-                            <option value="nebula" data-i18n="form_series_opt1">Nébuleuses (Teintes cosmiques & fluides)</option>
-                            <option value="sediment" data-i18n="form_series_opt2">Sédiments (Terres minérales & feuille d'or)</option>
-                            <option value="abstract" data-i18n="form_series_opt3">Formes organiques & abstraction pure</option>
-                        </select>
-                    </div>
-                    <textarea name="message" class="custom-textarea" rows="3" data-i18n-ph="form_ph_comm_desc" placeholder="Décrivez votre espace ou votre vision pour l'œuvre..."></textarea>
-                    <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="form_btn_commission">Demander une consultation pour commande</button>
+                    <input type="text" name="subject" class="custom-input" id="contactSubjectInput" data-i18n-ph="form_ph_subject" placeholder="Objet de votre demande / Subject" aria-label="Objet de votre demande / Subject" required>
+                    <textarea name="message" class="custom-textarea" rows="5" id="contactMessageInput" data-i18n-ph="form_ph_message" placeholder="Votre message / Your message..." aria-label="Votre message / Your message" required></textarea>
+                    <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="contact_btn_send">Envoyer le Message</button>
                 </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 8. Panorama Background Window Portal 2 -->
-    <div class="artwork-window-banner">
-        <div class="window-banner-badge">
-            <span style="font-size: 16px; color: var(--accent-gold);">◈</span>
-            <span class="serif-font" style="font-size: 19px; letter-spacing: 0.1em; color: var(--text-heading);" data-i18n="window_badge_2">De la matière brute à l'espace habité</span>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-brand-wrap">
+            <span class="serif-font" style="font-size: 17px; font-weight: 600; color: var(--text-heading);" id="footerBrandName">ERG – Eloísa Rodríguez</span>
+            <p style="font-size: 12px;" data-i18n="footer_rights">© 2026 Eloísa Rodríguez. Tous droits réservés.</p>
+            <span class="footer-version-tag" id="footerVersionTag">Edition v2.5.0</span>
         </div>
     </div>
+</footer>
 
-    <!-- 9. Contact Section -->
-    <section class="solid-section" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-details">
-                    <div>
-                        <span class="section-tag" data-i18n="contact_tag">Contact Direct Atelier</span>
-                        <h2 class="section-title" style="font-size: 36px;" data-i18n="contact_title">Prendre Contact</h2>
-                        <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 24px;" data-i18n="contact_desc">
-                            Pour représentations en galerie, acquisitions, demandes de presse ou rendez-vous d'atelier.
-                        </p>
-                    </div>
+<!-- Artwork Modal Detail View -->
+<div class="modal-overlay" id="artworkModal" onclick="closeModalOutside(event)" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+        <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
 
-                    <div class="contact-item">
-                        <h5 data-i18n="contact_email_label">Courriel</h5>
-                        <a href="mailto:studio@eloisarg.com" id="contactEmailLink">studio@eloisarg.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <h5 data-i18n="contact_domain_label">Site Officiel</h5>
-                        <a href="https://eloisarg.com" target="_blank" rel="noopener noreferrer" id="contactDomainLink">eloisarg.com</a>
+        <div class="modal-visual-wrap">
+            <div class="modal-view-controls">
+                <button class="modal-view-btn active" id="btnViewDetail" onclick="switchModalView('detail')" data-i18n="modal_view_detail" aria-label="Zoom texture">Zoom Texture</button>
+                <button class="modal-view-btn" id="btnViewRoom" onclick="switchModalView('room')" data-i18n="modal_view_room" aria-label="Vue en salon">Vue en Salon</button>
+            </div>
+
+            <div class="modal-visual">
+                <div class="zoom-box-container" id="zoomContainer">
+                    <img id="modalArtImg" src="images/paintings/original-nebuleuse-en-bleu-eloisa-rodriguez.webp" alt="Artwork Preview" decoding="async">
+                    <span class="zoom-hint" data-i18n="zoom_hint">Survoler pour zoomer sur la matière</span>
+
+                    <div class="modal-carousel-nav" id="carouselNav" style="display: none;">
+                        <button class="carousel-btn" onclick="prevCarouselImage(event)" aria-label="Previous Image">‹</button>
+                        <button class="carousel-btn" onclick="nextCarouselImage(event)" aria-label="Next Image">›</button>
                     </div>
                 </div>
 
-                <div class="contact-form-card">
-                    <h3 class="serif-font" style="font-size: 26px; margin-bottom: 18px;" data-i18n="contact_form_title">Envoyer un Message Direct</h3>
-                    <form class="commissions-form" name="contact" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)">
-                        <input type="hidden" name="form-name" value="contact">
-                        <div class="form-grid-2">
-                            <input type="text" name="name" class="custom-input" data-i18n-ph="form_ph_name" placeholder="Nom complet / Name" required>
-                            <input type="email" name="email" class="custom-input" data-i18n-ph="form_ph_email" placeholder="Courriel / Email" required>
-                        </div>
-                        <input type="text" name="subject" class="custom-input" id="contactSubjectInput" data-i18n-ph="form_ph_subject" placeholder="Objet de votre demande / Subject" required>
-                        <textarea name="message" class="custom-textarea" rows="5" id="contactMessageInput" data-i18n-ph="form_ph_message" placeholder="Votre message / Your message..." required></textarea>
-                        <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="contact_btn_send">Envoyer le Message</button>
-                    </form>
+                <div class="room-sim-wrap" id="roomSimWrap">
+                    <div class="room-artwork-frame" id="roomArtworkFrame">
+                        <img id="roomArtImg" src="images/paintings/original-nebuleuse-en-bleu-eloisa-rodriguez.webp" alt="Room Preview" decoding="async">
+                    </div>
+                    <div class="room-scale-reference" data-i18n="room_scale_ref">Échelle Salon • Studio ERG</div>
                 </div>
             </div>
+
+            <div class="carousel-thumbs" id="modalCarouselThumbs" style="display: none;"></div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-inner">
-            <div class="footer-brand-wrap">
-                <span class="serif-font" style="font-size: 17px; font-weight: 600; color: var(--text-heading);" id="footerBrandName">ERG – Eloísa Rodríguez</span>
-                <p style="font-size: 12px;" data-i18n="footer_rights">© 2026 Eloísa Rodríguez. Tous droits réservés.</p>
-                <span class="footer-version-tag" id="footerVersionTag">Edition v2.5.0</span>
-            </div>
-        </div>
-    </footer>
+        <div class="modal-text">
+            <div>
+                <span class="section-tag" id="modalSeries">SÉRIE</span>
+                <h3 class="serif-font" style="font-size: 26px; margin-bottom: 8px;" id="modalTitle">Titre</h3>
+                <div class="art-card-price" style="font-size: 22px; color: var(--accent-gold);" id="modalPrice">€0</div>
 
-    <!-- Artwork Modal Detail View -->
-    <div class="modal-overlay" id="artworkModal" onclick="closeModalOutside(event)" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-        <div class="modal-card">
-            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
-            
-            <div class="modal-visual-wrap">
-                <div class="modal-view-controls">
-                    <button class="modal-view-btn active" id="btnViewDetail" onclick="switchModalView('detail')" data-i18n="modal_view_detail">Zoom Texture</button>
-                    <button class="modal-view-btn" id="btnViewRoom" onclick="switchModalView('room')" data-i18n="modal_view_room">Vue en Salon</button>
-                </div>
+                <ul class="modal-specs-list">
+                    <li><strong data-i18n="modal_tech_label">Technique :</strong> <span id="modalMedium"></span></li>
+                    <li><strong data-i18n="modal_dim_label">Dimensions :</strong> <span id="modalDimensions"></span></li>
+                    <li><strong data-i18n="modal_year_label">Année :</strong> <span id="modalYear"></span></li>
+                </ul>
 
-                <div class="modal-visual">
-                    <div class="zoom-box-container" id="zoomContainer">
-                        <img id="modalArtImg" src="" alt="Artwork Preview" decoding="async">
-                        <span class="zoom-hint" data-i18n="zoom_hint">Survoler pour zoomer sur la matière</span>
-                        
-                        <div class="modal-carousel-nav" id="carouselNav" style="display: none;">
-                            <button class="carousel-btn" onclick="prevCarouselImage(event)" aria-label="Previous Image">‹</button>
-                            <button class="carousel-btn" onclick="nextCarouselImage(event)" aria-label="Next Image">›</button>
-                        </div>
+                <!-- Insignias de confianza con claves i18n -->
+                <div class="trust-badges-container" id="trustBadgesWrap">
+                    <div class="trust-badge-item">
+                        <div class="trust-badge-icon"><svg viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg></div>
+                        <span class="trust-badge-label" data-i18n="badge_original">Œuvre<br>Originale</span>
                     </div>
-
-                    <div class="room-sim-wrap" id="roomSimWrap">
-                        <div class="room-artwork-frame" id="roomArtworkFrame">
-                            <img id="roomArtImg" src="" alt="Room Preview" decoding="async">
-                        </div>
-                        <div class="room-scale-reference" data-i18n="room_scale_ref">Échelle Salon • Studio ERG</div>
+                    <div class="trust-badge-item">
+                        <div class="trust-badge-icon"><svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" /></svg></div>
+                        <span class="trust-badge-label" data-i18n="badge_unique">Pièce<br>Unique</span>
+                    </div>
+                    <div class="trust-badge-item">
+                        <div class="trust-badge-icon"><svg viewBox="0 0 24 24"><path d="M21,11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1L21,5V11M12,21C15.75,20 19,15.54 19,11.22V6.3L12,3.18L5,6.3V11.22C5,15.54 8.25,20 12,21M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z" /></svg></div>
+                        <span class="trust-badge-label" data-i18n="badge_cert">Certificat<br>Inclus</span>
                     </div>
                 </div>
 
-                <div class="carousel-thumbs" id="modalCarouselThumbs" style="display: none;"></div>
+                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;" id="modalDesc"></p>
             </div>
 
-            <div class="modal-text">
-                <div>
-                    <span class="section-tag" id="modalSeries">SÉRIE</span>
-                    <h3 class="serif-font" style="font-size: 26px; margin-bottom: 8px;" id="modalTitle">Titre</h3>
-                    <div class="art-card-price" style="font-size: 22px; color: var(--accent-gold);" id="modalPrice">€0</div>
-
-                    <ul class="modal-specs-list">
-                        <li><strong data-i18n="modal_tech_label">Technique :</strong> <span id="modalMedium"></span></li>
-                        <li><strong data-i18n="modal_dim_label">Dimensions :</strong> <span id="modalDimensions"></span></li>
-                        <li><strong data-i18n="modal_year_label">Année :</strong> <span id="modalYear"></span></li>
-                    </ul>
-
-                    <!-- Insignias de confianza con claves i18n -->
-                    <div class="trust-badges-container" id="trustBadgesWrap">
-                        <div class="trust-badge-item">
-                            <div class="trust-badge-icon"><svg viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg></div>
-                            <span class="trust-badge-label" data-i18n="badge_original">Œuvre<br>Originale</span>
-                        </div>
-                        <div class="trust-badge-item">
-                            <div class="trust-badge-icon"><svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" /></svg></div>
-                            <span class="trust-badge-label" data-i18n="badge_unique">Pièce<br>Unique</span>
-                        </div>
-                        <div class="trust-badge-item">
-                            <div class="trust-badge-icon"><svg viewBox="0 0 24 24"><path d="M21,11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1L21,5V11M12,21C15.75,20 19,15.54 19,11.22V6.3L12,3.18L5,6.3V11.22C5,15.54 8.25,20 12,21M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z" /></svg></div>
-                            <span class="trust-badge-label" data-i18n="badge_cert">Certificat<br>Inclus</span>
-                        </div>
-                    </div>
-
-                    <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;" id="modalDesc"></p>
-                </div>
-
-                <div style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;" id="modalActionsWrap"></div>
-            </div>
+            <div style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;" id="modalActionsWrap"></div>
         </div>
     </div>
+</div>
 
-    <!-- Slide-in Cart Drawer -->
-    <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle">
-        <div class="cart-drawer-header">
-            <h4 class="serif-font" style="font-size: 20px;" id="cartDrawerTitle" data-i18n="cart_title">Sélection d'Atelier</h4>
-            <button onclick="toggleCartDrawer()" style="font-size: 22px; color: var(--text-muted);" aria-label="Close cart">&times;</button>
-        </div>
-
-        <div class="cart-drawer-items" id="cartItemsList"></div>
-
-        <div class="cart-drawer-footer">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 14px;">
-                <span data-i18n="cart_total_label">Total Estimé :</span>
-                <span class="art-card-price" id="cartTotalDisplay">€0</span>
-            </div>
-            <button class="btn-primary" style="width: 100%;" onclick="proceedCheckout()" data-i18n="cart_checkout_btn">Passerelle de paiement bientôt disponible</button>
-        </div>
+<!-- Slide-in Cart Drawer -->
+<div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle">
+    <div class="cart-drawer-header">
+        <h4 class="serif-font" style="font-size: 20px;" id="cartDrawerTitle" data-i18n="cart_title">Sélection d'Atelier</h4>
+        <button onclick="toggleCartDrawer()" style="font-size: 22px; color: var(--text-muted);" aria-label="Close cart">&times;</button>
     </div>
 
-    <!-- Toast Notification -->
-    <div class="toast" id="toastMessage" role="status" aria-live="polite"></div>
+    <div class="cart-drawer-items" id="cartItemsList"></div>
 
-    <!-- Application Script -->
-    <script>
-        const meta = window.ERG_METADATA || {};
-        const APP_VERSION = meta.version || "2.5.0";
-        console.info(`[ERG Gallery] Loaded Version: v${APP_VERSION}`);
+    <div class="cart-drawer-footer">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 14px;">
+            <span data-i18n="cart_total_label">Total Estimé :</span>
+            <span class="art-card-price" id="cartTotalDisplay">€0</span>
+        </div>
+        <button class="btn-primary" style="width: 100%;" onclick="proceedCheckout()" data-i18n="cart_checkout_btn">Passerelle de paiement bientôt disponible</button>
+    </div>
+</div>
 
-        let currentLang = localStorage.getItem('erg_lang') || 'fr';
-        let currentTheme = localStorage.getItem('erg_theme') || 'dark';
-        let currentCurrency = localStorage.getItem('erg_currency') || 'EUR';
-        let cart = JSON.parse(localStorage.getItem('erg_cart') || '[]');
+<!-- Toast Notification -->
+<div class="toast" id="toastMessage" role="status" aria-live="polite"></div>
 
-        let activeSeriesFilter = 'nebula-sediment';
-        let onlyAvailable = false;
+<!-- Application Script -->
+<script>
+  const meta = window.ERG_METADATA || {};
+  const APP_VERSION = meta.version || "2.5.0";
+  console.info(`[ERG Gallery] Loaded Version: v${APP_VERSION}`);
 
-        let currentModalArtwork = null;
-        let currentModalImageIndex = 0;
+  let currentLang = localStorage.getItem('erg_lang') || 'fr';
+  let currentTheme = localStorage.getItem('erg_theme') || 'dark';
+  let currentCurrency = localStorage.getItem('erg_currency') || 'EUR';
+  let cart = JSON.parse(localStorage.getItem('erg_cart') || '[]');
 
-        const exchangeRates = { EUR: 1.0, USD: 1.08, CHF: 0.97 };
-        const i18n = window.ERG_I18N || {};
-        let artworks = window.ERG_ARTWORKS || [];
+  let activeSeriesFilter = 'nebula-sediment';
+  let onlyAvailable = false;
 
-        function getSeriesName(seriesKey) {
-            if (!seriesKey) return '';
-            const key = `series_${seriesKey.replace(/-/g, '_')}`;
-            return (i18n[currentLang] && i18n[currentLang][key]) || seriesKey;
-        }
+  let currentModalArtwork = null;
+  let currentModalImageIndex = 0;
 
-        function getArtworkMainImage(art) {
-            if (art.images && Array.isArray(art.images) && art.images.length > 0) {
-                return art.images[0];
-            }
-            return art.image || '';
-        }
+  const exchangeRates = { EUR: 1.0, USD: 1.08, CHF: 0.97 };
+  const i18n = window.ERG_I18N || {};
+  let artworks = window.ERG_ARTWORKS || [];
 
-        function getArtworkImages(art) {
-            if (art.images && Array.isArray(art.images) && art.images.length > 0) {
-                return art.images;
-            }
-            return art.image ? [art.image] : [];
-        }
+  function getSeriesName(seriesKey) {
+    if (!seriesKey) return '';
+    const key = `series_${seriesKey.replace(/-/g, '_')}`;
+    return (i18n[currentLang] && i18n[currentLang][key]) || seriesKey;
+  }
 
-        function applyMetadata() {
-            if (!meta.artistName) return;
-            document.getElementById('brandMainName').textContent = meta.artistName;
-            document.getElementById('signatureArtistName').textContent = meta.artistName;
-            document.getElementById('footerBrandName').textContent = `ERG – ${meta.artistName}`;
-            document.getElementById('footerVersionTag').textContent = `Edition v${meta.version}`;
-            
-            const emailLink = document.getElementById('contactEmailLink');
-            if(emailLink) { emailLink.href = `mailto:${meta.email}`; emailLink.textContent = meta.email; }
-            
-            const domainLink = document.getElementById('contactDomainLink');
-            if(domainLink) { domainLink.href = `https://${meta.domain}`; domainLink.textContent = meta.domain; }
+  function getArtworkMainImage(art) {
+    if (art.images && Array.isArray(art.images) && art.images.length > 0) {
+      return art.images[0];
+    }
+    return art.image || '';
+  }
 
-            const socialContainer = document.getElementById('socialIconsContainer');
-            if (socialContainer && meta.socials) {
-                socialContainer.innerHTML = `
+  function getArtworkImages(art) {
+    if (art.images && Array.isArray(art.images) && art.images.length > 0) {
+      return art.images;
+    }
+    return art.image ? [art.image] : [];
+  }
+
+  function applyMetadata() {
+    if (!meta.artistName) return;
+    document.getElementById('brandMainName').textContent = meta.artistName;
+    document.getElementById('signatureArtistName').textContent = meta.artistName;
+    document.getElementById('footerBrandName').textContent = `ERG – ${meta.artistName}`;
+    document.getElementById('footerVersionTag').textContent = `Edition v${meta.version}`;
+
+    const emailLink = document.getElementById('contactEmailLink');
+    if(emailLink) { emailLink.href = `mailto:${meta.email}`; emailLink.textContent = meta.email; }
+
+    const domainLink = document.getElementById('contactDomainLink');
+    if(domainLink) { domainLink.href = `https://${meta.domain}`; domainLink.textContent = meta.domain; }
+
+    const socialContainer = document.getElementById('socialIconsContainer');
+    if (socialContainer && meta.socials) {
+      socialContainer.innerHTML = `
                     <a href="mailto:${meta.email}" class="social-icon-btn" title="Courriel / Email" aria-label="Email">
                         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                     </a>
@@ -1678,21 +1676,21 @@
                         <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     </a>
                 `;
-            }
+    }
 
-            renderExhibitions();
-        }
-        
-        function renderExhibitions() {
-            const expContainer = document.getElementById('exhibitionsListContainer');
-            if (!expContainer || !meta.exhibitions) return;
+    renderExhibitions();
+  }
 
-            expContainer.innerHTML = meta.exhibitions.map(item => {
-                const titleText = item.title[currentLang] || item.title.fr;
-                const locText = item.location[currentLang] || item.location.fr;
-                const badgeText = item.badge ? (item.badge[currentLang] || item.badge.fr) : '';
+  function renderExhibitions() {
+    const expContainer = document.getElementById('exhibitionsListContainer');
+    if (!expContainer || !meta.exhibitions) return;
 
-                return `
+    expContainer.innerHTML = meta.exhibitions.map(item => {
+      const titleText = item.title[currentLang] || item.title.fr;
+      const locText = item.location[currentLang] || item.location.fr;
+      const badgeText = item.badge ? (item.badge[currentLang] || item.badge.fr) : '';
+
+      return `
                     <li class="cv-item">
                         <span class="cv-year">${item.year}</span>
                         <div class="cv-desc">
@@ -1702,125 +1700,124 @@
                         </div>
                     </li>
                 `;
-            }).join('');
-        }
+    }).join('');
+  }
 
-        function handleRightClick(e) {
-            e.preventDefault();
-            showToast(i18n[currentLang].protect_alert);
-            return false;
-        }
+  function handleRightClick(e) {
+    e.preventDefault();
+    showToast(i18n[currentLang].protect_alert);
+    return false;
+  }
 
-        function formatPrice(eur) {
-            const val = Math.round(eur * exchangeRates[currentCurrency]);
-            if (currentCurrency === 'EUR') return `€${val.toLocaleString()}`;
-            if (currentCurrency === 'USD') return `$${val.toLocaleString()}`;
-            if (currentCurrency === 'CHF') return `CHF ${val.toLocaleString()}`;
-            return `${val}`;
-        }
+  function formatPrice(eur) {
+    const val = Math.round(eur * exchangeRates[currentCurrency]);
+    if (currentCurrency === 'EUR') return `€${val.toLocaleString()}`;
+    if (currentCurrency === 'USD') return `$${val.toLocaleString()}`;
+    if (currentCurrency === 'CHF') return `CHF ${val.toLocaleString()}`;
+    return `${val}`;
+  }
 
-        function setLanguage(lang) {
-            currentLang = lang;
-            localStorage.setItem('erg_lang', lang);
+  function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('erg_lang', lang);
 
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
-            });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+    });
 
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (i18n[lang] && i18n[lang][key]) {
-                    el.innerHTML = i18n[lang][key];
-                }
-            });
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (i18n[lang] && i18n[lang][key]) {
+        el.innerHTML = i18n[lang][key];
+      }
+    });
 
-            document.querySelectorAll('[data-i18n-ph]').forEach(el => {
-                const key = el.getAttribute('data-i18n-ph');
-                if (i18n[lang] && i18n[lang][key]) {
-                    el.setAttribute('placeholder', i18n[lang][key]);
-                }
-            });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+      const key = el.getAttribute('data-i18n-ph');
+      if (i18n[lang] && i18n[lang][key]) {
+        el.setAttribute('placeholder', i18n[lang][key]);
+      }
+    });
 
-            const statementEl = document.getElementById('statementFullText');
-            statementEl.innerHTML = `
+    const statementEl = document.getElementById('statementFullText');
+    statementEl.innerHTML = `
                 <p style="margin-bottom: 18px;">${i18n[lang].statement_p1}</p>
                 <p style="margin-bottom: 18px;">${i18n[lang].statement_p2}</p>
                 <p>${i18n[lang].statement_p3}</p>
             `;
 
-            renderDynamicFilterBar();
-            renderAllGrids();
-            renderExhibitions();
-        }
+    renderDynamicFilterBar();
+    renderAllGrids();
+    renderExhibitions();
+  }
 
-        function toggleTheme() {
-            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            localStorage.setItem('erg_theme', currentTheme);
-            applyTheme();
-        }
+  function toggleTheme() {
+    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('erg_theme', currentTheme);
+    applyTheme();
+  }
 
-        function applyTheme() {
-            if (currentTheme === 'light') {
-                document.body.classList.add('light-theme');
-                document.getElementById('themeIcon').textContent = '🌙';
-            } else {
-                document.body.classList.remove('light-theme');
-                document.getElementById('themeIcon').textContent = '☀️';
-            }
-        }
+  function applyTheme() {
+    if (currentTheme === 'light') {
+      document.body.classList.add('light-theme');
+      document.getElementById('themeIcon').textContent = '🌙';
+    } else {
+      document.body.classList.remove('light-theme');
+      document.getElementById('themeIcon').textContent = '☀️';
+    }
+  }
 
-        function setCurrency(curr) {
-            currentCurrency = curr;
-            localStorage.setItem('erg_currency', curr);
-            document.getElementById('currencySelector').value = curr;
-            renderAllGrids();
-            updateCartUI();
-        }
+  function setCurrency(curr) {
+    currentCurrency = curr;
+    localStorage.setItem('erg_currency', curr);
+    document.getElementById('currencySelector').value = curr;
+    renderAllGrids();
+    updateCartUI();
+  }
 
-        function toggleMobileMenu() {
-            const nav = document.getElementById('navLinks');
-            const isOpen = nav.classList.toggle('mobile-open');
-            document.getElementById('hamburgerBtn').setAttribute('aria-expanded', isOpen);
-        }
+  function toggleMobileMenu() {
+    const nav = document.getElementById('navLinks');
+    const isOpen = nav.classList.toggle('mobile-open');
+    document.getElementById('hamburgerBtn').setAttribute('aria-expanded', isOpen);
+  }
 
-        function closeMobileMenu() {
-            document.getElementById('navLinks').classList.remove('mobile-open');
-            document.getElementById('hamburgerBtn').setAttribute('aria-expanded', 'false');
-        }
+  function closeMobileMenu() {
+    document.getElementById('navLinks').classList.remove('mobile-open');
+    document.getElementById('hamburgerBtn').setAttribute('aria-expanded', 'false');
+  }
 
-        function createCardHtml(art) {
-          const isAvailable = art.status === 'available';
-          const isPrint = art.category === 'print';
-          const mainImg = getArtworkMainImage(art);
+  function createCardHtml(art) {
+    const isAvailable = art.status === 'available';
+    const isPrint = art.category === 'print';
+    const mainImg = getArtworkMainImage(art);
 
-          let badgeText = '';
-          let badgeClass = '';
+    let badgeText = '';
+    let badgeClass = '';
 
-          if (isPrint) {
-            badgeText = i18n[currentLang].status_print;
-            badgeClass = 'badge-print';
-          } else if (art.status === 'available') {
-            badgeText = i18n[currentLang].status_available;
-            badgeClass = 'badge-available';
-          } else if (art.status === 'reserved') {
-            badgeText = i18n[currentLang].status_reserved;
-            badgeClass = 'badge-reserved';
-          } else if (art.status === 'sold') {
-            badgeText = i18n[currentLang].status_sold;
-            badgeClass = 'badge-sold';
-          } else if (art.status === 'on_loan') {
-            badgeText = i18n[currentLang].status_onloan;
-            badgeClass = 'badge-onloan';
-          }
+    if (isPrint) {
+      badgeText = i18n[currentLang].status_print;
+      badgeClass = 'badge-print';
+    } else if (art.status === 'available') {
+      badgeText = i18n[currentLang].status_available;
+      badgeClass = 'badge-available';
+    } else if (art.status === 'reserved') {
+      badgeText = i18n[currentLang].status_reserved;
+      badgeClass = 'badge-reserved';
+    } else if (art.status === 'sold') {
+      badgeText = i18n[currentLang].status_sold;
+      badgeClass = 'badge-sold';
+    } else if (art.status === 'on_loan') {
+      badgeText = i18n[currentLang].status_onloan;
+      badgeClass = 'badge-onloan';
+    }
 
-          // Solo mostramos botón si se puede adquirir o añadir a la selección
-          const actionButtonHtml = (isAvailable || isPrint)
-            ? `<button class="btn-outline" style="padding: 6px 14px; font-size: 11px;" onclick="addToBag('${art.id}')">
+    const actionButtonHtml = (isAvailable || isPrint)
+      ? `<button class="btn-outline" style="padding: 6px 14px; font-size: 11px;" onclick="addToBag('${art.id}')">
                  ${i18n[currentLang].btn_acquire}
                </button>`
-            : '';
+      : '';
 
-          return `
+    return `
                 <div class="art-card">
                     <div class="art-card-thumb" onclick="openArtworkModal('${art.id}')">
                         <span class="art-badge ${badgeClass}">${badgeText}</span>
@@ -1840,364 +1837,361 @@
                     </div>
                 </div>
             `;
-        }
+  }
 
-        function renderDynamicFilterBar() {
-          const bar = document.getElementById('dynamicFilterBar');
-          if (!bar) return;
+  function renderDynamicFilterBar() {
+    const bar = document.getElementById('dynamicFilterBar');
+    if (!bar) return;
 
-          let uniqueSeries = [...new Set(artworks.map(a => a.series))];
-          uniqueSeries = uniqueSeries.filter(s => s !== 'all');
+    let uniqueSeries = [...new Set(artworks.map(a => a.series))];
+    uniqueSeries = uniqueSeries.filter(s => s !== 'all');
 
-          // Orden explícito: 1. Nébuleuses & Sédiments, 2. Portraits, 3. Autres Œuvres
-          const seriesPriority = {
-            'nebula-sediment': 1,
-            'portrait': 2,
-            'otras': 3
-          };
+    const seriesPriority = {
+      'nebula-sediment': 1,
+      'portrait': 2,
+      'otras': 3
+    };
 
-          uniqueSeries.sort((a, b) => {
-            const orderA = seriesPriority[a] || 99;
-            const orderB = seriesPriority[b] || 99;
-            return orderA - orderB;
-          });
+    uniqueSeries.sort((a, b) => {
+      const orderA = seriesPriority[a] || 99;
+      const orderB = seriesPriority[b] || 99;
+      return orderA - orderB;
+    });
 
-          let html = '';
+    let html = '';
 
-          uniqueSeries.forEach(seriesKey => {
-            const label = getSeriesName(seriesKey);
-            const isActive = activeSeriesFilter === seriesKey ? 'active' : '';
+    uniqueSeries.forEach(seriesKey => {
+      const label = getSeriesName(seriesKey);
+      const isActive = activeSeriesFilter === seriesKey ? 'active' : '';
 
-            html += `<button class="filter-btn ${isActive}" onclick="filterGallery('${seriesKey}', this)">${label}</button>`;
-          });
+      html += `<button class="filter-btn ${isActive}" onclick="filterGallery('${seriesKey}', this)">${label}</button>`;
+    });
 
-          const allActive = activeSeriesFilter === 'all' ? 'active' : '';
-          html += `<button class="filter-btn ${allActive}" onclick="filterGallery('all', this)">${i18n[currentLang].filter_all || 'Toutes les Œuvres'}</button>`;
+    const allActive = activeSeriesFilter === 'all' ? 'active' : '';
+    html += `<button class="filter-btn ${allActive}" onclick="filterGallery('all', this)">${i18n[currentLang].filter_all || 'Toutes les Œuvres'}</button>`;
 
-          const availActive = onlyAvailable ? 'active' : '';
-          html += `
-        <div class="filter-divider"></div>
-        <button class="filter-btn-avail ${availActive}" onclick="toggleAvailabilityFilter(this)">
-            <span>✦</span> <span data-i18n="filter_avail">${i18n[currentLang].filter_avail}</span>
-        </button>
-    `;
+    const availActive = onlyAvailable ? 'active' : '';
+    html += `
+            <div class="filter-divider"></div>
+            <button class="filter-btn-avail ${availActive}" onclick="toggleAvailabilityFilter(this)">
+                <span>✦</span> <span data-i18n="filter_avail">${i18n[currentLang].filter_avail}</span>
+            </button>
+          `;
 
-          bar.innerHTML = html;
-        }
+    bar.innerHTML = html;
+  }
 
-        function toggleAvailabilityFilter(btn) {
-            onlyAvailable = !onlyAvailable;
-            if (btn) btn.classList.toggle('active', onlyAvailable);
-            
-            const grid = document.getElementById('originalArtworksGrid');
-            grid.classList.add('animating');
-            setTimeout(() => {
-                renderAllGrids();
-                grid.classList.remove('animating');
-            }, 200);
-        }
+  function toggleAvailabilityFilter(btn) {
+    onlyAvailable = !onlyAvailable;
+    if (btn) btn.classList.toggle('active', onlyAvailable);
 
-        function renderAllGrids() {
-            const origContainer = document.getElementById('originalArtworksGrid');
-            let origItems = artworks.filter(a => a.category === 'original');
-            
-            if (activeSeriesFilter !== 'all') {
-                origItems = origItems.filter(a => a.series === activeSeriesFilter);
-            }
-            if (onlyAvailable) {
-                origItems = origItems.filter(a => a.status === 'available');
-            }
+    const grid = document.getElementById('originalArtworksGrid');
+    grid.classList.add('animating');
+    setTimeout(() => {
+      renderAllGrids();
+      grid.classList.remove('animating');
+    }, 200);
+  }
 
-            origContainer.innerHTML = origItems.map(createCardHtml).join('');
+  function renderAllGrids() {
+    const origContainer = document.getElementById('originalArtworksGrid');
+    let origItems = artworks.filter(a => a.category === 'original');
 
-            const printsContainer = document.getElementById('printsGrid');
-            const printItems = artworks.filter(a => a.category === 'print');
-            printsContainer.innerHTML = printItems.map(createCardHtml).join('');
-        }
+    if (activeSeriesFilter !== 'all') {
+      origItems = origItems.filter(a => a.series === activeSeriesFilter);
+    }
+    if (onlyAvailable) {
+      origItems = origItems.filter(a => a.status === 'available');
+    }
 
-        function filterGallery(filter, btn) {
-            const grid = document.getElementById('originalArtworksGrid');
-            grid.classList.add('animating');
-            
-            activeSeriesFilter = filter;
-            
-            if(btn) {
-                document.querySelectorAll('#dynamicFilterBar .filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-            }
+    origContainer.innerHTML = origItems.map(createCardHtml).join('');
 
-            setTimeout(() => {
-                renderAllGrids();
-                grid.classList.remove('animating');
-            }, 200);
-        }
+    const printsContainer = document.getElementById('printsGrid');
+    const printItems = artworks.filter(a => a.category === 'print');
+    printsContainer.innerHTML = printItems.map(createCardHtml).join('');
+  }
 
-        function switchModalView(mode) {
-            const btnDetail = document.getElementById('btnViewDetail');
-            const btnRoom = document.getElementById('btnViewRoom');
-            const zoomBox = document.getElementById('zoomContainer');
-            const roomBox = document.getElementById('roomSimWrap');
+  function filterGallery(filter, btn) {
+    const grid = document.getElementById('originalArtworksGrid');
+    grid.classList.add('animating');
 
-            if (mode === 'detail') {
-                btnDetail.classList.add('active');
-                btnRoom.classList.remove('active');
-                zoomBox.style.display = 'flex';
-                roomBox.style.display = 'none';
-            } else {
-                btnRoom.classList.add('active');
-                btnDetail.classList.remove('active');
-                zoomBox.style.display = 'none';
-                roomBox.style.display = 'flex';
-            }
-        }
+    activeSeriesFilter = filter;
 
-        const zoomBox = document.getElementById('zoomContainer');
-        
-        function updateZoomPosition(clientX, clientY) {
-            const img = document.getElementById('modalArtImg');
-            const rect = zoomBox.getBoundingClientRect();
-            
-            const x = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
-            const y = Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100));
+    if(btn) {
+      document.querySelectorAll('#dynamicFilterBar .filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
 
-            img.style.transformOrigin = `${x}% ${y}%`;
-            img.style.transform = 'scale(3.5)';
-        }
+    setTimeout(() => {
+      renderAllGrids();
+      grid.classList.remove('animating');
+    }, 200);
+  }
 
-        function resetZoom() {
-            const img = document.getElementById('modalArtImg');
-            img.style.transform = 'scale(1)';
-        }
+  function switchModalView(mode) {
+    const btnDetail = document.getElementById('btnViewDetail');
+    const btnRoom = document.getElementById('btnViewRoom');
+    const zoomBox = document.getElementById('zoomContainer');
+    const roomBox = document.getElementById('roomSimWrap');
 
-        zoomBox.addEventListener('mousemove', (e) => updateZoomPosition(e.clientX, e.clientY));
-        zoomBox.addEventListener('mouseleave', resetZoom);
-        
-        zoomBox.addEventListener('touchmove', (e) => {
-            if (e.touches.length > 0) {
-                updateZoomPosition(e.touches[0].clientX, e.touches[0].clientY);
-            }
-        }, { passive: true });
-        zoomBox.addEventListener('touchend', resetZoom);
+    if (mode === 'detail') {
+      btnDetail.classList.add('active');
+      btnRoom.classList.remove('active');
+      zoomBox.style.display = 'flex';
+      roomBox.style.display = 'none';
+    } else {
+      btnRoom.classList.add('active');
+      btnDetail.classList.remove('active');
+      zoomBox.style.display = 'none';
+      roomBox.style.display = 'flex';
+    }
+  }
 
-        function openArtworkModal(id) {
-          const art = artworks.find(a => a.id === id);
-          if (!art) return;
+  const zoomBox = document.getElementById('zoomContainer');
 
-          history.pushState({ artworkId: id }, '', `#artwork-${id}`);
+  function updateZoomPosition(clientX, clientY) {
+    const img = document.getElementById('modalArtImg');
+    const rect = zoomBox.getBoundingClientRect();
 
-          currentModalArtwork = art;
-          currentModalImageIndex = 0;
+    const x = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+    const y = Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100));
 
-          document.getElementById('modalSeries').textContent = getSeriesName(art.series);
-          document.getElementById('modalTitle').textContent = art.title;
-          document.getElementById('modalPrice').textContent = formatPrice(art.priceEur);
-          document.getElementById('modalMedium').textContent = art.medium[currentLang] || art.medium.fr;
-          document.getElementById('modalDimensions').textContent = art.dimensions;
-          document.getElementById('modalYear').textContent = art.year;
-          document.getElementById('modalDesc').textContent = art.desc[currentLang] || art.desc.fr;
+    img.style.transformOrigin = `${x}% ${y}%`;
+    img.style.transform = 'scale(3.5)';
+  }
 
-          renderModalCarousel();
-          switchModalView('detail');
+  function resetZoom() {
+    const img = document.getElementById('modalArtImg');
+    img.style.transform = 'scale(1)';
+  }
 
-          const actions = document.getElementById('modalActionsWrap');
-          if (art.status === 'available' || art.category === 'print') {
-            actions.innerHTML = `
+  zoomBox.addEventListener('mousemove', (e) => updateZoomPosition(e.clientX, e.clientY));
+  zoomBox.addEventListener('mouseleave', resetZoom);
+
+  zoomBox.addEventListener('touchmove', (e) => {
+    if (e.touches.length > 0) {
+      updateZoomPosition(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: true });
+  zoomBox.addEventListener('touchend', resetZoom);
+
+  function openArtworkModal(id) {
+    const art = artworks.find(a => a.id === id);
+    if (!art) return;
+
+    history.pushState({ artworkId: id }, '', `#artwork-${id}`);
+
+    currentModalArtwork = art;
+    currentModalImageIndex = 0;
+
+    document.getElementById('modalSeries').textContent = getSeriesName(art.series);
+    document.getElementById('modalTitle').textContent = art.title;
+    document.getElementById('modalPrice').textContent = formatPrice(art.priceEur);
+    document.getElementById('modalMedium').textContent = art.medium[currentLang] || art.medium.fr;
+    document.getElementById('modalDimensions').textContent = art.dimensions;
+    document.getElementById('modalYear').textContent = art.year;
+    document.getElementById('modalDesc').textContent = art.desc[currentLang] || art.desc.fr;
+
+    renderModalCarousel();
+    switchModalView('detail');
+
+    const actions = document.getElementById('modalActionsWrap');
+    if (art.status === 'available' || art.category === 'print') {
+      actions.innerHTML = `
               <button class="btn-primary" style="flex:1; min-width:140px;" onclick="addToBag('${art.id}'); closeModal();">${i18n[currentLang].btn_add_bag}</button>
               <button class="btn-outline" style="flex:1; min-width:140px;" onclick="inquireDirectly('${art.title}')">${i18n[currentLang].btn_inquire_piece}</button>
             `;
-          } else {
-            actions.innerHTML = `
+    } else {
+      actions.innerHTML = `
               <button class="btn-primary" style="flex:1;" onclick="inquireDirectly('${art.title}')">${i18n[currentLang].btn_ask_similar || i18n[currentLang].form_btn_commission}</button>
             `;
-          }
+    }
 
-          document.getElementById('artworkModal').classList.add('open');
-          document.body.style.overflow = 'hidden';
-        }
+    document.getElementById('artworkModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
 
-        function renderModalCarousel() {
-            if (!currentModalArtwork) return;
-            const images = getArtworkImages(currentModalArtwork);
-            const nav = document.getElementById('carouselNav');
-            const thumbs = document.getElementById('modalCarouselThumbs');
+  function renderModalCarousel() {
+    if (!currentModalArtwork) return;
+    const images = getArtworkImages(currentModalArtwork);
+    const nav = document.getElementById('carouselNav');
+    const thumbs = document.getElementById('modalCarouselThumbs');
 
-            if (images.length > 1) {
-                nav.style.display = 'flex';
-                thumbs.style.display = 'flex';
-                thumbs.innerHTML = images.map((src, idx) => `
-                    <button class="carousel-thumb-btn ${idx === currentModalImageIndex ? 'active' : ''}" onclick="setModalImageIndex(${idx})">
+    if (images.length > 1) {
+      nav.style.display = 'flex';
+      thumbs.style.display = 'flex';
+      thumbs.innerHTML = images.map((src, idx) => `
+                    <button class="carousel-thumb-btn ${idx === currentModalImageIndex ? 'active' : ''}" onclick="setModalImageIndex(${idx})" aria-label="Voir l'image ${idx + 1}">
                         <img src="${src}" alt="Thumb ${idx + 1}" decoding="async">
                     </button>
                 `).join('');
-            } else {
-                nav.style.display = 'none';
-                thumbs.style.display = 'none';
-                thumbs.innerHTML = '';
-            }
+    } else {
+      nav.style.display = 'none';
+      thumbs.style.display = 'none';
+      thumbs.innerHTML = '';
+    }
 
-            updateModalActiveImage();
-        }
+    updateModalActiveImage();
+  }
 
-        function updateModalActiveImage() {
-            if (!currentModalArtwork) return;
-            const images = getArtworkImages(currentModalArtwork);
-            const activeSrc = images[currentModalImageIndex] || getArtworkMainImage(currentModalArtwork);
+  function updateModalActiveImage() {
+    if (!currentModalArtwork) return;
+    const images = getArtworkImages(currentModalArtwork);
+    const activeSrc = images[currentModalImageIndex] || getArtworkMainImage(currentModalArtwork);
 
-            const modalImg = document.getElementById('modalArtImg');
-            const roomImg = document.getElementById('roomArtImg');
+    const modalImg = document.getElementById('modalArtImg');
+    const roomImg = document.getElementById('roomArtImg');
 
-            modalImg.src = activeSrc;
-            roomImg.src = activeSrc;
-            modalImg.classList.add('loaded');
-            roomImg.classList.add('loaded');
-            resetZoom();
+    modalImg.src = activeSrc;
+    roomImg.src = activeSrc;
+    modalImg.classList.add('loaded');
+    roomImg.classList.add('loaded');
+    resetZoom();
 
-            document.querySelectorAll('#modalCarouselThumbs .carousel-thumb-btn').forEach((btn, idx) => {
-                btn.classList.toggle('active', idx === currentModalImageIndex);
-            });
-        }
+    document.querySelectorAll('#modalCarouselThumbs .carousel-thumb-btn').forEach((btn, idx) => {
+      btn.classList.toggle('active', idx === currentModalImageIndex);
+    });
+  }
 
-        function setModalImageIndex(idx) {
-            currentModalImageIndex = idx;
-            updateModalActiveImage();
-        }
+  function setModalImageIndex(idx) {
+    currentModalImageIndex = idx;
+    updateModalActiveImage();
+  }
 
-        function prevCarouselImage(e) {
-            if (e) e.stopPropagation();
-            if (!currentModalArtwork) return;
-            const images = getArtworkImages(currentModalArtwork);
-            if (images.length <= 1) return;
-            currentModalImageIndex = (currentModalImageIndex - 1 + images.length) % images.length;
-            updateModalActiveImage();
-        }
+  function prevCarouselImage(e) {
+    if (e) e.stopPropagation();
+    if (!currentModalArtwork) return;
+    const images = getArtworkImages(currentModalArtwork);
+    if (images.length <= 1) return;
+    currentModalImageIndex = (currentModalImageIndex - 1 + images.length) % images.length;
+    updateModalActiveImage();
+  }
 
-        function nextCarouselImage(e) {
-            if (e) e.stopPropagation();
-            if (!currentModalArtwork) return;
-            const images = getArtworkImages(currentModalArtwork);
-            if (images.length <= 1) return;
-            currentModalImageIndex = (currentModalImageIndex + 1) % images.length;
-            updateModalActiveImage();
-        }
+  function nextCarouselImage(e) {
+    if (e) e.stopPropagation();
+    if (!currentModalArtwork) return;
+    const images = getArtworkImages(currentModalArtwork);
+    if (images.length <= 1) return;
+    currentModalImageIndex = (currentModalImageIndex + 1) % images.length;
+    updateModalActiveImage();
+  }
 
-        function inquireDirectly(artworkTitle) {
-            closeModal();
-            const subjectInput = document.getElementById('contactSubjectInput');
-            const messageInput = document.getElementById('contactMessageInput');
-            
-            const prefixes = {
-                fr: "Demande d'acquisition pour l'œuvre :",
-                en: "Acquisition inquiry for artwork:",
-                it: "Richiesta di acquisizione per l'opera:",
-                es: "Consulta de adquisición para la obra:"
-            };
+  function inquireDirectly(artworkTitle) {
+    closeModal();
+    const subjectInput = document.getElementById('contactSubjectInput');
+    const messageInput = document.getElementById('contactMessageInput');
 
-            subjectInput.value = `${prefixes[currentLang]} ${artworkTitle}`;
-            messageInput.focus();
+    const prefixes = {
+      fr: "Demande d'acquisition pour l'œuvre :",
+      en: "Acquisition inquiry for artwork:",
+      it: "Richiesta di acquisizione per l'opera:",
+      es: "Consulta de adquisición para la obra:"
+    };
 
-            const contactSection = document.getElementById('contact');
-            contactSection.scrollIntoView({ behavior: 'smooth' });
-        }
+    subjectInput.value = `${prefixes[currentLang]} ${artworkTitle}`;
+    messageInput.focus();
 
-        function closeModal() {
-          document.getElementById('artworkModal').classList.remove('open');
-          document.body.style.overflow = 'auto';
-          resetZoom();
+    const contactSection = document.getElementById('contact');
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  }
 
-          // Si la URL tenía el hash de la obra, lo limpiamos limpiamente
-          if (window.location.hash.startsWith('#artwork-')) {
-            history.pushState(null, '', window.location.pathname + window.location.search);
-          }
-        }
+  function closeModal() {
+    document.getElementById('artworkModal').classList.remove('open');
+    document.body.style.overflow = 'auto';
+    resetZoom();
 
-        function closeModalOutside(e) {
-            if (e.target.id === 'artworkModal') closeModal();
-        }
+    if (window.location.hash.startsWith('#artwork-')) {
+      history.pushState(null, '', window.location.pathname + window.location.search);
+    }
+  }
 
-        function addToBag(id) {
-            const art = artworks.find(a => a.id === id);
-            if (!art) return;
+  function closeModalOutside(e) {
+    if (e.target.id === 'artworkModal') closeModal();
+  }
 
-            const existingIndex = cart.findIndex(item => item.id === art.id);
+  function addToBag(id) {
+    const art = artworks.find(a => a.id === id);
+    if (!art) return;
 
-            if (art.category === 'original' && existingIndex > -1) {
-                const alerts = {
-                    fr: "Cette pièce unique est déjà dans votre sélection.",
-                    en: "This original piece is already in your bag.",
-                    it: "Questo pezzo unico è già nella tua selezione.",
-                    es: "Esta pieza única ya está en tu selección."
-                };
-                showToast(alerts[currentLang]);
-                toggleCartDrawer(true);
-                return;
-            }
+    const existingIndex = cart.findIndex(item => item.id === art.id);
 
-            if (art.category === 'print' && existingIndex > -1) {
-                cart[existingIndex].qty = (cart[existingIndex].qty || 1) + 1;
-            } else {
-                cart.push({ ...art, qty: 1 });
-            }
+    if (art.category === 'original' && existingIndex > -1) {
+      const alerts = {
+        fr: "Cette pièce unique est déjà dans votre sélection.",
+        en: "This original piece is already in your bag.",
+        it: "Questo pezzo unico è già nella tua selezione.",
+        es: "Esta pieza única ya está en tu selección."
+      };
+      showToast(alerts[currentLang]);
+      toggleCartDrawer(true);
+      return;
+    }
 
-            saveCart();
-            updateCartUI();
-            showToast(`"${art.title}" ${i18n[currentLang].toast_added}`);
-            toggleCartDrawer(true);
-        }
+    if (art.category === 'print' && existingIndex > -1) {
+      cart[existingIndex].qty = (cart[existingIndex].qty || 1) + 1;
+    } else {
+      cart.push({ ...art, qty: 1 });
+    }
 
-        function removeFromBag(index) {
-            cart.splice(index, 1);
-            saveCart();
-            updateCartUI();
-        }
+    saveCart();
+    updateCartUI();
+    showToast(`"${art.title}" ${i18n[currentLang].toast_added}`);
+    toggleCartDrawer(true);
+  }
 
-        function saveCart() {
-            localStorage.setItem('erg_cart', JSON.stringify(cart));
-        }
+  function removeFromBag(index) {
+    cart.splice(index, 1);
+    saveCart();
+    updateCartUI();
+  }
 
-        function toggleCartDrawer(forceOpen = null) {
-            const drawer = document.getElementById('cartDrawer');
-            const btn = document.getElementById('cartOpenBtn');
-            const isActive = forceOpen !== null ? forceOpen : !drawer.classList.contains('active');
-            
-            drawer.classList.toggle('active', isActive);
-            btn.setAttribute('aria-expanded', isActive);
-        }
+  function saveCart() {
+    localStorage.setItem('erg_cart', JSON.stringify(cart));
+  }
 
-        function updateCartUI() {
-            const totalCount = cart.reduce((sum, item) => sum + (item.qty || 1), 0);
-            document.getElementById('cartBadge').textContent = totalCount;
-            const container = document.getElementById('cartItemsList');
-            container.innerHTML = '';
+  function toggleCartDrawer(forceOpen = null) {
+    const drawer = document.getElementById('cartDrawer');
+    const btn = document.getElementById('cartOpenBtn');
+    const isActive = forceOpen !== null ? forceOpen : !drawer.classList.contains('active');
 
-            if (cart.length === 0) {
-                const emptyMsgs = {
-                    fr: "Votre sélection est vide.",
-                    en: "Your bag is currently empty.",
-                    it: "La tua selezione è vuota.",
-                    es: "Tu selección está vacía."
-                };
-                container.innerHTML = `
+    drawer.classList.toggle('active', isActive);
+    btn.setAttribute('aria-expanded', isActive);
+  }
+
+  function updateCartUI() {
+    document.getElementById('cartBadge').textContent = cart.reduce((sum, item) => sum + (item.qty || 1), 0);
+    const container = document.getElementById('cartItemsList');
+    container.innerHTML = '';
+
+    if (cart.length === 0) {
+      const emptyMsgs = {
+        fr: "Votre sélection est vide.",
+        en: "Your bag is currently empty.",
+        it: "La tua selezione è vuota.",
+        es: "Tu selección está vacía."
+      };
+      container.innerHTML = `
                     <div style="text-align: center; color: var(--text-muted); margin-top: 50px;">
                         <p style="font-size: 28px; color: var(--accent-gold); margin-bottom: 10px;">◈</p>
                         <p>${emptyMsgs[currentLang]}</p>
                     </div>
                 `;
-                document.getElementById('cartTotalDisplay').textContent = formatPrice(0);
-                return;
-            }
+      document.getElementById('cartTotalDisplay').textContent = formatPrice(0);
+      return;
+    }
 
-            let total = 0;
-            const removeLabels = { fr: 'Retirer', en: 'Remove', it: 'Rimuovi', es: 'Eliminar' };
+    let total = 0;
+    const removeLabels = { fr: 'Retirer', en: 'Remove', it: 'Rimuovi', es: 'Eliminar' };
 
-            cart.forEach((item, idx) => {
-                const itemTotal = item.priceEur * (item.qty || 1);
-                total += itemTotal;
-                const qtyText = item.qty > 1 ? ` (×${item.qty})` : '';
-                const itemImg = getArtworkMainImage(item);
+    cart.forEach((item, idx) => {
+      const itemTotal = item.priceEur * (item.qty || 1);
+      total += itemTotal;
+      const qtyText = item.qty > 1 ? ` (×${item.qty})` : '';
+      const itemImg = getArtworkMainImage(item);
 
-                const div = document.createElement('div');
-                div.className = 'cart-drawer-item';
-                div.innerHTML = `
+      const div = document.createElement('div');
+      div.className = 'cart-drawer-item';
+      div.innerHTML = `
                     <img src="${itemImg}" class="cart-drawer-thumb" alt="${item.title}" decoding="async">
                     <div style="flex-grow:1;">
                         <div style="font-size:13px; font-weight:600;">${item.title}${qtyText}</div>
@@ -2205,99 +2199,97 @@
                         <button style="font-size:11px; color:#c65353;" onclick="removeFromBag(${idx})">${removeLabels[currentLang]}</button>
                     </div>
                 `;
-                container.appendChild(div);
-            });
+      container.appendChild(div);
+    });
 
-            document.getElementById('cartTotalDisplay').textContent = formatPrice(total);
-        }
+    document.getElementById('cartTotalDisplay').textContent = formatPrice(total);
+  }
 
-        function proceedCheckout() {
-            if (cart.length === 0) return;
-            const checkoutMsgs = {
-                fr: "Les acquisitions en ligne directes seront bientôt disponibles. Veuillez utiliser le formulaire de contact pour réserver.",
-                en: "Direct online checkouts will be available soon. Please use the contact form to reserve.",
-                it: "I pagamenti online diretti saranno presto disponibili. Si prega di utilizzare il modulo di contatto per prenotare.",
-                es: "Las adquisiciones online directas estarán disponibles próximamente. Utiliza el formulario de contacto para reservar."
-            };
-            alert(checkoutMsgs[currentLang]);
-            toggleCartDrawer(false);
-            const contactSection = document.getElementById('contact');
-            contactSection.scrollIntoView({ behavior: 'smooth' });
-        }
+  function proceedCheckout() {
+    if (cart.length === 0) return;
+    const checkoutMsgs = {
+      fr: "Les acquisitions en ligne directes seront bientôt disponibles. Veuillez utiliser le formulaire de contact pour réserver.",
+      en: "Direct online checkouts will be available soon. Please use the contact form to reserve.",
+      it: "I pagamenti online diretti saranno presto disponibili. Si prega di utilizzare il modulo di contatto per prenotare.",
+      es: "Las adquisiciones online directas estarán disponibles próximamente. Utiliza el formulario de contacto para reservar."
+    };
+    alert(checkoutMsgs[currentLang]);
+    toggleCartDrawer(false);
+    const contactSection = document.getElementById('contact');
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  }
 
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const form = e.target;
-            const formData = new FormData(form);
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
 
-            fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData).toString()
-            })
-            .then(() => {
-                const successMsgs = {
-                    fr: "Demande transmise avec succès à l'atelier. Nous vous répondrons rapidement.",
-                    en: "Inquiry successfully sent to the studio. We will get back to you shortly.",
-                    it: "Richiesta inviata con successo allo studio. Vi risponderemo al più presto.",
-                    es: "Solicitud enviada con éxito al estudio. Nos pondremos en contacto con usted en breve."
-                };
-                showToast(successMsgs[currentLang]);
-                form.reset();
-            })
-            .catch((error) => {
-                console.error("Form error:", error);
-                showToast("Erreur lors de l'envoi. Veuillez réessayer.");
-            });
-        }
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    })
+      .then(() => {
+        const successMsgs = {
+          fr: "Demande transmise avec succès à l'atelier. Nous vous répondrons rapidement.",
+          en: "Inquiry successfully sent to the studio. We will get back to you shortly.",
+          it: "Richiesta inviata con successo allo studio. Vi risponderemo al più presto.",
+          es: "Solicitud enviada con éxito al estudio. Nos pondremos en contacto con usted en breve."
+        };
+        showToast(successMsgs[currentLang]);
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("Form error:", error);
+        showToast("Erreur lors de l'envoi. Veuillez réessayer.");
+      });
+  }
 
-        function showToast(msg) {
-            const toast = document.getElementById('toastMessage');
-            toast.textContent = msg;
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 3500);
-        }
+  function showToast(msg) {
+    const toast = document.getElementById('toastMessage');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3500);
+  }
 
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape') {
-            closeModal();
-            toggleCartDrawer(false);
-            closeMobileMenu();
-          } else if (e.key === 'ArrowLeft' && document.getElementById('artworkModal').classList.contains('open')) {
-            prevCarouselImage();
-          } else if (e.key === 'ArrowRight' && document.getElementById('artworkModal').classList.contains('open')) {
-            nextCarouselImage();
-          }
-        });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+      toggleCartDrawer(false);
+      closeMobileMenu();
+    } else if (e.key === 'ArrowLeft' && document.getElementById('artworkModal').classList.contains('open')) {
+      prevCarouselImage();
+    } else if (e.key === 'ArrowRight' && document.getElementById('artworkModal').classList.contains('open')) {
+      nextCarouselImage();
+    }
+  });
 
-        // 1. Abre el modal automáticamente si la URL contiene un hash como #artwork-ID
-        function checkUrlHashForModal() {
-          const hash = window.location.hash;
-          if (hash && hash.startsWith('#artwork-')) {
-            const artId = hash.replace('#artwork-', '');
-            openArtworkModal(artId);
-          }
-        }
+  function checkUrlHashForModal() {
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#artwork-')) {
+      const artId = hash.replace('#artwork-', '');
+      openArtworkModal(artId);
+    }
+  }
 
-        // 2. Gestiona la navegación con los botones Atrás / Adelante del navegador
-        window.addEventListener('popstate', (e) => {
-          if (e.state && e.state.artworkId) {
-            openArtworkModal(e.state.artworkId);
-          } else {
-            closeModal();
-          }
-        });
+  window.addEventListener('popstate', (e) => {
+    if (e.state && e.state.artworkId) {
+      openArtworkModal(e.state.artworkId);
+    } else {
+      closeModal();
+    }
+  });
 
-        document.addEventListener('DOMContentLoaded', () => {
-          applyTheme();
-          applyMetadata();
-          setCurrency(currentCurrency);
-          setLanguage(currentLang);
-          updateCartUI();
-          renderDynamicFilterBar();
-          renderAllGrids();
-          checkUrlHashForModal(); // <-- Ejecuta la comprobación al cargar la página
-        });
-    </script>
+  document.addEventListener('DOMContentLoaded', () => {
+    applyTheme();
+    applyMetadata();
+    setCurrency(currentCurrency);
+    setLanguage(currentLang);
+    updateCartUI();
+    renderDynamicFilterBar();
+    renderAllGrids();
+    checkUrlHashForModal();
+  });
+</script>
 </body>
 </html>
