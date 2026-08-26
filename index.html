@@ -1160,7 +1160,7 @@
                     <div class="contact-inquiry-tags" id="contactInquiryTags"></div>
                 </div>
 
-                <form class="commissions-form" name="contact" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)">
+                <form class="commissions-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event)">                    <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
                     <input type="hidden" name="form-name" value="contact">
                     <div class="form-grid-2">
                         <input type="text" name="name" class="custom-input" data-i18n-ph="form_ph_name" placeholder="Nom complet / Name" required>
@@ -2069,15 +2069,37 @@
 
   function handleFormSubmit(e) {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(formData).toString() })
-      .then(() => {
-        const successMsgs = { fr: "Demande transmise avec succès à l'atelier.", en: "Inquiry successfully sent to the studio.", it: "Richiesta inviata con successo.", es: "Solicitud enviada con éxito." };
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Server returned ${response.status}`);
+        }
+        const successMsgs = {
+          fr: "Demande transmise avec succès à l'atelier.",
+          en: "Inquiry successfully sent to the studio.",
+          it: "Richiesta inviata con successo.",
+          es: "Solicitud enviada con éxito."
+        };
         showToast(successMsgs[currentLang] || successMsgs.fr);
-        e.target.reset();
+        form.reset();
         clearInquirySelection();
       })
-      .catch(() => showToast("Erreur lors de l'envoi."));
+      .catch(() => {
+        const errorMsgs = {
+          fr: "Erreur lors de l'envoi. Veuillez réessayer.",
+          en: "Error sending message. Please try again.",
+          it: "Errore durante l'invio. Riprova più tardi.",
+          es: "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
+        };
+        showToast(errorMsgs[currentLang] || errorMsgs.fr);
+      });
   }
 
   function showToast(msg) {
