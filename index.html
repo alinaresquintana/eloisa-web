@@ -14,7 +14,7 @@
     <meta name="keywords" content="Eloísa Rodríguez, ERG Art, artiste peintre Vich, atelier d'art Vaud, atelier d'artiste La Côte, peinture contemporaine Suisse, tableaux sur mesure, tirages d'art, art abstrait, acrylique sur toile, portraits">
     <meta name="author" content="Eloísa Rodríguez">
 
-    <!-- Open Graph / Redes Sociales (Facebook, WhatsApp, LinkedIn, iMessage) -->
+    <!-- Open Graph / Redes Sociales -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://eloisarg.com/">
     <meta property="og:title" content="Eloísa Rodríguez (ERG) | Artiste Peintre & Atelier d'Art à Vich">
@@ -37,6 +37,7 @@
 
     <style>
         :root {
+            --banner-height: 0px;
             --bg-body: transparent;
             --bg-solid: #0c0f15;
             --bg-card: #131822;
@@ -241,16 +242,85 @@
             background: rgba(12, 15, 21, 0.85);
         }
 
-        .navbar {
+        /* Top Announcement Bar */
+        .announcement-bar {
             position: fixed;
             top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1001;
+            background: linear-gradient(90deg, #131822 0%, #1f2737 50%, #131822 100%);
+            border-bottom: 1px solid var(--accent-gold);
+            color: var(--text-main);
+            font-size: 13px;
+            padding: 9px 40px 9px 24px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        body.light-theme .announcement-bar {
+            background: linear-gradient(90deg, #f0eee6 0%, #e3dfd3 50%, #f0eee6 100%);
+            color: #1f242e;
+        }
+
+        .announcement-bar-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .announcement-bar strong {
+            color: var(--accent-gold);
+        }
+
+        .announcement-bar-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-gold);
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: var(--transition);
+        }
+
+        .announcement-bar-link:hover {
+            color: var(--accent-gold-hover);
+        }
+
+        .announcement-bar-close {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            line-height: 1;
+            color: var(--text-muted);
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px 8px;
+        }
+
+        .announcement-bar-close:hover {
+            color: var(--text-heading);
+        }
+
+        /* Navbar & Global Spacing */
+        .navbar {
+            position: fixed;
+            top: var(--banner-height);
             left: 0;
             width: 100%;
             z-index: 1000;
             background: var(--nav-bg);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-color);
-            transition: background 0.3s ease, border-color 0.3s ease;
+            transition: top 0.3s ease, background 0.3s ease, border-color 0.3s ease;
         }
 
         .nav-inner {
@@ -493,12 +563,13 @@
 
         /* HERO SECTION */
         .hero-split-section {
-            margin-top: 84px;
-            min-height: calc(100vh - 84px);
+            margin-top: calc(84px + var(--banner-height));
+            min-height: calc(100vh - 84px - var(--banner-height));
             display: flex;
             align-items: center;
             position: relative;
             background: linear-gradient(to right, rgba(12, 15, 21, 0.92) 0%, rgba(12, 15, 21, 0.7) 65%, transparent 100%);
+            transition: margin-top 0.3s ease;
         }
 
         body.light-theme .hero-split-section {
@@ -1245,7 +1316,7 @@
             .modal-visual-wrap { border-right: none; border-bottom: 1px solid var(--border-color); }
             .nav-links {
                 position: fixed;
-                top: 84px;
+                top: calc(84px + var(--banner-height));
                 left: 0;
                 width: 100%;
                 background: var(--bg-modal);
@@ -1264,8 +1335,10 @@
     <!-- Ficheros externos de datos y textos -->
     <script src="metadata.js"></script>
     <script src="i18n.js"></script>
+    <script src="notifications.js"></script>
     <script src="artworks.js"></script>
-    <!-- Schema.org JSON-LD (Datos Estructurados para Google) -->
+
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -1318,13 +1391,19 @@
 </head>
 <body oncontextmenu="return handleRightClick(event);">
 
+<!-- Top Announcement Bar -->
+<aside class="announcement-bar" id="announcementBar" role="region" aria-label="Announcement">
+    <div class="announcement-bar-content" id="announcementContent"></div>
+    <button class="announcement-bar-close" onclick="dismissNotification()" aria-label="Fermer l'annonce">&times;</button>
+</aside>
+
 <!-- Fondo Principal Local -->
 <div class="global-fixed-bg">
     <img src="images/background.jpg" alt="Eloísa Rodríguez Master Background Canvas" decoding="async" onload="this.classList.add('loaded')">
 </div>
 
 <!-- Header Navigation -->
-<header class="navbar">
+<header class="navbar" id="mainNavbar">
     <div class="container-wide nav-inner">
         <div class="brand-logo-wrap">
             <a href="#" class="brand-logo" aria-label="Eloísa Rodríguez Homepage">
@@ -1630,7 +1709,7 @@
                     <li><strong data-i18n="modal_year_label">Année :</strong> <span id="modalYear"></span></li>
                 </ul>
 
-                <!-- Insignias de confianza con claves i18n -->
+                <!-- Insignias de confianza -->
                 <div class="trust-badges-container" id="trustBadgesWrap">
                     <div class="trust-badge-item">
                         <div class="trust-badge-icon"><svg viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg></div>
@@ -1685,12 +1764,15 @@
   let currentTheme = localStorage.getItem('erg_theme') || 'dark';
   let currentCurrency = localStorage.getItem('erg_currency') || 'CHF';
   let cart = JSON.parse(localStorage.getItem('erg_cart') || '[]');
+
   let activeSeriesFilter = 'nebula-sediment';
   let onlyAvailable = false;
 
   let currentModalArtwork = null;
   let currentModalImageIndex = 0;
+  let activeNotification = null;
 
+  // Base en Francos Suizos (CHF = 1.0)
   const exchangeRates = { CHF: 1.0, EUR: 1.07, USD: 1.24 };
   const i18n = window.ERG_I18N || {};
   let artworks = window.ERG_ARTWORKS || [];
@@ -1782,6 +1864,83 @@
     return `${val}`;
   }
 
+  function getActiveNotification() {
+    const notifs = window.ERG_NOTIFICATIONS || [];
+    const now = new Date();
+
+    return notifs.find(n => {
+      if (!n.active) return false;
+      const start = n.startDate ? new Date(n.startDate) : null;
+      const end = n.endDate ? new Date(n.endDate) : null;
+
+      if (start && now < start) return false;
+      if (end && now > end) return false;
+      if (sessionStorage.getItem(`erg_dismissed_${n.id}`)) return false;
+
+      return true;
+    });
+  }
+
+  function handleNotificationLinkClick(e, link) {
+    if (!link) return;
+
+    // 1. Caso: Deeplink a una obra específica (#artwork-art-XX)
+    if (link.startsWith('#artwork-')) {
+      e.preventDefault();
+      const artId = link.replace('#artwork-', '');
+      openArtworkModal(artId);
+      return;
+    }
+
+    // 2. Caso: Enlace interno a una sección de la página (#collection, #contact, etc.)
+    if (link.startsWith('#')) {
+      e.preventDefault();
+      const targetEl = document.querySelector(link);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth' });
+        history.pushState(null, '', link);
+      }
+      return;
+    }
+
+    // 3. Caso: Enlace externo (deja actuar al navegador de forma estándar)
+  }
+
+  function renderNotificationBar() {
+    const banner = document.getElementById('announcementBar');
+    const container = document.getElementById('announcementContent');
+    activeNotification = getActiveNotification();
+
+    if (!activeNotification) {
+      banner.style.display = 'none';
+      document.documentElement.style.setProperty('--banner-height', '0px');
+      return;
+    }
+
+    const text = activeNotification.text[currentLang] || activeNotification.text.fr || '';
+    const linkText = activeNotification.linkText ? (activeNotification.linkText[currentLang] || activeNotification.linkText.fr || '') : '';
+    const link = activeNotification.link || '';
+
+    let html = `<span>${text}</span>`;
+    if (link && linkText) {
+      // Escapamos comillas para pasar el link limpiamente a la función de clic
+      html += ` <a href="${link}" class="announcement-bar-link" onclick="handleNotificationLinkClick(event, '${link}')">${linkText}</a>`;
+    }
+
+    container.innerHTML = html;
+    banner.style.display = 'flex';
+
+    const height = banner.offsetHeight || 38;
+    document.documentElement.style.setProperty('--banner-height', `${height}px`);
+  }
+
+  function dismissNotification() {
+    if (activeNotification) {
+      sessionStorage.setItem(`erg_dismissed_${activeNotification.id}`, 'true');
+    }
+    renderNotificationBar();
+  }
+
   function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('erg_lang', lang);
@@ -1805,12 +1964,15 @@
     });
 
     const statementEl = document.getElementById('statementFullText');
-    statementEl.innerHTML = `
+    if (statementEl && i18n[lang]) {
+      statementEl.innerHTML = `
                 <p style="margin-bottom: 18px;">${i18n[lang].statement_p1}</p>
                 <p style="margin-bottom: 18px;">${i18n[lang].statement_p2}</p>
                 <p>${i18n[lang].statement_p3}</p>
             `;
+    }
 
+    renderNotificationBar();
     renderDynamicFilterBar();
     renderAllGrids();
     renderExhibitions();
@@ -1930,7 +2092,6 @@
     uniqueSeries.forEach(seriesKey => {
       const label = getSeriesName(seriesKey);
       const isActive = activeSeriesFilter === seriesKey ? 'active' : '';
-
       html += `<button class="filter-btn ${isActive}" onclick="filterGallery('${seriesKey}', this)">${label}</button>`;
     });
 
@@ -2349,6 +2510,14 @@
       openArtworkModal(e.state.artworkId);
     } else {
       closeModal();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (activeNotification) {
+      const banner = document.getElementById('announcementBar');
+      const height = banner.offsetHeight || 38;
+      document.documentElement.style.setProperty('--banner-height', `${height}px`);
     }
   });
 

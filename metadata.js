@@ -5,8 +5,8 @@ window.ERG_METADATA = {
   email: "contact@eloisarg.com",
   domain: "www.eloisarg.com",
   socials: {
-    instagram: "https://instagram.com",
-    facebook: "https://facebook.com"
+    instagram: "https://www.instagram.com/eloisarg_art/",
+    facebook: "https://m.facebook.com/100081551711285"
   },
   exhibitions: [
     {
