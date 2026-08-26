@@ -11,8 +11,8 @@ window.ERG_ARTWORKS = [
       it: "Tecnica mista su tela",
       es: "Técnica mixta sobre lienzo"
     },
-    year: "2023",
-    priceEur: 3200,
+    year: "2025",
+    priceChf: 1850,
     status: "available",
     images: [
       "images/paintings/original-nebuleuse-en-bleu-eloisa-rodriguez.webp"
@@ -36,8 +36,8 @@ window.ERG_ARTWORKS = [
       it: "Tecnica mista, terre ocre e pigmenti su tela",
       es: "Técnica mixta, tierras ocres y pigmentos sobre lienzo"
     },
-    year: "2023",
-    priceEur: 3800,
+    year: "2024",
+    priceChf: 1400,
     status: "available",
     images: [
       "images/paintings/original-sedimentum-iv-eloisa-rodriguez.webp"
@@ -62,7 +62,7 @@ window.ERG_ARTWORKS = [
       es: "Técnica mixta sobre lienzo"
     },
     year: "2023",
-    priceEur: 2800,
+    priceChf: 2800,
     status: "available",
     images: [
       "images/paintings/original-nebula-genesis-eloisa-rodriguez.webp"
@@ -87,7 +87,7 @@ window.ERG_ARTWORKS = [
       es: "Técnica mixta sobre lienzo"
     },
     year: "2023",
-    priceEur: 2600,
+    priceChf: 2600,
     status: "available",
     images: [
       "images/paintings/original-tectonic-memory-eloisa-rodriguez.webp"
@@ -111,8 +111,8 @@ window.ERG_ARTWORKS = [
       it: "Tecnica mista su tela",
       es: "Técnica mixta sobre lienzo"
     },
-    year: "2023",
-    priceEur: 3100,
+    year: "2025",
+    priceChf: 1850,
     status: "available",
     images: [
       "images/paintings/original-sedimentum-quadrata-eloisa-rodriguez.webp"
@@ -136,8 +136,8 @@ window.ERG_ARTWORKS = [
       it: "Tecnica mista su lino",
       es: "Técnica mixta sobre lino"
     },
-    year: "2023",
-    priceEur: 2400,
+    year: "2024",
+    priceChf: 1250,
     status: "available",
     images: [
       "images/paintings/original-horizontal-sediment-eloisa-rodriguez.webp"
@@ -162,7 +162,7 @@ window.ERG_ARTWORKS = [
       es: "Óleo, pigmentos minerales y pan de oro sobre lino"
     },
     year: "2023",
-    priceEur: 3100,
+    priceChf: 3100,
     status: "available",
     images: [
       "images/paintings/original-cosmic-harmony-eloisa-rodriguez.webp"
@@ -187,7 +187,7 @@ window.ERG_ARTWORKS = [
       es: "Óleo, pigmentos cósmicos y polvos metálicos sobre lino"
     },
     year: "2024",
-    priceEur: 3900,
+    priceChf: 3900,
     status: "available",
     images: [
       "images/paintings/original-milky-way-centre-eloisa-rodriguez.webp"
@@ -212,7 +212,7 @@ window.ERG_ARTWORKS = [
       es: "Óleo sobre lienzo"
     },
     year: "2024",
-    priceEur: 3400,
+    priceChf: 3400,
     status: "on_loan",
     images: [
       "images/paintings/original-eternal-stop-eloisa-rodriguez.webp"
@@ -229,15 +229,15 @@ window.ERG_ARTWORKS = [
     title: "Infinite Desert",
     category: "original",
     series: "nebula-sediment",
-    dimensions: "150 × 100 cm",
+    dimensions: "130 × 100 cm",
     medium: {
       fr: "Sable, terres naturelles et huile sur lin",
       en: "Sand, natural earths & oil on linen",
       it: "Sabbia, terre naturali e olio su lino",
       es: "Arena, tierras naturales y óleo sobre lino"
     },
-    year: "2024",
-    priceEur: 4100,
+    year: "2025",
+    priceChf: 2100,
     status: "available",
     images: [
       "images/paintings/original-infinite-desert-eloisa-rodriguez.webp"
@@ -262,7 +262,7 @@ window.ERG_ARTWORKS = [
       es: "Giclée sobre papel de algodón Hahnemühle 310g"
     },
     year: "2023",
-    priceEur: 420,
+    priceChf: 420,
     status: "available",
     images: [
       "images/paintings/print-cosmic-harmony-1-eloisa-rodriguez.webp",
@@ -289,7 +289,7 @@ window.ERG_ARTWORKS = [
       es: "Acrílico sobre lienzo"
     },
     year: "2024",
-    priceEur: 6420,
+    priceChf: 6420,
     status: "sold",
     images: [
       "images/paintings/original-presence-silencieuse-eloisa-rodriguez.webp"
@@ -314,7 +314,7 @@ window.ERG_ARTWORKS = [
       es: "Acrílico sobre lienzo"
     },
     year: "2023",
-    priceEur: 5800,
+    priceChf: 5800,
     status: "sold",
     images: [
       "images/paintings/original-immersion-pourpre-eloisa-rodriguez.webp"
@@ -339,7 +339,7 @@ window.ERG_ARTWORKS = [
       es: "Acrílico sobre lienzo"
     },
     year: "2023",
-    priceEur: 1600,
+    priceChf: 1600,
     status: "available",
     images: [
       "images/paintings/original-cosmos-ethere-eloisa-rodriguez.webp"

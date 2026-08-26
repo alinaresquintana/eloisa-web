@@ -1359,9 +1359,9 @@
             </button>
 
             <select class="currency-select" id="currencySelector" onchange="setCurrency(this.value)" aria-label="Currency Selector">
+                <option value="CHF" selected>CHF</option>
                 <option value="EUR">EUR (€)</option>
                 <option value="USD">USD ($)</option>
-                <option value="CHF">CHF</option>
             </select>
 
             <button class="cart-pill-btn" onclick="toggleCartDrawer()" aria-haspopup="dialog" aria-expanded="false" id="cartOpenBtn" aria-label="Voir la sélection d'atelier">
@@ -1622,7 +1622,7 @@
             <div>
                 <span class="section-tag" id="modalSeries">SÉRIE</span>
                 <h3 class="serif-font" style="font-size: 26px; margin-bottom: 8px;" id="modalTitle">Titre</h3>
-                <div class="art-card-price" style="font-size: 22px; color: var(--accent-gold);" id="modalPrice">€0</div>
+                <div class="art-card-price" style="font-size: 22px; color: var(--accent-gold);" id="modalPrice">CHF 0</div>
 
                 <ul class="modal-specs-list">
                     <li><strong data-i18n="modal_tech_label">Technique :</strong> <span id="modalMedium"></span></li>
@@ -1666,7 +1666,7 @@
     <div class="cart-drawer-footer">
         <div style="display: flex; justify-content: space-between; margin-bottom: 14px;">
             <span data-i18n="cart_total_label">Total Estimé :</span>
-            <span class="art-card-price" id="cartTotalDisplay">€0</span>
+            <span class="art-card-price" id="cartTotalDisplay">CHF 0</span>
         </div>
         <button class="btn-primary" style="width: 100%;" onclick="proceedCheckout()" data-i18n="cart_checkout_btn">Passerelle de paiement bientôt disponible</button>
     </div>
@@ -1683,16 +1683,15 @@
 
   let currentLang = localStorage.getItem('erg_lang') || 'fr';
   let currentTheme = localStorage.getItem('erg_theme') || 'dark';
-  let currentCurrency = localStorage.getItem('erg_currency') || 'EUR';
+  let currentCurrency = localStorage.getItem('erg_currency') || 'CHF';
   let cart = JSON.parse(localStorage.getItem('erg_cart') || '[]');
-
   let activeSeriesFilter = 'nebula-sediment';
   let onlyAvailable = false;
 
   let currentModalArtwork = null;
   let currentModalImageIndex = 0;
 
-  const exchangeRates = { EUR: 1.0, USD: 1.08, CHF: 0.97 };
+  const exchangeRates = { CHF: 1.0, EUR: 1.07, USD: 1.24 };
   const i18n = window.ERG_I18N || {};
   let artworks = window.ERG_ARTWORKS || [];
 
@@ -1775,11 +1774,11 @@
     return false;
   }
 
-  function formatPrice(eur) {
-    const val = Math.round(eur * exchangeRates[currentCurrency]);
+  function formatPrice(chf) {
+    const val = Math.round(chf * exchangeRates[currentCurrency]);
+    if (currentCurrency === 'CHF') return `CHF ${val.toLocaleString()}`;
     if (currentCurrency === 'EUR') return `€${val.toLocaleString()}`;
     if (currentCurrency === 'USD') return `$${val.toLocaleString()}`;
-    if (currentCurrency === 'CHF') return `CHF ${val.toLocaleString()}`;
     return `${val}`;
   }
 
@@ -1899,7 +1898,7 @@
                         <h4 class="art-card-title serif-font">${art.title}</h4>
                         <p class="art-card-specs">${art.dimensions} • ${mediumText} (${art.year})</p>
                         <div class="art-card-bottom">
-                            <span class="art-card-price">${formatPrice(art.priceEur)}</span>
+                            <span class="art-card-price">${formatPrice(art.priceChf)}</span>
                             ${actionButtonHtml}
                         </div>
                     </div>
@@ -2054,7 +2053,7 @@
 
     document.getElementById('modalSeries').textContent = getSeriesName(art.series);
     document.getElementById('modalTitle').textContent = art.title;
-    document.getElementById('modalPrice').textContent = formatPrice(art.priceEur);
+    document.getElementById('modalPrice').textContent = formatPrice(art.priceChf);
     document.getElementById('modalMedium').textContent = art.medium[currentLang] || art.medium.fr;
     document.getElementById('modalDimensions').textContent = art.dimensions;
     document.getElementById('modalYear').textContent = art.year;
@@ -2257,7 +2256,7 @@
     const removeLabels = { fr: 'Retirer', en: 'Remove', it: 'Rimuovi', es: 'Eliminar' };
 
     cart.forEach((item, idx) => {
-      const itemTotal = item.priceEur * (item.qty || 1);
+      const itemTotal = (item.priceChf || 0) * (item.qty || 1);
       total += itemTotal;
       const qtyText = item.qty > 1 ? ` (×${item.qty})` : '';
       const itemImg = getArtworkMainImage(item);
