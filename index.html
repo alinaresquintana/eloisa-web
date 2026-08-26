@@ -5,32 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eloísa Rodríguez (ERG) | Artiste Peintre & Atelier d'Art à Vich, Suisse</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="version" content="2.6.0">
 
-    <!-- SEO & Metadata -->
-    <meta name="version" content="2.5.0">
-    <meta name="description" content="Site officiel de l'artiste peintre Eloísa Rodríguez (ERG). Atelier d'art à Vich (Vaud) : peintures contemporaines originales, commandes sur mesure et tirages d'art.">
-    <meta name="keywords" content="Eloísa Rodríguez, ERG Art, artiste peintre Vich, atelier d'art Vaud, atelier d'artiste La Côte, peinture contemporaine Suisse, tableaux sur mesure, tirages d'art, art abstrait, acrylique sur toile, portraits">
-    <meta name="author" content="Eloísa Rodríguez">
-
-    <!-- Open Graph / Redes Sociales -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://eloisarg.com/">
-    <meta property="og:title" content="Eloísa Rodríguez (ERG) | Artiste Peintre & Atelier d'Art à Vich">
-    <meta property="og:description" content="Site officiel de l'artiste peintre contemporaine Eloísa Rodríguez. Exploration de la matière brute, peintures originales, tirages d'art et commandes privées à Vich (Vaud).">
-    <meta property="og:image" content="https://eloisarg.com/images/paintings/original-milky-way-centre-eloisa-rodriguez.webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="fr_FR">
-
-    <!-- Twitter / X Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Eloísa Rodríguez (ERG) | Artiste Peintre & Atelier d'Art à Vich">
-    <meta name="twitter:description" content="Site officiel de l'artiste peintre contemporaine Eloísa Rodríguez. Peintures originales, tirages d'art et commandes privées à Vich (Suisse).">
-    <meta name="twitter:image" content="https://eloisarg.com/images/paintings/original-milky-way-centre-eloisa-rodriguez.webp">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -48,9 +25,9 @@
             --accent-gold: #d4af37;
             --accent-gold-hover: #e5c158;
             --accent-gold-soft: rgba(212, 175, 55, 0.15);
-            --border-color: rgba(255, 255, 255, 0.1);
+            --border-color: rgba(255, 255, 255, 0.12);
             --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            --nav-bg: rgba(12, 15, 21, 0.9);
+            --nav-bg: rgba(12, 15, 21, 0.94);
             --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             --font-serif: 'Cormorant Garamond', Georgia, serif;
             --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -68,249 +45,46 @@
             --accent-gold: #9e7520;
             --accent-gold-hover: #835e13;
             --accent-gold-soft: rgba(158, 117, 32, 0.12);
-            --border-color: rgba(0, 0, 0, 0.1);
+            --border-color: rgba(0, 0, 0, 0.12);
             --card-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
-            --nav-bg: rgba(244, 243, 239, 0.92);
+            --nav-bg: rgba(244, 243, 239, 0.95);
         }
 
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; background-color: #0c0f15; }
+        body { font-family: var(--font-sans), sans-serif; background: transparent; color: var(--text-main); line-height: 1.65; font-size: 15px; overflow-x: hidden; -webkit-font-smoothing: antialiased; position: relative; user-select: none; -webkit-user-select: none; }
+        img { max-width: 100%; display: block; filter: blur(10px); transition: filter 0.5s ease-out; }
+        img.loaded { filter: blur(0px); }
+        section[id] { scroll-margin-top: 100px; }
 
-        html {
-            scroll-behavior: smooth;
-            background-color: #0c0f15;
-        }
+        .global-fixed-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -10; pointer-events: none; overflow: hidden; }
+        .global-fixed-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 59% 65%; filter: brightness(1) contrast(1.05) saturate(1.1); }
+        body.light-theme .global-fixed-bg img { filter: brightness(1.05) contrast(1) opacity(0.85); }
+        a { color: inherit; text-decoration: none; transition: var(--transition); }
+        button { font-family: inherit, sans-serif; cursor: pointer; border: none; background: none; outline: none; transition: var(--transition); }
+        .container-wide { max-width: 1500px; margin: 0 auto; padding: 0 32px; }
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 28px; }
+        h1, h2, h3, h4, .serif-font { font-family: var(--font-serif), Georgia, serif; font-weight: 400; letter-spacing: 0.02em; color: var(--text-heading); }
+        .section-tag { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.25em; color: var(--accent-gold); margin-bottom: 12px; font-weight: 700; }
+        .section-title { font-size: clamp(32px, 4vw, 48px); line-height: 1.15; margin-bottom: 16px; }
+        .section-subtitle { color: var(--text-muted); font-size: 16px; max-width: 640px; margin-bottom: 44px; }
 
-        body {
-            font-family: var(--font-sans), sans-serif;
-            background: transparent;
-            color: var(--text-main);
-            line-height: 1.65;
-            font-size: 15px;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            position: relative;
-            user-select: none;
-            -webkit-user-select: none;
-        }
+        .btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 28px; background: var(--accent-gold); color: #0c0f15; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border-radius: var(--radius-sm); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35); transition: var(--transition); }
+        .btn-primary:hover { background: var(--accent-gold-hover); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45); }
+        .btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 26px; background: rgba(12, 15, 21, 0.6); backdrop-filter: blur(10px); color: var(--text-main); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid var(--border-color); border-radius: var(--radius-sm); transition: var(--transition); }
+        .btn-outline:hover { border-color: var(--accent-gold); color: var(--accent-gold); background: rgba(12, 15, 21, 0.85); }
 
-        img {
-            max-width: 100%;
-            display: block;
-            -webkit-user-drag: none;
-            pointer-events: auto;
-            -webkit-touch-callout: none;
-            filter: blur(10px);
-            transition: filter 0.5s ease-out;
-        }
+        /* Announcement Bar */
+        .announcement-bar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1001; background: linear-gradient(90deg, #131822 0%, #1f2737 50%, #131822 100%); border-bottom: 1px solid var(--accent-gold); color: var(--text-main); font-size: 13px; padding: 9px 40px 9px 24px; display: none; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); }
+        body.light-theme .announcement-bar { background: linear-gradient(90deg, #f0eee6 0%, #e3dfd3 50%, #f0eee6 100%); color: #1f242e; }
+        .announcement-bar-content { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; text-align: center; }
+        .announcement-bar strong { color: var(--accent-gold); }
+        .announcement-bar-link { display: inline-flex; align-items: center; color: var(--accent-gold); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+        .announcement-bar-close { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); cursor: pointer; }
 
-        img.loaded {
-            filter: blur(0px);
-        }
-
-        section[id] {
-            scroll-margin-top: 90px;
-        }
-
-        .global-fixed-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -10;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .global-fixed-bg img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: 59% 65%;
-            filter: brightness(1) contrast(1.05) saturate(1.1);
-        }
-
-        body.light-theme .global-fixed-bg img {
-            filter: brightness(1.05) contrast(1) opacity(0.85);
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        button {
-            font-family: inherit, sans-serif;
-            cursor: pointer;
-            border: none;
-            background: none;
-            outline: none;
-            transition: var(--transition);
-        }
-
-        .container-wide {
-            max-width: 1480px;
-            margin: 0 auto;
-            padding: 0 32px;
-        }
-
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 28px;
-        }
-
-        h1, h2, h3, h4, .serif-font {
-            font-family: var(--font-serif), Georgia, serif;
-            font-weight: 400;
-            letter-spacing: 0.02em;
-            color: var(--text-heading);
-        }
-
-        .section-tag {
-            display: inline-block;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.25em;
-            color: var(--accent-gold);
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-
-        .section-title {
-            font-size: clamp(32px, 4vw, 48px);
-            line-height: 1.15;
-            margin-bottom: 16px;
-        }
-
-        .section-subtitle {
-            color: var(--text-muted);
-            font-size: 16px;
-            max-width: 640px;
-            margin-bottom: 44px;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 13px 28px;
-            background: var(--accent-gold);
-            color: #0c0f15;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            border-radius: var(--radius-sm);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-            transition: var(--transition);
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-gold-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
-        }
-
-        .btn-outline {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px 26px;
-            background: rgba(12, 15, 21, 0.6);
-            backdrop-filter: blur(10px);
-            color: var(--text-main);
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            transition: var(--transition);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--accent-gold);
-            color: var(--accent-gold);
-            background: rgba(12, 15, 21, 0.85);
-        }
-
-        /* Top Announcement Bar */
-        .announcement-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1001;
-            background: linear-gradient(90deg, #131822 0%, #1f2737 50%, #131822 100%);
-            border-bottom: 1px solid var(--accent-gold);
-            color: var(--text-main);
-            font-size: 13px;
-            padding: 9px 40px 9px 24px;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        body.light-theme .announcement-bar {
-            background: linear-gradient(90deg, #f0eee6 0%, #e3dfd3 50%, #f0eee6 100%);
-            color: #1f242e;
-        }
-
-        .announcement-bar-content {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .announcement-bar strong {
-            color: var(--accent-gold);
-        }
-
-        .announcement-bar-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--accent-gold);
-            font-weight: 700;
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            transition: var(--transition);
-        }
-
-        .announcement-bar-link:hover {
-            color: var(--accent-gold-hover);
-        }
-
-        .announcement-bar-close {
-            position: absolute;
-            right: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 18px;
-            line-height: 1;
-            color: var(--text-muted);
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 4px 8px;
-        }
-
-        .announcement-bar-close:hover {
-            color: var(--text-heading);
-        }
-
-        /* Navbar & Global Spacing */
+        /* -------------------------------------------------------------
+           HEADER EDITORIAL (Estructura de 3 Bloques)
+        ------------------------------------------------------------- */
         .navbar {
             position: fixed;
             top: var(--banner-height);
@@ -320,220 +94,200 @@
             background: var(--nav-bg);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-color);
-            transition: top 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+            transition: top 0.3s ease;
         }
 
         .nav-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 84px;
+            height: 82px;
             gap: 24px;
         }
 
-        .brand-logo {
+        /* Bloque 1: Marca */
+        .block-brand {
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
         }
 
-        .brand-logo .logo-main {
-            font-family: var(--font-serif), Georgia, serif;
-            font-size: 21px;
-            letter-spacing: 0.18em;
+        .brand-logo-main {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            letter-spacing: 0.16em;
             font-weight: 600;
             text-transform: uppercase;
             color: var(--text-heading);
             white-space: nowrap;
         }
 
-        .brand-logo .logo-sub {
+        .brand-logo-sub {
             font-size: 9px;
-            letter-spacing: 0.3em;
+            letter-spacing: 0.32em;
             color: var(--accent-gold);
             text-transform: uppercase;
-            font-weight: 600;
+            font-weight: 700;
         }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            list-style: none;
-            flex-shrink: 0;
-        }
-
-        .nav-links a {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--text-muted);
-            font-weight: 600;
-            position: relative;
-            padding: 6px 0;
-            white-space: nowrap;
-            display: inline-block;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--accent-gold);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 1px;
+        /* Separadores Verticales Dorados */
+        .block-separator {
+            width: 1px;
+            height: 24px;
             background: var(--accent-gold);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after, .nav-links a.active::after {
-            width: 100%;
-        }
-
-        .nav-controls {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-left: 20px;
+            opacity: 0.45;
             flex-shrink: 0;
         }
 
-        .social-icons-group {
+        /* Bloque 2: Menú Central */
+        .block-menu {
             display: flex;
             align-items: center;
-            gap: 10px;
+            list-style: none;
+            gap: 0;
         }
 
-        .social-icon-btn {
+        .block-menu li {
+            display: flex;
+            align-items: center;
+        }
+
+        .block-menu li::after {
+            content: "/";
+            color: var(--border-color);
+            font-size: 12px;
+            margin: 0 14px;
+        }
+
+        .block-menu li:last-child::after {
+            display: none;
+        }
+
+        .block-menu a {
+            font-size: 11.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            font-weight: 600;
+            color: var(--text-muted);
+            padding: 6px 0;
+            transition: var(--transition);
+        }
+
+        .block-menu a:hover, .block-menu a.active {
+            color: var(--accent-gold);
+        }
+
+        /* Bloque 3: Controles & Utilidades */
+        .block-controls {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-shrink: 0;
+        }
+
+        /* Redes Sociales */
+        .social-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-btn {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 32px;
             height: 32px;
             border-radius: 50%;
-            border: 1px solid var(--border-color);
-            background: rgba(255, 255, 255, 0.04);
             color: var(--text-muted);
+            border: 1px solid transparent;
             transition: var(--transition);
         }
 
-        body.light-theme .social-icon-btn {
-            background: rgba(0, 0, 0, 0.04);
-            color: var(--text-main);
-        }
-
-        .social-icon-btn svg {
-            width: 14px;
-            height: 14px;
+        .social-btn svg {
+            width: 16px;
+            height: 16px;
             fill: currentColor;
         }
 
-        .social-icon-btn:hover {
-            border-color: var(--accent-gold);
+        .social-btn:hover {
             color: var(--accent-gold);
+            border-color: var(--border-color);
             transform: translateY(-2px);
         }
 
-        .lang-switch {
-            display: flex;
-            align-items: center;
+        /* Selectores de Idioma y Moneda en Dropdown */
+        .control-select {
+            background-color: var(--bg-card);
+            color: var(--text-main);
             border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 2px;
-            background: rgba(255, 255, 255, 0.04);
-            gap: 2px;
-        }
-
-        body.light-theme .lang-switch {
-            background: rgba(0, 0, 0, 0.04);
-        }
-
-        .lang-btn {
+            border-radius: var(--radius-sm);
+            padding: 5px 9px;
             font-size: 11px;
             font-weight: 600;
-            letter-spacing: 0.04em;
-            padding: 4px 7px;
-            border-radius: 14px;
-            color: var(--text-muted);
             cursor: pointer;
-            white-space: nowrap;
+            outline: none;
+            transition: var(--transition);
         }
 
-        .lang-btn.active {
-            background: var(--accent-gold);
-            color: #0c0f15;
-            font-weight: 700;
+        .control-select:hover {
+            border-color: var(--accent-gold);
         }
 
-        .controls-divider {
-            width: 1px;
-            height: 22px;
-            background: var(--border-color);
-            margin: 0 2px;
+        .control-select option {
+            background-color: #131822;
+            color: #f2f4f8;
+            padding: 4px;
         }
 
-        .theme-toggle-btn {
-            width: 34px;
-            height: 34px;
+        body.light-theme .control-select option {
+            background-color: #ffffff;
+            color: #1f242e;
+        }
+
+        /* Botón Modo Claro/Oscuro */
+        .theme-btn {
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             border: 1px solid var(--border-color);
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.03);
             color: var(--text-main);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 13px;
+            transition: var(--transition);
         }
 
-        body.light-theme .theme-toggle-btn {
-            background: rgba(0, 0, 0, 0.04);
+        body.light-theme .theme-btn {
+            background: rgba(0, 0, 0, 0.03);
         }
 
-        .theme-toggle-btn:hover {
+        .theme-btn:hover {
             border-color: var(--accent-gold);
             color: var(--accent-gold);
         }
 
-        .currency-select {
-            background-color: var(--bg-card);
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            padding: 5px 8px;
-            font-size: 11px;
-            cursor: pointer;
-            outline: none;
-        }
-
-        .currency-select option {
-            background-color: #131822;
-            color: #f2f4f8;
-        }
-
-        body.light-theme .currency-select option {
-            background-color: #ffffff;
-            color: #1f242e;
-        }
-
+        /* Botón de Cesta / Selección Sobrio */
         .cart-pill-btn {
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 6px 12px;
-            border: 1px solid var(--border-color);
+            padding: 6px 13px;
             border-radius: var(--radius-sm);
-            font-size: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             color: var(--text-main);
-            background: rgba(255, 255, 255, 0.04);
-            white-space: nowrap;
+            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.03);
+            transition: var(--transition);
         }
 
         body.light-theme .cart-pill-btn {
-            background: rgba(0, 0, 0, 0.04);
+            background: rgba(0, 0, 0, 0.03);
         }
 
         .cart-pill-btn:hover {
@@ -546,460 +300,23 @@
             color: #0c0f15;
             font-size: 10px;
             font-weight: 700;
-            width: 18px;
-            height: 18px;
+            width: 17px;
+            height: 17px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .mobile-hamburger {
-            display: none;
-            font-size: 22px;
-            color: var(--text-main);
-            padding: 4px;
-        }
+        .mobile-hamburger { display: none; font-size: 22px; color: var(--text-main); padding: 4px; }
 
-        /* HERO SECTION */
-        .hero-split-section {
-            margin-top: calc(84px + var(--banner-height));
-            min-height: calc(100vh - 84px - var(--banner-height));
-            display: flex;
-            align-items: center;
-            position: relative;
-            background: linear-gradient(to right, rgba(12, 15, 21, 0.92) 0%, rgba(12, 15, 21, 0.7) 65%, transparent 100%);
-            transition: margin-top 0.3s ease;
-        }
-
-        body.light-theme .hero-split-section {
-            background: linear-gradient(to right, rgba(244, 243, 239, 0.92) 0%, rgba(244, 243, 239, 0.7) 65%, transparent 100%);
-        }
-
-        .hero-split-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 100%;
-        }
-
-        .hero-split-left {
-            padding: 40px 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            text-align: left;
-            z-index: 2;
-            max-width: 750px;
-            margin: 0;
-        }
-
-        .hero-split-left h1 {
-            font-size: clamp(36px, 4.2vw, 58px);
-            line-height: 1.12;
-            margin-bottom: 22px;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-            text-align: left;
-        }
-
-        body.light-theme .hero-split-left h1 { text-shadow: none; }
-
-        .hero-split-left h1 em { font-style: italic; color: var(--accent-gold); }
-
-        .hero-split-left p {
-            color: var(--text-main);
-            opacity: 0.92;
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 34px;
-            max-width: 620px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            text-align: left;
-        }
-
-        body.light-theme .hero-split-left p { text-shadow: none; }
-
-        .hero-cta {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 16px;
-            flex-wrap: wrap;
-            width: 100%;
-        }
-
-        /* Statement Section */
-        .window-statement-section {
-            padding: 130px 0;
-            position: relative;
-        }
-
-        .statement-glass-box {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-            background: rgba(12, 15, 21, 0.75);
-            backdrop-filter: blur(16px);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 56px 48px;
-            box-shadow: var(--card-shadow);
-        }
-
-        body.light-theme .statement-glass-box { background: rgba(255, 255, 255, 0.88); }
-
-        .quote-glyph {
-            font-family: var(--font-serif), Georgia, serif;
-            font-size: 70px;
-            color: var(--accent-gold);
-            opacity: 0.8;
-            line-height: 1;
-            margin-bottom: -15px;
-        }
-
-        .statement-lead {
-            font-family: var(--font-serif), Georgia, serif;
-            font-size: clamp(24px, 3vw, 34px);
-            line-height: 1.45;
-            color: var(--text-heading);
-            font-style: italic;
-            margin-bottom: 28px;
-        }
-
-        .statement-body-text {
-            color: var(--text-main);
-            font-size: 16px;
-            line-height: 1.85;
-            text-align: justify;
-            text-align-last: center;
-            margin-bottom: 24px;
-        }
-
-        .statement-signature {
-            margin-top: 36px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .statement-author {
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--accent-gold);
-        }
-
-        .statement-role { font-size: 12px; color: var(--text-muted); letter-spacing: 0.08em; }
-
-        .solid-section {
-            background: var(--bg-solid);
-            padding: 110px 0;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            position: relative;
-            z-index: 2;
-        }
-
-        .bio-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 60px;
-            margin-bottom: 70px;
-            align-items: start;
-        }
-
-        .bio-lead-text {
-            background: var(--bg-card);
-            padding: 36px;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--card-shadow);
-        }
-
-        .bio-lead-text h3 { font-size: clamp(28px, 3.4vw, 40px); margin-bottom: 20px; line-height: 1.2; }
-        .bio-lead-text p { color: var(--text-muted); font-size: 15px; line-height: 1.8; margin-bottom: 18px; }
-
-        .bio-details-block {
-            background: var(--bg-card);
-            padding: 36px;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--card-shadow);
-            display: flex;
-            flex-direction: column;
-            gap: 36px;
-        }
-
-        .cv-column-header {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--accent-gold);
-            margin-bottom: 16px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-            font-weight: 700;
-        }
-
-        .cv-timeline { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-        .cv-item { display: grid; grid-template-columns: 70px 1fr; gap: 14px; font-size: 14px; }
-        .cv-year { font-family: var(--font-serif), Georgia, serif; font-weight: 700; color: var(--accent-gold); font-size: 16px; }
-        .cv-desc strong { color: var(--text-heading); font-weight: 600; }
-        .cv-desc span { color: var(--text-muted); display: block; font-size: 13px; }
-        .cv-placeholder-badge {
-            display: inline-block;
-            font-size: 10px;
-            padding: 2px 8px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px dashed var(--accent-gold);
-            color: var(--accent-gold);
-            border-radius: 3px;
-            margin-top: 4px;
-        }
-
-        .section-header-center {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 45px;
-        }
-
-        .filter-bar {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 35px;
-        }
-
-        .filter-btn {
-            padding: 8px 20px;
-            border-radius: 25px;
-            font-size: 12px;
-            color: var(--text-muted);
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-
-        .filter-btn:hover, .filter-btn.active {
-            color: #0c0f15;
-            background: var(--accent-gold);
-            border-color: var(--accent-gold);
-            font-weight: 700;
-        }
-
-        .filter-divider {
-            width: 1px;
-            height: 24px;
-            background: var(--border-color);
-            margin: 0 8px;
-        }
-
-        .filter-btn-avail {
-            padding: 8px 20px;
-            border-radius: 25px;
-            font-size: 12px;
-            color: var(--text-muted);
-            background: var(--bg-card);
-            border: 1px dashed var(--accent-gold);
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .filter-btn-avail:hover, .filter-btn-avail.active {
-            color: #0c0f15;
-            background: var(--accent-gold);
-            border-color: var(--accent-gold);
-            font-weight: 700;
-        }
-
-        .art-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 24px;
-            transition: opacity 0.25s ease, transform 0.25s ease;
-        }
-
-        .art-grid.animating { opacity: 0; transform: scale(0.985); }
-
-        .art-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: var(--transition);
-            box-shadow: var(--card-shadow);
-        }
-
-        .art-card:hover { transform: translateY(-5px); border-color: rgba(212, 175, 55, 0.5); }
-
-        .art-card-thumb {
-            height: 320px;
-            position: relative;
-            cursor: pointer;
-            overflow: hidden;
-            background: #080a0e;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px;
-        }
-
-        .art-card-thumb img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease-out;
-        }
-
-        .art-card:hover .art-card-thumb img { transform: scale(1.04); }
-
-        .art-badge {
-            position: absolute;
-            top: 14px;
-            left: 14px;
-            padding: 4px 10px;
-            border-radius: 3px;
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            z-index: 2;
-            backdrop-filter: blur(8px);
-        }
-
-        .badge-available { background: var(--accent-gold); color: #0c0f15; }
-        .badge-reserved { background: #d46a4e; color: #ffffff; }
-        .badge-sold { background: #b83232; color: #ffffff; }
-        .badge-onloan { background: #6b5b95; color: #ffffff; }
-        .badge-print { background: #3b74a8; color: #ffffff; }
-
-        .art-hover-prompt {
-            position: absolute;
-            inset: 0;
-            background: rgba(10, 12, 15, 0.65);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: var(--transition);
-            z-index: 3;
-        }
-
-        .art-card:hover .art-hover-prompt { opacity: 1; }
-
-        .art-card-body { padding: 22px; display: flex; flex-direction: column; flex-grow: 1; }
-        .art-card-series { font-size: 11px; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 5px; font-weight: 700; }
-        .art-card-title { font-size: 21px; margin-bottom: 6px; }
-        .art-card-specs { font-size: 13px; color: var(--text-muted); margin-bottom: 18px; flex-grow: 1; }
-
-        .art-card-bottom {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 14px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .art-card-price { font-family: var(--font-serif), Georgia, serif; font-size: 20px; font-weight: 600; color: var(--text-heading); }
-
-        .artwork-window-banner {
-            padding: 95px 0;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .window-banner-badge {
-            background: rgba(12, 15, 21, 0.75);
-            backdrop-filter: blur(14px);
-            border: 1px solid var(--border-color);
-            padding: 18px 36px;
-            border-radius: 40px;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            box-shadow: var(--card-shadow);
-        }
-
-        body.light-theme .window-banner-badge { background: rgba(255, 255, 255, 0.85); }
-
-        .commissions-wrapper {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 56px 44px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-            box-shadow: var(--card-shadow);
-        }
-
-        .commissions-info h3 { font-size: clamp(26px, 3.2vw, 36px); margin-bottom: 16px; }
-        .commissions-info p { color: var(--text-muted); font-size: 15px; line-height: 1.7; margin-bottom: 24px; }
-        .commissions-highlights { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--accent-gold); font-weight: 600; }
-
-        .commissions-form, .contact-form-card { display: flex; flex-direction: column; gap: 16px; }
-
-        .contact-form-card {
-            background: var(--bg-card);
-            padding: 36px;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--card-shadow);
-        }
-
-        .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-        .custom-input, .custom-select, .custom-textarea {
-            width: 100%;
-            background: var(--bg-solid);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            padding: 12px 14px;
-            color: var(--text-main);
-            font-family: inherit, sans-serif;
-            font-size: 13px;
-            outline: none;
-            transition: var(--transition);
-        }
-
-        .custom-select option { background-color: #131822; color: #f2f4f8; }
-        body.light-theme .custom-select option { background-color: #ffffff; color: #1f242e; }
-        .custom-input:focus, .custom-select:focus, .custom-textarea:focus { border-color: var(--accent-gold); }
-
-        .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
-
-        .contact-details {
-            background: var(--bg-card);
-            padding: 36px;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--card-shadow);
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .contact-item h5 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-gold); margin-bottom: 4px; font-weight: 700; }
-        .contact-item p, .contact-item a { color: var(--text-main); font-size: 15px; }
-
+        /* -------------------------------------------------------------
+           FOOTER EDITORIAL CON SEPARADORES
+        ------------------------------------------------------------- */
         .footer {
             background: #080a0e;
             border-top: 1px solid var(--border-color);
-            padding: 60px 0 35px;
+            padding: 70px 0 35px;
             font-size: 13px;
             color: var(--text-muted);
             position: relative;
@@ -1008,12 +325,38 @@
 
         body.light-theme .footer { background: #ebe9e3; }
 
-        .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
-        .footer-brand-wrap { display: flex; flex-direction: column; gap: 6px; }
+        /* Matriz Principal a 4 Columnas con Separadores */
+        .footer-grid-modular {
+            display: grid;
+            grid-template-columns: 1.3fr auto 1fr auto 1.1fr auto 1fr;
+            align-items: start;
+            padding-bottom: 35px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 24px;
+            gap: 24px;
+        }
+
+        .footer-col h5 {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--accent-gold);
+            margin-bottom: 14px;
+            font-weight: 700;
+        }
+
+        .footer-nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 12px;
+        }
+
+        .footer-nav-list a:hover { color: var(--accent-gold); }
 
         .footer-version-tag {
             display: inline-block;
-            align-self: flex-start;
             font-size: 10px;
             letter-spacing: 0.08em;
             padding: 2px 8px;
@@ -1022,263 +365,170 @@
             color: var(--accent-gold);
             border: 1px solid var(--border-color);
             font-weight: 600;
-            margin-top: 2px;
         }
 
-        .modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(8, 10, 14, 0.88);
-            backdrop-filter: blur(14px);
-            z-index: 2000;
+        .footer-bottom-bar {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            padding: 24px;
-            opacity: 0;
-            pointer-events: none;
-            transition: var(--transition);
+            flex-wrap: wrap;
+            gap: 16px;
         }
 
+        /* Responsive Móvil */
+        @media (max-width: 1080px) {
+            .block-separator { display: none; }
+            .block-menu {
+                position: fixed;
+                top: calc(82px + var(--banner-height));
+                left: 0;
+                width: 100%;
+                background: var(--bg-modal);
+                flex-direction: column;
+                padding: 24px;
+                gap: 16px;
+                border-bottom: 1px solid var(--border-color);
+                display: none;
+            }
+            .block-menu li::after { display: none; }
+            .block-menu.mobile-open { display: flex; }
+            .mobile-hamburger { display: block; }
+
+            .footer-grid-modular {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-grid-modular .block-separator {
+                display: none;
+            }
+            .footer-bottom-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* RESTO DEL CONTENIDO */
+        .hero-split-section { margin-top: calc(82px + var(--banner-height)); min-height: calc(100vh - 82px - var(--banner-height)); display: flex; align-items: center; position: relative; background: linear-gradient(to right, rgba(12, 15, 21, 0.92) 0%, rgba(12, 15, 21, 0.7) 65%, transparent 100%); }
+        body.light-theme .hero-split-section { background: linear-gradient(to right, rgba(244, 243, 239, 0.92) 0%, rgba(244, 243, 239, 0.7) 65%, transparent 100%); }
+        .hero-split-container { display: flex; flex-direction: column; align-items: flex-start; width: 100%; }
+        .hero-split-left { padding: 40px 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; z-index: 2; max-width: 750px; }
+        .hero-split-left h1 { font-size: clamp(36px, 4.2vw, 58px); line-height: 1.12; margin-bottom: 22px; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
+        body.light-theme .hero-split-left h1 { text-shadow: none; }
+        .hero-split-left h1 em { font-style: italic; color: var(--accent-gold); }
+        .hero-split-left p { color: var(--text-main); opacity: 0.92; font-size: 16px; line-height: 1.8; margin-bottom: 34px; max-width: 620px; }
+        .hero-cta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+        .window-statement-section { padding: 130px 0; position: relative; }
+        .statement-glass-box { max-width: 900px; margin: 0 auto; text-align: center; background: rgba(12, 15, 21, 0.75); backdrop-filter: blur(16px); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 56px 48px; box-shadow: var(--card-shadow); }
+        body.light-theme .statement-glass-box { background: rgba(255, 255, 255, 0.88); }
+        .quote-glyph { font-family: var(--font-serif); font-size: 70px; color: var(--accent-gold); opacity: 0.8; line-height: 1; margin-bottom: -15px; }
+        .statement-lead { font-family: var(--font-serif); font-size: clamp(24px, 3vw, 34px); line-height: 1.45; color: var(--text-heading); font-style: italic; margin-bottom: 28px; }
+        .statement-body-text { color: var(--text-main); font-size: 16px; line-height: 1.85; text-align: justify; text-align-last: center; margin-bottom: 24px; }
+        .statement-signature { margin-top: 36px; display: flex; flex-direction: column; align-items: center; }
+        .statement-author { font-size: 14px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-gold); }
+        .statement-role { font-size: 12px; color: var(--text-muted); letter-spacing: 0.08em; }
+
+        .solid-section { background: var(--bg-solid); padding: 110px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative; z-index: 2; }
+        .bio-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; margin-bottom: 70px; align-items: start; }
+        .bio-lead-text { background: var(--bg-card); padding: 36px; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--card-shadow); }
+        .bio-lead-text h3 { font-size: clamp(28px, 3.4vw, 40px); margin-bottom: 20px; line-height: 1.2; }
+        .bio-lead-text p { color: var(--text-muted); font-size: 15px; line-height: 1.8; margin-bottom: 18px; }
+        .bio-details-block { background: var(--bg-card); padding: 36px; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--card-shadow); display: flex; flex-direction: column; gap: 36px; }
+        .cv-column-header { font-size: 13px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-gold); margin-bottom: 16px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; font-weight: 700; }
+        .cv-timeline { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+        .cv-item { display: grid; grid-template-columns: 70px 1fr; gap: 14px; font-size: 14px; }
+        .cv-year { font-family: var(--font-serif); font-weight: 700; color: var(--accent-gold); font-size: 16px; }
+        .cv-desc strong { color: var(--text-heading); font-weight: 600; }
+        .cv-desc span { color: var(--text-muted); display: block; font-size: 13px; }
+        .cv-placeholder-badge { display: inline-block; font-size: 10px; padding: 2px 8px; background: rgba(255, 255, 255, 0.05); border: 1px dashed var(--accent-gold); color: var(--accent-gold); border-radius: 3px; margin-top: 4px; }
+
+        .section-header-center { text-align: center; display: flex; flex-direction: column; align-items: center; margin-bottom: 45px; }
+        .filter-bar { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 35px; }
+        .filter-btn { padding: 8px 20px; border-radius: 25px; font-size: 12px; color: var(--text-muted); background: var(--bg-card); border: 1px solid var(--border-color); transition: var(--transition); }
+        .filter-btn:hover, .filter-btn.active { color: #0c0f15; background: var(--accent-gold); border-color: var(--accent-gold); font-weight: 700; }
+        .filter-divider { width: 1px; height: 24px; background: var(--border-color); margin: 0 8px; }
+        .filter-btn-avail { padding: 8px 20px; border-radius: 25px; font-size: 12px; color: var(--text-muted); background: var(--bg-card); border: 1px dashed var(--accent-gold); transition: var(--transition); display: inline-flex; align-items: center; gap: 6px; }
+        .filter-btn-avail:hover, .filter-btn-avail.active { color: #0c0f15; background: var(--accent-gold); border-color: var(--accent-gold); font-weight: 700; }
+
+        .art-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; transition: opacity 0.25s ease, transform 0.25s ease; }
+        .art-grid.animating { opacity: 0; transform: scale(0.985); }
+        .art-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; transition: var(--transition); box-shadow: var(--card-shadow); }
+        .art-card:hover { transform: translateY(-5px); border-color: rgba(212, 175, 55, 0.5); }
+        .art-card-thumb { height: 320px; position: relative; cursor: pointer; overflow: hidden; background: #080a0e; display: flex; align-items: center; justify-content: center; padding: 12px; }
+        .art-card-thumb img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease-out; }
+        .art-card:hover .art-card-thumb img { transform: scale(1.04); }
+        .art-badge { position: absolute; top: 14px; left: 14px; padding: 4px 10px; border-radius: 3px; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; z-index: 2; backdrop-filter: blur(8px); }
+        .badge-available { background: var(--accent-gold); color: #0c0f15; }
+        .badge-reserved { background: #d46a4e; color: #ffffff; }
+        .badge-sold { background: #b83232; color: #ffffff; }
+        .badge-onloan { background: #6b5b95; color: #ffffff; }
+        .badge-print { background: #3b74a8; color: #ffffff; }
+        .art-hover-prompt { position: absolute; inset: 0; background: rgba(10, 12, 15, 0.65); display: flex; align-items: center; justify-content: center; opacity: 0; transition: var(--transition); z-index: 3; }
+        .art-card:hover .art-hover-prompt { opacity: 1; }
+        .art-card-body { padding: 22px; display: flex; flex-direction: column; flex-grow: 1; }
+        .art-card-series { font-size: 11px; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 5px; font-weight: 700; }
+        .art-card-title { font-size: 21px; margin-bottom: 6px; }
+        .art-card-specs { font-size: 13px; color: var(--text-muted); margin-bottom: 18px; flex-grow: 1; }
+        .art-card-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--border-color); }
+        .art-card-price { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--text-heading); }
+
+        .artwork-window-banner { padding: 95px 0; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .window-banner-badge { background: rgba(12, 15, 21, 0.75); backdrop-filter: blur(14px); border: 1px solid var(--border-color); padding: 18px 36px; border-radius: 40px; display: inline-flex; align-items: center; gap: 12px; box-shadow: var(--card-shadow); }
+        body.light-theme .window-banner-badge { background: rgba(255, 255, 255, 0.85); }
+
+        .commissions-wrapper { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 56px 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; box-shadow: var(--card-shadow); }
+        .commissions-info h3 { font-size: clamp(26px, 3.2vw, 36px); margin-bottom: 16px; }
+        .commissions-info p { color: var(--text-muted); font-size: 15px; line-height: 1.7; margin-bottom: 24px; }
+        .commissions-highlights { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--accent-gold); font-weight: 600; }
+        .commissions-form, .contact-form-card { display: flex; flex-direction: column; gap: 16px; }
+        .contact-form-card { background: var(--bg-card); padding: 36px; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--card-shadow); }
+        .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .custom-input, .custom-select, .custom-textarea { width: 100%; background: var(--bg-solid); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 12px 14px; color: var(--text-main); font-family: inherit, sans-serif; font-size: 13px; outline: none; transition: var(--transition); }
+        .custom-select option { background-color: #131822; color: #f2f4f8; }
+        body.light-theme .custom-select option { background-color: #ffffff; color: #1f242e; }
+        .custom-input:focus, .custom-select:focus, .custom-textarea:focus { border-color: var(--accent-gold); }
+
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
+        .contact-details { background: var(--bg-card); padding: 36px; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--card-shadow); display: flex; flex-direction: column; gap: 24px; }
+        .contact-item h5 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-gold); margin-bottom: 4px; font-weight: 700; }
+        .contact-item p, .contact-item a { color: var(--text-main); font-size: 15px; }
+
+        .modal-overlay { position: fixed; inset: 0; background: rgba(8, 10, 14, 0.88); backdrop-filter: blur(14px); z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 24px; opacity: 0; pointer-events: none; transition: var(--transition); }
         .modal-overlay.open { opacity: 1; pointer-events: auto; }
-
-        .modal-card {
-            background: var(--bg-modal);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            max-width: 1200px;
-            width: 100%;
-            max-height: 95vh;
-            overflow-y: auto;
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            position: relative;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
-        }
-
+        .modal-card { background: var(--bg-modal); border: 1px solid var(--border-color); border-radius: var(--radius-md); max-width: 1200px; width: 100%; max-height: 95vh; overflow-y: auto; display: grid; grid-template-columns: 1.4fr 1fr; position: relative; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7); }
         .modal-close { position: absolute; top: 16px; right: 18px; font-size: 22px; color: var(--text-muted); z-index: 10; }
-
         .modal-visual-wrap { display: flex; flex-direction: column; background: rgba(0, 0, 0, 0.35); border-right: 1px solid var(--border-color); }
         .modal-view-controls { display: flex; gap: 8px; padding: 14px 20px 0; justify-content: center; }
-
-        .modal-view-btn {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            padding: 5px 12px;
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-            color: var(--text-muted);
-            background: var(--bg-card);
-            cursor: pointer;
-        }
-
+        .modal-view-btn { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; padding: 5px 12px; border-radius: 20px; border: 1px solid var(--border-color); color: var(--text-muted); background: var(--bg-card); cursor: pointer; }
         .modal-view-btn.active { background: var(--accent-gold); color: #0c0f15; font-weight: 700; border-color: var(--accent-gold); }
-
         .modal-visual { padding: 24px 24px 12px; display: flex; align-items: center; justify-content: center; position: relative; min-height: 480px; flex-grow: 1; }
-
-        .zoom-box-container {
-            width: 100%;
-            height: 480px;
-            overflow: hidden;
-            position: relative;
-            cursor: crosshair;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: var(--radius-sm);
-            background: #080a0e;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            touch-action: none;
-        }
-
+        .zoom-box-container { width: 100%; height: 480px; overflow: hidden; position: relative; cursor: crosshair; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-sm); background: #080a0e; box-shadow: 0 10px 30px rgba(0,0,0,0.5); touch-action: none; }
         .zoom-box-container img { max-width: 100%; max-height: 100%; object-fit: contain; transform-origin: center center; transition: transform 0.1s ease-out; pointer-events: none; filter: none !important; }
         .zoom-hint { position: absolute; bottom: 10px; background: rgba(0,0,0,0.7); color: #fff; font-size: 10px; padding: 4px 10px; border-radius: 12px; pointer-events: none; letter-spacing: 0.05em; z-index: 5; }
+        .modal-carousel-nav { position: absolute; inset: 0; pointer-events: none; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; z-index: 6; }
+        .carousel-btn { pointer-events: auto; width: 38px; height: 38px; border-radius: 50%; background: rgba(12, 15, 21, 0.8); border: 1px solid var(--border-color); color: var(--text-main); display: flex; align-items: center; justify-content: center; font-size: 18px; cursor: pointer; transition: var(--transition); backdrop-filter: blur(8px); }
+        .carousel-btn:hover { background: var(--accent-gold); color: #0c0f15; border-color: var(--accent-gold); transform: scale(1.08); }
+        .carousel-thumbs { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 8px 16px 18px; overflow-x: auto; }
+        .carousel-thumb-btn { width: 52px; height: 52px; border-radius: 4px; border: 2px solid transparent; overflow: hidden; cursor: pointer; opacity: 0.5; transition: var(--transition); flex-shrink: 0; background: #080a0e; padding: 2px; }
+        .carousel-thumb-btn.active { border-color: var(--accent-gold); opacity: 1; transform: scale(1.05); }
+        .carousel-thumb-btn img { width: 100%; height: 100%; object-fit: cover; filter: none !important; }
 
-        /* Carrusel Modal */
-        .modal-carousel-nav {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 12px;
-            z-index: 6;
-        }
-
-        .carousel-btn {
-            pointer-events: auto;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: rgba(12, 15, 21, 0.8);
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            cursor: pointer;
-            transition: var(--transition);
-            backdrop-filter: blur(8px);
-        }
-
-        .carousel-btn:hover {
-            background: var(--accent-gold);
-            color: #0c0f15;
-            border-color: var(--accent-gold);
-            transform: scale(1.08);
-        }
-
-        .carousel-thumbs {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 8px 16px 18px;
-            overflow-x: auto;
-        }
-
-        .carousel-thumb-btn {
-            width: 52px;
-            height: 52px;
-            border-radius: 4px;
-            border: 2px solid transparent;
-            overflow: hidden;
-            cursor: pointer;
-            opacity: 0.5;
-            transition: var(--transition);
-            flex-shrink: 0;
-            background: #080a0e;
-            padding: 2px;
-        }
-
-        .carousel-thumb-btn.active {
-            border-color: var(--accent-gold);
-            opacity: 1;
-            transform: scale(1.05);
-        }
-
-        .carousel-thumb-btn img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: none !important;
-        }
-
-        /* VISTA SALÓN */
-        .room-sim-wrap {
-            width: 100%;
-            height: 480px;
-            border-radius: var(--radius-sm);
-            position: relative;
-            background: url('images/room-bg.jpg') center/cover no-repeat;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            box-shadow: inset 0 0 40px rgba(0,0,0,0.4);
-            border: 1px solid var(--border-color);
-        }
-
-        .room-artwork-frame {
-            position: absolute;
-            top: 8%;
-            max-width: 200px;
-            max-height: 150px;
-            background: transparent;
-            padding: 0;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: max-width 0.3s ease;
-            z-index: 2;
-        }
+        .room-sim-wrap { width: 100%; height: 480px; border-radius: var(--radius-sm); position: relative; background: url('images/room-bg.jpg') center/cover no-repeat; display: none; align-items: center; justify-content: center; overflow: hidden; box-shadow: inset 0 0 40px rgba(0,0,0,0.4); border: 1px solid var(--border-color); }
+        .room-artwork-frame { position: absolute; top: 8%; max-width: 200px; max-height: 150px; background: transparent; padding: 0; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); display: flex; align-items: center; justify-content: center; transition: max-width 0.3s ease; z-index: 2; }
         .room-artwork-frame img { max-width: 100%; max-height: 100%; object-fit: contain; filter: none !important; border: none; }
+        .room-scale-reference { position: absolute; bottom: 12px; right: 16px; background: rgba(12, 15, 21, 0.85); color: var(--text-muted); padding: 4px 12px; border-radius: 12px; font-size: 10px; letter-spacing: 0.05em; border: 1px solid var(--border-color); z-index: 5; }
 
-        .room-scale-reference {
-            position: absolute;
-            bottom: 12px;
-            right: 16px;
-            background: rgba(12, 15, 21, 0.85);
-            color: var(--text-muted);
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 10px;
-            letter-spacing: 0.05em;
-            border: 1px solid var(--border-color);
-            z-index: 5;
-        }
-
-        /* TRUST BADGES */
-        .trust-badges-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            margin: 20px 0;
-            padding: 14px 0;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .trust-badge-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 6px;
-            flex: 1;
-        }
-
-        .trust-badge-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            background: rgba(212, 175, 55, 0.08);
-            color: var(--accent-gold);
-        }
-
-        .trust-badge-icon svg {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
-        }
-
-        .trust-badge-label {
-            font-size: 10px;
-            font-weight: 600;
-            color: var(--text-muted);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            line-height: 1.25;
-        }
+        .trust-badges-container { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 20px 0; padding: 14px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+        .trust-badge-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; flex: 1; }
+        .trust-badge-icon { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(212, 175, 55, 0.08); color: var(--accent-gold); }
+        .trust-badge-icon svg { width: 16px; height: 16px; fill: currentColor; }
+        .trust-badge-label { font-size: 10px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.25; }
 
         .modal-text { padding: 36px 30px; display: flex; flex-direction: column; justify-content: space-between; }
         .modal-specs-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 14px 0; font-size: 13px; color: var(--text-muted); }
         .modal-specs-list strong { color: var(--text-heading); }
 
-        .cart-drawer {
-            position: fixed;
-            top: 0;
-            right: -420px;
-            width: 100%;
-            max-width: 390px;
-            height: 100vh;
-            background: var(--bg-modal);
-            border-left: 1px solid var(--border-color);
-            z-index: 2500;
-            box-shadow: -15px 0 40px rgba(0, 0, 0, 0.6);
-            display: flex;
-            flex-direction: column;
-            transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
+        .cart-drawer { position: fixed; top: 0; right: -420px; width: 100%; max-width: 390px; height: 100vh; background: var(--bg-modal); border-left: 1px solid var(--border-color); z-index: 2500; box-shadow: -15px 0 40px rgba(0, 0, 0, 0.6); display: flex; flex-direction: column; transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
         .cart-drawer.active { right: 0; }
         .cart-drawer-header { padding: 22px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
         .cart-drawer-items { padding: 22px; flex-grow: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; }
@@ -1286,133 +536,42 @@
         .cart-drawer-thumb { width: 58px; height: 58px; border-radius: var(--radius-sm); object-fit: cover; flex-shrink: 0; filter: none !important; }
         .cart-drawer-footer { padding: 22px; border-top: 1px solid var(--border-color); background: rgba(8, 10, 14, 0.9); }
 
-        .toast {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            background: var(--bg-modal);
-            border: 1px solid var(--accent-gold);
-            color: var(--text-main);
-            padding: 12px 20px;
-            border-radius: var(--radius-sm);
-            font-size: 13px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-            transform: translateY(80px);
-            opacity: 0;
-            transition: var(--transition);
-            z-index: 3000;
-        }
-
+        .toast { position: fixed; bottom: 24px; right: 24px; background: var(--bg-modal); border: 1px solid var(--accent-gold); color: var(--text-main); padding: 12px 20px; border-radius: var(--radius-sm); font-size: 13px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); transform: translateY(80px); opacity: 0; transition: var(--transition); z-index: 3000; }
         .toast.show { transform: translateY(0); opacity: 1; }
-
-        @media (max-width: 1240px) {
-            .nav-links { gap: 16px; }
-            .nav-controls { margin-left: 12px; }
-        }
-
-        @media (max-width: 960px) {
-            .hero-split-section { min-height: auto; padding: 40px 0 60px; }
-            .bio-grid, .commissions-wrapper, .modal-card, .contact-grid { grid-template-columns: 1fr; }
-            .modal-visual-wrap { border-right: none; border-bottom: 1px solid var(--border-color); }
-            .nav-links {
-                position: fixed;
-                top: calc(84px + var(--banner-height));
-                left: 0;
-                width: 100%;
-                background: var(--bg-modal);
-                flex-direction: column;
-                padding: 24px;
-                gap: 18px;
-                border-bottom: 1px solid var(--border-color);
-                display: none;
-            }
-            .nav-links.mobile-open { display: flex; }
-            .mobile-hamburger { display: block; }
-            .nav-controls { margin-left: 0; }
-        }
     </style>
 
-    <!-- Ficheros externos de datos y textos -->
     <script src="metadata.js"></script>
     <script src="i18n.js"></script>
     <script src="notifications.js"></script>
     <script src="artworks.js"></script>
-
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@graph": [
-                {
-                    "@type": "Person",
-                    "@id": "https://eloisarg.com/#artist",
-                    "name": "Eloísa Rodríguez",
-                    "alternateName": "ERG",
-                    "jobTitle": "Artiste Peintre",
-                    "url": "https://eloisarg.com/",
-                    "image": "https://eloisarg.com/images/paintings/original-milky-way-centre-eloisa-rodriguez.webp",
-                    "description": "Artiste peintre contemporaine explorant la matière brute, les nébuleuses et les sédiments géologiques.",
-                    "sameAs": [
-                        "https://www.instagram.com/eloisarg",
-                        "https://www.facebook.com/eloisarg"
-                    ]
-                },
-                {
-                    "@type": "ArtGallery",
-                    "@id": "https://eloisarg.com/#atelier",
-                    "name": "Atelier d'Art ERG - Eloísa Rodríguez",
-                    "url": "https://eloisarg.com/",
-                    "logo": "https://eloisarg.com/favicon.svg",
-                    "image": "https://eloisarg.com/images/background.jpg",
-                    "description": "Atelier de création artistique et galerie d'art contemporain à Vich (Vaud, Suisse).",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Vich",
-                        "addressRegion": "VD",
-                        "addressCountry": "CH"
-                    },
-                    "founder": {
-                        "@id": "https://eloisarg.com/#artist"
-                    }
-                },
-                {
-                    "@type": "WebSite",
-                    "@id": "https://eloisarg.com/#website",
-                    "url": "https://eloisarg.com/",
-                    "name": "Eloísa Rodríguez - Artiste Peintre & Atelier d'Art",
-                    "inLanguage": ["fr", "en", "it", "es"],
-                    "publisher": {
-                        "@id": "https://eloisarg.com/#artist"
-                    }
-                }
-            ]
-        }
-    </script>
 </head>
 <body oncontextmenu="return handleRightClick(event);">
 
-<!-- Top Announcement Bar -->
+<!-- Barra de Notificaciones Superior -->
 <aside class="announcement-bar" id="announcementBar" role="region" aria-label="Announcement">
     <div class="announcement-bar-content" id="announcementContent"></div>
     <button class="announcement-bar-close" onclick="dismissNotification()" aria-label="Fermer l'annonce">&times;</button>
 </aside>
 
-<!-- Fondo Principal Local -->
+<!-- Fondo Principal -->
 <div class="global-fixed-bg">
-    <img src="images/background.jpg" alt="Eloísa Rodríguez Master Background Canvas" decoding="async" onload="this.classList.add('loaded')">
+    <img src="images/background.jpg" alt="Master Canvas" decoding="async" onload="this.classList.add('loaded')">
 </div>
 
-<!-- Header Navigation -->
+<!-- HEADER / MENÚ PRINCIPAL EDITORIAL -->
 <header class="navbar" id="mainNavbar">
     <div class="container-wide nav-inner">
-        <div class="brand-logo-wrap">
-            <a href="#" class="brand-logo" aria-label="Eloísa Rodríguez Homepage">
-                <span class="logo-main" id="brandMainName">Eloísa Rodríguez</span>
-                <span class="logo-sub" id="brandSubName">ERG • Fine Art</span>
-            </a>
-        </div>
+        <!-- BLOQUE 1: Nombre del Artista / Atelier -->
+        <a href="#" class="block-brand" aria-label="Homepage">
+            <span class="brand-logo-main" id="brandMainName">Eloísa Rodríguez</span>
+            <span class="brand-logo-sub" id="brandSubName">ERG • Fine Art</span>
+        </a>
 
-        <ul class="nav-links" id="navLinks">
+        <!-- Separador 1 -->
+        <div class="block-separator"></div>
+
+        <!-- BLOQUE 2: Menú Central -->
+        <ul class="block-menu" id="navLinks">
             <li><a href="#statement" data-i18n="nav_statement" onclick="closeMobileMenu()">Démarche</a></li>
             <li><a href="#bio" data-i18n="nav_bio" onclick="closeMobileMenu()">Biographie</a></li>
             <li><a href="#collection" data-i18n="nav_collection" onclick="closeMobileMenu()">Collection</a></li>
@@ -1421,34 +580,42 @@
             <li><a href="#contact" data-i18n="nav_contact" onclick="closeMobileMenu()">Contact</a></li>
         </ul>
 
-        <div class="nav-controls">
-            <div class="social-icons-group" id="socialIconsContainer"></div>
+        <!-- Separador 2 -->
+        <div class="block-separator"></div>
 
-            <div class="controls-divider"></div>
+        <!-- BLOQUE 3: Redes Sociales, Idiomas con Banderas, Moneda, Tema y Selección -->
+        <div class="block-controls">
+            <!-- Redes Sociales -->
+            <div class="social-group" id="socialIconsContainer"></div>
 
-            <div class="lang-switch" role="group" aria-label="Language Selector">
-                <button class="lang-btn" onclick="setLanguage('fr')" aria-label="Passer en Français">FR</button>
-                <button class="lang-btn" onclick="setLanguage('en')" aria-label="Switch to English">EN</button>
-                <button class="lang-btn" onclick="setLanguage('it')" aria-label="Passa all'Italiano">IT</button>
-                <button class="lang-btn" onclick="setLanguage('es')" aria-label="Cambiar a Español">ES</button>
-            </div>
+            <!-- Selector de Idiomas con Banderas -->
+            <select class="control-select" id="languageSelector" onchange="setLanguage(this.value)" aria-label="Language">
+                <option value="fr">🇫🇷 FR</option>
+                <option value="en">🇬🇧 EN</option>
+                <option value="it">🇮🇹 IT</option>
+                <option value="es">🇪🇸 ES</option>
+            </select>
 
-            <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" title="Mode Sombre / Clair" aria-label="Toggle Theme">
-                <span id="themeIcon">☀️</span>
-            </button>
-
-            <select class="currency-select" id="currencySelector" onchange="setCurrency(this.value)" aria-label="Currency Selector">
+            <!-- Selector de Moneda -->
+            <select class="control-select" id="currencySelector" onchange="setCurrency(this.value)" aria-label="Currency">
                 <option value="CHF" selected>CHF</option>
                 <option value="EUR">EUR (€)</option>
                 <option value="USD">USD ($)</option>
             </select>
 
-            <button class="cart-pill-btn" onclick="toggleCartDrawer()" aria-haspopup="dialog" aria-expanded="false" id="cartOpenBtn" aria-label="Voir la sélection d'atelier">
+            <!-- Modo Oscuro / Claro -->
+            <button class="theme-btn" id="themeToggle" onclick="toggleTheme()" title="Mode Sombre / Clair">
+                <span id="themeIcon">☀️</span>
+            </button>
+
+            <!-- Selección / Cesta Minimalista -->
+            <button class="cart-pill-btn" onclick="toggleCartDrawer()" id="cartOpenBtn" aria-label="Sélection">
                 <span data-i18n="cart_label">Sélection</span>
                 <span class="cart-badge" id="cartBadge">0</span>
             </button>
 
-            <button class="mobile-hamburger" onclick="toggleMobileMenu()" aria-label="Toggle Navigation" aria-expanded="false" id="hamburgerBtn">☰</button>
+            <!-- Hamburguesa Móvil -->
+            <button class="mobile-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Menu">☰</button>
         </div>
     </div>
 </header>
@@ -1539,7 +706,7 @@
     </div>
 </section>
 
-<!-- 5. Panorama Background Window Portal 1 -->
+<!-- 5. Panorama Window Portal 1 -->
 <div class="artwork-window-banner">
     <div class="window-banner-badge">
         <span style="font-size: 16px; color: var(--accent-gold);">◈</span>
@@ -1581,31 +748,31 @@
             <form class="commissions-form" name="commissions" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)">
                 <input type="hidden" name="form-name" value="commissions">
                 <div class="form-grid-2">
-                    <input type="text" name="name" class="custom-input" data-i18n-ph="form_ph_name" placeholder="Nom complet / Full Name" aria-label="Nom complet / Full Name" required>
-                    <input type="email" name="email" class="custom-input" data-i18n-ph="form_ph_email" placeholder="Courriel / Email" aria-label="Courriel / Email" required>
+                    <input type="text" name="name" class="custom-input" data-i18n-ph="form_ph_name" placeholder="Nom complet / Full Name" required>
+                    <input type="email" name="email" class="custom-input" data-i18n-ph="form_ph_email" placeholder="Courriel / Email" required>
                 </div>
                 <div class="form-grid-2">
-                    <select name="dimensions" class="custom-select" id="commDimensionsSelect" aria-label="Dimensions souhaitées">
+                    <select name="dimensions" class="custom-select" id="commDimensionsSelect">
                         <option value="" disabled selected data-i18n="form_dim_placeholder">Dimensions souhaitées</option>
                         <option value="M" data-i18n="form_dim_opt1">Moyen (80 × 60 cm à 100 × 80 cm)</option>
                         <option value="L" data-i18n="form_dim_opt2">Grand (120 × 100 cm à 160 × 120 cm)</option>
                         <option value="XL" data-i18n="form_dim_opt3">Monumental (> 180 cm)</option>
                     </select>
-                    <select name="series" class="custom-select" id="commSeriesSelect" aria-label="Série d'inspiration">
+                    <select name="series" class="custom-select" id="commSeriesSelect">
                         <option value="" disabled selected data-i18n="form_series_placeholder">Série d'inspiration</option>
                         <option value="nebula" data-i18n="form_series_opt1">Nébuleuses & Sédiments (Teintes cosmiques & minérales)</option>
                         <option value="portrait" data-i18n="series_portrait">Portraits</option>
                         <option value="abstract" data-i18n="form_series_opt2">Autres créations & abstraction pure</option>
                     </select>
                 </div>
-                <textarea name="message" class="custom-textarea" rows="3" data-i18n-ph="form_ph_comm_desc" placeholder="Décrivez votre espace ou votre vision pour l'œuvre..." aria-label="Description du projet"></textarea>
+                <textarea name="message" class="custom-textarea" rows="3" data-i18n-ph="form_ph_comm_desc" placeholder="Décrivez votre espace ou votre vision pour l'œuvre..."></textarea>
                 <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="form_btn_commission">Demander une consultation pour commande</button>
             </form>
         </div>
     </div>
 </section>
 
-<!-- 8. Panorama Background Window Portal 2 -->
+<!-- 8. Panorama Window Portal 2 -->
 <div class="artwork-window-banner">
     <div class="window-banner-badge">
         <span style="font-size: 16px; color: var(--accent-gold);">◈</span>
@@ -1628,7 +795,7 @@
 
                 <div class="contact-item">
                     <h5 data-i18n="contact_email_label">Courriel</h5>
-                    <a href="mailto:studio@eloisarg.com" id="contactEmailLink">studio@eloisarg.com</a>
+                    <a href="mailto:contact@eloisarg.com" id="contactEmailLink">contact@eloisarg.com</a>
                 </div>
                 <div class="contact-item">
                     <h5 data-i18n="contact_domain_label">Site Officiel</h5>
@@ -1641,11 +808,11 @@
                 <form class="commissions-form" name="contact" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)">
                     <input type="hidden" name="form-name" value="contact">
                     <div class="form-grid-2">
-                        <input type="text" name="name" class="custom-input" data-i18n-ph="form_ph_name" placeholder="Nom complet / Name" aria-label="Nom complet / Name" required>
-                        <input type="email" name="email" class="custom-input" data-i18n-ph="form_ph_email" placeholder="Courriel / Email" aria-label="Courriel / Email" required>
+                        <input type="text" name="name" class="custom-input" data-i18n-ph="form_ph_name" placeholder="Nom complet / Name" required>
+                        <input type="email" name="email" class="custom-input" data-i18n-ph="form_ph_email" placeholder="Courriel / Email" required>
                     </div>
-                    <input type="text" name="subject" class="custom-input" id="contactSubjectInput" data-i18n-ph="form_ph_subject" placeholder="Objet de votre demande / Subject" aria-label="Objet de votre demande / Subject" required>
-                    <textarea name="message" class="custom-textarea" rows="5" id="contactMessageInput" data-i18n-ph="form_ph_message" placeholder="Votre message / Your message..." aria-label="Votre message / Your message" required></textarea>
+                    <input type="text" name="subject" class="custom-input" id="contactSubjectInput" data-i18n-ph="form_ph_subject" placeholder="Objet de votre demande / Subject" required>
+                    <textarea name="message" class="custom-textarea" rows="5" id="contactMessageInput" data-i18n-ph="form_ph_message" placeholder="Votre message / Your message..." required></textarea>
                     <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="contact_btn_send">Envoyer le Message</button>
                 </form>
             </div>
@@ -1653,39 +820,103 @@
     </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER EDITORIAL COMPLETO -->
 <footer class="footer">
-    <div class="container footer-inner">
-        <div class="footer-brand-wrap">
-            <span class="serif-font" style="font-size: 17px; font-weight: 600; color: var(--text-heading);" id="footerBrandName">ERG – Eloísa Rodríguez</span>
-            <p style="font-size: 12px;" data-i18n="footer_rights">© 2026 Eloísa Rodríguez. Tous droits réservés.</p>
-            <span class="footer-version-tag" id="footerVersionTag">Edition v2.5.0</span>
+    <div class="container">
+        <!-- Matriz Principal de 4 Columnas con Separadores -->
+        <div class="footer-grid-modular">
+            <!-- Columna 1: Identidad & Atelier -->
+            <div class="footer-col">
+                <span class="serif-font" style="font-size: 20px; font-weight: 600; color: var(--text-heading); display: block; margin-bottom: 8px;" id="footerBrandName">ERG – Eloísa Rodríguez</span>
+                <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px;">
+                    Atelier de création contemporaine explorant la sédimentation géologique et les structures cosmiques.
+                </p>
+                <div class="social-group" id="footerSocials"></div>
+            </div>
+
+            <div class="block-separator"></div>
+
+            <!-- Columna 2: Navegación & Series -->
+            <div class="footer-col">
+                <h5>Collection & Œuvres</h5>
+                <ul class="footer-nav-list">
+                    <li><a href="#collection">Nébuleuses & Sédiments</a></li>
+                    <li><a href="#collection">Portraits & Figures</a></li>
+                    <li><a href="#prints">Tirages d'Art Numérotés</a></li>
+                    <li><a href="#commissions">Commandes Privées</a></li>
+                    <li><a href="#statement">Démarche Artistique</a></li>
+                </ul>
+            </div>
+
+            <div class="block-separator"></div>
+
+            <!-- Columna 3: Servicios & Compromisos -->
+            <div class="footer-col">
+                <h5>Services & Engagements</h5>
+                <ul class="footer-nav-list">
+                    <li><span style="color: var(--text-muted);">✓ Certificat d'Authenticité inclus</span></li>
+                    <li><span style="color: var(--text-muted);">✓ Livraison sécurisée Suisse & Monde</span></li>
+                    <li><span style="color: var(--text-muted);">✓ Visite d'atelier sur rendez-vous</span></li>
+                    <li><span style="color: var(--text-muted);">✓ Conseil en intégration d'art</span></li>
+                </ul>
+            </div>
+
+            <div class="block-separator"></div>
+
+            <!-- Columna 4: Ubicación & Contacto Directo -->
+            <div class="footer-col">
+                <h5>Atelier & Contact</h5>
+                <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.7; margin-bottom: 10px;">
+                    <strong>Atelier ERG</strong><br>
+                    Vich, Canton de Vaud<br>
+                    Suisse
+                </p>
+                <p style="font-size: 12.5px;">
+                    <a href="mailto:contact@eloisarg.com" style="color: var(--accent-gold);">contact@eloisarg.com</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Franja Inferior: Legal & Copyright -->
+        <div class="footer-bottom-bar">
+            <p style="font-size: 12px; color: var(--text-muted);" data-i18n="footer_rights">© 2026 Eloísa Rodríguez. Tous droits réservés.</p>
+
+            <!-- Enlaces legales ocultos temporalmente
+                        <div style="display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted);">
+                            <a href="#contact">Mentions Légales</a>
+                            <span>•</span>
+                            <a href="#contact">Conditions d'Acquisition</a>
+                            <span>•</span>
+                            <a href="#contact">Protection des Données</a>
+                        </div>
+                        -->
+
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span class="footer-version-tag" id="footerVersionTag">Edition v2.6.0</span>
+                <a href="#" style="font-size: 11px; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.1em;">Haut de page ↑</a>
+            </div>
         </div>
     </div>
 </footer>
 
-<!-- Artwork Modal Detail View -->
+<!-- Modal -->
 <div class="modal-overlay" id="artworkModal" onclick="closeModalOutside(event)" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-card">
         <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
-
         <div class="modal-visual-wrap">
             <div class="modal-view-controls">
-                <button class="modal-view-btn active" id="btnViewDetail" onclick="switchModalView('detail')" data-i18n="modal_view_detail" aria-label="Zoom texture">Zoom Texture</button>
-                <button class="modal-view-btn" id="btnViewRoom" onclick="switchModalView('room')" data-i18n="modal_view_room" aria-label="Vue en salon">Vue en Salon</button>
+                <button class="modal-view-btn active" id="btnViewDetail" onclick="switchModalView('detail')" data-i18n="modal_view_detail">Zoom Texture</button>
+                <button class="modal-view-btn" id="btnViewRoom" onclick="switchModalView('room')" data-i18n="modal_view_room">Vue en Salon</button>
             </div>
-
             <div class="modal-visual">
                 <div class="zoom-box-container" id="zoomContainer">
                     <img id="modalArtImg" src="images/paintings/original-nebuleuse-en-bleu-eloisa-rodriguez.webp" alt="Artwork Preview" decoding="async">
                     <span class="zoom-hint" data-i18n="zoom_hint">Survoler pour zoomer sur la matière</span>
-
                     <div class="modal-carousel-nav" id="carouselNav" style="display: none;">
                         <button class="carousel-btn" onclick="prevCarouselImage(event)" aria-label="Previous Image">‹</button>
                         <button class="carousel-btn" onclick="nextCarouselImage(event)" aria-label="Next Image">›</button>
                     </div>
                 </div>
-
                 <div class="room-sim-wrap" id="roomSimWrap">
                     <div class="room-artwork-frame" id="roomArtworkFrame">
                         <img id="roomArtImg" src="images/paintings/original-nebuleuse-en-bleu-eloisa-rodriguez.webp" alt="Room Preview" decoding="async">
@@ -1693,7 +924,6 @@
                     <div class="room-scale-reference" data-i18n="room_scale_ref">Échelle Salon • Studio ERG</div>
                 </div>
             </div>
-
             <div class="carousel-thumbs" id="modalCarouselThumbs" style="display: none;"></div>
         </div>
 
@@ -1709,8 +939,7 @@
                     <li><strong data-i18n="modal_year_label">Année :</strong> <span id="modalYear"></span></li>
                 </ul>
 
-                <!-- Insignias de confianza -->
-                <div class="trust-badges-container" id="trustBadgesWrap">
+                <div class="trust-badges-container">
                     <div class="trust-badge-item">
                         <div class="trust-badge-icon"><svg viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg></div>
                         <span class="trust-badge-label" data-i18n="badge_original">Œuvre<br>Originale</span>
@@ -1733,15 +962,13 @@
     </div>
 </div>
 
-<!-- Slide-in Cart Drawer -->
+<!-- Drawer Carrito -->
 <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle">
     <div class="cart-drawer-header">
         <h4 class="serif-font" style="font-size: 20px;" id="cartDrawerTitle" data-i18n="cart_title">Sélection d'Atelier</h4>
         <button onclick="toggleCartDrawer()" style="font-size: 22px; color: var(--text-muted);" aria-label="Close cart">&times;</button>
     </div>
-
     <div class="cart-drawer-items" id="cartItemsList"></div>
-
     <div class="cart-drawer-footer">
         <div style="display: flex; justify-content: space-between; margin-bottom: 14px;">
             <span data-i18n="cart_total_label">Total Estimé :</span>
@@ -1751,14 +978,11 @@
     </div>
 </div>
 
-<!-- Toast Notification -->
 <div class="toast" id="toastMessage" role="status" aria-live="polite"></div>
 
-<!-- Application Script -->
 <script>
   const meta = window.ERG_METADATA || {};
-  const APP_VERSION = meta.version || "2.5.0";
-  console.info(`[ERG Gallery] Loaded Version: v${APP_VERSION}`);
+  const APP_VERSION = meta.version || "2.6.0";
 
   let currentLang = localStorage.getItem('erg_lang') || 'fr';
   let currentTheme = localStorage.getItem('erg_theme') || 'dark';
@@ -1767,13 +991,11 @@
 
   let activeSeriesFilter = 'nebula-sediment';
   let onlyAvailable = false;
-
   let currentModalArtwork = null;
   let currentModalImageIndex = 0;
   let activeNotification = null;
 
-  // Base en Francos Suizos (CHF = 1.0)
-  const exchangeRates = { CHF: 1.0, EUR: 1.07, USD: 1.24 };
+  const exchangeRates = { CHF: 1.0, EUR: 1.03, USD: 1.11 };
   const i18n = window.ERG_I18N || {};
   let artworks = window.ERG_ARTWORKS || [];
 
@@ -1784,17 +1006,11 @@
   }
 
   function getArtworkMainImage(art) {
-    if (art.images && Array.isArray(art.images) && art.images.length > 0) {
-      return art.images[0];
-    }
-    return art.image || '';
+    return (art.images && Array.isArray(art.images) && art.images.length > 0) ? art.images[0] : (art.image || '');
   }
 
   function getArtworkImages(art) {
-    if (art.images && Array.isArray(art.images) && art.images.length > 0) {
-      return art.images;
-    }
-    return art.image ? [art.image] : [];
+    return (art.images && Array.isArray(art.images) && art.images.length > 0) ? art.images : (art.image ? [art.image] : []);
   }
 
   function applyMetadata() {
@@ -1802,7 +1018,7 @@
     document.getElementById('brandMainName').textContent = meta.artistName;
     document.getElementById('signatureArtistName').textContent = meta.artistName;
     document.getElementById('footerBrandName').textContent = `ERG – ${meta.artistName}`;
-    document.getElementById('footerVersionTag').textContent = `Edition v${meta.version}`;
+    document.getElementById('footerVersionTag').textContent = `Edition v${meta.version || '2.6.0'}`;
 
     const emailLink = document.getElementById('contactEmailLink');
     if(emailLink) { emailLink.href = `mailto:${meta.email}`; emailLink.textContent = meta.email; }
@@ -1810,20 +1026,15 @@
     const domainLink = document.getElementById('contactDomainLink');
     if(domainLink) { domainLink.href = `https://${meta.domain}`; domainLink.textContent = meta.domain; }
 
-    const socialContainer = document.getElementById('socialIconsContainer');
-    if (socialContainer && meta.socials) {
-      socialContainer.innerHTML = `
-                    <a href="mailto:${meta.email}" class="social-icon-btn" title="Courriel / Email" aria-label="Email">
-                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    </a>
-                    <a href="${meta.socials.instagram}" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Instagram" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    </a>
-                    <a href="${meta.socials.facebook}" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Facebook" aria-label="Facebook">
-                        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    </a>
-                `;
-    }
+    const socialHtml = `
+      <a href="mailto:${meta.email}" class="social-btn" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+      <a href="${meta.socials.instagram}" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="${meta.socials.facebook}" target="_blank" rel="noopener noreferrer" class="social-btn" title="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    `;
+    const sc = document.getElementById('socialIconsContainer');
+    const fs = document.getElementById('footerSocials');
+    if (sc) sc.innerHTML = socialHtml;
+    if (fs) fs.innerHTML = socialHtml;
 
     renderExhibitions();
   }
@@ -1831,23 +1042,16 @@
   function renderExhibitions() {
     const expContainer = document.getElementById('exhibitionsListContainer');
     if (!expContainer || !meta.exhibitions) return;
-
-    expContainer.innerHTML = meta.exhibitions.map(item => {
-      const titleText = item.title[currentLang] || item.title.fr;
-      const locText = item.location[currentLang] || item.location.fr;
-      const badgeText = item.badge ? (item.badge[currentLang] || item.badge.fr) : '';
-
-      return `
-                    <li class="cv-item">
-                        <span class="cv-year">${item.year}</span>
-                        <div class="cv-desc">
-                            <strong>${titleText}</strong>
-                            <span>${locText}</span>
-                            ${badgeText ? `<span class="cv-placeholder-badge">${badgeText}</span>` : ''}
-                        </div>
-                    </li>
-                `;
-    }).join('');
+    expContainer.innerHTML = meta.exhibitions.map(item => `
+      <li class="cv-item">
+          <span class="cv-year">${item.year}</span>
+          <div class="cv-desc">
+              <strong>${item.title[currentLang] || item.title.fr}</strong>
+              <span>${item.location[currentLang] || item.location.fr}</span>
+              ${item.badge ? `<span class="cv-placeholder-badge">${item.badge[currentLang] || item.badge.fr}</span>` : ''}
+          </div>
+      </li>
+    `).join('');
   }
 
   function handleRightClick(e) {
@@ -1867,43 +1071,32 @@
   function getActiveNotification() {
     const notifs = window.ERG_NOTIFICATIONS || [];
     const now = new Date();
-
     return notifs.find(n => {
       if (!n.active) return false;
       const start = n.startDate ? new Date(n.startDate) : null;
       const end = n.endDate ? new Date(n.endDate) : null;
-
       if (start && now < start) return false;
       if (end && now > end) return false;
       if (sessionStorage.getItem(`erg_dismissed_${n.id}`)) return false;
-
       return true;
     });
   }
 
   function handleNotificationLinkClick(e, link) {
     if (!link) return;
-
-    // 1. Caso: Deeplink a una obra específica (#artwork-art-XX)
     if (link.startsWith('#artwork-')) {
       e.preventDefault();
-      const artId = link.replace('#artwork-', '');
-      openArtworkModal(artId);
+      openArtworkModal(link.replace('#artwork-', ''));
       return;
     }
-
-    // 2. Caso: Enlace interno a una sección de la página (#collection, #contact, etc.)
     if (link.startsWith('#')) {
       e.preventDefault();
-      const targetEl = document.querySelector(link);
-      if (targetEl) {
-        targetEl.scrollIntoView({ behavior: 'smooth' });
+      const target = document.querySelector(link);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
         history.pushState(null, '', link);
       }
-      return;
     }
-
-    // 3. Caso: Enlace externo (deja actuar al navegador de forma estándar)
   }
 
   function renderNotificationBar() {
@@ -1923,21 +1116,17 @@
 
     let html = `<span>${text}</span>`;
     if (link && linkText) {
-      // Escapamos comillas para pasar el link limpiamente a la función de clic
       html += ` <a href="${link}" class="announcement-bar-link" onclick="handleNotificationLinkClick(event, '${link}')">${linkText}</a>`;
     }
 
     container.innerHTML = html;
     banner.style.display = 'flex';
-
     const height = banner.offsetHeight || 38;
     document.documentElement.style.setProperty('--banner-height', `${height}px`);
   }
 
   function dismissNotification() {
-    if (activeNotification) {
-      sessionStorage.setItem(`erg_dismissed_${activeNotification.id}`, 'true');
-    }
+    if (activeNotification) sessionStorage.setItem(`erg_dismissed_${activeNotification.id}`, 'true');
     renderNotificationBar();
   }
 
@@ -1945,31 +1134,26 @@
     currentLang = lang;
     localStorage.setItem('erg_lang', lang);
 
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
-    });
+    const langSel = document.getElementById('languageSelector');
+    if (langSel) langSel.value = lang;
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (i18n[lang] && i18n[lang][key]) {
-        el.innerHTML = i18n[lang][key];
-      }
+      if (i18n[lang] && i18n[lang][key]) el.innerHTML = i18n[lang][key];
     });
 
     document.querySelectorAll('[data-i18n-ph]').forEach(el => {
       const key = el.getAttribute('data-i18n-ph');
-      if (i18n[lang] && i18n[lang][key]) {
-        el.setAttribute('placeholder', i18n[lang][key]);
-      }
+      if (i18n[lang] && i18n[lang][key]) el.setAttribute('placeholder', i18n[lang][key]);
     });
 
     const statementEl = document.getElementById('statementFullText');
     if (statementEl && i18n[lang]) {
       statementEl.innerHTML = `
-                <p style="margin-bottom: 18px;">${i18n[lang].statement_p1}</p>
-                <p style="margin-bottom: 18px;">${i18n[lang].statement_p2}</p>
-                <p>${i18n[lang].statement_p3}</p>
-            `;
+        <p style="margin-bottom: 18px;">${i18n[lang].statement_p1}</p>
+        <p style="margin-bottom: 18px;">${i18n[lang].statement_p2}</p>
+        <p>${i18n[lang].statement_p3}</p>
+      `;
     }
 
     renderNotificationBar();
@@ -1997,7 +1181,8 @@
   function setCurrency(curr) {
     currentCurrency = curr;
     localStorage.setItem('erg_currency', curr);
-    document.getElementById('currencySelector').value = curr;
+    const currSel = document.getElementById('currencySelector');
+    if (currSel) currSel.value = curr;
     renderAllGrids();
     updateCartUI();
   }
@@ -2017,143 +1202,101 @@
     const isAvailable = art.status === 'available';
     const isPrint = art.category === 'print';
     const mainImg = getArtworkMainImage(art);
-    const mediumText = art.medium[currentLang] || art.medium.fr || '';
+    const mediumText = (art.medium && (art.medium[currentLang] || art.medium.fr)) || '';
     const dynamicAlt = `${art.title} – ${mediumText} – Eloísa Rodríguez`;
 
     let badgeText = '';
     let badgeClass = '';
 
-    if (isPrint) {
-      badgeText = i18n[currentLang].status_print;
-      badgeClass = 'badge-print';
-    } else if (art.status === 'available') {
-      badgeText = i18n[currentLang].status_available;
-      badgeClass = 'badge-available';
-    } else if (art.status === 'reserved') {
-      badgeText = i18n[currentLang].status_reserved;
-      badgeClass = 'badge-reserved';
-    } else if (art.status === 'sold') {
-      badgeText = i18n[currentLang].status_sold;
-      badgeClass = 'badge-sold';
-    } else if (art.status === 'on_loan') {
-      badgeText = i18n[currentLang].status_onloan;
-      badgeClass = 'badge-onloan';
-    }
+    if (isPrint) { badgeText = i18n[currentLang]?.status_print || 'Estampe'; badgeClass = 'badge-print'; }
+    else if (art.status === 'available') { badgeText = i18n[currentLang]?.status_available || 'Disponible'; badgeClass = 'badge-available'; }
+    else if (art.status === 'reserved') { badgeText = i18n[currentLang]?.status_reserved || 'Réservé'; badgeClass = 'badge-reserved'; }
+    else if (art.status === 'sold') { badgeText = i18n[currentLang]?.status_sold || 'Vendu'; badgeClass = 'badge-sold'; }
+    else if (art.status === 'on_loan') { badgeText = i18n[currentLang]?.status_onloan || 'Prêt'; badgeClass = 'badge-onloan'; }
 
-    const actionButtonHtml = (isAvailable || isPrint)
-      ? `<button class="btn-outline" style="padding: 6px 14px; font-size: 11px;" onclick="addToBag('${art.id}')">
-                 ${i18n[currentLang].btn_acquire}
-               </button>`
+    const actionBtn = (isAvailable || isPrint)
+      ? `<button class="btn-outline" style="padding: 6px 14px; font-size: 11px;" onclick="addToBag('${art.id}')">${i18n[currentLang]?.btn_acquire || 'Acquérir'}</button>`
       : '';
 
     return `
-                <div class="art-card">
-                    <div class="art-card-thumb" onclick="openArtworkModal('${art.id}')">
-                        <span class="art-badge ${badgeClass}">${badgeText}</span>
-                        <img src="${mainImg}" alt="${dynamicAlt}" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
-                        <div class="art-hover-prompt">
-                            <button class="btn-outline" style="background:#fff; color:#000;" onclick="event.stopPropagation(); openArtworkModal('${art.id}')">${i18n[currentLang].btn_inspect}</button>
-                        </div>
-                    </div>
-                    <div class="art-card-body">
-                        <span class="art-card-series">${getSeriesName(art.series)}</span>
-                        <h4 class="art-card-title serif-font">${art.title}</h4>
-                        <p class="art-card-specs">${art.dimensions} • ${mediumText} (${art.year})</p>
-                        <div class="art-card-bottom">
-                            <span class="art-card-price">${formatPrice(art.priceChf)}</span>
-                            ${actionButtonHtml}
-                        </div>
-                    </div>
-                </div>
-            `;
+      <div class="art-card">
+          <div class="art-card-thumb" onclick="openArtworkModal('${art.id}')">
+              <span class="art-badge ${badgeClass}">${badgeText}</span>
+              <img src="${mainImg}" alt="${dynamicAlt}" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
+              <div class="art-hover-prompt">
+                  <button class="btn-outline" style="background:#fff; color:#000;" onclick="event.stopPropagation(); openArtworkModal('${art.id}')">${i18n[currentLang]?.btn_inspect || 'Détails'}</button>
+              </div>
+          </div>
+          <div class="art-card-body">
+              <span class="art-card-series">${getSeriesName(art.series)}</span>
+              <h4 class="art-card-title serif-font">${art.title}</h4>
+              <p class="art-card-specs">${art.dimensions} • ${mediumText} (${art.year})</p>
+              <div class="art-card-bottom">
+                  <span class="art-card-price">${formatPrice(art.priceChf)}</span>
+                  ${actionBtn}
+              </div>
+          </div>
+      </div>
+    `;
   }
 
   function renderDynamicFilterBar() {
     const bar = document.getElementById('dynamicFilterBar');
     if (!bar) return;
 
-    let uniqueSeries = [...new Set(artworks.map(a => a.series))];
-    uniqueSeries = uniqueSeries.filter(s => s !== 'all');
-
-    const seriesPriority = {
-      'nebula-sediment': 1,
-      'portrait': 2,
-      'otras': 3
-    };
-
-    uniqueSeries.sort((a, b) => {
-      const orderA = seriesPriority[a] || 99;
-      const orderB = seriesPriority[b] || 99;
-      return orderA - orderB;
-    });
+    let uniqueSeries = [...new Set(artworks.map(a => a.series))].filter(s => s !== 'all');
+    const priority = { 'nebula-sediment': 1, 'portrait': 2, 'otras': 3 };
+    uniqueSeries.sort((a, b) => (priority[a] || 99) - (priority[b] || 99));
 
     let html = '';
-
     uniqueSeries.forEach(seriesKey => {
-      const label = getSeriesName(seriesKey);
       const isActive = activeSeriesFilter === seriesKey ? 'active' : '';
-      html += `<button class="filter-btn ${isActive}" onclick="filterGallery('${seriesKey}', this)">${label}</button>`;
+      html += `<button class="filter-btn ${isActive}" onclick="filterGallery('${seriesKey}', this)">${getSeriesName(seriesKey)}</button>`;
     });
 
     const allActive = activeSeriesFilter === 'all' ? 'active' : '';
-    html += `<button class="filter-btn ${allActive}" onclick="filterGallery('all', this)">${i18n[currentLang].filter_all || 'Toutes les Œuvres'}</button>`;
-
-    const availActive = onlyAvailable ? 'active' : '';
+    html += `<button class="filter-btn ${allActive}" onclick="filterGallery('all', this)">${i18n[currentLang]?.filter_all || 'Toutes les Œuvres'}</button>`;
     html += `
-            <div class="filter-divider"></div>
-            <button class="filter-btn-avail ${availActive}" onclick="toggleAvailabilityFilter(this)">
-                <span>✦</span> <span data-i18n="filter_avail">${i18n[currentLang].filter_avail}</span>
-            </button>
-          `;
-
+      <div class="filter-divider"></div>
+      <button class="filter-btn-avail ${onlyAvailable ? 'active' : ''}" onclick="toggleAvailabilityFilter(this)">
+          <span>✦</span> <span data-i18n="filter_avail">${i18n[currentLang]?.filter_avail || 'Disponibles'}</span>
+      </button>
+    `;
     bar.innerHTML = html;
   }
 
   function toggleAvailabilityFilter(btn) {
     onlyAvailable = !onlyAvailable;
     if (btn) btn.classList.toggle('active', onlyAvailable);
-
     const grid = document.getElementById('originalArtworksGrid');
     grid.classList.add('animating');
-    setTimeout(() => {
-      renderAllGrids();
-      grid.classList.remove('animating');
-    }, 200);
+    setTimeout(() => { renderAllGrids(); grid.classList.remove('animating'); }, 200);
   }
 
   function renderAllGrids() {
     const origContainer = document.getElementById('originalArtworksGrid');
+    if (!origContainer) return;
+
     let origItems = artworks.filter(a => a.category === 'original');
-
-    if (activeSeriesFilter !== 'all') {
-      origItems = origItems.filter(a => a.series === activeSeriesFilter);
-    }
-    if (onlyAvailable) {
-      origItems = origItems.filter(a => a.status === 'available');
-    }
-
+    if (activeSeriesFilter !== 'all') origItems = origItems.filter(a => a.series === activeSeriesFilter);
+    if (onlyAvailable) origItems = origItems.filter(a => a.status === 'available');
     origContainer.innerHTML = origItems.map(createCardHtml).join('');
 
     const printsContainer = document.getElementById('printsGrid');
-    const printItems = artworks.filter(a => a.category === 'print');
-    printsContainer.innerHTML = printItems.map(createCardHtml).join('');
+    if (printsContainer) {
+      printsContainer.innerHTML = artworks.filter(a => a.category === 'print').map(createCardHtml).join('');
+    }
   }
 
   function filterGallery(filter, btn) {
     const grid = document.getElementById('originalArtworksGrid');
     grid.classList.add('animating');
-
     activeSeriesFilter = filter;
-
     if(btn) {
       document.querySelectorAll('#dynamicFilterBar .filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
     }
-
-    setTimeout(() => {
-      renderAllGrids();
-      grid.classList.remove('animating');
-    }, 200);
+    setTimeout(() => { renderAllGrids(); grid.classList.remove('animating'); }, 200);
   }
 
   function switchModalView(mode) {
@@ -2163,62 +1306,43 @@
     const roomBox = document.getElementById('roomSimWrap');
 
     if (mode === 'detail') {
-      btnDetail.classList.add('active');
-      btnRoom.classList.remove('active');
-      zoomBox.style.display = 'flex';
-      roomBox.style.display = 'none';
+      btnDetail.classList.add('active'); btnRoom.classList.remove('active');
+      zoomBox.style.display = 'flex'; roomBox.style.display = 'none';
     } else {
-      btnRoom.classList.add('active');
-      btnDetail.classList.remove('active');
-      zoomBox.style.display = 'none';
-      roomBox.style.display = 'flex';
+      btnRoom.classList.add('active'); btnDetail.classList.remove('active');
+      zoomBox.style.display = 'none'; roomBox.style.display = 'flex';
     }
   }
 
   const zoomBox = document.getElementById('zoomContainer');
-
   function updateZoomPosition(clientX, clientY) {
     const img = document.getElementById('modalArtImg');
     const rect = zoomBox.getBoundingClientRect();
-
     const x = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
     const y = Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100));
-
     img.style.transformOrigin = `${x}% ${y}%`;
     img.style.transform = 'scale(3.5)';
   }
-
-  function resetZoom() {
-    const img = document.getElementById('modalArtImg');
-    img.style.transform = 'scale(1)';
-  }
-
+  function resetZoom() { document.getElementById('modalArtImg').style.transform = 'scale(1)'; }
   zoomBox.addEventListener('mousemove', (e) => updateZoomPosition(e.clientX, e.clientY));
   zoomBox.addEventListener('mouseleave', resetZoom);
-
-  zoomBox.addEventListener('touchmove', (e) => {
-    if (e.touches.length > 0) {
-      updateZoomPosition(e.touches[0].clientX, e.touches[0].clientY);
-    }
-  }, { passive: true });
+  zoomBox.addEventListener('touchmove', (e) => { if (e.touches.length > 0) updateZoomPosition(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
   zoomBox.addEventListener('touchend', resetZoom);
 
   function openArtworkModal(id) {
     const art = artworks.find(a => a.id === id);
     if (!art) return;
-
     history.pushState({ artworkId: id }, '', `#artwork-${id}`);
-
     currentModalArtwork = art;
     currentModalImageIndex = 0;
 
     document.getElementById('modalSeries').textContent = getSeriesName(art.series);
     document.getElementById('modalTitle').textContent = art.title;
     document.getElementById('modalPrice').textContent = formatPrice(art.priceChf);
-    document.getElementById('modalMedium').textContent = art.medium[currentLang] || art.medium.fr;
+    document.getElementById('modalMedium').textContent = (art.medium && (art.medium[currentLang] || art.medium.fr)) || '';
     document.getElementById('modalDimensions').textContent = art.dimensions;
     document.getElementById('modalYear').textContent = art.year;
-    document.getElementById('modalDesc').textContent = art.desc[currentLang] || art.desc.fr;
+    document.getElementById('modalDesc').textContent = (art.desc && (art.desc[currentLang] || art.desc.fr)) || '';
 
     renderModalCarousel();
     switchModalView('detail');
@@ -2226,15 +1350,14 @@
     const actions = document.getElementById('modalActionsWrap');
     if (art.status === 'available' || art.category === 'print') {
       actions.innerHTML = `
-              <button class="btn-primary" style="flex:1; min-width:140px;" onclick="addToBag('${art.id}'); closeModal();">${i18n[currentLang].btn_add_bag}</button>
-              <button class="btn-outline" style="flex:1; min-width:140px;" onclick="inquireDirectly('${art.title}')">${i18n[currentLang].btn_inquire_piece}</button>
-            `;
+        <button class="btn-primary" style="flex:1; min-width:140px;" onclick="addToBag('${art.id}'); closeModal();">${i18n[currentLang]?.btn_add_bag || 'Ajouter'}</button>
+        <button class="btn-outline" style="flex:1; min-width:140px;" onclick="inquireDirectly('${art.title}')">${i18n[currentLang]?.btn_inquire_piece || 'Demander'}</button>
+      `;
     } else {
       actions.innerHTML = `
-              <button class="btn-primary" style="flex:1;" onclick="inquireDirectly('${art.title}')">${i18n[currentLang].btn_ask_similar || i18n[currentLang].form_btn_commission}</button>
-            `;
+        <button class="btn-primary" style="flex:1;" onclick="inquireDirectly('${art.title}')">${i18n[currentLang]?.btn_ask_similar || 'Demander une œuvre similaire'}</button>
+      `;
     }
-
     document.getElementById('artworkModal').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
@@ -2246,19 +1369,15 @@
     const thumbs = document.getElementById('modalCarouselThumbs');
 
     if (images.length > 1) {
-      nav.style.display = 'flex';
-      thumbs.style.display = 'flex';
+      nav.style.display = 'flex'; thumbs.style.display = 'flex';
       thumbs.innerHTML = images.map((src, idx) => `
-                    <button class="carousel-thumb-btn ${idx === currentModalImageIndex ? 'active' : ''}" onclick="setModalImageIndex(${idx})" aria-label="Voir l'image ${idx + 1}">
-                        <img src="${src}" alt="Thumb ${idx + 1}" decoding="async">
-                    </button>
-                `).join('');
+        <button class="carousel-thumb-btn ${idx === currentModalImageIndex ? 'active' : ''}" onclick="setModalImageIndex(${idx})" aria-label="Image ${idx + 1}">
+            <img src="${src}" alt="Thumb ${idx + 1}" decoding="async">
+        </button>
+      `).join('');
     } else {
-      nav.style.display = 'none';
-      thumbs.style.display = 'none';
-      thumbs.innerHTML = '';
+      nav.style.display = 'none'; thumbs.style.display = 'none'; thumbs.innerHTML = '';
     }
-
     updateModalActiveImage();
   }
 
@@ -2266,19 +1385,13 @@
     if (!currentModalArtwork) return;
     const images = getArtworkImages(currentModalArtwork);
     const activeSrc = images[currentModalImageIndex] || getArtworkMainImage(currentModalArtwork);
-    const mediumText = currentModalArtwork.medium[currentLang] || currentModalArtwork.medium.fr || '';
-    const dynamicAlt = `${currentModalArtwork.title} (Vue ${currentModalImageIndex + 1}) – ${mediumText} – Eloísa Rodríguez`;
+    const dynamicAlt = `${currentModalArtwork.title} (Vue ${currentModalImageIndex + 1}) – Eloísa Rodríguez`;
 
     const modalImg = document.getElementById('modalArtImg');
     const roomImg = document.getElementById('roomArtImg');
-
-    modalImg.src = activeSrc;
-    modalImg.alt = dynamicAlt;
-    roomImg.src = activeSrc;
-    roomImg.alt = `${dynamicAlt} - Vue en salon`;
-
-    modalImg.classList.add('loaded');
-    roomImg.classList.add('loaded');
+    modalImg.src = activeSrc; modalImg.alt = dynamicAlt;
+    roomImg.src = activeSrc; roomImg.alt = `${dynamicAlt} - Vue en salon`;
+    modalImg.classList.add('loaded'); roomImg.classList.add('loaded');
     resetZoom();
 
     document.querySelectorAll('#modalCarouselThumbs .carousel-thumb-btn').forEach((btn, idx) => {
@@ -2286,76 +1399,35 @@
     });
   }
 
-  function setModalImageIndex(idx) {
-    currentModalImageIndex = idx;
-    updateModalActiveImage();
-  }
-
-  function prevCarouselImage(e) {
-    if (e) e.stopPropagation();
-    if (!currentModalArtwork) return;
-    const images = getArtworkImages(currentModalArtwork);
-    if (images.length <= 1) return;
-    currentModalImageIndex = (currentModalImageIndex - 1 + images.length) % images.length;
-    updateModalActiveImage();
-  }
-
-  function nextCarouselImage(e) {
-    if (e) e.stopPropagation();
-    if (!currentModalArtwork) return;
-    const images = getArtworkImages(currentModalArtwork);
-    if (images.length <= 1) return;
-    currentModalImageIndex = (currentModalImageIndex + 1) % images.length;
-    updateModalActiveImage();
-  }
+  function setModalImageIndex(idx) { currentModalImageIndex = idx; updateModalActiveImage(); }
+  function prevCarouselImage(e) { if (e) e.stopPropagation(); if (!currentModalArtwork) return; const images = getArtworkImages(currentModalArtwork); if (images.length <= 1) return; currentModalImageIndex = (currentModalImageIndex - 1 + images.length) % images.length; updateModalActiveImage(); }
+  function nextCarouselImage(e) { if (e) e.stopPropagation(); if (!currentModalArtwork) return; const images = getArtworkImages(currentModalArtwork); if (images.length <= 1) return; currentModalImageIndex = (currentModalImageIndex + 1) % images.length; updateModalActiveImage(); }
 
   function inquireDirectly(artworkTitle) {
     closeModal();
-    const subjectInput = document.getElementById('contactSubjectInput');
-    const messageInput = document.getElementById('contactMessageInput');
-
-    const prefixes = {
-      fr: "Demande d'acquisition pour l'œuvre :",
-      en: "Acquisition inquiry for artwork:",
-      it: "Richiesta di acquisizione per l'opera:",
-      es: "Consulta de adquisición para la obra:"
-    };
-
-    subjectInput.value = `${prefixes[currentLang]} ${artworkTitle}`;
-    messageInput.focus();
-
-    const contactSection = document.getElementById('contact');
-    contactSection.scrollIntoView({ behavior: 'smooth' });
+    const prefixes = { fr: "Demande d'acquisition pour :", en: "Acquisition inquiry for:", it: "Richiesta per:", es: "Consulta de adquisición para:" };
+    document.getElementById('contactSubjectInput').value = `${prefixes[currentLang] || prefixes.fr} ${artworkTitle}`;
+    document.getElementById('contactMessageInput').focus();
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
   }
 
   function closeModal() {
     document.getElementById('artworkModal').classList.remove('open');
     document.body.style.overflow = 'auto';
     resetZoom();
-
-    if (window.location.hash.startsWith('#artwork-')) {
-      history.pushState(null, '', window.location.pathname + window.location.search);
-    }
+    if (window.location.hash.startsWith('#artwork-')) history.pushState(null, '', window.location.pathname + window.location.search);
   }
 
-  function closeModalOutside(e) {
-    if (e.target.id === 'artworkModal') closeModal();
-  }
+  function closeModalOutside(e) { if (e.target.id === 'artworkModal') closeModal(); }
 
   function addToBag(id) {
     const art = artworks.find(a => a.id === id);
     if (!art) return;
-
     const existingIndex = cart.findIndex(item => item.id === art.id);
 
     if (art.category === 'original' && existingIndex > -1) {
-      const alerts = {
-        fr: "Cette pièce unique est déjà dans votre sélection.",
-        en: "This original piece is already in your bag.",
-        it: "Questo pezzo unico è già nella tua selezione.",
-        es: "Esta pieza única ya está en tu selección."
-      };
-      showToast(alerts[currentLang]);
+      const alerts = { fr: "Cette pièce unique est déjà dans votre sélection.", en: "This original piece is already in your bag.", it: "Questo pezzo unico è già nella tua selezione.", es: "Esta pieza única ya está en tu selección." };
+      showToast(alerts[currentLang] || alerts.fr);
       toggleCartDrawer(true);
       return;
     }
@@ -2365,28 +1437,16 @@
     } else {
       cart.push({ ...art, qty: 1 });
     }
-
-    saveCart();
-    updateCartUI();
-    showToast(`"${art.title}" ${i18n[currentLang].toast_added}`);
-    toggleCartDrawer(true);
+    saveCart(); updateCartUI(); showToast(`"${art.title}" ${i18n[currentLang]?.toast_added || 'ajouté'}`); toggleCartDrawer(true);
   }
 
-  function removeFromBag(index) {
-    cart.splice(index, 1);
-    saveCart();
-    updateCartUI();
-  }
-
-  function saveCart() {
-    localStorage.setItem('erg_cart', JSON.stringify(cart));
-  }
+  function removeFromBag(index) { cart.splice(index, 1); saveCart(); updateCartUI(); }
+  function saveCart() { localStorage.setItem('erg_cart', JSON.stringify(cart)); }
 
   function toggleCartDrawer(forceOpen = null) {
     const drawer = document.getElementById('cartDrawer');
     const btn = document.getElementById('cartOpenBtn');
     const isActive = forceOpen !== null ? forceOpen : !drawer.classList.contains('active');
-
     drawer.classList.toggle('active', isActive);
     btn.setAttribute('aria-expanded', isActive);
   }
@@ -2397,18 +1457,8 @@
     container.innerHTML = '';
 
     if (cart.length === 0) {
-      const emptyMsgs = {
-        fr: "Votre sélection est vide.",
-        en: "Your bag is currently empty.",
-        it: "La tua selezione è vuota.",
-        es: "Tu selección está vacía."
-      };
-      container.innerHTML = `
-                    <div style="text-align: center; color: var(--text-muted); margin-top: 50px;">
-                        <p style="font-size: 28px; color: var(--accent-gold); margin-bottom: 10px;">◈</p>
-                        <p>${emptyMsgs[currentLang]}</p>
-                    </div>
-                `;
+      const emptyMsgs = { fr: "Votre sélection est vide.", en: "Your bag is currently empty.", it: "La tua selezione è vuota.", es: "Tu selección está vacía." };
+      container.innerHTML = `<div style="text-align: center; color: var(--text-muted); margin-top: 50px;"><p style="font-size: 28px; color: var(--accent-gold); margin-bottom: 10px;">◈</p><p>${emptyMsgs[currentLang] || emptyMsgs.fr}</p></div>`;
       document.getElementById('cartTotalDisplay').textContent = formatPrice(0);
       return;
     }
@@ -2420,21 +1470,18 @@
       const itemTotal = (item.priceChf || 0) * (item.qty || 1);
       total += itemTotal;
       const qtyText = item.qty > 1 ? ` (×${item.qty})` : '';
-      const itemImg = getArtworkMainImage(item);
-
       const div = document.createElement('div');
       div.className = 'cart-drawer-item';
       div.innerHTML = `
-                    <img src="${itemImg}" class="cart-drawer-thumb" alt="${item.title}" decoding="async">
-                    <div style="flex-grow:1;">
-                        <div style="font-size:13px; font-weight:600;">${item.title}${qtyText}</div>
-                        <div style="font-size:13px; color:var(--accent-gold);">${formatPrice(itemTotal)}</div>
-                        <button style="font-size:11px; color:#c65353;" onclick="removeFromBag(${idx})">${removeLabels[currentLang]}</button>
-                    </div>
-                `;
+        <img src="${getArtworkMainImage(item)}" class="cart-drawer-thumb" alt="${item.title}" decoding="async">
+        <div style="flex-grow:1;">
+            <div style="font-size:13px; font-weight:600;">${item.title}${qtyText}</div>
+            <div style="font-size:13px; color:var(--accent-gold);">${formatPrice(itemTotal)}</div>
+            <button style="font-size:11px; color:#c65353;" onclick="removeFromBag(${idx})">${removeLabels[currentLang] || 'Retirer'}</button>
+        </div>
+      `;
       container.appendChild(div);
     });
-
     document.getElementById('cartTotalDisplay').textContent = formatPrice(total);
   }
 
@@ -2446,36 +1493,21 @@
       it: "I pagamenti online diretti saranno presto disponibili. Si prega di utilizzare il modulo di contatto per prenotare.",
       es: "Las adquisiciones online directas estarán disponibles próximamente. Utiliza el formulario de contacto para reservar."
     };
-    alert(checkoutMsgs[currentLang]);
+    alert(checkoutMsgs[currentLang] || checkoutMsgs.fr);
     toggleCartDrawer(false);
-    const contactSection = document.getElementById('contact');
-    contactSection.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
   }
 
   function handleFormSubmit(e) {
     e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString()
-    })
+    const formData = new FormData(e.target);
+    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(formData).toString() })
       .then(() => {
-        const successMsgs = {
-          fr: "Demande transmise avec succès à l'atelier. Nous vous répondrons rapidement.",
-          en: "Inquiry successfully sent to the studio. We will get back to you shortly.",
-          it: "Richiesta inviata con successo allo studio. Vi risponderemo al più presto.",
-          es: "Solicitud enviada con éxito al estudio. Nos pondremos en contacto con usted en breve."
-        };
-        showToast(successMsgs[currentLang]);
-        form.reset();
+        const successMsgs = { fr: "Demande transmise avec succès à l'atelier.", en: "Inquiry successfully sent to the studio.", it: "Richiesta inviata con successo.", es: "Solicitud enviada con éxito." };
+        showToast(successMsgs[currentLang] || successMsgs.fr);
+        e.target.reset();
       })
-      .catch((error) => {
-        console.error("Form error:", error);
-        showToast("Erreur lors de l'envoi. Veuillez réessayer.");
-      });
+      .catch(() => showToast("Erreur lors de l'envoi."));
   }
 
   function showToast(msg) {
@@ -2486,37 +1518,24 @@
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeModal();
-      toggleCartDrawer(false);
-      closeMobileMenu();
-    } else if (e.key === 'ArrowLeft' && document.getElementById('artworkModal').classList.contains('open')) {
-      prevCarouselImage();
-    } else if (e.key === 'ArrowRight' && document.getElementById('artworkModal').classList.contains('open')) {
-      nextCarouselImage();
-    }
+    if (e.key === 'Escape') { closeModal(); toggleCartDrawer(false); closeMobileMenu(); }
+    else if (e.key === 'ArrowLeft' && document.getElementById('artworkModal').classList.contains('open')) prevCarouselImage();
+    else if (e.key === 'ArrowRight' && document.getElementById('artworkModal').classList.contains('open')) nextCarouselImage();
   });
 
   function checkUrlHashForModal() {
     const hash = window.location.hash;
-    if (hash && hash.startsWith('#artwork-')) {
-      const artId = hash.replace('#artwork-', '');
-      openArtworkModal(artId);
-    }
+    if (hash && hash.startsWith('#artwork-')) openArtworkModal(hash.replace('#artwork-', ''));
   }
 
   window.addEventListener('popstate', (e) => {
-    if (e.state && e.state.artworkId) {
-      openArtworkModal(e.state.artworkId);
-    } else {
-      closeModal();
-    }
+    if (e.state && e.state.artworkId) openArtworkModal(e.state.artworkId);
+    else closeModal();
   });
 
   window.addEventListener('resize', () => {
     if (activeNotification) {
-      const banner = document.getElementById('announcementBar');
-      const height = banner.offsetHeight || 38;
+      const height = document.getElementById('announcementBar').offsetHeight || 38;
       document.documentElement.style.setProperty('--banner-height', `${height}px`);
     }
   });
@@ -2527,8 +1546,6 @@
     setCurrency(currentCurrency);
     setLanguage(currentLang);
     updateCartUI();
-    renderDynamicFilterBar();
-    renderAllGrids();
     checkUrlHashForModal();
   });
 </script>
