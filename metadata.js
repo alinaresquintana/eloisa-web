@@ -10,6 +10,27 @@ window.ERG_METADATA = {
   },
   exhibitions: [
     {
+      year: "2022 – Présent",
+      title: {
+        fr: "Atelier d'Art ERG • Création & Direction",
+        en: "ERG Art Studio • Creation & Direction",
+        it: "Studio d'Arte ERG • Creazione & Direzione",
+        es: "Atelier de Arte ERG • Creación y Dirección"
+      },
+      location: {
+        fr: "Vich, Canton de Vaud (Suisse)",
+        en: "Vich, Canton of Vaud (Switzerland)",
+        it: "Vich, Canton Vaud (Svizzera)",
+        es: "Vich, Cantón de Vaud (Suiza)"
+      },
+      badge: {
+        fr: "En cours",
+        en: "Ongoing",
+        it: "In corso",
+        es: "En curso"
+      }
+    },
+    {
       year: "2026",
       title: {
         fr: "Exposition Collective ArtGland 2026",
@@ -24,6 +45,111 @@ window.ERG_METADATA = {
         es: "Salle Polyvalente de Grand-Champ, Gland (Suiza)"
       },
       badge: {
+        fr: "À venir • Sélection Officielle",
+        en: "Upcoming • Official Selection",
+        it: "In arrivo • Selezione Ufficiale",
+        es: "Próximamente • Selección Oficial"
+      }
+    },
+    {
+      year: "2025",
+      title: {
+        fr: "Direction Artistique • FOLG 2025",
+        en: "Artistic Direction • FOLG 2025",
+        it: "Direzione Artistica • FOLG 2025",
+        es: "Dirección Artística • FOLG 2025"
+      },
+      location: {
+        fr: "Suisse",
+        en: "Switzerland",
+        it: "Svizzera",
+        es: "Suiza"
+      },
+      badge: {
+        fr: "Direction Artistique",
+        en: "Artistic Direction",
+        it: "Direzione Artistica",
+        es: "Dirección Artística"
+      }
+    },
+    {
+      year: "2025",
+      title: {
+        fr: "Prix International Target Prize",
+        en: "Target Prize International Art Award",
+        it: "Premio Internazionale Target Prize",
+        es: "Premio Internacional Target Prize"
+      },
+      location: {
+        fr: "Sélection Internationale",
+        en: "International Selection",
+        it: "Selezione Internazionale",
+        es: "Selección Internacional"
+      },
+      badge: {
+        fr: "Demi-Finaliste",
+        en: "Semi-Finalist",
+        it: "Semifinalista",
+        es: "Semifinalista"
+      }
+    },
+    {
+      year: "2019",
+      title: {
+        fr: "Conseil Artistique & Résidence de Création",
+        en: "Art Advisory & Studio Residency",
+        it: "Consulenza Artistica & Residenza di Creazione",
+        es: "Asesoramiento Artístico y Residencia de Creación"
+      },
+      location: {
+        fr: "Espace Créatif & Collection Privée, Lausanne (Suisse)",
+        en: "Creative Space & Private Collection, Lausanne (Switzerland)",
+        it: "Spazio Creativo & Collezione Privata, Losanna (Svizzera)",
+        es: "Espacio Creativo y Colección Privada, Lausana (Suiza)"
+      },
+      badge: {
+        fr: "Conseil & Atelier",
+        en: "Advisory & Studio",
+        it: "Consulenza & Studio",
+        es: "Asesoramiento y Taller"
+      }
+    },
+    {
+      year: "2017",
+      title: {
+        fr: "XX Certamen Nacional de Pintura Frida Kahlo",
+        en: "20th Frida Kahlo National Painting Award",
+        it: "XX Concorso Nazionale di Pittura Frida Kahlo",
+        es: "XX Certamen Nacional de Pintura Frida Kahlo"
+      },
+      location: {
+        fr: "Madrid (Espagne)",
+        en: "Madrid (Spain)",
+        it: "Madrid (Spagna)",
+        es: "Madrid (España)"
+      },
+      badge: {
+        fr: "Finaliste",
+        en: "Finalist",
+        it: "Finalista",
+        es: "Finalista"
+      }
+    },
+    {
+      year: "2016",
+      title: {
+        fr: "Prix de Peinture de l'Armée de l'Air & « Le Monde du Thé »",
+        en: "Air Force Painting Award & 'Le Monde du Thé'",
+        it: "Premio di Pittura Aeronautica & 'Le Monde du Thé'",
+        es: "Premio de Pintura del Ejército del Aire y 'El Mundo del Té'"
+      },
+      location: {
+        fr: "Madrid (Espagne)",
+        en: "Madrid (Spain)",
+        it: "Madrid (Spagna)",
+        es: "Madrid (España)"
+      },
+      badge: {
         fr: "Sélection Officielle",
         en: "Official Selection",
         it: "Selezione Ufficiale",
@@ -31,136 +157,46 @@ window.ERG_METADATA = {
       }
     },
     {
-      year: "2021 – Présent",
-      title: {
-        fr: "Direction des Ateliers & Cours de Peinture",
-        en: "Painting Studio & Workshops (Kids & Adults)",
-        it: "Direzione Corsi di Pittura (Bambini & Adulti)",
-        es: "Dirección de Clases y Talleres de Pintura"
-      },
-      location: {
-        fr: "Atelier d'Art ERG, Vich (Suisse)",
-        en: "ERG Art Studio, Vich (Switzerland)",
-        it: "Studio d'Arte ERG, Vich (Svizzera)",
-        es: "Atelier de Arte ERG, Vich (Suiza)"
-      },
-      badge: {
-        fr: "Pédagogie & Atelier (5 ans)",
-        en: "Teaching & Studio (5 years)",
-        it: "Didattica & Studio (5 anni)",
-        es: "Docencia y Taller (5 años)"
-      }
-    },
-    {
-      year: "2019",
-      title: {
-        fr: "Conseil Artistique & Résidence de Création",
-        en: "Art Advisory & Private Studio Residency",
-        it: "Consulenza Artistica & Residenza Privata",
-        es: "Asesoramiento Artístico y Residencia Privada"
-      },
-      location: {
-        fr: "Espace Créatif & Collection Privée, Lausanne",
-        en: "Creative Space & Private Collection, Lausanne",
-        it: "Spazio Creativo & Collezione Privata, Losanna",
-        es: "Espacio Creativo y Colección Privada, Lausana"
-      },
-      badge: {
-        fr: "Conseil & Atelier",
-        en: "Advisory & Studio",
-        it: "Consulenza",
-        es: "Asesoramiento"
-      }
-    },
-    {
-      year: "2017",
-      title: {
-        fr: "Matière & Lumière (Exposition Personnelle)",
-        en: "Matter & Light (Solo Exhibition)",
-        it: "Materia & Luce (Mostra Personale)",
-        es: "Materia y Luz (Exposición Individual)"
-      },
-      location: {
-        fr: "Galerie de Arte Complutense, Alcalá de Henares",
-        en: "Complutense Art Gallery, Alcalá de Henares",
-        it: "Galleria d'Arte Complutense, Alcalá de Henares",
-        es: "Galería de Arte Complutense, Alcalá de Henares"
-      },
-      badge: {
-        fr: "Exposition personnelle",
-        en: "Solo Exhibition",
-        it: "Mostra personale",
-        es: "Exposición individual"
-      }
-    },
-    {
-      year: "2015",
-      title: {
-        fr: "Strates Méditerranéennes (Exposition Collective)",
-        en: "Mediterranean Strata (Group Exhibition)",
-        it: "Strati Mediterranei (Mostra Collettiva)",
-        es: "Estratos Mediterráneos (Exposición Colectiva)"
-      },
-      location: {
-        fr: "Galleria San Frediano, Florence",
-        en: "San Frediano Gallery, Florence",
-        it: "Galleria San Frediano, Firenze",
-        es: "Galería San Frediano, Florencia"
-      },
-      badge: {
-        fr: "Exposition collective",
-        en: "Group Exhibition",
-        it: "Mostra collettiva",
-        es: "Exposición colectiva"
-      }
-    },
-    {
       year: "2014",
       title: {
-        fr: "Atelier Ouvert & Recherche Plastique",
-        en: "Open Studio & Material Research",
-        it: "Studio Aperto & Ricerca Plastica",
-        es: "Atelier Abierto e Investigación Plástica"
+        fr: "Scuola delle Arti & Laboratorio Artistico",
+        en: "Scuola delle Arti & Artist Lab",
+        it: "Scuola delle Arti & Laboratorio Artistico",
+        es: "Scuola delle Arti y Laboratorio Artístico"
       },
       location: {
-        fr: "Spazio Arte Santo Spirito, Florence",
-        en: "Santo Spirito Art Space, Florence",
-        it: "Spazio Arte Santo Spirito, Firenze",
-        es: "Espacio Arte Santo Spirito, Florencia"
+        fr: "Florence (Italie)",
+        en: "Florence (Italy)",
+        it: "Firenze (Italia)",
+        es: "Florencia (Italia)"
       },
-      badge: null
+      badge: {
+        fr: "Recherche Plastique",
+        en: "Material Research",
+        it: "Ricerca Plastica",
+        es: "Investigación Plástica"
+      }
     },
     {
       year: "2013",
       title: {
-        fr: "Master en Art Contemporain & Pratiques Plastiques",
-        en: "Master's Degree in Contemporary Art Practices",
-        it: "Master in Arte Contemporanea",
-        es: "Máster en Arte Contemporáneo y Prácticas Plásticas"
+        fr: "Diplôme en Beaux-Arts (6 ans de formation)",
+        en: "Degree in Fine Arts (6-year visual arts program)",
+        it: "Diploma in Belle Arti (6 anni di formazione)",
+        es: "Licenciatura en Bellas Artes (Formación de 6 años)"
       },
       location: {
-        fr: "Accademia delle Arti, Florence",
-        en: "Academy of Arts, Florence",
-        it: "Accademia delle Arti, Firenze",
-        es: "Academia de las Artes, Florencia"
+        fr: "Facultad de Bellas Artes, Universidad Complutense de Madrid",
+        en: "Faculty of Fine Arts, Complutense University of Madrid",
+        it: "Facoltà di Belle Arti, Università Complutense di Madrid",
+        es: "Facultad de Bellas Artes, Universidad Complutense de Madrid"
       },
-      badge: null
-    },
-    {
-      year: "2011",
-      title: {
-        fr: "Licence en Beaux-Arts (Peinture)",
-        en: "Bachelor of Fine Arts (BFA - Painting)",
-        it: "Laurea in Belle Arti (Pittura)",
-        es: "Licenciatura en Bellas Artes (Pintura)"
-      },
-      location: {
-        fr: "Universidad Complutense, Madrid",
-        en: "Complutense University, Madrid",
-        it: "Università Complutense, Madrid",
-        es: "Universidad Complutense, Madrid"
-      },
-      badge: null
+      badge: {
+        fr: "Formation Académique",
+        en: "Academic Degree",
+        it: "Formazione Accademica",
+        es: "Formación Académica"
+      }
     }
   ]
 };
