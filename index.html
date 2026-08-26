@@ -86,7 +86,7 @@
             --text-heading: #ffffff;
             --accent-gold: #d4af37;
             --accent-gold-hover: #e5c158;
-            --accent-gold-soft: rgba(212, 175, 55, 0.15);
+            --accent-gold-soft: rgba(212, 175, 55, 0.12);
             --border-color: rgba(255, 255, 255, 0.12);
             --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             --nav-bg: rgba(12, 15, 21, 0.94);
@@ -150,7 +150,7 @@
         .announcement-bar-link { display: inline-flex; align-items: center; color: var(--accent-gold); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
         .announcement-bar-close { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); cursor: pointer; }
 
-        /* Header / Navbar (Tamaños originales de escritorio) */
+        /* Header / Navbar */
         .navbar {
             position: fixed;
             top: var(--banner-height);
@@ -167,22 +167,21 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 92px; /* Original */
-            gap: 24px;   /* Original */
+            height: 92px;
+            gap: 24px;
         }
 
-        /* Bloque 1: Brand */
         .block-brand {
             display: flex;
             align-items: center;
-            gap: 14px;   /* Original */
+            gap: 14px;
             text-decoration: none;
             flex-shrink: 0;
         }
 
         .brand-logo-img {
-            width: 58px;  /* Original */
-            height: 58px; /* Original */
+            width: 58px;
+            height: 58px;
             object-fit: contain;
             filter: invert(1) brightness(1.8);
             transition: transform 0.3s ease;
@@ -197,11 +196,9 @@
         .brand-logo-sub { font-size: 8.5px; letter-spacing: 0.3em; color: var(--accent-gold); text-transform: uppercase; font-weight: 700; margin-top: 2px; }
         .block-separator { width: 1px; height: 24px; background: var(--accent-gold); opacity: 0.45; flex-shrink: 0; }
 
-        /* Bloque 2: Menú Navegación Escritorio */
+        /* Menú Navegación Escritorio */
         .block-menu { display: flex; align-items: center; list-style: none; gap: 0; }
         .block-menu li.nav-link-item { display: flex; align-items: center; }
-        
-        /* Método infalible: barra ANTES de cada enlace excepto el primero */
         .block-menu li.nav-link-item + li.nav-link-item::before { 
             content: "/"; 
             color: var(--border-color); 
@@ -212,7 +209,7 @@
         .block-menu a { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 600; color: var(--text-muted); padding: 6px 0; transition: var(--transition); }
         .block-menu a:hover, .block-menu a.active { color: var(--accent-gold); }
 
-        /* Bloque 3: Controles Escritorio */
+        /* Controles Escritorio */
         .block-controls { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
         .social-group { display: flex; align-items: center; gap: 8px; }
         .social-btn { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; color: var(--text-muted); border: 1px solid transparent; transition: var(--transition); }
@@ -234,11 +231,7 @@
         .cart-badge { background: var(--accent-gold); color: #0c0f15; font-size: 10px; font-weight: 700; width: 17px; height: 17px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 
         .mobile-hamburger { display: none; font-size: 24px; color: var(--text-main); background: none; border: none; cursor: pointer; }
-
-        /* Herramientas móviles dentro del menú (ocultas en escritorio) */
-        .mobile-menu-toolbar {
-            display: none !important;
-        }
+        .mobile-menu-toolbar { display: none !important; }
 
         /* FAQ Accordion */
         .faq-categories-bar { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
@@ -318,19 +311,134 @@
         .statement-author { font-size: 14px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-gold); }
         .statement-role { font-size: 12px; color: var(--text-muted); letter-spacing: 0.08em; }
 
+        /* =======================================================
+           SECCIÓN BIOGRAFÍA & LÍNEA DE TIEMPO EDITORIAL (REDISEÑADA)
+           ======================================================= */
         .solid-section { background: var(--bg-solid); padding: 110px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative; z-index: 2; }
-        .bio-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; margin-bottom: 70px; align-items: start; }
+        .bio-grid { display: grid; grid-template-columns: 1fr 1.35fr; gap: 60px; margin-bottom: 70px; align-items: start; }
         .bio-lead-text { background: var(--bg-card); padding: 36px; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--card-shadow); }
         .bio-lead-text h3 { font-size: clamp(28px, 3.4vw, 40px); margin-bottom: 20px; line-height: 1.2; }
         .bio-lead-text p { color: var(--text-muted); font-size: 15px; line-height: 1.8; margin-bottom: 18px; }
-        .bio-details-block { background: var(--bg-card); padding: 36px; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--card-shadow); display: flex; flex-direction: column; gap: 36px; }
-        .cv-column-header { font-size: 13px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-gold); margin-bottom: 16px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; font-weight: 700; }
-        .cv-timeline { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-        .cv-item { display: grid; grid-template-columns: 70px 1fr; gap: 14px; font-size: 14px; }
-        .cv-year { font-family: var(--font-serif); font-weight: 700; color: var(--accent-gold); font-size: 16px; }
-        .cv-desc strong { color: var(--text-heading); font-weight: 600; }
-        .cv-desc span { color: var(--text-muted); display: block; font-size: 13px; }
-        .cv-placeholder-badge { display: inline-block; font-size: 10px; padding: 2px 8px; background: rgba(255, 255, 255, 0.05); border: 1px dashed var(--accent-gold); color: var(--accent-gold); border-radius: 3px; margin-top: 4px; }
+        
+        .bio-details-block { 
+            background: var(--bg-card); 
+            padding: 38px 36px 42px 36px; 
+            border-radius: var(--radius-md); 
+            border: 1px solid var(--border-color); 
+            box-shadow: var(--card-shadow); 
+        }
+
+        .cv-column-header { 
+            font-size: 13px; 
+            text-transform: uppercase; 
+            letter-spacing: 0.18em; 
+            color: var(--accent-gold); 
+            margin-bottom: 26px; 
+            border-bottom: 1px solid var(--border-color); 
+            padding-bottom: 12px; 
+            font-weight: 700; 
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Línea de tiempo con eje vertical continuo */
+        .cv-timeline { 
+            list-style: none; 
+            display: flex; 
+            flex-direction: column; 
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .cv-timeline::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 5px;
+            width: 1px;
+            background: linear-gradient(180deg, var(--accent-gold) 0%, var(--border-color) 80%, transparent 100%);
+        }
+
+        .cv-item { 
+            position: relative;
+            padding-bottom: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .cv-item:last-child {
+            padding-bottom: 0;
+        }
+
+        /* Nodo circular sobre la línea */
+        .cv-item::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 7px;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 2px solid var(--accent-gold);
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .cv-item:hover::before {
+            background: var(--accent-gold);
+            box-shadow: 0 0 10px var(--accent-gold);
+        }
+
+        .cv-header-row {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .cv-year { 
+            font-family: var(--font-serif); 
+            font-weight: 700; 
+            color: var(--accent-gold); 
+            font-size: 21px; 
+            line-height: 1;
+            letter-spacing: 0.02em;
+        }
+
+        .cv-desc strong { 
+            color: var(--text-heading); 
+            font-weight: 600; 
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        .cv-desc span { 
+            color: var(--text-muted); 
+            display: block; 
+            font-size: 13.5px; 
+            margin-top: 3px;
+        }
+
+        /* Rediseño moderno del Badge (Píldora minimalista de galería) */
+        .cv-badge-pill { 
+            display: inline-flex; 
+            align-items: center;
+            font-size: 10.5px; 
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 2px 9px; 
+            background: var(--accent-gold-soft); 
+            border: 1px solid rgba(212, 175, 55, 0.35); 
+            color: var(--accent-gold); 
+            border-radius: 12px; 
+            margin-top: 6px; 
+            width: fit-content;
+        }
 
         .section-header-center { text-align: center; display: flex; flex-direction: column; align-items: center; margin-bottom: 45px; }
         .filter-bar { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 35px; }
@@ -469,10 +577,9 @@
         .toast.show { transform: translateY(0); opacity: 1; }
 
         /* =======================================================
-           ESTRATEGIA RESPONSIVE MÓVIL (LIMPIA Y PURA)
+           ESTRATEGIA RESPONSIVE MÓVIL
            ======================================================= */
         @media (max-width: 991px) {
-            /* 1. Header en móvil: Solo Logo a la izquierda y Hamburguesa a la derecha */
             .nav-inner {
                 height: 64px;
                 padding: 0 16px;
@@ -502,12 +609,10 @@
                 display: none !important;
             }
 
-            /* Ocultamos TODOS los controles de cabecera en móvil */
             .block-controls {
                 display: none !important;
             }
 
-            /* Mostramos el botón Hamburguesa directamente a la derecha */
             .mobile-hamburger {
                 display: inline-flex !important;
                 align-items: center;
@@ -515,7 +620,6 @@
                 flex-shrink: 0;
             }
 
-            /* 2. Menú móvil a pantalla completa desplegable */
             .block-menu {
                 position: fixed !important;
                 top: calc(64px + var(--banner-height)) !important;
@@ -567,7 +671,6 @@
                 color: var(--accent-gold) !important;
             }
 
-            /* 3. Barra de herramientas integrada dentro del menú desplegable */
             .mobile-menu-toolbar {
                 display: flex !important;
                 width: 100%;
@@ -580,7 +683,6 @@
                 border-top: 1px solid var(--border-color);
             }
 
-            /* Fila 1: Botón Carrito en su propia línea */
             .mobile-cart-wrap {
                 width: 100%;
                 display: flex;
@@ -595,7 +697,6 @@
                 letter-spacing: 0.1em;
             }
 
-            /* Fila 2: Selectores e Icono de Tema perfectamente alineados */
             .mobile-menu-selectors {
                 display: flex;
                 align-items: center;
@@ -617,7 +718,6 @@
                 flex-shrink: 0;
             }
 
-            /* 4. Ajustes de contenido y formularios a 1 columna */
             .hero-split-section {
                 margin-top: calc(64px + var(--banner-height));
                 min-height: auto;
@@ -740,7 +840,6 @@
 
             <!-- Herramientas sólo visibles dentro del menú en móvil -->
             <li class="mobile-menu-toolbar">
-                <!-- Línea 1: Carrito en su propia línea -->
                 <div class="mobile-cart-wrap">
                     <button class="cart-pill-btn" onclick="toggleCartDrawer(); closeMobileMenu();" aria-label="Sélection">
                         <span data-i18n="cart_label">Sélection</span>
@@ -748,7 +847,6 @@
                     </button>
                 </div>
 
-                <!-- Línea 2: Selectores e Icono de Tema -->
                 <div class="mobile-menu-selectors">
                     <select class="control-select" id="mobileLanguageSelector" onchange="setLanguage(this.value)" aria-label="Language">
                         <option value="fr">🇫🇷 FR</option>
@@ -772,7 +870,7 @@
 
         <div class="block-separator"></div>
 
-        <!-- Bloque 3: Controles Escritorio (100% ocultos en móvil) -->
+        <!-- Bloque 3: Controles Escritorio -->
         <div class="block-controls">
             <div class="social-group" id="socialIconsContainer"></div>
 
@@ -799,7 +897,6 @@
             </button>
         </div>
 
-        <!-- Botón Hamburguesa Móvil (Único elemento a la derecha en móvil) -->
         <button class="mobile-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Menu">☰</button>
     </div>
 </header>
@@ -877,7 +974,7 @@
     </div>
 </div>
 
-<!-- 6. Biography Section -->
+<!-- 6. Biography Section (Línea de Tiempo Rediseñada) -->
 <section class="solid-section" id="bio">
     <div class="container">
         <div class="section-header-center">
@@ -904,7 +1001,10 @@
 
             <div class="bio-details-block">
                 <div>
-                    <h4 class="cv-column-header" data-i18n="cv_exhibitions_title">Expositions Sélectionnées</h4>
+                    <h4 class="cv-column-header">
+                        <span style="color: var(--accent-gold);">◈</span> 
+                        <span data-i18n="cv_exhibitions_title">Parcours & Distinctions</span>
+                    </h4>
                     <ul class="cv-timeline" id="exhibitionsListContainer"></ul>
                 </div>
             </div>
@@ -1001,7 +1101,7 @@
             <div class="contact-form-card">
                 <h3 class="serif-font" style="font-size: 26px; margin-bottom: 18px;" data-i18n="contact_form_title">Envoyer un Message Direct</h3>
 
-                <!-- Caja visual de resumen de selección -->
+                <!-- Caja visual de selección -->
                 <div class="contact-inquiry-box" id="contactInquiryBox">
                     <div class="contact-inquiry-header">
                         <span data-i18n="contact_inquiry_preview_title">Œuvres sélectionnées pour cette demande :</span>
@@ -1350,16 +1450,19 @@
     renderExhibitions();
   }
 
+  /* Renderizado de la nueva línea de tiempo con diseño editorial */
   function renderExhibitions() {
     const expContainer = document.getElementById('exhibitionsListContainer');
     if (!expContainer || !meta.exhibitions) return;
     expContainer.innerHTML = meta.exhibitions.map(item => `
       <li class="cv-item">
-          <span class="cv-year">${item.year}</span>
+          <div class="cv-header-row">
+              <span class="cv-year">${item.year}</span>
+              ${item.badge ? `<span class="cv-badge-pill">${item.badge[currentLang] || item.badge.fr}</span>` : ''}
+          </div>
           <div class="cv-desc">
               <strong>${item.title[currentLang] || item.title.fr}</strong>
               <span>${item.location[currentLang] || item.location.fr}</span>
-              ${item.badge ? `<span class="cv-placeholder-badge">${item.badge[currentLang] || item.badge.fr}</span>` : ''}
           </div>
       </li>
     `).join('');
@@ -1479,7 +1582,7 @@
         <h4>2. Dati Raccolti e Finalità</h4>
         <p>I dati forniti tramite i moduli vengono utilizzati esclusivamente per rispondere alle richieste di acquisto, preventivi o visite. I dati non vengono ceduti a terzi.</p>
         <h4>3. Hosting e Sicurezza</h4>
-        <p>Il sitio è ospitato su infrastruttura protetta con crittografia SSL (HTTPS). I moduli sono elaborati in conformità alla nLPD svizzera e al GDPR europeo.</p>
+        <p>Il sito è ospitato su infrastruttura protetta con crittografia SSL (HTTPS). I moduli sono elaborati in conformità alla nLPD svizzera e al GDPR europeo.</p>
         <h4>4. Cookie e Archiviazione Locale</h4>
         <p>Il sito non fa uso di cookie pubblicitari. Vengono memorizzate solo le preferenze tecniche necessarie (lingua, valuta, tema e carrello) nel localStorage del browser.</p>
         <h4>5. Diritti dell'Utente</h4>

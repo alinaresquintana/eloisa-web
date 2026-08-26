@@ -36,7 +36,7 @@ window.ERG_I18N = {
     bio_p2:
       "Son langage visuel s'est nourri d'une solide formation académique à Madrid et Florence, complétée par son parcours dans les arts de la scène, explorant le volume, le comportement de la matière et la réfraction lumineuse.",
     bio_btn_dossier: "Demander le Dossier d'Artiste PDF",
-    cv_exhibitions_title: "Expositions Sélectionnées",
+    cv_exhibitions_title: "Parcours & Distinctions",
     cv_publications_title: "Publications & Documentation",
     collection_tag: "Peintures Originales",
     collection_title: "Le Portfolio de la Collection",
@@ -185,7 +185,7 @@ window.ERG_I18N = {
     bio_p2:
       "Her visual language is grounded in fine arts training in Madrid and Florence, enriched by her performing arts background exploring volume, matter behavior, and light refraction.",
     bio_btn_dossier: "Request Artist Dossier PDF",
-    cv_exhibitions_title: "Selected Exhibitions",
+    cv_exhibitions_title: "Career & Distinctions",
     cv_publications_title: "Publications & Documentation",
     collection_tag: "Original Paintings",
     collection_title: "The Porfolio Collection",
@@ -330,7 +330,7 @@ window.ERG_I18N = {
     bio_p2:
       "Il suo linguaggio visivo si è formato a Madrid e Firenze, arricchito dal percorso nelle arti sceniche, esplorando il volume e la forza espressiva della materia.",
     bio_btn_dossier: "Richiedi Dossier Artista PDF",
-    cv_exhibitions_title: "Mostre Selezionate",
+    cv_exhibitions_title: "Percorso & Riconoscimenti",
     cv_publications_title: "Pubblicazioni & Documentazione",
     collection_tag: "Dipinti Originali",
     collection_title: "Il Portfolio della Collezione",
@@ -476,7 +476,7 @@ window.ERG_I18N = {
     bio_p2:
       "Su lenguaje visual se formó en la Universidad Complutense de Madrid y Florencia, complementado por las artes escénicas, explorando el volumen, la materia y la refracción de la luz.",
     bio_btn_dossier: "Solicitar Dossier de Artista PDF",
-    cv_exhibitions_title: "Exposiciones Seleccionadas",
+    cv_exhibitions_title: "Trayectoria y Distinciones",
     cv_publications_title: "Publicaciones & Documentación",
     collection_tag: "Pinturas Originales",
     collection_title: "El Porfolio de la Colección",
