@@ -592,6 +592,88 @@
             color: var(--text-main);
         }
 
+        /* Bloque de Consentimiento RGPD / LPD */
+        .gdpr-consent-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin: 4px 0 12px;
+        }
+
+        .gdpr-checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.45;
+            cursor: pointer;
+        }
+
+        .gdpr-checkbox-label input[type="checkbox"] {
+            margin-top: 3px;
+            accent-color: var(--accent-gold);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .gdpr-checkbox-label a {
+            color: var(--accent-gold);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .gdpr-checkbox-label a:hover {
+            color: var(--accent-gold-hover);
+        }
+
+        .gdpr-info-micro {
+            font-size: 11px;
+            color: var(--text-muted);
+            opacity: 0.85;
+            line-height: 1.4;
+        }
+
+        /* Modal Política de Privacidad & Mentions Légales */
+        .privacy-modal-card {
+            background: var(--bg-modal);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            max-width: 800px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            padding: 44px 36px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .privacy-content h3 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: var(--text-heading);
+        }
+
+        .privacy-content h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent-gold);
+            margin: 22px 0 8px;
+            font-weight: 700;
+        }
+
+        .privacy-content p, .privacy-content ul {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .privacy-content ul {
+            padding-left: 20px;
+        }
+
         /* Footer */
         .footer {
             background: #080a0e;
@@ -1098,7 +1180,8 @@
                 </ul>
             </div>
 
-            <form class="commissions-form" name="commissions" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)">
+            <form class="commissions-form" name="commissions" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event)">
+                <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
                 <input type="hidden" name="form-name" value="commissions">
                 <div class="form-grid-2">
                     <input type="text" name="name" class="custom-input" data-i18n-ph="form_ph_name" placeholder="Nom complet / Full Name" required>
@@ -1119,6 +1202,16 @@
                     </select>
                 </div>
                 <textarea name="message" class="custom-textarea" rows="3" data-i18n-ph="form_ph_comm_desc" placeholder="Décrivez votre espace ou votre vision pour l'œuvre..."></textarea>
+
+                <!-- Consentimiento RGPD / nLPD -->
+                <div class="gdpr-consent-wrap">
+                    <label class="gdpr-checkbox-label">
+                        <input type="checkbox" name="gdpr_consent" required>
+                        <span><span data-i18n="gdpr_consent_text">J'ai lu et j'accepte la</span> <a href="#privacy" onclick="openPrivacyModal(event)" data-i18n="gdpr_privacy_link">Politique de Confidentialité</a>.*</span>
+                    </label>
+                    <span class="gdpr-info-micro" data-i18n="gdpr_info_micro">Vos données sont utilisées exclusivement pour traiter votre demande et ne sont jamais transmises à des tiers.</span>
+                </div>
+
                 <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="form_btn_commission">Demander une consultation pour commande</button>
             </form>
         </div>
@@ -1160,7 +1253,8 @@
                     <div class="contact-inquiry-tags" id="contactInquiryTags"></div>
                 </div>
 
-                <form class="commissions-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event)">                    <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+                <form class="commissions-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event)">
+                    <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
                     <input type="hidden" name="form-name" value="contact">
                     <div class="form-grid-2">
                         <input type="text" name="name" class="custom-input" data-i18n-ph="form_ph_name" placeholder="Nom complet / Name" required>
@@ -1168,6 +1262,16 @@
                     </div>
                     <input type="text" name="subject" class="custom-input" id="contactSubjectInput" data-i18n-ph="form_ph_subject" placeholder="Objet de votre demande / Subject" required>
                     <textarea name="message" class="custom-textarea" rows="5" id="contactMessageInput" data-i18n-ph="form_ph_message" placeholder="Votre message / Your message..." required></textarea>
+
+                    <!-- Consentimiento RGPD / nLPD -->
+                    <div class="gdpr-consent-wrap">
+                        <label class="gdpr-checkbox-label">
+                            <input type="checkbox" name="gdpr_consent" required>
+                            <span><span data-i18n="gdpr_consent_text">J'ai lu et j'accepte la</span> <a href="#privacy" onclick="openPrivacyModal(event)" data-i18n="gdpr_privacy_link">Politique de Confidentialité</a>.*</span>
+                        </label>
+                        <span class="gdpr-info-micro" data-i18n="gdpr_info_micro">Vos données sont utilisées exclusivement pour traiter votre demande et ne sont jamais transmises à des tiers.</span>
+                    </div>
+
                     <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="contact_btn_send">Envoyer le Message</button>
                 </form>
             </div>
@@ -1355,7 +1459,7 @@
                 <h5>Services & Engagements</h5>
                 <ul class="footer-nav-list">
                     <li><span style="color: var(--text-muted);">✓ Certificat d'Authenticité inclus</span></li>
-                    <li><span style="color: var(--text-muted);">✓ Livraison sécurisée Suisse & Monde</span></li>
+                    <li><span style="color: var(--text-muted);">✓ Livraison sécurisée en Suisse uniquement</span></li>
                     <li><span style="color: var(--text-muted);">✓ Visite d'atelier sur rendez-vous</span></li>
                     <li><span style="color: var(--text-muted);">✓ Conseil en intégration d'art</span></li>
                 </ul>
@@ -1377,7 +1481,10 @@
         </div>
 
         <div class="footer-bottom-bar">
-            <p style="font-size: 12px; color: var(--text-muted);" data-i18n="footer_rights">© 2026 Eloísa Rodríguez. Tous droits réservés.</p>
+            <p style="font-size: 12px; color: var(--text-muted);">
+                <span data-i18n="footer_rights">© 2026 Eloísa Rodríguez. Tous droits réservés.</span> ·
+                <a href="#privacy" onclick="openPrivacyModal(event)" style="color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px;" data-i18n="footer_privacy_link">Confidentialité & Mentions Légales</a>
+            </p>
 
             <div style="display: flex; align-items: center; gap: 12px;">
                 <span class="footer-version-tag" id="footerVersionTag">Edition v2.6.5</span>
@@ -1387,7 +1494,7 @@
     </div>
 </footer>
 
-<!-- Modal -->
+<!-- Modal Obra de Arte -->
 <div class="modal-overlay" id="artworkModal" onclick="closeModalOutside(event)" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-card">
         <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
@@ -1446,6 +1553,16 @@
             </div>
 
             <div style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;" id="modalActionsWrap"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal RGPD: Política de Privacidad & Mentions Légales -->
+<div class="modal-overlay" id="privacyModal" onclick="closePrivacyModalOutside(event)" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle">
+    <div class="privacy-modal-card">
+        <button class="modal-close" onclick="closePrivacyModal()" aria-label="Close modal">&times;</button>
+        <div class="privacy-content" id="privacyModalContent">
+            <!-- El contenido multilingüe se inyecta dinámicamente vía i18n / JS -->
         </div>
     </div>
 </div>
@@ -1618,6 +1735,102 @@
     renderNotificationBar();
   }
 
+  function renderPrivacyContent() {
+    const container = document.getElementById('privacyModalContent');
+    if (!container) return;
+
+    const privData = {
+      fr: `
+        <h3 class="serif-font" id="privacyModalTitle">Politique de Confidentialité & Mentions Légales</h3>
+        <h4>1. Responsable du Traitement</h4>
+        <p>Le présent site est édité par Eloísa Rodríguez (Atelier d'Art ERG), établi à Vich (Canton de Vaud, Suisse).<br>Courriel : <a href="mailto:contact@eloisarg.com" style="color:var(--accent-gold);">contact@eloisarg.com</a> · Site : <a href="https://eloisarg.com" style="color:var(--accent-gold);">eloisarg.com</a></p>
+
+        <h4>2. Données Collectées & Finalités</h4>
+        <p>Les informations transmises via les formulaires de contact et de commande sur mesure (nom, adresse courriel, message et éventuelle sélection d'œuvres) sont traitées dans le strict but de répondre à vos demandes d'acquisition, de devis ou de visite d'atelier. Aucune donnée n'est cédée, louée ou commercialisée à des tiers.</p>
+
+        <h4>3. Hébergement & Sécurité</h4>
+        <p>Le site est hébergé sur une infrastructure sécurisée avec chiffrement SSL (HTTPS). Les formulaires sont traités de manière confidentielle via Netlify Forms conformément aux exigences du RGPD européen et de la nLPD suisse.</p>
+
+        <h4>4. Cookies & Données Locales</h4>
+        <p>Ce site n'utilise aucun cookie traceur publicitaire ni outil d'analyse comportementale tiers. Seules les préférences d'affichage strictement nécessaires (langue, devise, thème sombre/clair et panier de sélection) sont enregistrées localement dans la mémoire de votre navigateur (localStorage).</p>
+
+        <h4>5. Vos Droits (nLPD & RGPD)</h4>
+        <p>Conformément aux réglementations suisse et européenne sur la protection des données, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Vous pouvez exercer ce droit à tout moment par simple message à <a href="mailto:contact@eloisarg.com" style="color:var(--accent-gold);">contact@eloisarg.com</a>.</p>
+      `,
+      en: `
+        <h3 class="serif-font" id="privacyModalTitle">Privacy Policy & Legal Notice</h3>
+        <h4>1. Data Controller</h4>
+        <p>This website is published by Eloísa Rodríguez (ERG Fine Art Studio), located in Vich (Canton of Vaud, Switzerland).<br>Email: <a href="mailto:contact@eloisarg.com" style="color:var(--accent-gold);">contact@eloisarg.com</a> · Website: <a href="https://eloisarg.com" style="color:var(--accent-gold);">eloisarg.com</a></p>
+
+        <h4>2. Data Collected & Purpose</h4>
+        <p>Personal data submitted through our contact and commission forms (name, email address, message, and artwork selection) is used exclusively to process your acquisition inquiries, quote requests, or studio visits. Data is never sold, shared, or transferred to third parties.</p>
+
+        <h4>3. Hosting & Security</h4>
+        <p>The site is hosted on a secure SSL-encrypted infrastructure (HTTPS). Inquiries are processed securely via Netlify Forms in accordance with European GDPR and Swiss nLPD regulations.</p>
+
+        <h4>4. Cookies & Local Storage</h4>
+        <p>We do not use advertising tracking cookies or third-party behavioral analytics. Only strictly necessary browsing preferences (language, currency, dark/light theme, and bag selection) are stored locally in your browser's localStorage.</p>
+
+        <h4>5. Your Rights (GDPR & Swiss FADP)</h4>
+        <p>Under Swiss and European data protection laws, you have the right to access, rectify, or request the erasure of your personal data at any time by contacting <a href="mailto:contact@eloisarg.com" style="color:var(--accent-gold);">contact@eloisarg.com</a>.</p>
+      `,
+      it: `
+        <h3 class="serif-font" id="privacyModalTitle">Informativa sulla Privacy & Note Legali</h3>
+        <h4>1. Titolare del Trattamento</h4>
+        <p>Questo sito è gestito da Eloísa Rodríguez (Studio d'Arte ERG), con sede a Vich (Canton Vaud, Svizzera).<br>Email: <a href="mailto:contact@eloisarg.com" style="color:var(--accent-gold);">contact@eloisarg.com</a> · Sito: <a href="https://eloisarg.com" style="color:var(--accent-gold);">eloisarg.com</a></p>
+
+        <h4>2. Dati Raccolti e Finalità</h4>
+        <p>I dati forniti tramite i moduli di contatto e commissione (nome, indirizzo email, messaggio e selezione di opere) vengono utilizzati esclusivamente per rispondere alle richieste di acquisto, preventivi o visite. I dati non vengono ceduti a terzi.</p>
+
+        <h4>3. Hosting e Sicurezza</h4>
+        <p>Il sito è ospitato su infrastruttura protetta con crittografia SSL (HTTPS). I moduli sono elaborati in conformità al GDPR europeo e alla nLPD svizzera.</p>
+
+        <h4>4. Cookie e Archiviazione Locale</h4>
+        <p>Il sito non fa uso di cookie pubblicitari o tracciamenti terzi. Vengono memorizzate solo le preferenze tecniche necessarie (lingua, valuta, tema e carrello) nel localStorage del browser.</p>
+
+        <h4>5. Diritti dell'Utente</h4>
+        <p>È possibile richiedere in qualsiasi momento l'accesso, la rettifica o la cancellazione dei propri dati personali scrivendo a <a href="mailto:contact@eloisarg.com" style="color:var(--accent-gold);">contact@eloisarg.com</a>.</p>
+      `,
+      es: `
+        <h3 class="serif-font" id="privacyModalTitle">Política de Privacidad y Aviso Legal</h3>
+        <h4>1. Responsable del Tratamiento</h4>
+        <p>Este sitio web es editado por Eloísa Rodríguez (Estudio de Arte ERG), ubicado en Vich (Cantón de Vaud, Suiza).<br>Correo: <a href="mailto:contact@eloisarg.com" style="color:var(--accent-gold);">contact@eloisarg.com</a> · Sitio: <a href="https://eloisarg.com" style="color:var(--accent-gold);">eloisarg.com</a></p>
+
+        <h4>2. Datos Recopilados y Finalidad</h4>
+        <p>Los datos facilitados a través de los formularios de contacto y encargos (nombre, correo electrónico, mensaje y obras seleccionadas) se tratan con el único fin de atender consultas de adquisición, presupuestos o visitas de taller. Nunca se ceden ni comercializan a terceros.</p>
+
+        <h4>3. Alojamiento y Seguridad</h4>
+        <p>El sitio web está alojado en una infraestructura segura con cifrado SSL (HTTPS). Los formularios se procesan confidencialmente mediante Netlify Forms conforme al RGPD europeo y la nLPD suiza.</p>
+
+        <h4>4. Cookies y Almacenamiento Local</h4>
+        <p>No empleamos cookies publicitarias ni herramientas de rastreo analítico de terceros. Únicamente se guardan en el navegador (localStorage) las preferencias técnicas esenciales (idioma, moneda, tema claro/oscuro y selección de obras).</p>
+
+        <h4>5. Tus Derechos</h4>
+        <p>Puedes ejercer tus derechos de acceso, rectificación o supresión de tus datos en cualquier momento enviando un mensaje a <a href="mailto:contact@eloisarg.com" style="color:var(--accent-gold);">contact@eloisarg.com</a>.</p>
+      `
+    };
+
+    container.innerHTML = privData[currentLang] || privData.fr;
+  }
+
+  function openPrivacyModal(e) {
+    if (e) e.preventDefault();
+    renderPrivacyContent();
+    document.getElementById('privacyModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePrivacyModal() {
+    document.getElementById('privacyModal').classList.remove('open');
+    if (!document.getElementById('artworkModal').classList.contains('open')) {
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  function closePrivacyModalOutside(e) {
+    if (e.target.id === 'privacyModal') closePrivacyModal();
+  }
+
   function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('erg_lang', lang);
@@ -1650,6 +1863,7 @@
     renderExhibitions();
     updateCartUI();
     renderInquiryPreview();
+    renderPrivacyContent();
   }
 
   function toggleTheme() {
@@ -2119,7 +2333,12 @@
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') { closeModal(); toggleCartDrawer(false); closeMobileMenu(); }
+    if (e.key === 'Escape') {
+      closeModal();
+      closePrivacyModal();
+      toggleCartDrawer(false);
+      closeMobileMenu();
+    }
     else if (e.key === 'ArrowLeft' && document.getElementById('artworkModal').classList.contains('open')) prevCarouselImage();
     else if (e.key === 'ArrowRight' && document.getElementById('artworkModal').classList.contains('open')) nextCarouselImage();
   });
@@ -2127,11 +2346,16 @@
   function checkUrlHashForModal() {
     const hash = window.location.hash;
     if (hash && hash.startsWith('#artwork-')) openArtworkModal(hash.replace('#artwork-', ''));
+    if (hash === '#privacy') openPrivacyModal();
   }
 
   window.addEventListener('popstate', (e) => {
     if (e.state && e.state.artworkId) openArtworkModal(e.state.artworkId);
-    else closeModal();
+    else if (window.location.hash === '#privacy') openPrivacyModal();
+    else {
+      closeModal();
+      closePrivacyModal();
+    }
   });
 
   window.addEventListener('resize', () => {
