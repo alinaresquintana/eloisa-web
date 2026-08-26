@@ -163,7 +163,7 @@ window.ERG_ARTWORKS = [
     },
     year: "2023",
     priceChf: 3100,
-    status: "available",
+    status: "reserved",
     images: [
       "images/paintings/original-cosmic-harmony-eloisa-rodriguez.webp"
     ],
