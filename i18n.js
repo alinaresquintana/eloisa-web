@@ -150,7 +150,10 @@ window.ERG_I18N = {
     faq_q_com2: "Comment sont fixés les tarifs et les délais d'une commande personnalisée ?",
     faq_a_com2: "Le tarif d'une commande sur mesure dépend du format et de la complexité technique, sur la même échelle de prix que les œuvres du portfolio. Le délai moyen est de 8 à 12 semaines, avec un acompte initial de 50 % au lancement et le solde à l'approbation finale de la toile.",
     faq_q_com3: "Quel niveau de personnalisation est possible pour une commande ?",
-    faq_a_com3: "Vous pouvez préciser les dimensions exactes, la dominante de couleurs et la série d'inspiration (ex. Nébuleuses & Sédiments ou Portraits), tout en laissant à l'artiste la liberté d'interprétation qui fait l'âme de chaque création.",
+    faq_a_com3: "Vous pouvez préciser les dimensions exactes, la dominante" +
+      " de couleurs et la série d'inspiration (ex. Nébuleuses & Sédiments ou Portraits), tout en laissant à l'artiste la liberté d'interprétation qui fait l'âme de chaque création.",
+    contact_inquiry_preview_title: "Œuvres sélectionnées pour cette demande :",
+    contact_inquiry_preview_clear: "Effacer la sélection"
   },
   en: {
     series_nebula_sediment: "Nebulae & Sediments",
@@ -252,7 +255,7 @@ window.ERG_I18N = {
     zoom_hint: "Hover or drag to explore texture details",
     cart_title: "Studio Bag",
     cart_total_label: "Estimated Total:",
-    cart_checkout_btn: "Inquire About Selected Works",
+    cart_checkout_btn: "Request Information on Selection",
     toast_added: "added to your selection.",
     protect_alert:
       "© Artwork protected by copyright. Image downloading is restricted.",
@@ -302,6 +305,8 @@ window.ERG_I18N = {
     faq_a_com2: "Commissions are priced according to dimensions and technique, matching standard portfolio rates. The timeframe is typically 8 to 12 weeks, with a 50% deposit required at commencement and 50% upon final canvas approval.",
     faq_q_com3: "How much customization is possible for a commission?",
     faq_a_com3: "You can specify desired dimensions, color palette harmony, and inspiration series (e.g. Nebulas & Sediments or Portraits), while allowing the artist full creative expression.",
+    contact_inquiry_preview_title: "Artworks selected for this inquiry:",
+    contact_inquiry_preview_clear: "Clear selection"
   },
   it: {
     series_nebula_sediment: "Nebulose & Sedimenti",
@@ -454,7 +459,10 @@ window.ERG_I18N = {
     faq_q_com2: "Come vengono calcolati i costi e i tempi di una commissione?",
     faq_a_com2: "I prezzi seguono il listino del portfolio. I tempi medi sono di 8-12 settimane, con anticipo del 50% all'avvio e saldo all'approvazione finale.",
     faq_q_com3: "Quale grado di personalizzazione è possibile?",
-    faq_a_com3: "È possibile concordare dimensioni, armonia cromatica e serie di riferimento, preservando la libertà espressiva dell'artista."
+    faq_a_com3: "È possibile concordare dimensioni, armonia cromatica e" +
+      " serie di riferimento, preservando la libertà espressiva dell'artista.",
+    contact_inquiry_preview_title: "Opere selezionate per questa richiesta:",
+    contact_inquiry_preview_clear: "Rimuovi selezione"
   },
   es: {
     series_nebula_sediment: "Nebulosas y Sedimentos",
@@ -515,7 +523,7 @@ window.ERG_I18N = {
       "✓ Cuaderno de bitácora fotográfico de la evolución del lienzo",
     comm_feat_3:
       "✓ Certificado de Autenticidad oficial y registro de procedencia",
-    form_dim_placeholder: "Dimensions souhaitées",
+    form_dim_placeholder: "Dimensiones deseadas",
     form_dim_opt1: "Mediano (80 × 60 cm a 100 × 80 cm)",
     form_dim_opt2: "Grande (120 × 100 cm a 160 × 120 cm)",
     form_dim_opt3: "Monumental (> 180 cm)",
@@ -609,5 +617,7 @@ window.ERG_I18N = {
     faq_a_com2: "El presupuesto se calcula según dimensiones y complejidad técnica, alineado con las tarifas del portfolio. El plazo oscila entre 8 y 12 semanas, requiriendo un 50 % de anticipo al inicio y el 50 % restante tras la aprobación final del lienzo.",
     faq_q_com3: "¿Qué grado de personalización se permite en una obra por encargo?",
     faq_a_com3: "Puedes indicar medidas exactas, gama cromática preferente y la serie que te sirve de inspiración (ej. Nébuleuses & Sédiments o Retratos), respetando la libertad creativa de la artista.",
+    contact_inquiry_preview_title: "Obras seleccionadas para esta consulta:",
+    contact_inquiry_preview_clear: "Quitar selección"
   }
 };

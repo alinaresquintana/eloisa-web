@@ -32,7 +32,7 @@
     <meta name="twitter:description" content="Peintures originales à l'huile, textures minérales et tirages d'art de collection.">
     <meta name="twitter:image" content="https://eloisarg.com/images/paintings/original-nebuleuse-en-bleu-eloisa-rodriguez.webp">
 
-    <!-- Datos Estructurados JSON-LD (Schema.org para Google Rich Snippets) -->
+    <!-- Datos Estructurados JSON-LD (Schema.org) -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -76,7 +76,7 @@
         }
     </script>
 
-    <!-- Favicon con caché forzada -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=5">
     <link rel="apple-touch-icon" href="images/logo-erg.png?v=3">
     <meta name="version" content="2.6.5">
@@ -123,6 +123,26 @@
             --nav-bg: rgba(244, 243, 239, 0.95);
         }
 
+        /* Transición suave global de color y fondo para cambio de tema */
+        body,
+        .navbar,
+        .solid-section,
+        .art-card,
+        .bio-lead-text,
+        .bio-details-block,
+        .commissions-wrapper,
+        .contact-details,
+        .contact-form-card,
+        .faq-item,
+        .footer,
+        .modal-card,
+        .cart-drawer,
+        .custom-input,
+        .custom-select,
+        .custom-textarea {
+            transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; background-color: #0c0f15; }
         body { font-family: var(--font-sans), sans-serif; background: transparent; color: var(--text-main); line-height: 1.65; font-size: 15px; overflow-x: hidden; -webkit-font-smoothing: antialiased; position: relative; user-select: none; -webkit-user-select: none; }
@@ -155,9 +175,7 @@
         .announcement-bar-link { display: inline-flex; align-items: center; color: var(--accent-gold); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
         .announcement-bar-close { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); cursor: pointer; }
 
-        /* -------------------------------------------------------------
-           HEADER EDITORIAL (Logo más grande)
-        ------------------------------------------------------------- */
+        /* Header */
         .navbar {
             position: fixed;
             top: var(--banner-height);
@@ -170,7 +188,6 @@
             transition: top 0.3s ease;
         }
 
-        /* Ajuste de altura del Header y tamaño del Logo */
         .nav-inner {
             display: flex;
             align-items: center;
@@ -179,7 +196,6 @@
             gap: 24px;
         }
 
-        /* Bloque 1: Imagotipo + Nombre */
         .block-brand {
             display: flex;
             align-items: center;
@@ -231,7 +247,6 @@
             margin-top: 2px;
         }
 
-        /* Separadores Verticales Dorados */
         .block-separator {
             width: 1px;
             height: 24px;
@@ -240,7 +255,6 @@
             flex-shrink: 0;
         }
 
-        /* Bloque 2: Menú Central */
         .block-menu {
             display: flex;
             align-items: center;
@@ -278,7 +292,6 @@
             color: var(--accent-gold);
         }
 
-        /* Bloque 3: Controles & Utilidades */
         .block-controls {
             display: flex;
             align-items: center;
@@ -407,9 +420,7 @@
 
         .mobile-hamburger { display: none; font-size: 22px; color: var(--text-main); padding: 4px; }
 
-        /* -------------------------------------------------------------
-                   SECCIÓN FAQ (Categorías & Tipografía Sans Limpia)
-                ------------------------------------------------------------- */
+        /* FAQ Accordion */
         .faq-categories-bar {
             display: flex;
             align-items: center;
@@ -475,7 +486,6 @@
             box-shadow: var(--card-shadow);
         }
 
-        /* Preguntas en tipografía sans-serif clara y muy legible */
         .faq-question {
             padding: 18px 22px;
             font-family: var(--font-sans);
@@ -523,9 +533,66 @@
             padding-top: 14px;
         }
 
-        /* -------------------------------------------------------------
-           FOOTER CON COLUMNA COMPLETA PARA EL LOGOTIPO
-        ------------------------------------------------------------- */
+        /* Badge visual de resumen de obras seleccionadas en el formulario */
+        .contact-inquiry-box {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            padding: 14px 18px;
+            margin-bottom: 18px;
+            background: var(--bg-solid);
+            border: 1px dashed var(--accent-gold);
+            border-radius: var(--radius-sm);
+            animation: fadeInFaq 0.3s ease-out forwards;
+        }
+
+        .contact-inquiry-box.show {
+            display: flex;
+        }
+
+        .contact-inquiry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+        }
+
+        .contact-inquiry-clear {
+            font-size: 11px;
+            color: var(--text-muted);
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .contact-inquiry-clear:hover {
+            color: #c65353;
+        }
+
+        .contact-inquiry-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .contact-art-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* Footer */
         .footer {
             background: #080a0e;
             border-top: 1px solid var(--border-color);
@@ -649,8 +716,9 @@
             }
         }
 
-        /* RESTO DEL CONTENIDO */
-        .hero-split-section { margin-top: calc(92px + var(--banner-height)); min-height: calc(100vh - 92px - var(--banner-height)); display: flex; align-items: center; position: relative; background: linear-gradient(to right, rgba(12, 15, 21, 0.92) 0%, rgba(12, 15, 21, 0.7) 65%, transparent 100%); }        body.light-theme .hero-split-section { background: linear-gradient(to right, rgba(244, 243, 239, 0.92) 0%, rgba(244, 243, 239, 0.7) 65%, transparent 100%); }
+        /* Secciones */
+        .hero-split-section { margin-top: calc(92px + var(--banner-height)); min-height: calc(100vh - 92px - var(--banner-height)); display: flex; align-items: center; position: relative; background: linear-gradient(to right, rgba(12, 15, 21, 0.92) 0%, rgba(12, 15, 21, 0.7) 65%, transparent 100%); }
+        body.light-theme .hero-split-section { background: linear-gradient(to right, rgba(244, 243, 239, 0.92) 0%, rgba(244, 243, 239, 0.7) 65%, transparent 100%); }
         .hero-split-container { display: flex; flex-direction: column; align-items: flex-start; width: 100%; }
         .hero-split-left { padding: 40px 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; z-index: 2; max-width: 750px; }
         .hero-split-left h1 { font-size: clamp(36px, 4.2vw, 58px); line-height: 1.12; margin-bottom: 22px; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
@@ -775,7 +843,6 @@
             overflow: hidden;
         }
 
-        /* Marca de agua elegante en la ficha del modal */
         .modal-text::after {
             content: '';
             position: absolute;
@@ -808,7 +875,7 @@
         .toast {
             position: fixed;
             bottom: 24px;
-            left: 24px; /* Cambiado de right a left para no tapar el drawer */
+            left: 24px;
             right: auto;
             background: var(--bg-modal);
             border: 1px solid var(--accent-gold);
@@ -843,10 +910,9 @@
     <img src="images/background.jpg" alt="Master Canvas" decoding="async" onload="this.classList.add('loaded')">
 </div>
 
-<!-- HEADER / MENÚ PRINCIPAL EDITORIAL -->
+<!-- Header -->
 <header class="navbar" id="mainNavbar">
     <div class="container-wide nav-inner">
-        <!-- BLOQUE 1: Imagotipo (48px) + Nombre del Artista -->
         <a href="#" class="block-brand" aria-label="Eloísa Rodríguez Atelier">
             <img src="images/logo-erg.png" alt="ERG Monogram" class="brand-logo-img" decoding="async">
             <div class="brand-text-wrap">
@@ -855,10 +921,8 @@
             </div>
         </a>
 
-        <!-- Separador 1 -->
         <div class="block-separator"></div>
 
-        <!-- BLOQUE 2: Menú Central -->
         <ul class="block-menu" id="navLinks">
             <li><a href="#statement" data-i18n="nav_statement" onclick="closeMobileMenu()">Démarche</a></li>
             <li><a href="#collection" data-i18n="nav_collection" onclick="closeMobileMenu()">Collection</a></li>
@@ -869,15 +933,11 @@
             <li><a href="#faq" data-i18n="nav_faq" onclick="closeMobileMenu()">FAQ</a></li>
         </ul>
 
-        <!-- Separador 2 -->
         <div class="block-separator"></div>
 
-        <!-- BLOQUE 3: Redes Sociales, Idiomas con Banderas, Moneda, Tema y Selección -->
         <div class="block-controls">
-            <!-- Redes Sociales -->
             <div class="social-group" id="socialIconsContainer"></div>
 
-            <!-- Selector de Idiomas con Banderas -->
             <select class="control-select" id="languageSelector" onchange="setLanguage(this.value)" aria-label="Language">
                 <option value="fr">🇫🇷 FR</option>
                 <option value="en">🇬🇧 EN</option>
@@ -885,25 +945,21 @@
                 <option value="es">🇪🇸 ES</option>
             </select>
 
-            <!-- Selector de Moneda -->
             <select class="control-select" id="currencySelector" onchange="setCurrency(this.value)" aria-label="Currency">
                 <option value="CHF" selected>CHF</option>
                 <option value="EUR">EUR (€)</option>
                 <option value="USD">USD ($)</option>
             </select>
 
-            <!-- Modo Oscuro / Claro -->
             <button class="theme-btn" id="themeToggle" onclick="toggleTheme()" title="Mode Sombre / Clair">
                 <span id="themeIcon">☀️</span>
             </button>
 
-            <!-- Selección / Cesta Minimalista -->
             <button class="cart-pill-btn" onclick="toggleCartDrawer()" id="cartOpenBtn" aria-label="Sélection">
                 <span data-i18n="cart_label">Sélection</span>
                 <span class="cart-badge" id="cartBadge">0</span>
             </button>
 
-            <!-- Hamburguesa Móvil -->
             <button class="mobile-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Menu">☰</button>
         </div>
     </div>
@@ -1056,10 +1112,10 @@
                         <option value="XL" data-i18n="form_dim_opt3">Monumental (> 180 cm)</option>
                     </select>
                     <select name="series" class="custom-select" id="commSeriesSelect">
-                        <option value="" disabled selected data-i18n="form_series_placeholder">Série d'inspiration</option>
+                        <option value="" disabled selected data-i18n="form_series_placeholder">Série d'inspiration pour le projet</option>
                         <option value="nebula" data-i18n="form_series_opt1">Nébuleuses & Sédiments (Teintes cosmiques & minérales)</option>
-                        <option value="portrait" data-i18n="series_portrait">Portraits</option>
-                        <option value="abstract" data-i18n="form_series_opt2">Autres créations & abstraction pure</option>
+                        <option value="portrait" data-i18n="form_series_opt2">Portraits expressifs sur mesure</option>
+                        <option value="abstract" data-i18n="form_series_opt3">Autres créations & abstraction pure</option>
                     </select>
                 </div>
                 <textarea name="message" class="custom-textarea" rows="3" data-i18n-ph="form_ph_comm_desc" placeholder="Décrivez votre espace ou votre vision pour l'œuvre..."></textarea>
@@ -1094,6 +1150,16 @@
 
             <div class="contact-form-card">
                 <h3 class="serif-font" style="font-size: 26px; margin-bottom: 18px;" data-i18n="contact_form_title">Envoyer un Message Direct</h3>
+
+                <!-- Caja visual de resumen de selección -->
+                <div class="contact-inquiry-box" id="contactInquiryBox">
+                    <div class="contact-inquiry-header">
+                        <span data-i18n="contact_inquiry_preview_title">Œuvres sélectionnées pour cette demande :</span>
+                        <button type="button" class="contact-inquiry-clear" onclick="clearInquirySelection()" data-i18n="contact_inquiry_preview_clear">Effacer la sélection</button>
+                    </div>
+                    <div class="contact-inquiry-tags" id="contactInquiryTags"></div>
+                </div>
+
                 <form class="commissions-form" name="contact" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)">
                     <input type="hidden" name="form-name" value="contact">
                     <div class="form-grid-2">
@@ -1109,7 +1175,7 @@
     </div>
 </section>
 
-<!-- 9. SECCIÓN FAQ POR CATEGORÍAS -->
+<!-- 10. FAQ Section por Categorías -->
 <section class="solid-section" id="faq" style="border-top: none;">
     <div class="container">
         <div class="section-header-center">
@@ -1119,7 +1185,6 @@
                 Sélectionnez une thématique pour consulter les détails pratiques de l'atelier.
             </p>
 
-            <!-- Barra de 4 Categorías -->
             <div class="faq-categories-bar" role="tablist">
                 <button class="faq-tab-btn active" onclick="switchFaqTab('acquisitions', this)" data-i18n="faq_cat_acquisitions">Adquisitions & Réservations</button>
                 <button class="faq-tab-btn" onclick="switchFaqTab('shipping', this)" data-i18n="faq_cat_shipping">Envois & Livraison</button>
@@ -1251,18 +1316,16 @@
     </div>
 </section>
 
-<!-- FOOTER EDITORIAL CON COLUMNA DEDICADA AL LOGO -->
+<!-- Footer -->
 <footer class="footer">
     <div class="container">
         <div class="footer-grid-modular">
-            <!-- Columna 1: Logotipo Monumental -->
             <div class="footer-col-logo">
                 <img src="images/logo-erg.png" alt="ERG Monogram" class="footer-logo-monumental" decoding="async">
             </div>
 
             <div class="block-separator"></div>
 
-            <!-- Columna 2: Identidad & Atelier -->
             <div class="footer-col">
                 <span class="serif-font" style="font-size: 21px; font-weight: 600; color: var(--text-heading); display: block; margin-bottom: 8px;" id="footerBrandName">ERG – Eloísa Rodríguez</span>
                 <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px;">
@@ -1273,7 +1336,6 @@
 
             <div class="block-separator"></div>
 
-            <!-- Columna 3: Navegación & Series -->
             <div class="footer-col">
                 <h5>Collection & Navigation</h5>
                 <ul class="footer-nav-list">
@@ -1289,7 +1351,6 @@
 
             <div class="block-separator"></div>
 
-            <!-- Columna 4: Servicios & Compromisos -->
             <div class="footer-col">
                 <h5>Services & Engagements</h5>
                 <ul class="footer-nav-list">
@@ -1302,7 +1363,6 @@
 
             <div class="block-separator"></div>
 
-            <!-- Columna 5: Ubicación & Contacto Directo -->
             <div class="footer-col">
                 <h5>Atelier & Contact</h5>
                 <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.7; margin-bottom: 10px;">
@@ -1316,7 +1376,6 @@
             </div>
         </div>
 
-        <!-- Franja Inferior: Legal & Copyright -->
         <div class="footer-bottom-bar">
             <p style="font-size: 12px; color: var(--text-muted);" data-i18n="footer_rights">© 2026 Eloísa Rodríguez. Tous droits réservés.</p>
 
@@ -1403,7 +1462,7 @@
             <span data-i18n="cart_total_label">Total Estimé :</span>
             <span class="art-card-price" id="cartTotalDisplay">CHF 0</span>
         </div>
-        <button class="btn-primary" style="width: 100%;" onclick="proceedCheckout()" data-i18n="cart_checkout_btn">Passerelle de paiement bientôt disponible</button>
+        <button class="btn-primary" style="width: 100%;" onclick="proceedCheckout()" data-i18n="cart_checkout_btn">Demander des informations sur la sélection</button>
     </div>
 </div>
 
@@ -1485,7 +1544,7 @@
 
   function handleRightClick(e) {
     e.preventDefault();
-    showToast(i18n[currentLang].protect_alert);
+    showToast(i18n[currentLang]?.protect_alert || 'Image protégée');
     return false;
   }
 
@@ -1589,6 +1648,8 @@
     renderDynamicFilterBar();
     renderAllGrids();
     renderExhibitions();
+    updateCartUI();
+    renderInquiryPreview();
   }
 
   function toggleTheme() {
@@ -1637,13 +1698,28 @@
     let badgeText = '';
     let badgeClass = '';
 
-    if (isPrint) { badgeText = i18n[currentLang]?.status_print || 'Estampe'; badgeClass = 'badge-print'; }
-    else if (art.status === 'available') { badgeText = i18n[currentLang]?.status_available || 'Disponible'; badgeClass = 'badge-available'; }
-    else if (art.status === 'reserved') { badgeText = i18n[currentLang]?.status_reserved || 'Réservé'; badgeClass = 'badge-reserved'; }
-    else if (art.status === 'sold') { badgeText = i18n[currentLang]?.status_sold || 'Vendu'; badgeClass = 'badge-sold'; }
-    else if (art.status === 'on_loan') { badgeText = i18n[currentLang]?.status_onloan || 'Prêt'; badgeClass = 'badge-onloan'; }
+    if (art.status === 'reserved') {
+      badgeText = i18n[currentLang]?.status_reserved || 'Réservé';
+      badgeClass = 'badge-reserved';
+    }
+    else if (art.status === 'sold') {
+      badgeText = i18n[currentLang]?.status_sold || 'Vendu';
+      badgeClass = 'badge-sold';
+    }
+    else if (art.status === 'on_loan') {
+      badgeText = i18n[currentLang]?.status_onloan || 'Prêt';
+      badgeClass = 'badge-onloan';
+    }
+    else if (isPrint) {
+      badgeText = i18n[currentLang]?.status_print || 'Estampe';
+      badgeClass = 'badge-print';
+    }
+    else {
+      badgeText = i18n[currentLang]?.status_available || 'Disponible';
+      badgeClass = 'badge-available';
+    }
 
-    const actionBtn = (isAvailable || isPrint)
+    const actionBtn = isAvailable
       ? `<button class="btn-outline" style="padding: 6px 14px; font-size: 11px;" onclick="addToBag('${art.id}')">${i18n[currentLang]?.btn_acquire || 'Acquérir'}</button>`
       : '';
 
@@ -1777,7 +1853,7 @@
     switchModalView('detail');
 
     const actions = document.getElementById('modalActionsWrap');
-    if (art.status === 'available' || art.category === 'print') {
+    if (art.status === 'available') {
       actions.innerHTML = `
         <button class="btn-primary" style="flex:1; min-width:140px;" onclick="addToBag('${art.id}'); closeModal();">${i18n[currentLang]?.btn_add_bag || 'Ajouter'}</button>
         <button class="btn-outline" style="flex:1; min-width:140px;" onclick="inquireDirectly('${art.title}')">${i18n[currentLang]?.btn_inquire_piece || 'Demander'}</button>
@@ -1834,7 +1910,7 @@
 
   function inquireDirectly(artworkTitle) {
     closeModal();
-    const prefixes = { fr: "Demande d'acquisition pour :", en: "Acquisition inquiry for:", it: "Richiesta per:", es: "Consulta de adquisición para:" };
+    const prefixes = { fr: "Demande d'information pour :", en: "Inquiry regarding:", it: "Richiesta per:", es: "Consulta para:" };
     document.getElementById('contactSubjectInput').value = `${prefixes[currentLang] || prefixes.fr} ${artworkTitle}`;
     document.getElementById('contactMessageInput').focus();
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
@@ -1869,7 +1945,7 @@
     saveCart(); updateCartUI(); showToast(`"${art.title}" ${i18n[currentLang]?.toast_added || 'ajouté'}`); toggleCartDrawer(true);
   }
 
-  function removeFromBag(index) { cart.splice(index, 1); saveCart(); updateCartUI(); }
+  function removeFromBag(index) { cart.splice(index, 1); saveCart(); updateCartUI(); renderInquiryPreview(); }
   function saveCart() { localStorage.setItem('erg_cart', JSON.stringify(cart)); }
 
   function toggleCartDrawer(forceOpen = null) {
@@ -1914,6 +1990,32 @@
     document.getElementById('cartTotalDisplay').textContent = formatPrice(total);
   }
 
+  function renderInquiryPreview() {
+    const box = document.getElementById('contactInquiryBox');
+    const tagsContainer = document.getElementById('contactInquiryTags');
+    if (!box || !tagsContainer) return;
+
+    if (cart.length === 0) {
+      box.classList.remove('show');
+      tagsContainer.innerHTML = '';
+      return;
+    }
+
+    tagsContainer.innerHTML = cart.map(item => {
+      const qty = (item.qty && item.qty > 1) ? ` (×${item.qty})` : '';
+      return `<span class="contact-art-chip">✦ ${item.title}${qty}</span>`;
+    }).join('');
+
+    box.classList.add('show');
+  }
+
+  function clearInquirySelection() {
+    const box = document.getElementById('contactInquiryBox');
+    if (box) box.classList.remove('show');
+    document.getElementById('contactSubjectInput').value = '';
+    document.getElementById('contactMessageInput').value = '';
+  }
+
   function proceedCheckout() {
     if (cart.length === 0) return;
 
@@ -1952,6 +2054,7 @@
     if (subjectInput) subjectInput.value = subjects[currentLang] || subjects.fr;
     if (messageInput) messageInput.value = fullMessage;
 
+    renderInquiryPreview();
     toggleCartDrawer(false);
 
     const contactSection = document.getElementById('contact');
@@ -1972,6 +2075,7 @@
         const successMsgs = { fr: "Demande transmise avec succès à l'atelier.", en: "Inquiry successfully sent to the studio.", it: "Richiesta inviata con successo.", es: "Solicitud enviada con éxito." };
         showToast(successMsgs[currentLang] || successMsgs.fr);
         e.target.reset();
+        clearInquirySelection();
       })
       .catch(() => showToast("Erreur lors de l'envoi."));
   }
