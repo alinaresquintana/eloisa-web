@@ -57,7 +57,7 @@
         body { font-family: var(--font-sans), sans-serif; background: transparent; color: var(--text-main); line-height: 1.65; font-size: 15px; overflow-x: hidden; -webkit-font-smoothing: antialiased; position: relative; user-select: none; -webkit-user-select: none; }
         img { max-width: 100%; display: block; filter: blur(10px); transition: filter 0.5s ease-out; }
         img.loaded { filter: blur(0px); }
-        section[id] { scroll-margin-top: 100px; }
+        section[id] { scroll-margin-top: calc(80px + var(--banner-height)); }
 
         .global-fixed-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -10; pointer-events: none; overflow: hidden; }
         .global-fixed-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 59% 65%; filter: brightness(1) contrast(1.05) saturate(1.1); }
@@ -335,6 +335,122 @@
         }
 
         .mobile-hamburger { display: none; font-size: 22px; color: var(--text-main); padding: 4px; }
+
+        /* -------------------------------------------------------------
+                   SECCIÓN FAQ (Categorías & Tipografía Sans Limpia)
+                ------------------------------------------------------------- */
+        .faq-categories-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+
+        .faq-tab-btn {
+            padding: 9px 22px;
+            border-radius: 25px;
+            font-family: var(--font-sans);
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-tab-btn:hover, .faq-tab-btn.active {
+            color: #0c0f15;
+            background: var(--accent-gold);
+            border-color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        .faq-accordion-group {
+            max-width: 820px;
+            margin: 0 auto;
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-accordion-group.active {
+            display: flex;
+            animation: fadeInFaq 0.3s ease-out forwards;
+        }
+
+        @keyframes fadeInFaq {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+
+        .faq-item[open] {
+            border-color: var(--accent-gold);
+            box-shadow: var(--card-shadow);
+        }
+
+        /* Preguntas en tipografía sans-serif clara y muy legible */
+        .faq-question {
+            padding: 18px 22px;
+            font-family: var(--font-sans);
+            font-size: 14.5px;
+            font-weight: 600;
+            color: var(--text-main);
+            letter-spacing: 0.01em;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            user-select: none;
+        }
+
+        .faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-icon-toggle {
+            font-size: 17px;
+            font-weight: 400;
+            color: var(--accent-gold);
+            transition: transform 0.25s ease;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .faq-item[open] .faq-icon-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 22px 20px 22px;
+            font-family: var(--font-sans);
+            font-size: 13.5px;
+            color: var(--text-muted);
+            line-height: 1.75;
+            border-top: 1px solid transparent;
+        }
+
+        .faq-item[open] .faq-answer {
+            border-top-color: var(--border-color);
+            padding-top: 14px;
+        }
 
         /* -------------------------------------------------------------
            FOOTER CON COLUMNA COMPLETA PARA EL LOGOTIPO
@@ -679,6 +795,7 @@
             <li><a href="#bio" data-i18n="nav_bio" onclick="closeMobileMenu()">Biographie</a></li>
             <li><a href="#commissions" data-i18n="nav_commissions" onclick="closeMobileMenu()">Commandes</a></li>
             <li><a href="#contact" data-i18n="nav_contact" onclick="closeMobileMenu()">Contact</a></li>
+            <li><a href="#faq" data-i18n="nav_faq" onclick="closeMobileMenu()">FAQ</a></li>
         </ul>
 
         <!-- Separador 2 -->
@@ -896,7 +1013,7 @@
 
                 <div class="contact-item">
                     <h5 data-i18n="contact_email_label">Courriel</h5>
-                    <a href="mailto:studio@eloisarg.com" id="contactEmailLink">studio@eloisarg.com</a>
+                    <a href="mailto:contact@eloisarg.com" id="contactEmailLink">contact@eloisarg.com</a>
                 </div>
                 <div class="contact-item">
                     <h5 data-i18n="contact_domain_label">Site Officiel</h5>
@@ -917,6 +1034,148 @@
                     <button type="submit" class="btn-primary" style="width: 100%;" data-i18n="contact_btn_send">Envoyer le Message</button>
                 </form>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- 9. SECCIÓN FAQ POR CATEGORÍAS -->
+<section class="solid-section" id="faq" style="border-top: none;">
+    <div class="container">
+        <div class="section-header-center">
+            <span class="section-tag" data-i18n="faq_tag">Guide & Modalités</span>
+            <h2 class="section-title" data-i18n="faq_title">Questions Fréquentes</h2>
+            <p class="section-subtitle" data-i18n="faq_subtitle">
+                Sélectionnez une thématique pour consulter les détails pratiques de l'atelier.
+            </p>
+
+            <!-- Barra de 4 Categorías -->
+            <div class="faq-categories-bar" role="tablist">
+                <button class="faq-tab-btn active" onclick="switchFaqTab('acquisitions', this)" data-i18n="faq_cat_acquisitions">Adquisitions & Réservations</button>
+                <button class="faq-tab-btn" onclick="switchFaqTab('shipping', this)" data-i18n="faq_cat_shipping">Envois & Livraison</button>
+                <button class="faq-tab-btn" onclick="switchFaqTab('visits', this)" data-i18n="faq_cat_visits">Visites & Authenticité</button>
+                <button class="faq-tab-btn" onclick="switchFaqTab('commissions', this)" data-i18n="faq_cat_commissions">Commandes & Projets</button>
+            </div>
+        </div>
+
+        <!-- CATEGORÍA 1: Adquisiciones y Reservas -->
+        <div class="faq-accordion-group active" id="faqGroup-acquisitions">
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_acq1">Comment se déroule la demande d'acquisition d'une œuvre ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_acq1"></div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_acq2">Est-il possible de poser une option ou de réserver une œuvre ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_acq2"></div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_acq3">Quelles sont les modalités de paiement acceptées ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_acq3"></div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_acq4">Que faire si une œuvre qui m'intéresse est déjà vendue ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_acq4"></div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_acq5">Comment est établie la facture d'achat ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_acq5"></div>
+            </details>
+        </div>
+
+        <!-- CATEGORÍA 2: Envíos y Transporte -->
+        <div class="faq-accordion-group" id="faqGroup-shipping">
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_ship1">Quels sont les coûts de livraison et les pays desservis ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_ship1"></div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_ship2">Peut-on retirer les œuvres directement à l'atelier de Vich ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_ship2"></div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_ship3">Que se passe-t-il si une œuvre est endommagée durant le transport ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_ship3"></div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_ship4">Comment les toiles sont-elles montées et conditionnées ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_ship4"></div>
+            </details>
+        </div>
+
+        <!-- CATEGORÍA 3: Visitas y Autenticidad -->
+        <div class="faq-accordion-group" id="faqGroup-visits">
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_vis1">Est-il possible de voir les toiles en personne ou en visio avant l'achat ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_vis1"></div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_vis2">Comment l'authenticité de l'œuvre est-elle garantie ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_vis2"></div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_vis3">Comment entretenir et préserver une peinture aux textures minérales et huile ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_vis3"></div>
+            </details>
+        </div>
+
+        <!-- CATEGORÍA 4: Encargos y Proyectos -->
+        <div class="faq-accordion-group" id="faqGroup-commissions">
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_com1">Peut-on suivre les œuvres actuellement en cours de création ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_com1"></div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_com2">Comment sont fixés les tarifs et les délais d'une commande personnalisée ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_com2"></div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span data-i18n="faq_q_com3">Quel niveau de personnalisation est possible pour une commande ?</span>
+                    <span class="faq-icon-toggle">+</span>
+                </summary>
+                <div class="faq-answer" data-i18n="faq_a_com3"></div>
+            </details>
         </div>
     </div>
 </section>
@@ -953,6 +1212,7 @@
                     <li><a href="#bio">Biographie & Registre</a></li>
                     <li><a href="#commissions">Commandes Privées</a></li>
                     <li><a href="#contact">Contact Atelier</a></li>
+                    <li><a href="#faq">Questions Fréquentes (FAQ)</a></li>
                 </ul>
             </div>
 
@@ -980,7 +1240,7 @@
                     Suisse
                 </p>
                 <p style="font-size: 12.5px;">
-                    <a href="mailto:studio@eloisarg.com" style="color: var(--accent-gold);">studio@eloisarg.com</a>
+                    <a href="mailto:contact@eloisarg.com" style="color: var(--accent-gold);">contact@eloisarg.com</a>
                 </p>
             </div>
         </div>
@@ -1650,6 +1910,15 @@
     toast.textContent = msg;
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 3500);
+  }
+
+  function switchFaqTab(categoryId, btn) {
+    document.querySelectorAll('.faq-tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.faq-accordion-group').forEach(g => g.classList.remove('active'));
+
+    if (btn) btn.classList.add('active');
+    const targetGroup = document.getElementById(`faqGroup-${categoryId}`);
+    if (targetGroup) targetGroup.classList.add('active');
   }
 
   document.addEventListener('keydown', (e) => {
