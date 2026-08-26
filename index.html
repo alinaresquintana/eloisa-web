@@ -674,9 +674,9 @@
         <!-- BLOQUE 2: Menú Central -->
         <ul class="block-menu" id="navLinks">
             <li><a href="#statement" data-i18n="nav_statement" onclick="closeMobileMenu()">Démarche</a></li>
-            <li><a href="#bio" data-i18n="nav_bio" onclick="closeMobileMenu()">Biographie</a></li>
             <li><a href="#collection" data-i18n="nav_collection" onclick="closeMobileMenu()">Collection</a></li>
             <li><a href="#prints" data-i18n="nav_prints" onclick="closeMobileMenu()">Estampes</a></li>
+            <li><a href="#bio" data-i18n="nav_bio" onclick="closeMobileMenu()">Biographie</a></li>
             <li><a href="#commissions" data-i18n="nav_commissions" onclick="closeMobileMenu()">Commandes</a></li>
             <li><a href="#contact" data-i18n="nav_contact" onclick="closeMobileMenu()">Contact</a></li>
         </ul>
@@ -757,7 +757,44 @@
     </div>
 </section>
 
-<!-- 3. Biography Section -->
+<!-- 3. Collection Portfolio -->
+<section class="solid-section" id="collection" style="border-top: none;">
+    <div class="container">
+        <div class="section-header-center">
+            <span class="section-tag" data-i18n="collection_tag">Peintures Originales</span>
+            <h2 class="section-title" data-i18n="collection_title">Le Portfolio de la Collection</h2>
+            <p class="section-subtitle" data-i18n="collection_subtitle">
+                Œuvres d'art uniques réalisées à l'huile, terres naturelles, lapis-lazuli et feuille d'or sur lin belge monté sur châssis.
+            </p>
+            <div class="filter-bar" role="tablist" id="dynamicFilterBar"></div>
+        </div>
+        <div class="art-grid" id="originalArtworksGrid"></div>
+    </div>
+</section>
+
+<!-- 4. Prints Section -->
+<section class="solid-section" id="prints">
+    <div class="container">
+        <div class="section-header-center">
+            <span class="section-tag" data-i18n="prints_tag">Éditions Limitées</span>
+            <h2 class="section-title" data-i18n="prints_title">Tirages d'Art (Giclée)</h2>
+            <p class="section-subtitle" data-i18n="prints_subtitle">
+                Impressions pigmentaires de qualité musée sur papier coton Hahnemühle 310g. Numérotées, titrées et signées à la main par l'artiste.
+            </p>
+        </div>
+        <div class="art-grid" id="printsGrid"></div>
+    </div>
+</section>
+
+<!-- 5. Panorama Window Portal 1 -->
+<div class="artwork-window-banner">
+    <div class="window-banner-badge">
+        <span style="font-size: 16px; color: var(--accent-gold);">◈</span>
+        <span class="serif-font" style="font-size: 19px; letter-spacing: 0.1em; color: var(--text-heading);" data-i18n="window_badge_1">Atelier ERG • Exploration de la Matière Brute</span>
+    </div>
+</div>
+
+<!-- 6. Biography Section -->
 <section class="solid-section" id="bio">
     <div class="container">
         <div class="section-header-center">
@@ -792,44 +829,15 @@
     </div>
 </section>
 
-<!-- 4. Collection Portfolio -->
-<section class="solid-section" id="collection" style="border-top: none;">
-    <div class="container">
-        <div class="section-header-center">
-            <span class="section-tag" data-i18n="collection_tag">Peintures Originales</span>
-            <h2 class="section-title" data-i18n="collection_title">Le Portfolio de la Collection</h2>
-            <p class="section-subtitle" data-i18n="collection_subtitle">
-                Œuvres d'art uniques réalisées à l'huile, terres naturelles, lapis-lazuli et feuille d'or sur lin belge monté sur châssis.
-            </p>
-            <div class="filter-bar" role="tablist" id="dynamicFilterBar"></div>
-        </div>
-        <div class="art-grid" id="originalArtworksGrid"></div>
-    </div>
-</section>
-
-<!-- 5. Panorama Window Portal 1 -->
+<!-- 7. Panorama Window Portal 2 -->
 <div class="artwork-window-banner">
     <div class="window-banner-badge">
         <span style="font-size: 16px; color: var(--accent-gold);">◈</span>
-        <span class="serif-font" style="font-size: 19px; letter-spacing: 0.1em; color: var(--text-heading);" data-i18n="window_badge_1">Atelier ERG • Exploration de la Matière Brute</span>
+        <span class="serif-font" style="font-size: 19px; letter-spacing: 0.1em; color: var(--text-heading);" data-i18n="window_badge_2">De la matière brute à l'espace habité</span>
     </div>
 </div>
 
-<!-- 6. Prints Section -->
-<section class="solid-section" id="prints">
-    <div class="container">
-        <div class="section-header-center">
-            <span class="section-tag" data-i18n="prints_tag">Éditions Limitées</span>
-            <h2 class="section-title" data-i18n="prints_title">Tirages d'Art (Giclée)</h2>
-            <p class="section-subtitle" data-i18n="prints_subtitle">
-                Impressions pigmentaires de qualité musée sur papier coton Hahnemühle 310g. Numérotées, titrées et signées à la main par l'artiste.
-            </p>
-        </div>
-        <div class="art-grid" id="printsGrid"></div>
-    </div>
-</section>
-
-<!-- 7. Bespoke Commissions -->
+<!-- 8. Bespoke Commissions -->
 <section class="solid-section" id="commissions" style="border-top: none;">
     <div class="container">
         <div class="commissions-wrapper">
@@ -872,14 +880,6 @@
         </div>
     </div>
 </section>
-
-<!-- 8. Panorama Window Portal 2 -->
-<div class="artwork-window-banner">
-    <div class="window-banner-badge">
-        <span style="font-size: 16px; color: var(--accent-gold);">◈</span>
-        <span class="serif-font" style="font-size: 19px; letter-spacing: 0.1em; color: var(--text-heading);" data-i18n="window_badge_2">De la matière brute à l'espace habité</span>
-    </div>
-</div>
 
 <!-- 9. Contact Section -->
 <section class="solid-section" id="contact">
@@ -945,13 +945,14 @@
 
             <!-- Columna 3: Navegación & Series -->
             <div class="footer-col">
-                <h5>Collection & Œuvres</h5>
+                <h5>Collection & Navigation</h5>
                 <ul class="footer-nav-list">
-                    <li><a href="#collection">Nébuleuses & Sédiments</a></li>
-                    <li><a href="#collection">Portraits & Figures</a></li>
-                    <li><a href="#prints">Tirages d'Art Numérotés</a></li>
-                    <li><a href="#commissions">Commandes Privées</a></li>
                     <li><a href="#statement">Démarche Artistique</a></li>
+                    <li><a href="#collection">Collection Principale</a></li>
+                    <li><a href="#prints">Tirages d'Art Numérotés</a></li>
+                    <li><a href="#bio">Biographie & Registre</a></li>
+                    <li><a href="#commissions">Commandes Privées</a></li>
+                    <li><a href="#contact">Contact Atelier</a></li>
                 </ul>
             </div>
 
