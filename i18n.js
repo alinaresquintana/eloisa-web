@@ -101,7 +101,7 @@ window.ERG_I18N = {
     zoom_hint: "Survoler ou glisser pour explorer la matière",
     cart_title: "Sélection d'Atelier",
     cart_total_label: "Total Estimé :",
-    cart_checkout_btn: "Passerelle de paiement bientôt disponible",
+    cart_checkout_btn: "Demander des informations sur la sélection",
     toast_added: "ajouté à votre sélection.",
     protect_alert:
       "© Reproduction et téléchargement des œuvres protégés par le droit d'auteur.",
@@ -210,7 +210,7 @@ window.ERG_I18N = {
     zoom_hint: "Hover or drag to explore texture details",
     cart_title: "Studio Bag",
     cart_total_label: "Estimated Total:",
-    cart_checkout_btn: "Online Checkout Coming Soon",
+    cart_checkout_btn: "Inquire About Selected Works",
     toast_added: "added to your selection.",
     protect_alert:
       "© Artwork protected by copyright. Image downloading is restricted.",
@@ -321,7 +321,7 @@ window.ERG_I18N = {
     zoom_hint: "Passa o trascina il dito per ingrandire la trama",
     cart_title: "Selezione dello Studio",
     cart_total_label: "Totale Estimato:",
-    cart_checkout_btn: "Pagamenti online disponibili a breve",
+    cart_checkout_btn: "Richiedi informazioni sulla selezione",
     toast_added: "aggiunto alla tua selezione.",
     protect_alert:
       "© Riproduzione e download delle opere protetti da copyright.",
@@ -433,7 +433,7 @@ window.ERG_I18N = {
     zoom_hint: "Pasa o arrastra el dedo para ver el detalle de la textura",
     cart_title: "Selección de Estudio",
     cart_total_label: "Total Estimado:",
-    cart_checkout_btn: "Pasarela de pago próxima disponible",
+    cart_checkout_btn: "Consultar sobre las obras seleccionadas",
     toast_added: "añadido a tu selección.",
     protect_alert:
       "© Obra protegida por derechos de autor. Descarga de imágenes restringida.",

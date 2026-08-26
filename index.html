@@ -618,7 +618,23 @@
         .cart-drawer-thumb { width: 58px; height: 58px; border-radius: var(--radius-sm); object-fit: cover; flex-shrink: 0; filter: none !important; }
         .cart-drawer-footer { padding: 22px; border-top: 1px solid var(--border-color); background: rgba(8, 10, 14, 0.9); }
 
-        .toast { position: fixed; bottom: 24px; right: 24px; background: var(--bg-modal); border: 1px solid var(--accent-gold); color: var(--text-main); padding: 12px 20px; border-radius: var(--radius-sm); font-size: 13px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); transform: translateY(80px); opacity: 0; transition: var(--transition); z-index: 3000; }
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 24px; /* Cambiado de right a left para no tapar el drawer */
+            right: auto;
+            background: var(--bg-modal);
+            border: 1px solid var(--accent-gold);
+            color: var(--text-main);
+            padding: 12px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            transform: translateY(80px);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 3000;
+        }
         .toast.show { transform: translateY(0); opacity: 1; }
     </style>
 
@@ -1568,15 +1584,52 @@
 
   function proceedCheckout() {
     if (cart.length === 0) return;
-    const checkoutMsgs = {
-      fr: "Les acquisitions en ligne directes seront bientôt disponibles. Veuillez utiliser le formulaire de contact pour réserver.",
-      en: "Direct online checkouts will be available soon. Please use the contact form to reserve.",
-      it: "I pagamenti online diretti saranno presto disponibili. Si prega di utilizzare il modulo di contatto per prenotare.",
-      es: "Las adquisiciones online directas estarán disponibles próximamente. Utiliza el formulario de contacto para reservar."
+
+    const subjects = {
+      fr: "Demande d'information concernant une sélection d'œuvres",
+      en: "Inquiry regarding selected artworks",
+      it: "Richiesta di informazioni su una selezione di opere",
+      es: "Consulta de información sobre obras seleccionadas"
     };
-    alert(checkoutMsgs[currentLang] || checkoutMsgs.fr);
+
+    const introText = {
+      fr: "Bonjour Eloísa,\n\nJe souhaiterais avoir des informations complémentaires sur les œuvres suivantes :",
+      en: "Hello Eloísa,\n\nI would like to receive more information about the following artworks:",
+      it: "Buongiorno Eloísa,\n\nVorrei ricevere maggiori informazioni sulle seguenti opere:",
+      es: "Hola Eloísa,\n\nMe gustaría recibir más información sobre las siguientes obras:"
+    };
+
+    let itemsListText = "";
+    cart.forEach(item => {
+      const qtySuffix = (item.qty && item.qty > 1) ? ` (×${item.qty})` : "";
+      itemsListText += `\n• ${item.title}${qtySuffix}`;
+    });
+
+    const closingText = {
+      fr: "\n\nPourriez-vous me renseigner sur leur disponibilité ?\n\nMerci par avance.",
+      en: "\n\nCould you let me know about their current availability?\n\nThank you.",
+      it: "\n\nPotrebbe fornirmi maggiori dettagli sulla loro disponibilità?\n\nGrazie.",
+      es: "\n\n¿Podrías darme más detalles sobre su disponibilidad actual?\n\nMuchas gracias."
+    };
+
+    const fullMessage = `${introText[currentLang] || introText.fr}\n${itemsListText}${closingText[currentLang] || closingText.fr}`;
+
+    const subjectInput = document.getElementById('contactSubjectInput');
+    const messageInput = document.getElementById('contactMessageInput');
+
+    if (subjectInput) subjectInput.value = subjects[currentLang] || subjects.fr;
+    if (messageInput) messageInput.value = fullMessage;
+
     toggleCartDrawer(false);
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      const nameInput = document.querySelector('form[name="contact"] input[name="name"]');
+      if (nameInput) {
+        setTimeout(() => nameInput.focus(), 600);
+      }
+    }
   }
 
   function handleFormSubmit(e) {
