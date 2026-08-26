@@ -1279,7 +1279,7 @@
     </div>
 </section>
 
-<!-- 10. FAQ Section por Categorías -->
+<!-- 10. FAQ Section por Categorías (Optimizada) -->
 <section class="solid-section" id="faq" style="border-top: none;">
     <div class="container">
         <div class="section-header-center">
@@ -1290,81 +1290,46 @@
             </p>
 
             <div class="faq-categories-bar" role="tablist">
-                <button class="faq-tab-btn active" onclick="switchFaqTab('acquisitions', this)" data-i18n="faq_cat_acquisitions">Adquisitions & Réservations</button>
-                <button class="faq-tab-btn" onclick="switchFaqTab('shipping', this)" data-i18n="faq_cat_shipping">Envois & Livraison</button>
+                <button class="faq-tab-btn active" onclick="switchFaqTab('acquisitions', this)" data-i18n="faq_cat_acquisitions">Adquisitions & Paiements</button>
+                <button class="faq-tab-btn" onclick="switchFaqTab('shipping', this)" data-i18n="faq_cat_shipping">Envois & Retrait</button>
                 <button class="faq-tab-btn" onclick="switchFaqTab('visits', this)" data-i18n="faq_cat_visits">Visites & Authenticité</button>
-                <button class="faq-tab-btn" onclick="switchFaqTab('commissions', this)" data-i18n="faq_cat_commissions">Commandes & Projets</button>
+                <button class="faq-tab-btn" onclick="switchFaqTab('commissions', this)" data-i18n="faq_cat_commissions">Commandes sur Mesure</button>
             </div>
         </div>
 
-        <!-- CATEGORÍA 1: Adquisiciones y Reservas -->
+        <!-- CATEGORÍA 1: Adquisiciones y Pagos -->
         <div class="faq-accordion-group active" id="faqGroup-acquisitions">
             <details class="faq-item">
                 <summary class="faq-question">
-                    <span data-i18n="faq_q_acq1">Comment se déroule la demande d'acquisition d'une œuvre ?</span>
+                    <span data-i18n="faq_q_acq1">Comment se déroule l'acquisition et le règlement d'une œuvre ?</span>
                     <span class="faq-icon-toggle">+</span>
                 </summary>
                 <div class="faq-answer" data-i18n="faq_a_acq1"></div>
             </details>
             <details class="faq-item">
                 <summary class="faq-question">
-                    <span data-i18n="faq_q_acq2">Est-il possible de poser une option ou de réserver une œuvre ?</span>
+                    <span data-i18n="faq_q_acq2">Est-il possible de réserver temporairement une pièce ?</span>
                     <span class="faq-icon-toggle">+</span>
                 </summary>
                 <div class="faq-answer" data-i18n="faq_a_acq2"></div>
             </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <span data-i18n="faq_q_acq3">Quelles sont les modalités de paiement acceptées ?</span>
-                    <span class="faq-icon-toggle">+</span>
-                </summary>
-                <div class="faq-answer" data-i18n="faq_a_acq3"></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <span data-i18n="faq_q_acq4">Que faire si une œuvre qui m'intéresse est déjà vendue ?</span>
-                    <span class="faq-icon-toggle">+</span>
-                </summary>
-                <div class="faq-answer" data-i18n="faq_a_acq4"></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <span data-i18n="faq_q_acq5">Comment est établie la facture d'achat ?</span>
-                    <span class="faq-icon-toggle">+</span>
-                </summary>
-                <div class="faq-answer" data-i18n="faq_a_acq5"></div>
-            </details>
         </div>
 
-        <!-- CATEGORÍA 2: Envíos y Transporte -->
+        <!-- CATEGORÍA 2: Envíos y Retirada -->
         <div class="faq-accordion-group" id="faqGroup-shipping">
             <details class="faq-item">
                 <summary class="faq-question">
-                    <span data-i18n="faq_q_ship1">Quels sont les coûts de livraison et les pays desservis ?</span>
+                    <span data-i18n="faq_q_ship1">Quelles sont les modalités et frais de livraison en Suisse ?</span>
                     <span class="faq-icon-toggle">+</span>
                 </summary>
                 <div class="faq-answer" data-i18n="faq_a_ship1"></div>
             </details>
             <details class="faq-item">
                 <summary class="faq-question">
-                    <span data-i18n="faq_q_ship2">Peut-on retirer les œuvres directement à l'atelier de Vich ?</span>
+                    <span data-i18n="faq_q_ship2">Que se passe-t-il en cas de dommage durant le transport ?</span>
                     <span class="faq-icon-toggle">+</span>
                 </summary>
                 <div class="faq-answer" data-i18n="faq_a_ship2"></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <span data-i18n="faq_q_ship3">Que se passe-t-il si une œuvre est endommagée durant le transport ?</span>
-                    <span class="faq-icon-toggle">+</span>
-                </summary>
-                <div class="faq-answer" data-i18n="faq_a_ship3"></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <span data-i18n="faq_q_ship4">Comment les toiles sont-elles montées et conditionnées ?</span>
-                    <span class="faq-icon-toggle">+</span>
-                </summary>
-                <div class="faq-answer" data-i18n="faq_a_ship4"></div>
             </details>
         </div>
 
@@ -1372,24 +1337,17 @@
         <div class="faq-accordion-group" id="faqGroup-visits">
             <details class="faq-item">
                 <summary class="faq-question">
-                    <span data-i18n="faq_q_vis1">Est-il possible de voir les toiles en personne ou en visio avant l'achat ?</span>
+                    <span data-i18n="faq_q_vis1">Peut-on voir l'œuvre avant l'achat et comment son authenticité est-elle garantie ?</span>
                     <span class="faq-icon-toggle">+</span>
                 </summary>
                 <div class="faq-answer" data-i18n="faq_a_vis1"></div>
             </details>
             <details class="faq-item">
                 <summary class="faq-question">
-                    <span data-i18n="faq_q_vis2">Comment l'authenticité de l'œuvre est-elle garantie ?</span>
+                    <span data-i18n="faq_q_vis2">Comment entretenir une toile aux textures minérales et huile ?</span>
                     <span class="faq-icon-toggle">+</span>
                 </summary>
                 <div class="faq-answer" data-i18n="faq_a_vis2"></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <span data-i18n="faq_q_vis3">Comment entretenir et préserver une peinture aux textures minérales et huile ?</span>
-                    <span class="faq-icon-toggle">+</span>
-                </summary>
-                <div class="faq-answer" data-i18n="faq_a_vis3"></div>
             </details>
         </div>
 
@@ -1397,24 +1355,17 @@
         <div class="faq-accordion-group" id="faqGroup-commissions">
             <details class="faq-item">
                 <summary class="faq-question">
-                    <span data-i18n="faq_q_com1">Peut-on suivre les œuvres actuellement en cours de création ?</span>
+                    <span data-i18n="faq_q_com1">Comment fonctionne une commande personnalisée et quels sont les délais ?</span>
                     <span class="faq-icon-toggle">+</span>
                 </summary>
                 <div class="faq-answer" data-i18n="faq_a_com1"></div>
             </details>
             <details class="faq-item">
                 <summary class="faq-question">
-                    <span data-i18n="faq_q_com2">Comment sont fixés les tarifs et les délais d'une commande personnalisée ?</span>
+                    <span data-i18n="faq_q_com2">Peut-on commander une œuvre inspirée d'une pièce déjà vendue ?</span>
                     <span class="faq-icon-toggle">+</span>
                 </summary>
                 <div class="faq-answer" data-i18n="faq_a_com2"></div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">
-                    <span data-i18n="faq_q_com3">Quel niveau de personnalisation est possible pour une commande ?</span>
-                    <span class="faq-icon-toggle">+</span>
-                </summary>
-                <div class="faq-answer" data-i18n="faq_a_com3"></div>
             </details>
         </div>
     </div>
