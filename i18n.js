@@ -1,62 +1,71 @@
 window.ERG_I18N = {
   fr: {
+    // 1. Series y Categorías
     series_nebula_sediment: "Nébuleuses & Sédiments",
     series_portrait: "Portraits",
     series_otras: "Autres Œuvres",
+    filter_all: "Toutes les Œuvres",
+    filter_avail: "Disponibles à l'achat",
+
+    // 2. Tarjetas Teaser / Continuidad
+    teaser_next_series_tag: "◈ Série Suivante",
+    teaser_all_series_tag: "◈ Collection ERG",
+    discover_next_series: "Découvrir la suite de la collection",
+    btn_next_series: "Explorer",
+    btn_view_full_collection: "Voir toutes les œuvres de la collection →",
+
+    // 3. Navegación & Estructura
     nav_statement: "Démarche",
-    nav_bio: "Biographie",
     nav_collection: "Collection",
     nav_prints: "Estampes",
+    nav_bio: "Biographie",
     nav_commissions: "Commandes & Projets",
     nav_contact: "Contact",
+    nav_faq: "FAQ",
     cart_label: "Sélection",
-    filter_avail: "Disponibles à l'achat",
+
+    // 4. Hero Section
     hero_tag: "Atelier d'Art Contemporain • Vich, Suisse",
     hero_title: "L'œuvre qui explore la beauté de <em>l'inconnu</em>.",
-    hero_desc:
-      "Une démarche artistique qui oscille entre l'abstraction et le figuratif, explorant des textures minérales profondes, la sédimentation et des harmonies cosmiques au sein de l'Atelier ERG à Vich.",
+    hero_desc: "Une démarche artistique qui oscille entre l'abstraction et le figuratif, explorant des textures minérales profondes, la sédimentation et des harmonies cosmiques au sein de l'Atelier ERG à Vich.",
     hero_btn_explore: "Explorer la Collection",
     hero_btn_statement: "Lire la Démarche",
-    statement_lead:
-      "Mon travail est une exploration de la beauté de l'inconnu.",
-    statement_p1:
-      "Mon travail est une exploration de la beauté de l'inconnu. Je m'inspire des nébuleuses et des sédiments pour créer des pièces qui jouent avec la perception de la couleur et de la texture. Je suis fascinée par la façon dont ces éléments s'associent pour former des motifs qui semblent chaotiques au premier abord, mais qui recèlent en eux-mêmes une complexité et une harmonie profondes.",
-    statement_p2:
-      "Je crois que la peinture est un moyen de se connecter à quelque chose de plus grand que nous, quelque chose qui défie notre compréhension et nous invite à nous immerger dans l'inexplicable. À l'image des nébuleuses et des sédiments, mon travail oscille entre l'abstraction et les formes reconnaissables, créant une sensation de mouvement et de fluidité qui invite le spectateur à s'y perdre.",
-    statement_p3:
-      "En somme, mon objectif est de créer des œuvres qui suscitent la réflexion et éveillent des émotions profondes chez ceux qui les contemplent. Je souhaite que mes créations soient vécues comme une immersion dans le mystère, l'inconnu et l'infini.",
+
+    // 5. Statement Section
+    statement_lead: "Mon travail est une exploration de la beauté de l'inconnu.",
+    statement_p1: "Mon travail est une exploration de la beauté de l'inconnu. Je m'inspire des nébuleuses et des sédiments pour créer des pièces qui jouent avec la perception de la couleur et de la texture. Je suis fascinée par la façon dont ces éléments s'associent pour former des motifs qui semblent chaotiques au premier abord, mais qui recèlent en eux-mêmes une complexité et une harmonie profondes.",
+    statement_p2: "Je crois que la peinture est un moyen de se connecter à quelque chose de plus grand que nous, quelque chose qui défie notre compréhension et nous invite à nous immerger dans l'inexplicable. À l'image des nébuleuses et des sédiments, mon travail oscille entre l'abstraction et les formes reconnaissables, créant une sensation de mouvement et de fluidité qui invite le spectateur à s'y perdre.",
+    statement_p3: "En somme, mon objectif est de créer des œuvres qui suscitent la réflexion et éveillent des émotions profondes chez ceux qui les contemplent. Je souhaite que mes créations soient vécues comme une immersion dans le mystère, l'inconnu et l'infini.",
     statement_role: "Artiste Peintre • Atelier ERG (Vich, Vaud)",
+
+    // 6. Colección & Prints
+    collection_tag: "Peintures Originales",
+    collection_title: "Le Portfolio de la Collection",
+    collection_subtitle: "Œuvres d'art originales uniques créées à l'huile, acrylique, terres naturelles et minéraux sur lin et toile.",
+    prints_tag: "Éditions Limitées",
+    prints_title: "Tirages d'Art (Giclée)",
+    prints_subtitle: "Impressions pigmentaires de qualité musée sur papier coton Hahnemühle 310g. Numérotées, titrées et signées à la main par l'artiste.",
+    window_badge_1: "Atelier ERG • Exploration de la Matière Brute à Vich",
+    window_badge_2: "De la matière brute à l'espace habité",
+
+    // 7. Biografía & CV
     bio_tag: "Profil & Parcours",
     bio_title: "Biographie & Registre Artistique",
-    bio_subtitle:
-      "Parcours académique, démarche de création à l'atelier de Vich (Vaud) et documentation critique de l'œuvre d'Eloísa Rodríguez.",
+    bio_subtitle: "Parcours académique, démarche de création à l'atelier de Vich (Vaud) et documentation critique de l'œuvre d'Eloísa Rodríguez.",
     bio_heading: "La matière comme seuil vers l'infini",
-    bio_p1:
-      "Établie dans son atelier à Vich, au cœur de La Côte vaudoise, Eloísa Rodríguez développe une œuvre axée sur les structures sédimentaires de la Terre et l'immensité chromatique des nébuleuses, traduisant ces dynamiques en toiles riches en matière, acrylique, huile et pigments purs.",
-    bio_p2:
-      "Son langage visuel s'est nourri d'une solide formation académique à Madrid et Florence, complétée par son parcours dans les arts de la scène, explorant le volume, le comportement de la matière et la réfraction lumineuse.",
+    bio_p1: "Établie dans son atelier à Vich, au cœur de La Côte vaudoise, Eloísa Rodríguez développe une œuvre axée sur les structures sédimentaires de la Terre et l'immensité chromatique des nébuleuses, traduisant ces dynamiques en toiles riches en matière, acrylique, huile et pigments purs.",
+    bio_p2: "Son langage visuel s'est nourri d'une solide formation académique à Madrid et Florence, complétée par son parcours dans les arts de la scène, explorant le volume, le comportement de la matière et la réfraction lumineuse.",
     bio_btn_dossier: "Demander le Dossier d'Artiste PDF",
     cv_exhibitions_title: "Parcours & Distinctions",
     cv_publications_title: "Publications & Documentation",
-    collection_tag: "Peintures Originales",
-    collection_title: "Le Portfolio de la Collection",
-    collection_subtitle:
-      "Œuvres d'art originales uniques créées à l'huile, acrylique, terres naturelles et minéraux sur lin et toile.",
-    filter_all: "Toutes les Œuvres",
-    window_badge_1: "Atelier ERG • Exploration de la Matière Brute à Vich",
-    window_badge_2: "De la matière brute à l'espace habité",
-    prints_tag: "Éditions Limitées",
-    prints_title: "Tirages d'Art (Giclée)",
-    prints_subtitle:
-      "Impressions pigmentaires de qualité musée sur papier coton Hahnemühle 310g. Numérotées, titrées et signées à la main par l'artiste.",
+
+    // 8. Encargos (Commissions)
     commissions_tag: "Projets Sur Mesure",
     commissions_title: "Commandes Privées & Projets Spéciaux",
-    commissions_desc:
-      "Eloísa Rodríguez collabore directement avec les collectionneurs et ateliers d'architecture intérieure pour composer des créations adaptées au format, à la palette et à la lumière de vos espaces.",
+    commissions_desc: "Eloísa Rodríguez collabore directement avec les collectionneurs et ateliers d'architecture intérieure pour composer des créations adaptées au format, à la palette et à la lumière de vos espaces.",
     comm_feat_1: "✓ Délai de création en atelier de 8 à 12 semaines",
     comm_feat_2: "✓ Carnet de bord photographique de l'évolution de la toile",
-    comm_feat_3:
-      "✓ Certificat d'Authenticité officiel et registre de provenance",
+    comm_feat_3: "✓ Certificat d'Authenticité officiel et registre de provenance",
     form_dim_placeholder: "Dimensions souhaitées",
     form_dim_opt1: "Moyen (80 × 60 cm à 100 × 80 cm)",
     form_dim_opt2: "Grand (120 × 100 cm à 160 × 120 cm)",
@@ -66,50 +75,53 @@ window.ERG_I18N = {
     form_series_opt2: "Portraits expressifs sur mesure",
     form_series_opt3: "Autres créations & abstraction pure",
     form_btn_commission: "Demander une consultation pour commande",
+
+    // 9. Contacto & Formularios
     contact_tag: "Contact Direct Atelier",
     contact_title: "Prendre Contact",
-    contact_desc:
-      "Pour acquisitions d'œuvres, commandes sur mesure, représentations en galerie, presse ou rendez-vous privé à l'Atelier de Vich.",
+    contact_desc: "Pour acquisitions d'œuvres, commandes sur mesure, représentations en galerie, presse ou rendez-vous privé à l'Atelier de Vich.",
     contact_email_label: "Courriel",
     contact_domain_label: "Site Officiel",
     contact_social_label: "Réseaux",
     contact_form_title: "Envoyer un Message Direct",
     contact_btn_send: "Envoyer le Message",
-    footer_rights: "© 2026 Eloísa Rodríguez. Tous droits réservés.",
     form_ph_name: "Nom complet / Full Name",
     form_ph_email: "Courriel / Email",
     form_ph_subject: "Objet de votre demande / Subject",
     form_ph_message: "Votre message / Your message...",
     form_ph_comm_desc: "Décrivez votre espace ou votre vision pour l'œuvre...",
+    contact_inquiry_preview_title: "Œuvres sélectionnées pour cette demande :",
+    contact_inquiry_preview_clear: "Effacer la sélection",
+
+    // 10. Estados, Botones & Modal
     btn_inspect: "Inspecter",
     btn_acquire: "Acquérir",
     btn_add_bag: "Ajouter à la sélection",
     btn_inquire_piece: "Demande d'Acquisition Directe",
+    btn_ask_similar: "Demander une pièce similaire",
     status_available: "Disponible",
     status_reserved: "Réservée",
     status_sold: "Vendu",
     status_onloan: "En Prêt / Galerie",
     status_print: "Tirage d'Art",
-    btn_ask_similar: "Demander une pièce similaire",
     modal_tech_label: "Technique :",
     modal_dim_label: "Dimensions :",
     modal_year_label: "Année :",
     modal_cert_label: "Certificat :",
     modal_cert_val: "Certificat officiel signé inclus",
-    modal_view_detail: "Zoom Texture",
-    modal_view_room: "Vue en Salon",
     zoom_hint: "Survoler ou glisser pour explorer la matière",
+    badge_original: "Œuvre<br>Originale",
+    badge_unique: "Pièce<br>Unique",
+    badge_cert: "Certificat<br>Inclus",
+    protect_alert: "© Reproduction et téléchargement des œuvres protégés par le droit d'auteur.",
+
+    // 11. Carrito (Bag)
     cart_title: "Sélection d'Atelier",
     cart_total_label: "Total Estimé :",
     cart_checkout_btn: "Demander des informations sur la sélection",
     toast_added: "ajouté à votre sélection.",
-    protect_alert:
-      "© Reproduction et téléchargement des œuvres protégés par le droit d'auteur.",
-    room_scale_ref: "Échelle Salon • Studio ERG",
-    badge_original: "Œuvre<br>Originale",
-    badge_unique: "Pièce<br>Unique",
-    badge_cert: "Certificat<br>Inclus",
-    nav_faq: "FAQ",
+
+    // 12. FAQ Section
     faq_tag: "Guide & Modalités",
     faq_title: "Questions Fréquentes",
     faq_subtitle: "Sélectionnez une thématique pour consulter les détails pratiques de l'atelier.",
@@ -117,91 +129,95 @@ window.ERG_I18N = {
     faq_cat_shipping: "Envois & Retrait",
     faq_cat_visits: "Visites & Authenticité",
     faq_cat_commissions: "Commandes sur Mesure",
-
-    // FAQ 1: Acquisitions
     faq_q_acq1: "Comment se déroule l'acquisition et le règlement d'une œuvre ?",
     faq_a_acq1: "Après l'envoi de votre sélection ou message, nous confirmons la disponibilité sous 24h. Le paiement s'effectue par TWINT, virement bancaire ou facture officielle détaillée faisant foi de titre légal de propriété.",
     faq_q_acq2: "Est-il possible de réserver temporairement une pièce ?",
     faq_a_acq2: "Oui. Une option de réservation sans engagement de 48 à 72 heures peut être posée le temps de confirmer votre choix, période durant laquelle la pièce est marquée « Réservée » sur le site.",
-
-    // FAQ 2: Envois
     faq_q_ship1: "Quelles sont les modalités et frais de livraison en Suisse ?",
     faq_a_ship1: "Les livraisons s'effectuent exclusivement en Suisse avec emballage renforcé et assurance intégrale. Les frais dépendent du lieu de destination et vous sont indiqués par avance avant validation. Le retrait gratuit à l'atelier de Vich est également disponible.",
     faq_q_ship2: "Que se passe-t-il en cas de dommage durant le transport ?",
     faq_a_ship2: "Tous les envois bénéficient d'une assurance ad valorem à 100 %. En cas d'incident constaté à l'arrivée, l'assurance prend en charge la restauration ou le remboursement immédiat.",
-
-    // FAQ 3: Visites & Authenticité
     faq_q_vis1: "Peut-on voir l'œuvre avant l'achat et comment son authenticité est-elle garantie ?",
     faq_a_vis1: "Vous pouvez convenir d'une visite privée à l'atelier de Vich ou d'un échange vidéo sous lumière naturelle. Chaque œuvre originale ou tirage limité est accompagné d'un Certificat d'Authenticité officiel signé par l'artiste.",
     faq_q_vis2: "Comment entretenir une toile aux textures minérales et huile ?",
     faq_a_vis2: "Exposez la toile en intérieur à l'abri du soleil direct et des sources d'humidité. Un dépoussiérage léger au plumeau doux et sec suffit (aucun produit ni chiffon humide).",
-
-    // FAQ 4: Commandes
     faq_q_com1: "Comment fonctionne une commande personnalisée et quels sont les délais ?",
     faq_a_com1: "Une commande sur mesure permet d'adapter format, nuances et inspirations (Nébuleuses, Portraits, etc.) à votre intérieur. Le délai est de 8 à 12 semaines, avec un acompte de 50 % au lancement et le solde à l'approbation finale.",
     faq_q_com2: "Peut-on commander une œuvre inspirée d'une pièce déjà vendue ?",
     faq_a_com2: "Oui. Si une toile vendue vous intéresse, Eloísa Rodríguez peut créer une œuvre inédite dans le même univers pictural, garantissant une pièce entièrement singulière.",
 
-    contact_inquiry_preview_title: "Œuvres sélectionnées pour cette demande :",
-    contact_inquiry_preview_clear: "Effacer la sélection",
+    // 13. RGPD & Footer
     gdpr_consent_text: "J'ai lu et j'accepte la",
     gdpr_privacy_link: "Politique de Confidentialité",
     gdpr_info_micro: "Vos données sont traitées exclusivement pour répondre à votre demande conformément à la nLPD et au RGPD.",
-    footer_privacy_link: "Confidentialité & Mentions Légales"
+    footer_privacy_link: "Confidentialité & Mentions Légales",
+    footer_rights: "© 2026 Eloísa Rodríguez. Tous droits réservés."
   },
+
   en: {
+    // 1. Series and Categories
     series_nebula_sediment: "Nebulae & Sediments",
     series_portrait: "Portraits",
     series_otras: "Other Works",
+    filter_all: "All Originals",
+    filter_avail: "Available to acquire",
+
+    // 2. Teaser / Continuity Cards
+    teaser_next_series_tag: "◈ Next Series",
+    teaser_all_series_tag: "◈ ERG Collection",
+    discover_next_series: "Discover the next series in the collection",
+    btn_next_series: "Explore",
+    btn_view_full_collection: "View all artworks in the collection →",
+
+    // 3. Navigation & Structure
     nav_statement: "Statement",
-    nav_bio: "Biography",
     nav_collection: "Collection",
     nav_prints: "Prints",
+    nav_bio: "Biography",
     nav_commissions: "Commissions",
     nav_contact: "Contact",
+    nav_faq: "FAQ",
     cart_label: "Bag",
-    filter_avail: "Available to acquire",
+
+    // 4. Hero Section
     hero_tag: "Contemporary Fine Art Studio • Vich, Switzerland",
     hero_title: "The work that explores the beauty of the <em>unknown</em>.",
-    hero_desc:
-      "Artwork moving between abstraction and recognizable forms, exploring deep mineral textures, geological sedimentation, and ethereal cosmic harmonies from the ERG Studio in Vich.",
+    hero_desc: "Artwork moving between abstraction and recognizable forms, exploring deep mineral textures, geological sedimentation, and ethereal cosmic harmonies from the ERG Studio in Vich.",
     hero_btn_explore: "Explore Collection",
     hero_btn_statement: "Read Statement",
+
+    // 5. Statement Section
     statement_lead: "My work is an exploration of the beauty of the unknown.",
-    statement_p1:
-      "My work is an exploration of the beauty of the unknown. I am inspired by nebulae and sediments to create pieces that play with the perception of color and texture. I am fascinated by how these elements combine to form patterns that at first glance appear chaotic, but actually contain a complexity and harmony within themselves.",
-    statement_p2:
-      "I believe that painting is a way to connect with something larger than ourselves, something that defies our understanding and invites us to immerse ourselves in the unexplainable. Like nebulae and sediments, my work moves between abstraction and recognizable forms, creating a sense of movement and fluidity that invites the viewer to lose themselves in it.",
-    statement_p3:
-      "Ultimately, my goal is to create works that are thought-provoking and evoke deep emotions to those who view them. I want my pieces to be experienced as an immersion into the mysterious, the unknown and the infinite.",
+    statement_p1: "My work is an exploration of the beauty of the unknown. I am inspired by nebulae and sediments to create pieces that play with the perception of color and texture. I am fascinated by how these elements combine to form patterns that at first glance appear chaotic, but actually contain a complexity and harmony within themselves.",
+    statement_p2: "I believe that painting is a way to connect with something larger than ourselves, something that defies our understanding and invites us to immerse ourselves in the unexplainable. Like nebulae and sediments, my work moves between abstraction and recognizable forms, creating a sense of movement and fluidity that invites the viewer to lose themselves in it.",
+    statement_p3: "Ultimately, my goal is to create works that are thought-provoking and evoke deep emotions to those who view them. I want my pieces to be experienced as an immersion into the mysterious, the unknown and the infinite.",
     statement_role: "Artist & Painter • ERG Studio (Vich, Switzerland)",
+
+    // 6. Collection & Prints
+    collection_tag: "Original Paintings",
+    collection_title: "The Portfolio Collection",
+    collection_subtitle: "Unique original artworks created with oil, acrylic, raw earths and mineral pigments on canvas and linen.",
+    prints_tag: "Limited Editions",
+    prints_title: "Fine Art Prints (Giclée)",
+    prints_subtitle: "Archival museum-quality pigment prints on 310g Hahnemühle cotton paper. Hand-numbered, titled, and signed by the artist.",
+    window_badge_1: "ERG Atelier • Exploration of Raw Matter in Vich",
+    window_badge_2: "From raw minerals to living architectural spaces",
+
+    // 7. Biography & CV
     bio_tag: "Profile & History",
     bio_title: "Biography & Artistic Register",
-    bio_subtitle:
-      "Academic background, creative practice in Vich (Canton of Vaud), and critical documentation of Eloísa Rodríguez's artwork.",
+    bio_subtitle: "Academic background, creative practice in Vich (Canton of Vaud), and critical documentation of Eloísa Rodríguez's artwork.",
     bio_heading: "Matter as a threshold to infinity",
-    bio_p1:
-      "Based in her studio in Vich, in the heart of the La Côte region, Eloísa Rodríguez translates Earth's sedimentary strata and the cosmic vastness of nebulae into textured canvases combining oil, acrylic, and pure mineral pigments.",
-    bio_p2:
-      "Her visual language is grounded in fine arts training in Madrid and Florence, enriched by her performing arts background exploring volume, matter behavior, and light refraction.",
+    bio_p1: "Based in her studio in Vich, in the heart of the La Côte region, Eloísa Rodríguez translates Earth's sedimentary strata and the cosmic vastness of nebulae into textured canvases combining oil, acrylic, and pure mineral pigments.",
+    bio_p2: "Her visual language is grounded in fine arts training in Madrid and Florence, enriched by her performing arts background exploring volume, matter behavior, and light refraction.",
     bio_btn_dossier: "Request Artist Dossier PDF",
     cv_exhibitions_title: "Career & Distinctions",
     cv_publications_title: "Publications & Documentation",
-    collection_tag: "Original Paintings",
-    collection_title: "The Porfolio Collection",
-    collection_subtitle:
-      "Unique original artworks created with oil, acrylic, raw earths and mineral pigments on canvas and linen.",
-    filter_all: "All Originals",
-    window_badge_1: "ERG Atelier • Exploration of Raw Matter in Vich",
-    window_badge_2: "From raw minerals to living architectural spaces",
-    prints_tag: "Limited Editions",
-    prints_title: "Fine Art Prints (Giclée)",
-    prints_subtitle:
-      "Archival museum-quality pigment prints on 310g Hahnemühle cotton paper. Hand-numbered, titled, and signed by the artist.",
+
+    // 8. Commissions
     commissions_tag: "Bespoke Inquiries",
     commissions_title: "Custom Commissions & Special Projects",
-    commissions_desc:
-      "Eloísa Rodríguez collaborates directly with private collectors and interior design ateliers to create tailored pieces adapted in format, chromatic intensity and atmosphere to the architecture of your space.",
+    commissions_desc: "Eloísa Rodríguez collaborates directly with private collectors and interior design ateliers to create tailored pieces adapted in format, chromatic intensity and atmosphere to the architecture of your space.",
     comm_feat_1: "✓ 8 to 12 weeks studio gestation period",
     comm_feat_2: "✓ Photographic work-in-progress journal",
     comm_feat_3: "✓ Includes Certificate of Authenticity & provenance",
@@ -214,50 +230,53 @@ window.ERG_I18N = {
     form_series_opt2: "Expressive Custom Portraits",
     form_series_opt3: "Other creations & pure abstraction",
     form_btn_commission: "Request Commission Consultation",
+
+    // 9. Contact & Forms
     contact_tag: "Direct Studio Contact",
     contact_title: "Get in Touch",
-    contact_desc:
-      "For artwork acquisitions, bespoke commissions, gallery representations, press inquiries, or private studio visits in Vich.",
+    contact_desc: "For artwork acquisitions, bespoke commissions, gallery representations, press inquiries, or private studio visits in Vich.",
     contact_email_label: "Email",
     contact_domain_label: "Official Domain",
     contact_social_label: "Social",
     contact_form_title: "Send a Direct Message",
     contact_btn_send: "Send Message",
-    footer_rights: "© 2026 Eloísa Rodríguez. All rights reserved.",
     form_ph_name: "Full Name",
     form_ph_email: "Email Address",
     form_ph_subject: "Subject of inquiry",
     form_ph_message: "Your message...",
     form_ph_comm_desc: "Describe your space, atmosphere or vision...",
+    contact_inquiry_preview_title: "Artworks selected for this inquiry:",
+    contact_inquiry_preview_clear: "Clear selection",
+
+    // 10. Status, Buttons & Modal
     btn_inspect: "Inspect",
     btn_acquire: "Acquire",
     btn_add_bag: "Add to Bag",
     btn_inquire_piece: "Direct Acquisition Inquiry",
+    btn_ask_similar: "Request Similar Work",
     status_available: "Available",
     status_reserved: "Reserved",
     status_sold: "Sold",
     status_onloan: "On Loan / Gallery",
     status_print: "Print Edition",
-    btn_ask_similar: "Request Similar Work",
     modal_tech_label: "Technique:",
     modal_dim_label: "Dimensions:",
     modal_year_label: "Year:",
     modal_cert_label: "Certificate:",
     modal_cert_val: "Official signed certificate included",
-    modal_view_detail: "Texture Zoom",
-    modal_view_room: "View in Room",
     zoom_hint: "Hover or drag to explore texture details",
+    badge_original: "Original<br>Artwork",
+    badge_unique: "One-of-a-Kind<br>Piece",
+    badge_cert: "Certificate<br>Included",
+    protect_alert: "© Artwork protected by copyright. Image downloading is restricted.",
+
+    // 11. Cart
     cart_title: "Studio Bag",
     cart_total_label: "Estimated Total:",
     cart_checkout_btn: "Request Information on Selection",
     toast_added: "added to your selection.",
-    protect_alert:
-      "© Artwork protected by copyright. Image downloading is restricted.",
-    room_scale_ref: "Room Scale • ERG Studio",
-    badge_original: "Original<br>Artwork",
-    badge_unique: "One-of-a-Kind<br>Piece",
-    badge_cert: "Certificate<br>Included",
-    nav_faq: "FAQ",
+
+    // 12. FAQ Section
     faq_tag: "Guide & Details",
     faq_title: "Frequently Asked Questions",
     faq_subtitle: "Select a topic to explore practical information and collectors' guidelines.",
@@ -265,92 +284,98 @@ window.ERG_I18N = {
     faq_cat_shipping: "Shipping & Pick-up",
     faq_cat_visits: "Visits & Authenticity",
     faq_cat_commissions: "Custom Commissions",
-
     faq_q_acq1: "How do purchases and payment processing work?",
     faq_a_acq1: "Upon receiving your inquiry, we confirm availability within 24h. Payments are processed via TWINT, secure bank wire, or official itemized invoice serving as proof of provenance.",
     faq_q_acq2: "Can I place a temporary hold on an artwork?",
     faq_a_acq2: "Yes. You can request a 48 to 72-hour non-binding hold to finalize your decision. The artwork will be marked as 'Reserved' on the site during that time.",
-
     faq_q_ship1: "What are the shipping rates and conditions in Switzerland?",
     faq_a_ship1: "We ship exclusively within Switzerland using reinforced packaging and full-value insurance. Costs vary by destination and are communicated prior to confirmation. Free studio pick-up in Vich is also available.",
     faq_q_ship2: "What happens in case of damage during transit?",
     faq_a_ship2: "All shipments are 100% insured against transit damage. Should an issue occur upon arrival, insurance covers prompt professional restoration or full reimbursement.",
-
     faq_q_vis1: "Can I view paintings before purchase and how is authenticity certified?",
     faq_a_vis1: "You can book a private studio visit in Vich or request a natural light video call. Each original artwork or limited edition includes an official physical Certificate of Authenticity signed by the artist.",
     faq_q_vis2: "How should I care for a textured mineral oil painting?",
     faq_a_vis2: "Display canvases indoors away from prolonged direct sunlight and humidity. For routine care, gently dust with a soft, dry duster (never use wet cloths or chemicals).",
-
     faq_q_com1: "How does a custom commission work and what are the lead times?",
     faq_a_com1: "Bespoke commissions adapt size, palette, and series inspiration (Nebulae, Portraits, etc.) to your space. Production takes 8–12 weeks with a 50% deposit upon launch and 50% upon final canvas approval.",
     faq_q_com2: "Can I commission an artwork inspired by a sold piece?",
     faq_a_com2: "Yes. If a sold piece resonates with you, Eloísa Rodríguez can create a bespoke original in that same spirit, ensuring each canvas remains entirely unique.",
 
-    contact_inquiry_preview_title: "Artworks selected for this inquiry:",
-    contact_inquiry_preview_clear: "Clear selection",
+    // 13. GDPR & Footer
     gdpr_consent_text: "I have read and agree to the",
     gdpr_privacy_link: "Privacy Policy",
     gdpr_info_micro: "Your data is strictly processed to fulfill your inquiry in accordance with GDPR and Swiss FADP.",
-    footer_privacy_link: "Privacy & Legal Notice"
+    footer_privacy_link: "Privacy & Legal Notice",
+    footer_rights: "© 2026 Eloísa Rodríguez. All rights reserved."
   },
+
   it: {
+    // 1. Serie e Categorie
     series_nebula_sediment: "Nebulose & Sedimenti",
     series_portrait: "Ritratti",
     series_otras: "Altre Opere",
+    filter_all: "Tutte le Opere",
+    filter_avail: "Disponibili all'acquisto",
+
+    // 2. Schede Teaser / Continuità
+    teaser_next_series_tag: "◈ Serie Successiva",
+    teaser_all_series_tag: "◈ Collezione ERG",
+    discover_next_series: "Scopri la serie successiva della collezione",
+    btn_next_series: "Esplora",
+    btn_view_full_collection: "Vedi tutte le opere della collezione →",
+
+    // 3. Navigazione & Struttura
     nav_statement: "Poetica",
-    nav_bio: "Biografia",
     nav_collection: "Collezione",
     nav_prints: "Stampe d'Arte",
+    nav_bio: "Biografia",
     nav_commissions: "Commissioni",
     nav_contact: "Contatto",
+    nav_faq: "FAQ",
     cart_label: "Selezione",
-    filter_avail: "Disponibili all'acquisto",
+
+    // 4. Hero Section
     hero_tag: "Studio d'Arte Contemporanea • Vich, Svizzera",
     hero_title: "L'opera che esplora la bellezza <em>dell'ignoto</em>.",
-    hero_desc:
-      "Un'opera che oscilla tra astrazione e forme riconoscibili, esplorando trame minerali, sedimenti e armonie cosmiche nello Studio ERG a Vich.",
+    hero_desc: "Un'opera che oscilla tra astrazione e forme riconoscibili, esplorando trame minerali, sedimenti e armonie cosmiche nello Studio ERG a Vich.",
     hero_btn_explore: "Esplora la Collezione",
     hero_btn_statement: "Leggi la Poetica",
-    statement_lead:
-      "Il mio lavoro è un'esplorazione della bellezza dell'ignoto.",
-    statement_p1:
-      "Il mio lavoro è un'esplorazione della bellezza dell'ignoto. Mi lascio ispirare da nebulose e sedimenti per dare vita a opere che giocano con la percezione del colore e della materia. Mi affascina il modo in cui questi elementi si uniscono creando trame all'apparenza caotiche, ma che racchiudono in realtà una profonda armonia e complessità.",
-    statement_p2:
-      "Credo che la pittura sia un ponte verso qualcosa di più grande di noi, qualcosa che sfida la nostra comprensione e ci invita a immergerci nell'inspiegabile. Come le nebulose e i sedimenti geologici, le mie opere oscillano tra astrazione e forme riconoscibili, donando una sensazione di fluidità che invita a perdersi.",
-    statement_p3:
-      "Il mio intento ultimo è creare opere che stimolino la riflessione ed evochino emozioni profonde. Desidero che ogni pezzo venga vissuto come un viaggio nel mistero, nell'ignoto e nell'infinito.",
+
+    // 5. Statement Section
+    statement_lead: "Il mio lavoro è un'esplorazione della bellezza dell'ignoto.",
+    statement_p1: "Il mio lavoro è un'esplorazione della bellezza dell'ignoto. Mi lascio ispirare da nebulose e sedimenti per dare vita a opere che giocano con la percezione del colore e della materia. Mi affascina il modo in cui questi elementi si uniscono creando trame all'apparenza caotiche, ma che racchiudono in realtà una profonda armonia e complessità.",
+    statement_p2: "Credo che la pittura sia un ponte verso qualcosa di più grande di noi, qualcosa che sfida la nostra comprensione e ci invita a immergerci nell'inspiegabile. Come le nebulose e i sedimenti geologici, le mie opere oscillano tra astrazione e forme riconoscibili, donando una sensazione di fluidità che invita a perdersi.",
+    statement_p3: "Il mio intento ultimo è creare opere che stimolino la riflessione ed evochino emozioni profonde. Desidero che ogni pezzo venga vissuto come un viaggio nel mistero, nell'ignoto e nell'infinito.",
     statement_role: "Artista Pittrice • ERG Studio (Vich, Canton Vaud)",
+
+    // 6. Collezione & Stampe
+    collection_tag: "Dipinti Originali",
+    collection_title: "Il Portfolio della Collezione",
+    collection_subtitle: "Opere d'arte uniche realizzate a olio, acrilico, terre naturali e pigmenti su lino e tela.",
+    prints_tag: "Edizioni Limitate",
+    prints_title: "Stampe Fine Art (Giclée)",
+    prints_subtitle: "Stampe a pigmenti di qualità museale su carta di cotone Hahnemühle 310g. Numerate e firmate a mano dall'artista.",
+    window_badge_1: "Studio ERG • Esplorazione della Materia Grezza a Vich",
+    window_badge_2: "Dalla materia grezza allo spazio architettonico",
+
+    // 7. Biografia & CV
     bio_tag: "Profilo & Percorso",
     bio_title: "Biografia & Registro Artistico",
-    bio_subtitle:
-      "Percorso accademico, attività di atelier a Vich (Vaud) e documentazione critica sull'opera di Eloísa Rodríguez.",
+    bio_subtitle: "Percorso accademico, attività di atelier a Vich (Vaud) e documentazione critica sull'opera di Eloísa Rodríguez.",
     bio_heading: "La materia come soglia verso l'infinito",
-    bio_p1:
-      "Nel suo studio a Vich (La Côte vaudoise), Eloísa Rodríguez traduce le strutture sedimentarie della Terra e la vastità delle nebulose in dipinti ricchi di consistenza materica, acrilico, olio e pigmenti minerali.",
-    bio_p2:
-      "Il suo linguaggio visivo si è formato a Madrid e Firenze, arricchito dal percorso nelle arti sceniche, esplorando il volume e la forza espressiva della materia.",
+    bio_p1: "Nel suo studio a Vich (La Côte vaudoise), Eloísa Rodríguez traduce le strutture sedimentarie della Terra e la vastità delle nebulose in dipinti ricchi di consistenza materica, acrilico, olio e pigmenti minerali.",
+    bio_p2: "Il suo linguaggio visivo si è formato a Madrid e Firenze, arricchito dal percorso nelle arti sceniche, esplorando il volume e la forza espressiva della materia.",
     bio_btn_dossier: "Richiedi Dossier Artista PDF",
     cv_exhibitions_title: "Percorso & Riconoscimenti",
     cv_publications_title: "Pubblicazioni & Documentazione",
-    collection_tag: "Dipinti Originali",
-    collection_title: "Il Portfolio della Collezione",
-    collection_subtitle:
-      "Opere d'arte uniche realizzate a olio, acrilico, terre naturali e pigmenti su lino e tela.",
-    filter_all: "Tutte le Opere",
-    window_badge_1: "Studio ERG • Esplorazione della Materia Grezza a Vich",
-    window_badge_2: "Dalla materia grezza allo spazio architettonico",
-    prints_tag: "Edizioni Limitate",
-    prints_title: "Stampe Fine Art (Giclée)",
-    prints_subtitle:
-      "Stampe a pigmenti di qualità museale su carta di cotone Hahnemühle 310g. Numerate e firmate a mano dall'artista.",
+
+    // 8. Commissioni
     commissions_tag: "Progetti Su Misura",
     commissions_title: "Commissioni Private & Progetti Speciali",
-    commissions_desc:
-      "Eloísa Rodríguez collabora direttamente con collezionisti e studi di interior design per realizzare opere personalizzate in termini di formato, atmosfera e tavolozza cromatica.",
+    commissions_desc: "Eloísa Rodríguez collabora direttamente con collezionisti e studi di interior design per realizzare opere personalizzate in termini di formato, atmosfera e tavolozza cromatica.",
     comm_feat_1: "✓ Tempo di realizzazione in studio di 8-12 settimane",
     comm_feat_2: "✓ Diario fotografico dell'evoluzione dell'opera",
-    comm_feat_3:
-      "✓ Certificato di Autenticità ufficiale e registro di provenienza",
+    comm_feat_3: "✓ Certificato di Autenticità ufficiale e registro di provenienza",
     form_dim_placeholder: "Dimensioni desiderate",
     form_dim_opt1: "Medio (80 × 60 cm a 100 × 80 cm)",
     form_dim_opt2: "Grande (120 × 100 cm a 160 × 120 cm)",
@@ -360,50 +385,53 @@ window.ERG_I18N = {
     form_series_opt2: "Ritratti su misura",
     form_series_opt3: "Altre creazioni & astrazione pura",
     form_btn_commission: "Richiedi consulenza per commissione",
+
+    // 9. Contatto & Moduli
     contact_tag: "Contatto Diretto Studio",
     contact_title: "Contattaci",
-    contact_desc:
-      "Per acquisizioni, opere personalizzate, collaborazioni con gallerie, richieste stampa o visite su appuntamento a Vich.",
+    contact_desc: "Per acquisizioni, opere personalizzate, collaborazioni con gallerie, richieste stampa o visite su appuntamento a Vich.",
     contact_email_label: "Email",
     contact_domain_label: "Sito Ufficiale",
     contact_social_label: "Social",
     contact_form_title: "Invia un Messaggio Diretto",
     contact_btn_send: "Invia Messaggio",
-    footer_rights: "© 2026 Eloísa Rodríguez. Tutti i diritti riservati.",
     form_ph_name: "Nome completo",
     form_ph_email: "Indirizzo email",
     form_ph_subject: "Oggetto della richiesta",
     form_ph_message: "Il tuo messaggio...",
     form_ph_comm_desc: "Descrivi il tuo spazio o la tua visione...",
+    contact_inquiry_preview_title: "Opere selezionate per questa richiesta:",
+    contact_inquiry_preview_clear: "Rimuovi selezione",
+
+    // 10. Stati, Pulsanti & Modale
     btn_inspect: "Ispeziona",
     btn_acquire: "Acquista",
     btn_add_bag: "Aggiungi alla selezione",
     btn_inquire_piece: "Richiesta Acquisizione Diretta",
+    btn_ask_similar: "Richiedi un'opera simile",
     status_available: "Disponibile",
     status_reserved: "Riservata",
     status_sold: "Venduto",
     status_onloan: "In Prestito / Galleria",
     status_print: "Tiratura d'Arte",
-    btn_ask_similar: "Richiedi un'opera simile",
     modal_tech_label: "Tecnica:",
     modal_dim_label: "Dimensions:",
     modal_year_label: "Anno:",
     modal_cert_label: "Certificato:",
     modal_cert_val: "Certificato ufficiale firmato incluso",
-    modal_view_detail: "Zoom Materico",
-    modal_view_room: "Vista in Salone",
     zoom_hint: "Passa o trascina il dito per ingrandire la trama",
+    badge_original: "Opera<br>Originale",
+    badge_unique: "Pezzo<br>Unico",
+    badge_cert: "Certificato<br>Incluso",
+    protect_alert: "© Riproduzione e download delle opere protetti da copyright.",
+
+    // 11. Carrello
     cart_title: "Selezione dello Studio",
     cart_total_label: "Totale Estimato:",
     cart_checkout_btn: "Richiedi informazioni sulla selezione",
     toast_added: "aggiunto alla tua selezione.",
-    protect_alert:
-      "© Riproduzione e download delle opere protetti da copyright.",
-    room_scale_ref: "Scala Salone • ERG Studio",
-    badge_original: "Opera<br>Originale",
-    badge_unique: "Pezzo<br>Unico",
-    badge_cert: "Certificato<br>Incluso",
-    nav_faq: "FAQ",
+
+    // 12. FAQ Section
     faq_tag: "Guida & Dettagli",
     faq_title: "Domande Frequenti",
     faq_subtitle: "Seleziona una categoria per consultare i dettagli pratici dell'atelier.",
@@ -411,93 +439,98 @@ window.ERG_I18N = {
     faq_cat_shipping: "Spedizioni & Ritiro",
     faq_cat_visits: "Visite & Autenticità",
     faq_cat_commissions: "Commissioni su Misura",
-
     faq_q_acq1: "Come si svolgono l'acquisto e il pagamento di un'opera?",
     faq_a_acq1: "Alla ricezione della richiesta, confermiamo la disponibilità entro 24 ore. I pagamenti avvengono tramite TWINT, bonifico bancario sicuro o fattura commerciale.",
     faq_q_acq2: "È possibile opzionare o prenotare temporaneamente un'opera?",
     faq_a_acq2: "Sì, offriamo un'opzione di riserva temporanea per 48-72 ore senza impegno, periodo durante il quale l'opera risulta «Riservata» sul sito.",
-
     faq_q_ship1: "Quali sono le modalità e i costi di spedizione in Svizzera?",
     faq_a_ship1: "Le spedizioni avvengono esclusivamente in Svizzera con imballaggio protetto e assicurazione totale. I costi dipendono dalla destinazione e vengono comunicati in anticipo. È sempre possibile il ritiro gratuito a Vich.",
     faq_q_ship2: "Cosa accade in caso di danni durante il trasporto?",
     faq_a_ship2: "Tutte le spedizioni sono coperte al 100% dal valore assicurato, garantendo immediato restauro o rimborso in caso di imprevisti.",
-
     faq_q_vis1: "È possibile visionare le opere prima dell'acquisto e come si certifica l'autenticità?",
     faq_a_vis1: "È possibile concordare una visita all'atelier di Vich o una videochiamata a luce naturale. Ogni dipinto o stampa include un Certificato di Autenticità firmato a mano.",
     faq_q_vis2: "Come prendersi cura di un dipinto a olio con texture minerali?",
     faq_a_vis2: "Esporre in interni lontano da fonti dirette di calore o sole. Spolverare delicatamente con un piumino morbido e asciutto.",
-
     faq_q_com1: "Come funziona una commissione su misura e quali sono i tempi?",
     faq_a_com1: "Una commissione consente di adattare formato e cromatismo al proprio spazio. Il tempo di realizzazione è di 8-12 settimane, con anticipo del 50% all'inizio e saldo all'approvazione finale.",
     faq_q_com2: "È possibile richiedere un'opera ispirata a un pezzo già venduto?",
     faq_a_com2: "Sì. Se un'opera venduta è di vostro gradimento, l'artista può creare una nuova opera nello stesso stile, preservandone l'assoluta unicità.",
 
-    contact_inquiry_preview_title: "Opere selezionate per questa richiesta:",
-    contact_inquiry_preview_clear: "Rimuovi selezione",
+    // 13. GDPR & Footer
     gdpr_consent_text: "Ho letto e accetto l'",
     gdpr_privacy_link: "Informativa sulla Privacy",
     gdpr_info_micro: "I tuoi dati vengono trattati esclusivamente per gestire la richiesta in conformità al GDPR e alla nLPD.",
-    footer_privacy_link: "Privacy & Note Legali"
+    footer_privacy_link: "Privacy & Note Legali",
+    footer_rights: "© 2026 Eloísa Rodríguez. Tutti i diritti riservati."
   },
+
   es: {
+    // 1. Series y Categorías
     series_nebula_sediment: "Nebulosas y Sedimentos",
     series_portrait: "Retratos",
     series_otras: "Otras Obras",
+    filter_all: "Todas las Obras",
+    filter_avail: "Disponibles para adquisición",
+
+    // 2. Tarjetas Teaser / Continuidad
+    teaser_next_series_tag: "◈ Siguiente Serie",
+    teaser_all_series_tag: "◈ Colección ERG",
+    discover_next_series: "Descubre la siguiente serie de la colección",
+    btn_next_series: "Explorar",
+    btn_view_full_collection: "Ver todas las obras de la colección →",
+
+    // 3. Navegación & Estructura
     nav_statement: "Statement",
-    nav_bio: "Biografía",
     nav_collection: "Colección",
     nav_prints: "Prints",
+    nav_bio: "Biografía",
     nav_commissions: "Encargos",
     nav_contact: "Contacto",
+    nav_faq: "FAQ",
     cart_label: "Selección",
-    filter_avail: "Disponibles para adquisición",
+
+    // 4. Hero Section
     hero_tag: "Estudio de Arte Contemporáneo • Vich, Suiza",
     hero_title: "La obra que explora la belleza de lo <em>desconocido</em>.",
-    hero_desc:
-      "Obras que transitan entre la abstracción y la figuración, explorando texturas minerales profundas, sedimentación geológica y armonías cósmicas desde el Estudio ERG en Vich.",
+    hero_desc: "Obras que transitan entre la abstracción y la figuración, explorando texturas minerales profundas, sedimentación geológica y armonías cósmicas desde el Estudio ERG en Vich.",
     hero_btn_explore: "Explorar la Colección",
     hero_btn_statement: "Leer Statement",
-    statement_lead:
-      "Mi obra es una exploración de la belleza de lo desconocido.",
-    statement_p1:
-      "Mi obra es una exploración de la belleza de lo desconocido. Me inspiro en nebulosas y sedimentos para crear piezas que juegan con la percepción del color y la textura. Me fascina cómo estos elementos se combinan para formar patrones que a primera vista parecen caóticos, pero que en realidad contienen una complejidad y armonía dentro de sí mismos.",
-    statement_p2:
-      "Creo que la pintura es una forma de conectar con algo más grande que nosotros, algo que desafía nuestro entendimiento y nos invita a sumergirnos en lo inexplicable. Como las nebulosas y los sedimentos, mi trabajo se mueve entre la abstracción y las formas reconocibles, creando una sensación de movimiento y fluidez que invita al espectador a perderse en ella.",
-    statement_p3:
-      "En última instancia, mi objetivo es crear obras que inviten a la reflexión y evoquen emociones profundas a quienes las contemplan. Quiero que mis piezas se experimenten como una inmersión en lo misterioso, lo desconocido y lo infinito.",
+
+    // 5. Statement Section
+    statement_lead: "Mi obra es una exploración de la belleza de lo desconocido.",
+    statement_p1: "Mi obra es una exploración de la belleza de lo desconocido. Me inspiro en nebulosas y sedimentos para crear piezas que juegan con la percepción del color y la textura. Me fascina cómo estos elementos se combinan para formar patrones que a primera vista parecen caóticos, pero que en realidad contienen una complejidad y armonía dentro de sí mismos.",
+    statement_p2: "Creo que la pintura es una forma de conectar con algo más grande que nosotros, algo que desafía nuestro entendimiento y nos invita a sumergirnos en lo inexplicable. Como las nebulosas y los sedimentos, mi trabajo se mueve entre la abstracción y las formas reconocibles, creando una sensación de movimiento y fluidez que invita al espectador a perderse en ella.",
+    statement_p3: "En última instancia, mi objetivo es crear obras que inviten a la reflexión y evoquen emociones profundas a quienes las contemplan. Quiero que mis piezas se experimenten como una inmersión en lo misterioso, lo desconocido y lo infinito.",
     statement_role: "Artista Plástica • Estudio ERG (Vich, Suiza)",
+
+    // 6. Colección & Prints
+    collection_tag: "Pinturas Originales",
+    collection_title: "El Porfolio de la Colección",
+    collection_subtitle: "Obras originales únicas creadas con óleo, acrílico, tierras naturales y otros materiales sobre tela.",
+    prints_tag: "Ediciones Limitadas",
+    prints_title: "Prints de Edición (Giclée)",
+    prints_subtitle: "Impresiones pigmentarias de calidad museo sobre papel de algodón Hahnemühle 310g. Numeradas y firmadas a mano por la artista.",
+    window_badge_1: "Estudio ERG • Exploración de la Materia en Bruto en Vich",
+    window_badge_2: "De la materia en bruto al espacio arquitectónico",
+
+    // 7. Biografía & CV
     bio_tag: "Perfil & Trayectoria",
     bio_title: "Biografía & Registro Artístico",
-    bio_subtitle:
-      "Formación académica, actividad de creación en el estudio de Vich (Vaud) y documentación crítica de la obra de Eloísa Rodríguez.",
+    bio_subtitle: "Formación académica, actividad de creación en el estudio de Vich (Vaud) y documentación crítica de la obra de Eloísa Rodríguez.",
     bio_heading: "La materia como umbral hacia lo infinito",
-    bio_p1:
-      "Desde su estudio en Vich (La Côte vaudoise), Eloísa Rodríguez traduce las estructuras sedimentarias de la Tierra y la inmensidad cósmica de las nebulosas en lienzos ricos en textura, óleo, acrílico y pigmentos minerales puros.",
-    bio_p2:
-      "Su lenguaje visual se formó en la Universidad Complutense de Madrid y Florencia, complementado por las artes escénicas, explorando el volumen, la materia y la refracción de la luz.",
+    bio_p1: "Desde su estudio en Vich (La Côte vaudoise), Eloísa Rodríguez traduce las estructuras sedimentarias de la Tierra y la inmensidad cósmica de las nebulosas en lienzos ricos en textura, óleo, acrílico y pigmentos minerales puros.",
+    bio_p2: "Su lenguaje visual se formó en la Universidad Complutense de Madrid y Florencia, complementado por las artes escénicas, explorando el volumen, la materia y la refracción de la luz.",
     bio_btn_dossier: "Solicitar Dossier de Artista PDF",
     cv_exhibitions_title: "Trayectoria y Distinciones",
     cv_publications_title: "Publicaciones & Documentación",
-    collection_tag: "Pinturas Originales",
-    collection_title: "El Porfolio de la Colección",
-    collection_subtitle:
-      "Obras originales únicas creadas con óleo, acrílico, tierras naturales y otros materiales sobre tela.",
-    filter_all: "Todas las Obras",
-    window_badge_1: "Estudio ERG • Exploración de la Materia en Bruto en Vich",
-    window_badge_2: "De la materia en bruto al espacio arquitectónico",
-    prints_tag: "Ediciones Limitadas",
-    prints_title: "Prints de Edición (Giclée)",
-    prints_subtitle:
-      "Impresiones pigmentarias de calidad museo sobre papel de algodón Hahnemühle 310g. Numeradas y firmadas a mano por la artista.",
+
+    // 8. Encargos (Commissions)
     commissions_tag: "Proyectos a Medida",
     commissions_title: "Encargos Privados & Proyectos Especiales",
-    commissions_desc:
-      "Eloísa Rodríguez colabora directamente con coleccionistas privados y estudios de interiorismo para crear obras a medida adaptadas al formato, cromatismo y luz de sus espacios.",
+    commissions_desc: "Eloísa Rodríguez colabora directamente con coleccionistas privados y estudios de interiorismo para crear obras a medida adaptadas al formato, cromatismo y luz de sus espacios.",
     comm_feat_1: "✓ Plazo de creación en estudio de 8 a 12 semanas",
-    comm_feat_2:
-      "✓ Cuaderno de bitácora fotográfico de la evolución del lienzo",
-    comm_feat_3:
-      "✓ Certificado de Autenticidad oficial y registro de procedencia",
+    comm_feat_2: "✓ Cuaderno de bitácora fotográfico de la evolución del lienzo",
+    comm_feat_3: "✓ Certificado de Autenticidad oficial y registro de procedencia",
     form_dim_placeholder: "Dimensiones deseadas",
     form_dim_opt1: "Mediano (80 × 60 cm a 100 × 80 cm)",
     form_dim_opt2: "Grande (120 × 100 cm a 160 × 120 cm)",
@@ -507,50 +540,53 @@ window.ERG_I18N = {
     form_series_opt2: "Retratos personalizados",
     form_series_opt3: "Otras obras & abstracción pura",
     form_btn_commission: "Solicitar consulta para encargo",
+
+    // 9. Contacto & Formularios
     contact_tag: "Contacto Directo",
     contact_title: "Ponte en Contacto",
-    contact_desc:
-      "Para adquisiciones de obras, proyectos a medida, representación en galerías, prensa o citas privadas en el estudio de Vich.",
+    contact_desc: "Para adquisiciones de obras, proyectos a medida, representación en galerías, prensa o citas privadas en el estudio de Vich.",
     contact_email_label: "Correo",
     contact_domain_label: "Sitio Oficial",
     contact_social_label: "Redes",
     contact_form_title: "Enviar un Mensaje Directo",
     contact_btn_send: "Enviar Mensaje",
-    footer_rights: "© 2026 Eloísa Rodríguez. Todos los derechos reservados.",
     form_ph_name: "Nombre completo",
     form_ph_email: "Correo electrónico",
     form_ph_subject: "Asunto de tu consulta",
     form_ph_message: "Tu mensaje...",
     form_ph_comm_desc: "Describe tu espacio, atmósfera o visión...",
+    contact_inquiry_preview_title: "Obras seleccionadas para esta consulta:",
+    contact_inquiry_preview_clear: "Quitar selección",
+
+    // 10. Estados, Botones & Modal
     btn_inspect: "Inspeccionar",
     btn_acquire: "Adquirir",
     btn_add_bag: "Añadir a la selección",
     btn_inquire_piece: "Consulta de Adquisición Directa",
+    btn_ask_similar: "Solicitar obra similar",
     status_available: "Disponible",
     status_reserved: "Reservada",
     status_sold: "Vendido",
     status_onloan: "En Préstamo / Galería",
     status_print: "Edición Print",
-    btn_ask_similar: "Solicitar obra similar",
     modal_tech_label: "Técnica:",
     modal_dim_label: "Dimensiones:",
     modal_year_label: "Año:",
     modal_cert_label: "Certificado:",
     modal_cert_val: "Certificado oficial firmado incluido",
-    modal_view_detail: "Zoom Textura",
-    modal_view_room: "Ver en Salón",
     zoom_hint: "Pasa o arrastra el dedo para ver el detalle de la textura",
+    badge_original: "Obra<br>Original",
+    badge_unique: "Pieza<br>Única",
+    badge_cert: "Certificado<br>Incluido",
+    protect_alert: "© Obra protegida por derechos de autor. Descarga de imágenes restringida.",
+
+    // 11. Carrito (Bag)
     cart_title: "Selección de Estudio",
     cart_total_label: "Total Estimado:",
     cart_checkout_btn: "Consultar sobre las obras seleccionadas",
     toast_added: "añadido a tu selección.",
-    protect_alert:
-      "© Obra protegida por derechos de autor. Descarga de imágenes restringida.",
-    room_scale_ref: "Escala Salón • Studio ERG",
-    badge_original: "Obra<br>Original",
-    badge_unique: "Pieza<br>Única",
-    badge_cert: "Certificado<br>Incluido",
-    nav_faq: "FAQ",
+
+    // 12. FAQ Section
     faq_tag: "Guía y Consultas",
     faq_title: "Preguntas Frecuentes",
     faq_subtitle: "Selecciona una categoría para ver los detalles prácticos del estudio.",
@@ -558,36 +594,28 @@ window.ERG_I18N = {
     faq_cat_shipping: "Envíos y Recogida",
     faq_cat_visits: "Visitas y Autenticidad",
     faq_cat_commissions: "Encargos a Medida",
-
-    // FAQ 1: Adquisiciones
     faq_q_acq1: "¿Cómo se gestiona la adquisición y el pago de una obra?",
     faq_a_acq1: "Tras enviar tu selección o consulta, confirmamos la disponibilidad en 24h. El pago se efectúa mediante TWINT, transferencia bancaria segura o factura oficial detallada como título de propiedad.",
     faq_q_acq2: "¿Es posible reservar una obra temporalmente?",
     faq_a_acq2: "Sí. Ofrecemos una reserva temporal sin compromiso durante 48 a 72 horas para valorar la adquisición con calma, durante la cual la pieza figura como «Reservada» en la web.",
-
-    // FAQ 2: Envíos
     faq_q_ship1: "¿Cuáles son las condiciones y costes de envío en Suiza?",
     faq_a_ship1: "Realizamos envíos exclusivamente dentro de Suiza con embalaje protector y seguro total. El coste varía según la dirección de entrega y se comunica por adelantado antes del pago. La recogida gratuita en el taller de Vich también está disponible.",
     faq_q_ship2: "¿Qué sucede si una obra sufre algún daño en el trayecto?",
     faq_a_ship2: "Todos los envíos cuentan con un seguro del 100 % del valor de la pieza. Ante cualquier incidencia durante la entrega, el seguro asume de inmediato la restauración o el reembolso.",
-
-    // FAQ 3: Visitas y Autenticidad
     faq_q_vis1: "¿Se pueden ver las pinturas antes de comprar y cómo se certifica su autenticidad?",
     faq_a_vis1: "Puedes concertar una visita privada al taller de Vich o una videollamada bajo luz natural. Cada pintura original y estampa numerada incluye un Certificado de Autenticidad físico oficial firmado por la artista.",
     faq_q_vis2: "¿Cómo cuidar y mantener una pintura al óleo con texturas minerales?",
     faq_a_vis2: "Coloca el lienzo en interiores protegido del sol directo y de fuentes de humedad o calor. Basta con pasar un plumero suave y seco (sin paños húmedos ni productos químicos).",
-
-    // FAQ 4: Encargos
     faq_q_com1: "¿Cómo funciona un encargo a medida y cuáles son sus plazos?",
     faq_a_com1: "Un encargo personalizado permite adaptar medidas, paleta y temática (Nebulosas, Retratos, etc.) a tu espacio. El plazo es de 8 a 12 semanas, con un anticipo del 50 % al inicio y el resto tras la aprobación final del lienzo.",
     faq_q_com2: "¿Es posible encargar una obra inspirada en una pieza ya vendida?",
     faq_a_com2: "Sí. Si una pieza vendida te inspira, Eloísa Rodríguez puede crear un lienzo inédito dentro de esa misma serie, garantizando una obra totalmente única.",
 
-    contact_inquiry_preview_title: "Obras seleccionadas para esta consulta:",
-    contact_inquiry_preview_clear: "Quitar selección",
+    // 13. RGPD & Footer
     gdpr_consent_text: "He leído y acepto la",
     gdpr_privacy_link: "Política de Privacidad",
     gdpr_info_micro: "Tus datos se tratan exclusivamente para responder a tu consulta conforme al RGPD y la nLPD suiza.",
-    footer_privacy_link: "Privacidad y Aviso Legal"
+    footer_privacy_link: "Privacidad y Aviso Legal",
+    footer_rights: "© 2026 Eloísa Rodríguez. Todos los derechos reservados."
   }
 };
