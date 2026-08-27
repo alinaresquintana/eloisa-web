@@ -116,5 +116,40 @@
       <image:caption>Acrylique sur toile</image:caption>
     </image:image>
 
+    <!-- 15. Magna Mori -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-magna-mori-eloisa-rodriguez.webp</image:loc>
+      <image:title>Magna Mori - Eloísa Rodríguez</image:title>
+      <image:caption>Technique mixte sur toile</image:caption>
+    </image:image>
+
+    <!-- 16. Nébuleuse en bleu II -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-nebulose-en-bleu-II-eloisa-rodriguez.webp</image:loc>
+      <image:title>Nébuleuse en bleu II - Eloísa Rodríguez</image:title>
+      <image:caption>Technique mixte et pigments purs sur toile</image:caption>
+    </image:image>
+
+    <!-- 17. Infinite & Finite: Purple Clash -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-infinite-finite-purple-clash-eloisa-rodriguez.webp</image:loc>
+      <image:title>Infinite &amp; Finite: Purple Clash - Eloísa Rodríguez</image:title>
+      <image:caption>Huile et pigments minéraux sur lin</image:caption>
+    </image:image>
+
+    <!-- 18. Anima en Movimiento -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-anima-en-movimiento-eloisa-rodriguez.webp</image:loc>
+      <image:title>Anima en Movimiento - Eloísa Rodríguez</image:title>
+      <image:caption>Huile et poudres métalliques sur toile</image:caption>
+    </image:image>
+
+    <!-- 19. Vortex Reti -->
+    <image:image>
+      <image:loc>https://eloisarg.com/images/paintings/original-vortex-reti-eloisa-rodriguez.webp</image:loc>
+      <image:title>Vortex Reti - Eloísa Rodríguez</image:title>
+      <image:caption>Huile, pigments et feuille d'or sur toile</image:caption>
+    </image:image>
+
   </url>
 </urlset>
