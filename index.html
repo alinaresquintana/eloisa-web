@@ -233,6 +233,23 @@
         .mobile-hamburger { display: none; font-size: 24px; color: var(--text-main); background: none; border: none; cursor: pointer; }
         .mobile-menu-toolbar { display: none !important; }
 
+        /* Estilos del Modal para el Manifiesto Íntegro */
+        .manifesto-modal-card {
+            background: var(--bg-modal);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            max-width: 780px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            padding: 50px 44px;
+            box-shadow: var(--card-shadow);
+        }
+        .manifesto-content h3 { font-size: 28px; margin-bottom: 24px; color: var(--text-heading); font-family: var(--font-serif); }
+        .manifesto-content p { font-size: 15px; color: var(--text-muted); line-height: 1.85; margin-bottom: 18px; text-align: justify; }
+        .manifesto-content strong { color: var(--text-heading); }
+
         /* FAQ Accordion */
         .faq-categories-bar { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
         .faq-tab-btn { padding: 9px 22px; border-radius: 25px; font-family: var(--font-sans); font-size: 12.5px; font-weight: 600; color: var(--text-muted); background: var(--bg-card); border: 1px solid var(--border-color); cursor: pointer; transition: var(--transition); }
@@ -311,9 +328,7 @@
         .statement-author { font-size: 14px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-gold); }
         .statement-role { font-size: 12px; color: var(--text-muted); letter-spacing: 0.08em; }
 
-        /* =======================================================
-           SECCIÓN BIOGRAFÍA & LÍNEA DE TIEMPO EDITORIAL (REDISEÑADA)
-           ======================================================= */
+        /* Biografía & Línea de Tiempo Editorial */
         .solid-section { background: var(--bg-solid); padding: 110px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative; z-index: 2; }
         .bio-grid { display: grid; grid-template-columns: 1fr 1.35fr; gap: 60px; margin-bottom: 70px; align-items: start; }
         .bio-lead-text { background: var(--bg-card); padding: 36px; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--card-shadow); }
@@ -342,7 +357,6 @@
             gap: 8px;
         }
 
-        /* Línea de tiempo con eje vertical continuo */
         .cv-timeline {
             list-style: none;
             display: flex;
@@ -373,7 +387,6 @@
             padding-bottom: 0;
         }
 
-        /* Nodo circular sobre la línea */
         .cv-item::before {
             content: '';
             position: absolute;
@@ -423,7 +436,6 @@
             margin-top: 3px;
         }
 
-        /* Rediseño moderno del Badge (Píldora minimalista de galería) */
         .cv-badge-pill {
             display: inline-flex;
             align-items: center;
@@ -457,7 +469,6 @@
         }
         .filter-btn:hover, .filter-btn.active { color: #0c0f15; background: var(--accent-gold); border-color: var(--accent-gold); font-weight: 700; }
 
-        /* Badge numérico de los tabs */
         .tab-count-badge {
             display: inline-flex;
             align-items: center;
@@ -511,7 +522,7 @@
         .art-card-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--border-color); }
         .art-card-price { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--text-heading); }
 
-        /* Tarjeta Teaser / Blurry Pespunteada */
+        /* Tarjeta Teaser */
         .art-card-teaser {
             background: var(--bg-card);
             border: 2px dashed rgba(212, 175, 55, 0.4);
@@ -610,11 +621,28 @@
         .contact-item h5 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-gold); margin-bottom: 4px; font-weight: 700; }
         .contact-item p, .contact-item a { color: var(--text-main); font-size: 15px; }
 
-        /* Modal con Marca de Agua */
+        /* Estilos del Modal para el Manifiesto Íntegro */
+        .manifesto-modal-card {
+            background: var(--bg-modal);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            max-width: 780px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            padding: 50px 44px;
+            box-shadow: var(--card-shadow);
+        }
+        .manifesto-content h3 { font-size: 28px; margin-bottom: 24px; color: var(--text-heading); font-family: var(--font-serif); }
+        .manifesto-content p { font-size: 15px; color: var(--text-muted); line-height: 1.85; margin-bottom: 18px; text-align: justify; }
+        .manifesto-content strong { color: var(--text-heading); }
+
+        /* Modal genérico */
         .modal-overlay { position: fixed; inset: 0; background: rgba(8, 10, 14, 0.88); backdrop-filter: blur(14px); z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 24px; opacity: 0; pointer-events: none; transition: var(--transition); }
         .modal-overlay.open { opacity: 1; pointer-events: auto; }
         .modal-card { background: var(--bg-modal); border: 1px solid var(--border-color); border-radius: var(--radius-md); max-width: 1200px; width: 100%; max-height: 95vh; overflow-y: auto; display: grid; grid-template-columns: 1.4fr 1fr; position: relative; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7); }
-        .modal-close { position: absolute; top: 16px; right: 18px; font-size: 22px; color: var(--text-muted); z-index: 10; }
+        .modal-close { position: absolute; top: 16px; right: 18px; font-size: 22px; color: var(--text-muted); z-index: 10; cursor: pointer; }
         .modal-visual-wrap { display: flex; flex-direction: column; background: rgba(0, 0, 0, 0.35); border-right: 1px solid var(--border-color); }
         .modal-visual { padding: 24px 24px 12px; display: flex; align-items: center; justify-content: center; position: relative; min-height: 480px; flex-grow: 1; }
         .zoom-box-container { width: 100%; height: 480px; overflow: hidden; position: relative; cursor: crosshair; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-sm); background: #080a0e; box-shadow: 0 10px 30px rgba(0,0,0,0.5); touch-action: none; }
@@ -687,9 +715,7 @@
         }
         .toast.show { transform: translateY(0); opacity: 1; }
 
-        /* =======================================================
-           ESTRATEGIA RESPONSIVE MÓVIL
-           ======================================================= */
+        /* Responsive móvil */
         @media (max-width: 991px) {
             .nav-inner {
                 height: 64px;
@@ -1053,7 +1079,7 @@
     </div>
 </section>
 
-<!-- 2. Statement Section -->
+<!-- 2. Statement Section (Con botón interactivo para el Manifiesto íntegro) -->
 <section class="window-statement-section" id="statement">
     <div class="container">
         <div class="statement-glass-box">
@@ -1062,6 +1088,13 @@
                 Mon travail est une exploration de la beauté de l'inconnu.
             </h2>
             <div class="statement-body-text" id="statementFullText"></div>
+
+            <div style="margin-top: 28px;">
+                <button type="button" class="btn-outline" onclick="openManifestoModal()" data-i18n="statement_read_full">
+                    Lire le Manifiesto de l'Œuvre (Version intégrale)
+                </button>
+            </div>
+
             <div class="statement-signature">
                 <span class="statement-author" id="signatureArtistName">Eloísa Rodríguez</span>
                 <span class="statement-role" data-i18n="statement_role">Artiste Peintre • ERG Studio</span>
@@ -1069,6 +1102,17 @@
         </div>
     </div>
 </section>
+
+<!-- Modal del Manifiesto Íntegro -->
+<div class="modal-overlay" id="manifestoModal" onclick="closeManifestoModalOutside(event)" role="dialog" aria-modal="true" aria-labelledby="manifestoModalTitle">
+    <div class="manifesto-modal-card">
+        <button class="modal-close" onclick="closeManifestoModal()" aria-label="Close modal">&times;</button>
+        <div class="manifesto-content">
+            <h3 class="serif-font" id="manifestoModalTitle" data-i18n="statement_modal_title">Manifiesto de l'Œuvre • Version Intégrale</h3>
+            <div id="manifestoModalBody"></div>
+        </div>
+    </div>
+</div>
 
 <!-- 3. Collection Portfolio -->
 <section class="solid-section" id="collection" style="border-top: none;">
@@ -1107,7 +1151,7 @@
     </div>
 </div>
 
-<!-- 6. Biography Section (Línea de Tiempo Rediseñada) -->
+<!-- 6. Biography Section -->
 <section class="solid-section" id="bio">
     <div class="container">
         <div class="section-header-center">
@@ -1196,7 +1240,6 @@
                 </div>
                 <textarea name="message" class="custom-textarea" rows="3" data-i18n-ph="form_ph_comm_desc" placeholder="Décrivez votre espace ou votre vision pour l'œuvre..."></textarea>
 
-                <!-- Consentimiento RGPD / nLPD -->
                 <div class="gdpr-consent-wrap">
                     <label class="gdpr-checkbox-label">
                         <input type="checkbox" name="gdpr_consent" required>
@@ -1237,7 +1280,6 @@
             <div class="contact-form-card">
                 <h3 class="serif-font" style="font-size: 26px; margin-bottom: 18px;" data-i18n="contact_form_title">Envoyer un Message Direct</h3>
 
-                <!-- Caja visual de selección -->
                 <div class="contact-inquiry-box" id="contactInquiryBox">
                     <div class="contact-inquiry-header">
                         <span data-i18n="contact_inquiry_preview_title">Œuvres sélectionnées pour cette demande :</span>
@@ -1256,7 +1298,6 @@
                     <input type="text" name="subject" class="custom-input" id="contactSubjectInput" data-i18n-ph="form_ph_subject" placeholder="Objet de votre demande / Subject" required>
                     <textarea name="message" class="custom-textarea" rows="5" id="contactMessageInput" data-i18n-ph="form_ph_message" placeholder="Votre message / Your message..." required></textarea>
 
-                    <!-- Consentimiento RGPD / nLPD -->
                     <div class="gdpr-consent-wrap">
                         <label class="gdpr-checkbox-label">
                             <input type="checkbox" name="gdpr_consent" required>
@@ -1290,7 +1331,6 @@
             </div>
         </div>
 
-        <!-- CATEGORÍA 1: Adquisiciones y Pagos -->
         <div class="faq-accordion-group active" id="faqGroup-acquisitions">
             <details class="faq-item">
                 <summary class="faq-question">
@@ -1308,7 +1348,6 @@
             </details>
         </div>
 
-        <!-- CATEGORÍA 2: Envíos y Retirada -->
         <div class="faq-accordion-group" id="faqGroup-shipping">
             <details class="faq-item">
                 <summary class="faq-question">
@@ -1326,7 +1365,6 @@
             </details>
         </div>
 
-        <!-- CATEGORÍA 3: Visitas y Authenticité -->
         <div class="faq-accordion-group" id="faqGroup-visits">
             <details class="faq-item">
                 <summary class="faq-question">
@@ -1344,7 +1382,6 @@
             </details>
         </div>
 
-        <!-- CATEGORÍA 4: Encargos y Proyectos -->
         <div class="faq-accordion-group" id="faqGroup-commissions">
             <details class="faq-item">
                 <summary class="faq-question">
@@ -1600,6 +1637,27 @@
     }).join('');
   }
 
+  /* Funciones para el Modal del Manifiesto */
+  function openManifestoModal() {
+    const bodyContainer = document.getElementById('manifestoModalBody');
+    if (bodyContainer && i18n[currentLang] && i18n[currentLang].statement_full_text) {
+      bodyContainer.innerHTML = i18n[currentLang].statement_full_text;
+    }
+    document.getElementById('manifestoModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeManifestoModal() {
+    document.getElementById('manifestoModal').classList.remove('open');
+    if (!document.getElementById('artworkModal').classList.contains('open') && !document.getElementById('privacyModal').classList.contains('open') && !document.getElementById('navLinks').classList.contains('mobile-open')) {
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  function closeManifestoModalOutside(e) {
+    if (e.target.id === 'manifestoModal') closeManifestoModal();
+  }
+
   function handleRightClick(e) {
     e.preventDefault();
     showToast(i18n[currentLang]?.protect_alert || 'Image protégée');
@@ -1747,7 +1805,7 @@
 
   function closePrivacyModal() {
     document.getElementById('privacyModal').classList.remove('open');
-    if (!document.getElementById('artworkModal').classList.contains('open') && !document.getElementById('navLinks').classList.contains('mobile-open')) {
+    if (!document.getElementById('artworkModal').classList.contains('open') && !document.getElementById('manifestoModal').classList.contains('open') && !document.getElementById('navLinks').classList.contains('mobile-open')) {
       document.body.style.overflow = 'auto';
     }
   }
@@ -1916,7 +1974,6 @@
 
     let html = '';
 
-    // Pestañas dinámicas con badge de conteo
     seriesList.forEach(seriesKey => {
       let countItems = artworks.filter(a => a.category === 'original' && a.series === seriesKey);
       if (onlyAvailable) {
@@ -1933,7 +1990,6 @@
       `;
     });
 
-    // Pestaña "Todas las obras"
     let totalOrig = artworks.filter(a => a.category === 'original');
     if (onlyAvailable) {
       totalOrig = totalOrig.filter(a => a.status === 'available');
@@ -1946,7 +2002,6 @@
       </button>
     `;
 
-    // Botón "Disponibles"
     html += `
       <div class="filter-divider"></div>
       <button type="button" id="btnOnlyAvailable" class="filter-btn-avail ${onlyAvailable ? 'active' : ''}" onclick="toggleAvailabilityFilter()">
@@ -2034,7 +2089,6 @@
 
     let cardsHtml = origItems.map(createCardHtml).join('');
 
-    // Tarjeta Teaser: Sólo si existe una serie siguiente
     if (activeSeriesFilter !== 'all') {
       const currentIndex = seriesList.indexOf(activeSeriesFilter);
       const nextSeries = seriesList[currentIndex + 1];
@@ -2165,7 +2219,7 @@
 
   function closeModal() {
     document.getElementById('artworkModal').classList.remove('open');
-    if (!document.getElementById('privacyModal').classList.contains('open') && !document.getElementById('navLinks').classList.contains('mobile-open')) {
+    if (!document.getElementById('privacyModal').classList.contains('open') && !document.getElementById('manifestoModal').classList.contains('open') && !document.getElementById('navLinks').classList.contains('mobile-open')) {
       document.body.style.overflow = 'auto';
     }
     resetZoom();
@@ -2173,6 +2227,27 @@
   }
 
   function closeModalOutside(e) { if (e.target.id === 'artworkModal') closeModal(); }
+
+  /* Funciones para el Modal del Manifiesto */
+  function openManifestoModal() {
+    const bodyContainer = document.getElementById('manifestoModalBody');
+    if (bodyContainer && i18n[currentLang] && i18n[currentLang].statement_full_text) {
+      bodyContainer.innerHTML = i18n[currentLang].statement_full_text;
+    }
+    document.getElementById('manifestoModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeManifestoModal() {
+    document.getElementById('manifestoModal').classList.remove('open');
+    if (!document.getElementById('artworkModal').classList.contains('open') && !document.getElementById('privacyModal').classList.contains('open') && !document.getElementById('navLinks').classList.contains('mobile-open')) {
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  function closeManifestoModalOutside(e) {
+    if (e.target.id === 'manifestoModal') closeManifestoModal();
+  }
 
   function addToBag(id) {
     const art = artworks.find(a => a.id === id);
@@ -2352,7 +2427,7 @@
           it: "Errore durante l'invio. Riprova più tardi.",
           es: "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
         };
-        showToast(errorMsgs[currentLang] || errorMs.fr);
+        showToast(errorMsgs[currentLang] || errorMsgs.fr);
       });
   }
 
@@ -2376,6 +2451,7 @@
     if (e.key === 'Escape') {
       closeModal();
       closePrivacyModal();
+      closeManifestoModal();
       toggleCartDrawer(false);
       closeMobileMenu();
     }
@@ -2395,6 +2471,7 @@
     else {
       closeModal();
       closePrivacyModal();
+      closeManifestoModal();
     }
   });
 
