@@ -1120,14 +1120,17 @@
 
         <div class="bio-grid">
             <div class="bio-lead-text">
-                <h3 class="serif-font" data-i18n="bio_heading">La matière comme seuil vers l'infini</h3>
+                <h3 class="serif-font" data-i18n="bio_heading">De la formation académique à l'atelier de Vich</h3>
                 <p data-i18n="bio_p1">
-                    Eloísa Rodríguez (ERG) développe une pratique picturale axée sur la sédimentation géologique et les structures nébulaires. Son travail interroge la transition entre l'ordre géométrique latent et le chaos apparent de la matière brute.
+                    Le parcours artistique d'Eloísa Rodríguez s'inscrit dans une quête constante de maîtrise de la matière, nourrie par une solide formation universitaire aux Beaux-Arts de l'Université Complutense de Madrid, complétée par des recherches plastiques approfondies menées à Florence.
                 </p>
                 <p data-i18n="bio_p2">
-                    En combinant des techniques traditionnelles de détrempe à l'huile avec l'utilisation de pigments purs, sables de quartz et feuilles de métaux précieux, ses toiles agissent comme des réceptacles optiques où la lumière se diffracte en fonction de la perspective du regardeur.
+                    Son expérience préalable dans les arts de la scène a également forgé sa sensibilité pour le volume, l'espace et la mise en scène lumineuse, des éléments qu'elle transpose aujourd'hui sur la toile à travers l'huile et des textures d'une grande profondeur.
                 </p>
-                <div style="margin-top: 24px;">
+                <p data-i18n="bio_p3">
+                    Établie dans son atelier de Vich, au cœur de La Côte vaudoise, son travail récent est marqué par une reconnaissance internationale croissante, illustrée notamment par ses sélections consécutives comme demi-finaliste du prestigieux Prix International Target Prize en 2025 et 2026, ainsi que par ses expositions institutionnelles en Suisse et en Espagne.
+                </p>
+                <div style="margin-top: 28px;">
                     <a href="#commissions" class="btn-outline" data-i18n="bio_btn_dossier">Demander le Dossier d'Artiste PDF</a>
                 </div>
             </div>
@@ -1576,18 +1579,25 @@
   function renderExhibitions() {
     const expContainer = document.getElementById('exhibitionsListContainer');
     if (!expContainer || !meta.exhibitions) return;
-    expContainer.innerHTML = meta.exhibitions.map(item => `
-      <li class="cv-item">
-          <div class="cv-header-row">
-              <span class="cv-year">${item.year}</span>
-              ${item.badge ? `<span class="cv-badge-pill">${item.badge[currentLang] || item.badge.fr}</span>` : ''}
-          </div>
-          <div class="cv-desc">
-              <strong>${item.title[currentLang] || item.title.fr}</strong>
-              <span>${item.location[currentLang] || item.location.fr}</span>
-          </div>
-      </li>
-    `).join('');
+    expContainer.innerHTML = meta.exhibitions.map(item => {
+      const titleText = item.title[currentLang] || item.title.fr;
+      const titleHtml = item.url
+        ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; border-bottom: 1px dotted var(--accent-gold); transition: var(--transition);" title="Voir la référence externe">${titleText} <span style="font-size: 11px; color: var(--accent-gold);">↗</span></a>`
+        : titleText;
+
+      return `
+        <li class="cv-item">
+            <div class="cv-header-row">
+                <span class="cv-year">${item.year}</span>
+                ${item.badge ? `<span class="cv-badge-pill">${item.badge[currentLang] || item.badge.fr}</span>` : ''}
+            </div>
+            <div class="cv-desc">
+                <strong>${titleHtml}</strong>
+                <span>${item.location[currentLang] || item.location.fr}</span>
+            </div>
+        </li>
+      `;
+    }).join('');
   }
 
   function handleRightClick(e) {

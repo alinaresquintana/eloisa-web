@@ -28,7 +28,8 @@ window.ERG_METADATA = {
         en: "Ongoing",
         it: "In corso",
         es: "En curso"
-      }
+      },
+      url:"https://atelierartvich.com/en/"
     },
     {
       year: "2026",
@@ -49,7 +50,30 @@ window.ERG_METADATA = {
         en: "Upcoming • Official Selection",
         it: "In arrivo • Selezione Ufficiale",
         es: "Próximamente • Selección Oficial"
-      }
+      },
+      url:"https://artgland.ch/"
+    },
+    {
+      year: "2025 – 2026",
+      title: {
+        fr: "Prix International Target Prize",
+        en: "Target Prize International Art Award",
+        it: "Premio Internazionale Target Prize",
+        es: "Premio Internacional Target Prize"
+      },
+      location: {
+        fr: "Sélection Internationale",
+        en: "International Selection",
+        it: "Selezione Internazionale",
+        es: "Selección Internacional"
+      },
+      badge: {
+        fr: "Demi-Finaliste les deux années",
+        en: "Semi-Finalist both years",
+        it: "Semifinalista in entrambi gli anni",
+        es: "Semifinalista los dos años"
+      },
+      url: "https://tartgetpaintingprize.com/"
     },
     {
       year: "2025",
@@ -70,28 +94,8 @@ window.ERG_METADATA = {
         en: "Artistic Direction",
         it: "Direzione Artistica",
         es: "Dirección Artística"
-      }
-    },
-    {
-      year: "2025",
-      title: {
-        fr: "Prix International Target Prize",
-        en: "Target Prize International Art Award",
-        it: "Premio Internazionale Target Prize",
-        es: "Premio Internacional Target Prize"
       },
-      location: {
-        fr: "Sélection Internationale",
-        en: "International Selection",
-        it: "Selezione Internazionale",
-        es: "Selección Internacional"
-      },
-      badge: {
-        fr: "Demi-Finaliste",
-        en: "Semi-Finalist",
-        it: "Semifinalista",
-        es: "Semifinalista"
-      }
+      url:"https://sors.gland.ch/folg-2025/"
     },
     {
       year: "2019",
