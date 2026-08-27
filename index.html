@@ -112,8 +112,8 @@
             --nav-bg: rgba(244, 243, 239, 0.95);
         }
 
-        body, .navbar, .solid-section, .art-card, .bio-lead-text, .bio-details-block, 
-        .commissions-wrapper, .contact-details, .contact-form-card, .faq-item, .footer, 
+        body, .navbar, .solid-section, .art-card, .bio-lead-text, .bio-details-block,
+        .commissions-wrapper, .contact-details, .contact-form-card, .faq-item, .footer,
         .modal-card, .cart-drawer, .custom-input, .custom-select, .custom-textarea {
             transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
         }
@@ -199,11 +199,11 @@
         /* Menú Navegación Escritorio */
         .block-menu { display: flex; align-items: center; list-style: none; gap: 0; }
         .block-menu li.nav-link-item { display: flex; align-items: center; }
-        .block-menu li.nav-link-item + li.nav-link-item::before { 
-            content: "/"; 
-            color: var(--border-color); 
-            font-size: 12px; 
-            margin: 0 14px; 
+        .block-menu li.nav-link-item + li.nav-link-item::before {
+            content: "/";
+            color: var(--border-color);
+            font-size: 12px;
+            margin: 0 14px;
         }
 
         .block-menu a { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 600; color: var(--text-muted); padding: 6px 0; transition: var(--transition); }
@@ -319,34 +319,34 @@
         .bio-lead-text { background: var(--bg-card); padding: 36px; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--card-shadow); }
         .bio-lead-text h3 { font-size: clamp(28px, 3.4vw, 40px); margin-bottom: 20px; line-height: 1.2; }
         .bio-lead-text p { color: var(--text-muted); font-size: 15px; line-height: 1.8; margin-bottom: 18px; }
-        
-        .bio-details-block { 
-            background: var(--bg-card); 
-            padding: 38px 36px 42px 36px; 
-            border-radius: var(--radius-md); 
-            border: 1px solid var(--border-color); 
-            box-shadow: var(--card-shadow); 
+
+        .bio-details-block {
+            background: var(--bg-card);
+            padding: 38px 36px 42px 36px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--card-shadow);
         }
 
-        .cv-column-header { 
-            font-size: 13px; 
-            text-transform: uppercase; 
-            letter-spacing: 0.18em; 
-            color: var(--accent-gold); 
-            margin-bottom: 26px; 
-            border-bottom: 1px solid var(--border-color); 
-            padding-bottom: 12px; 
-            font-weight: 700; 
+        .cv-column-header {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--accent-gold);
+            margin-bottom: 26px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+            font-weight: 700;
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
         /* Línea de tiempo con eje vertical continuo */
-        .cv-timeline { 
-            list-style: none; 
-            display: flex; 
-            flex-direction: column; 
+        .cv-timeline {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
             position: relative;
             padding-left: 20px;
         }
@@ -361,7 +361,7 @@
             background: linear-gradient(180deg, var(--accent-gold) 0%, var(--border-color) 80%, transparent 100%);
         }
 
-        .cv-item { 
+        .cv-item {
             position: relative;
             padding-bottom: 28px;
             display: flex;
@@ -400,56 +400,97 @@
             flex-wrap: wrap;
         }
 
-        .cv-year { 
-            font-family: var(--font-serif); 
-            font-weight: 700; 
-            color: var(--accent-gold); 
-            font-size: 21px; 
+        .cv-year {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            color: var(--accent-gold);
+            font-size: 21px;
             line-height: 1;
             letter-spacing: 0.02em;
         }
 
-        .cv-desc strong { 
-            color: var(--text-heading); 
-            font-weight: 600; 
+        .cv-desc strong {
+            color: var(--text-heading);
+            font-weight: 600;
             font-size: 15px;
             line-height: 1.4;
         }
 
-        .cv-desc span { 
-            color: var(--text-muted); 
-            display: block; 
-            font-size: 13.5px; 
+        .cv-desc span {
+            color: var(--text-muted);
+            display: block;
+            font-size: 13.5px;
             margin-top: 3px;
         }
 
         /* Rediseño moderno del Badge (Píldora minimalista de galería) */
-        .cv-badge-pill { 
-            display: inline-flex; 
+        .cv-badge-pill {
+            display: inline-flex;
             align-items: center;
-            font-size: 10.5px; 
+            font-size: 10.5px;
             font-weight: 700;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            padding: 2px 9px; 
-            background: var(--accent-gold-soft); 
-            border: 1px solid rgba(212, 175, 55, 0.35); 
-            color: var(--accent-gold); 
-            border-radius: 12px; 
-            margin-top: 6px; 
+            padding: 2px 9px;
+            background: var(--accent-gold-soft);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            color: var(--accent-gold);
+            border-radius: 12px;
+            margin-top: 6px;
             width: fit-content;
         }
 
         .section-header-center { text-align: center; display: flex; flex-direction: column; align-items: center; margin-bottom: 45px; }
         .filter-bar { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 35px; }
-        .filter-btn { padding: 8px 20px; border-radius: 25px; font-size: 12px; color: var(--text-muted); background: var(--bg-card); border: 1px solid var(--border-color); transition: var(--transition); }
+
+        .filter-btn {
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 12px;
+            color: var(--text-muted);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
         .filter-btn:hover, .filter-btn.active { color: #0c0f15; background: var(--accent-gold); border-color: var(--accent-gold); font-weight: 700; }
+
+        /* Badge numérico de los tabs */
+        .tab-count-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1;
+            padding: 2px 7px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            margin-left: 6px;
+            transition: var(--transition);
+        }
+        .filter-btn:hover .tab-count-badge,
+        .filter-btn.active .tab-count-badge {
+            background: #0c0f15;
+            color: var(--accent-gold);
+        }
+
         .filter-divider { width: 1px; height: 24px; background: var(--border-color); margin: 0 8px; }
         .filter-btn-avail { padding: 8px 20px; border-radius: 25px; font-size: 12px; color: var(--text-muted); background: var(--bg-card); border: 1px dashed var(--accent-gold); transition: var(--transition); display: inline-flex; align-items: center; gap: 6px; }
         .filter-btn-avail:hover, .filter-btn-avail.active { color: #0c0f15; background: var(--accent-gold); border-color: var(--accent-gold); font-weight: 700; }
 
-        .art-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; transition: opacity 0.25s ease, transform 0.25s ease; }
-        .art-grid.animating { opacity: 0; transform: scale(0.985); }
+        .art-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 24px;
+            transition: opacity 0.2s ease;
+        }
+        .art-grid.animating {
+            opacity: 0.1;
+        }
         .art-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; transition: var(--transition); box-shadow: var(--card-shadow); }
         .art-card:hover { transform: translateY(-5px); border-color: rgba(212, 175, 55, 0.5); }
         .art-card-thumb { height: 320px; position: relative; cursor: pointer; overflow: hidden; background: #080a0e; display: flex; align-items: center; justify-content: center; padding: 12px; }
@@ -469,6 +510,84 @@
         .art-card-specs { font-size: 13px; color: var(--text-muted); margin-bottom: 18px; flex-grow: 1; }
         .art-card-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--border-color); }
         .art-card-price { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--text-heading); }
+
+        /* Tarjeta Teaser / Blurry Pespunteada */
+        .art-card-teaser {
+            background: var(--bg-card);
+            border: 2px dashed rgba(212, 175, 55, 0.4);
+            border-radius: var(--radius-md);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            min-height: 440px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px 24px;
+            transition: var(--transition);
+            box-shadow: var(--card-shadow);
+        }
+        .art-card-teaser:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+        }
+        .teaser-bg-blur {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(14px) brightness(0.35);
+            transform: scale(1.12);
+            transition: transform 0.5s ease, filter 0.5s ease;
+            z-index: 1;
+        }
+        .art-card-teaser:hover .teaser-bg-blur {
+            filter: blur(10px) brightness(0.45);
+            transform: scale(1.18);
+        }
+        .teaser-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .teaser-tag {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--accent-gold);
+        }
+        .teaser-title {
+            font-size: 24px;
+            color: #ffffff;
+            line-height: 1.25;
+            margin: 4px 0 8px;
+        }
+        .teaser-arrow-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--accent-gold);
+            color: #0c0f15;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: var(--transition);
+        }
+        .art-card-teaser:hover .teaser-arrow-btn {
+            background: var(--accent-gold-hover);
+            transform: scale(1.12) translateX(4px);
+        }
 
         .artwork-window-banner { padding: 95px 0; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; }
         .window-banner-badge { background: rgba(12, 15, 21, 0.75); backdrop-filter: blur(14px); border: 1px solid var(--border-color); padding: 18px 36px; border-radius: 40px; display: inline-flex; align-items: center; gap: 12px; box-shadow: var(--card-shadow); }
@@ -497,9 +616,6 @@
         .modal-card { background: var(--bg-modal); border: 1px solid var(--border-color); border-radius: var(--radius-md); max-width: 1200px; width: 100%; max-height: 95vh; overflow-y: auto; display: grid; grid-template-columns: 1.4fr 1fr; position: relative; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7); }
         .modal-close { position: absolute; top: 16px; right: 18px; font-size: 22px; color: var(--text-muted); z-index: 10; }
         .modal-visual-wrap { display: flex; flex-direction: column; background: rgba(0, 0, 0, 0.35); border-right: 1px solid var(--border-color); }
-        .modal-view-controls { display: flex; gap: 8px; padding: 14px 20px 0; justify-content: center; }
-        .modal-view-btn { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; padding: 5px 12px; border-radius: 20px; border: 1px solid var(--border-color); color: var(--text-muted); background: var(--bg-card); cursor: pointer; }
-        .modal-view-btn.active { background: var(--accent-gold); color: #0c0f15; font-weight: 700; border-color: var(--accent-gold); }
         .modal-visual { padding: 24px 24px 12px; display: flex; align-items: center; justify-content: center; position: relative; min-height: 480px; flex-grow: 1; }
         .zoom-box-container { width: 100%; height: 480px; overflow: hidden; position: relative; cursor: crosshair; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-sm); background: #080a0e; box-shadow: 0 10px 30px rgba(0,0,0,0.5); touch-action: none; }
         .zoom-box-container img { max-width: 100%; max-height: 100%; object-fit: contain; transform-origin: center center; transition: transform 0.1s ease-out; pointer-events: none; filter: none !important; }
@@ -511,11 +627,6 @@
         .carousel-thumb-btn { width: 52px; height: 52px; border-radius: 4px; border: 2px solid transparent; overflow: hidden; cursor: pointer; opacity: 0.5; transition: var(--transition); flex-shrink: 0; background: #080a0e; padding: 2px; }
         .carousel-thumb-btn.active { border-color: var(--accent-gold); opacity: 1; transform: scale(1.05); }
         .carousel-thumb-btn img { width: 100%; height: 100%; object-fit: cover; filter: none !important; }
-
-        .room-sim-wrap { width: 100%; height: 480px; border-radius: var(--radius-sm); position: relative; background: url('images/room-bg.jpg') center/cover no-repeat; display: none; align-items: center; justify-content: center; overflow: hidden; box-shadow: inset 0 0 40px rgba(0,0,0,0.4); border: 1px solid var(--border-color); }
-        .room-artwork-frame { position: absolute; top: 8%; max-width: 200px; max-height: 150px; background: transparent; padding: 0; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); display: flex; align-items: center; justify-content: center; transition: max-width 0.3s ease; z-index: 2; }
-        .room-artwork-frame img { max-width: 100%; max-height: 100%; object-fit: contain; filter: none !important; border: none; }
-        .room-scale-reference { position: absolute; bottom: 12px; right: 16px; background: rgba(12, 15, 21, 0.85); color: var(--text-muted); padding: 4px 12px; border-radius: 12px; font-size: 10px; letter-spacing: 0.05em; border: 1px solid var(--border-color); z-index: 5; }
 
         .trust-badges-container { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 20px 0; padding: 14px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
         .trust-badge-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; flex: 1; }
@@ -617,6 +728,29 @@
                 display: inline-flex !important;
                 align-items: center;
                 justify-content: center;
+                flex-shrink: 0;
+            }
+
+            .art-card-teaser {
+                min-height: 340px;
+                padding: 22px 16px;
+            }
+
+            .filter-bar {
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding: 0 16px 12px 16px;
+                -webkit-overflow-scrolling: touch;
+                gap: 8px;
+            }
+
+            .filter-bar::-webkit-scrollbar {
+                display: none;
+            }
+
+            .filter-btn, .filter-btn-avail {
+                white-space: nowrap;
                 flex-shrink: 0;
             }
 
@@ -737,9 +871,9 @@
             }
 
             .commissions-wrapper,
-            .contact-form-card, 
-            .contact-details, 
-            .bio-lead-text, 
+            .contact-form-card,
+            .contact-details,
+            .bio-lead-text,
             .bio-details-block {
                 padding: 24px 18px !important;
             }
@@ -754,10 +888,9 @@
             }
 
             .modal-visual,
-            .zoom-box-container, 
-            .room-sim-wrap {
-                height: 280px !important;
-                min-height: 280px !important;
+            .zoom-box-container {
+                height: 320px !important;
+                min-height: 320px !important;
             }
 
             .footer-grid-modular {
@@ -1002,7 +1135,7 @@
             <div class="bio-details-block">
                 <div>
                     <h4 class="cv-column-header">
-                        <span style="color: var(--accent-gold);">◈</span> 
+                        <span style="color: var(--accent-gold);">◈</span>
                         <span data-i18n="cv_exhibitions_title">Parcours & Distinctions</span>
                     </h4>
                     <ul class="cv-timeline" id="exhibitionsListContainer"></ul>
@@ -1307,24 +1440,14 @@
     <div class="modal-card">
         <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
         <div class="modal-visual-wrap">
-            <div class="modal-view-controls">
-                <button class="modal-view-btn active" id="btnViewDetail" onclick="switchModalView('detail')" data-i18n="modal_view_detail">Zoom Texture</button>
-                <button class="modal-view-btn" id="btnViewRoom" onclick="switchModalView('room')" data-i18n="modal_view_room">Vue en Salon</button>
-            </div>
             <div class="modal-visual">
                 <div class="zoom-box-container" id="zoomContainer">
-                    <img id="modalArtImg" src="images/paintings/original-nebuleuse-en-bleu-eloisa-rodriguez.webp" alt="Artwork Preview" decoding="async">
+                    <img id="modalArtImg" src="" alt="Artwork Preview" decoding="async">
                     <span class="zoom-hint" data-i18n="zoom_hint">Survoler pour zoomer sur la matière</span>
                     <div class="modal-carousel-nav" id="carouselNav" style="display: none;">
                         <button class="carousel-btn" onclick="prevCarouselImage(event)" aria-label="Previous Image">‹</button>
                         <button class="carousel-btn" onclick="nextCarouselImage(event)" aria-label="Next Image">›</button>
                     </div>
-                </div>
-                <div class="room-sim-wrap" id="roomSimWrap">
-                    <div class="room-artwork-frame" id="roomArtworkFrame">
-                        <img id="roomArtImg" src="images/paintings/original-nebuleuse-en-bleu-eloisa-rodriguez.webp" alt="Room Preview" decoding="async">
-                    </div>
-                    <div class="room-scale-reference" data-i18n="room_scale_ref">Échelle Salon • Studio ERG</div>
                 </div>
             </div>
             <div class="carousel-thumbs" id="modalCarouselThumbs" style="display: none;"></div>
@@ -1400,7 +1523,7 @@
   let currentCurrency = localStorage.getItem('erg_currency') || 'CHF';
   let cart = JSON.parse(localStorage.getItem('erg_cart') || '[]');
 
-  let activeSeriesFilter = 'nebula-sediment';
+  let activeSeriesFilter = null;
   let onlyAvailable = false;
   let currentModalArtwork = null;
   let currentModalImageIndex = 0;
@@ -1450,7 +1573,6 @@
     renderExhibitions();
   }
 
-  /* Renderizado de la nueva línea de tiempo con diseño editorial */
   function renderExhibitions() {
     const expContainer = document.getElementById('exhibitionsListContainer');
     if (!expContainer || !meta.exhibitions) return;
@@ -1655,6 +1777,7 @@
     renderNotificationBar();
     renderDynamicFilterBar();
     renderAllGrids();
+    renderPrintsGrid();
     renderExhibitions();
     updateCartUI();
     renderInquiryPreview();
@@ -1686,6 +1809,7 @@
     if (currSel) currSel.value = curr;
     if (mobileCurrSel) mobileCurrSel.value = curr;
     renderAllGrids();
+    renderPrintsGrid();
     updateCartUI();
   }
 
@@ -1764,77 +1888,174 @@
     `;
   }
 
+  function getOrderedSeriesList() {
+    const uniqueSeries = [...new Set(artworks.map(a => a.series))].filter(s => s && s !== 'all');
+    const priority = { 'nebula-sediment': 1, 'nebula': 1, 'portrait': 2, 'portraits': 2, 'otras': 3, 'abstract': 3 };
+    return uniqueSeries.sort((a, b) => (priority[a] || 99) - (priority[b] || 99));
+  }
+
   function renderDynamicFilterBar() {
     const bar = document.getElementById('dynamicFilterBar');
     if (!bar) return;
 
-    let uniqueSeries = [...new Set(artworks.map(a => a.series))].filter(s => s !== 'all');
-    const priority = { 'nebula-sediment': 1, 'portrait': 2, 'otras': 3 };
-    uniqueSeries.sort((a, b) => (priority[a] || 99) - (priority[b] || 99));
+    const seriesList = getOrderedSeriesList();
+
+    if (!activeSeriesFilter || (activeSeriesFilter !== 'all' && !seriesList.includes(activeSeriesFilter))) {
+      activeSeriesFilter = seriesList[0] || 'all';
+    }
 
     let html = '';
-    uniqueSeries.forEach(seriesKey => {
+
+    // Pestañas dinámicas con badge de conteo
+    seriesList.forEach(seriesKey => {
+      let countItems = artworks.filter(a => a.category === 'original' && a.series === seriesKey);
+      if (onlyAvailable) {
+        countItems = countItems.filter(a => a.status === 'available');
+      }
+      const count = countItems.length;
       const isActive = activeSeriesFilter === seriesKey ? 'active' : '';
-      html += `<button class="filter-btn ${isActive}" onclick="filterGallery('${seriesKey}', this)">${getSeriesName(seriesKey)}</button>`;
+
+      html += `
+        <button type="button" class="filter-btn ${isActive}" onclick="filterGallery('${seriesKey}')">
+          <span>${getSeriesName(seriesKey)}</span>
+          <span class="tab-count-badge">${count}</span>
+        </button>
+      `;
     });
 
+    // Pestaña "Todas las obras"
+    let totalOrig = artworks.filter(a => a.category === 'original');
+    if (onlyAvailable) {
+      totalOrig = totalOrig.filter(a => a.status === 'available');
+    }
     const allActive = activeSeriesFilter === 'all' ? 'active' : '';
-    html += `<button class="filter-btn ${allActive}" onclick="filterGallery('all', this)">${i18n[currentLang]?.filter_all || 'Toutes les Œuvres'}</button>`;
+    html += `
+      <button type="button" class="filter-btn ${allActive}" onclick="filterGallery('all')">
+        <span>${i18n[currentLang]?.filter_all || 'Toutes les Œuvres'}</span>
+        <span class="tab-count-badge">${totalOrig.length}</span>
+      </button>
+    `;
+
+    // Botón "Disponibles"
     html += `
       <div class="filter-divider"></div>
-      <button class="filter-btn-avail ${onlyAvailable ? 'active' : ''}" onclick="toggleAvailabilityFilter(this)">
+      <button type="button" id="btnOnlyAvailable" class="filter-btn-avail ${onlyAvailable ? 'active' : ''}" onclick="toggleAvailabilityFilter()">
           <span>✦</span> <span data-i18n="filter_avail">${i18n[currentLang]?.filter_avail || 'Disponibles'}</span>
       </button>
     `;
+
     bar.innerHTML = html;
   }
 
-  function toggleAvailabilityFilter(btn) {
+  function toggleAvailabilityFilter() {
     onlyAvailable = !onlyAvailable;
-    if (btn) btn.classList.toggle('active', onlyAvailable);
+
+    const availBtn = document.getElementById('btnOnlyAvailable');
+    if (availBtn) {
+      availBtn.classList.toggle('active', onlyAvailable);
+    }
+
+    renderDynamicFilterBar();
+
     const grid = document.getElementById('originalArtworksGrid');
-    grid.classList.add('animating');
-    setTimeout(() => { renderAllGrids(); grid.classList.remove('animating'); }, 200);
+    if (grid) {
+      grid.classList.add('animating');
+      setTimeout(() => {
+        renderAllGrids();
+        grid.classList.remove('animating');
+      }, 150);
+    }
+  }
+
+  function filterGallery(filter, scrollToTop = false) {
+    activeSeriesFilter = filter;
+    renderDynamicFilterBar();
+
+    const grid = document.getElementById('originalArtworksGrid');
+    if (grid) {
+      grid.style.minHeight = `${grid.offsetHeight}px`;
+      grid.classList.add('animating');
+
+      if (scrollToTop) {
+        const collectionSec = document.getElementById('collection');
+        if (collectionSec) {
+          collectionSec.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+
+      setTimeout(() => {
+        renderAllGrids();
+        grid.classList.remove('animating');
+
+        setTimeout(() => {
+          grid.style.minHeight = '';
+        }, 50);
+      }, 150);
+    }
   }
 
   function renderAllGrids() {
     const origContainer = document.getElementById('originalArtworksGrid');
     if (!origContainer) return;
 
-    let origItems = artworks.filter(a => a.category === 'original');
-    if (activeSeriesFilter !== 'all') origItems = origItems.filter(a => a.series === activeSeriesFilter);
-    if (onlyAvailable) origItems = origItems.filter(a => a.status === 'available');
-    origContainer.innerHTML = origItems.map(createCardHtml).join('');
+    const seriesList = getOrderedSeriesList();
 
+    if (!activeSeriesFilter) {
+      activeSeriesFilter = seriesList[0] || 'all';
+    }
+
+    let origItems = artworks.filter(a => a.category === 'original');
+
+    if (activeSeriesFilter !== 'all') {
+      origItems = origItems.filter(a => a.series === activeSeriesFilter);
+    } else {
+      origItems.sort((a, b) => {
+        const indexA = seriesList.indexOf(a.series);
+        const indexB = seriesList.indexOf(b.series);
+        const posA = indexA === -1 ? 999 : indexA;
+        const posB = indexB === -1 ? 999 : indexB;
+        return posA - posB;
+      });
+    }
+
+    if (onlyAvailable) {
+      origItems = origItems.filter(a => a.status === 'available');
+    }
+
+    let cardsHtml = origItems.map(createCardHtml).join('');
+
+    // Tarjeta Teaser: Sólo si existe una serie siguiente
+    if (activeSeriesFilter !== 'all') {
+      const currentIndex = seriesList.indexOf(activeSeriesFilter);
+      const nextSeries = seriesList[currentIndex + 1];
+
+      if (nextSeries) {
+        const nextArtwork = artworks.find(a => a.category === 'original' && a.series === nextSeries);
+        const nextImg = nextArtwork ? getArtworkMainImage(nextArtwork) : 'images/background.jpg';
+        const nextSeriesName = getSeriesName(nextSeries);
+        const tagText = i18n[currentLang]?.teaser_next_series_tag || '◈ Série Suivante';
+
+        const teaserCard = `
+          <div class="art-card-teaser" onclick="filterGallery('${nextSeries}', true)" role="button" aria-label="Explorer ${nextSeriesName}">
+            <img src="${nextImg}" class="teaser-bg-blur" alt="" decoding="async">
+            <div class="teaser-content">
+              <span class="teaser-tag">${tagText}</span>
+              <h4 class="teaser-title serif-font">${nextSeriesName}</h4>
+              <div class="teaser-arrow-btn">→</div>
+            </div>
+          </div>
+        `;
+        cardsHtml += teaserCard;
+      }
+    }
+
+    origContainer.innerHTML = cardsHtml;
+  }
+
+  function renderPrintsGrid() {
     const printsContainer = document.getElementById('printsGrid');
     if (printsContainer) {
       printsContainer.innerHTML = artworks.filter(a => a.category === 'print').map(createCardHtml).join('');
-    }
-  }
-
-  function filterGallery(filter, btn) {
-    const grid = document.getElementById('originalArtworksGrid');
-    grid.classList.add('animating');
-    activeSeriesFilter = filter;
-    if(btn) {
-      document.querySelectorAll('#dynamicFilterBar .filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    }
-    setTimeout(() => { renderAllGrids(); grid.classList.remove('animating'); }, 200);
-  }
-
-  function switchModalView(mode) {
-    const btnDetail = document.getElementById('btnViewDetail');
-    const btnRoom = document.getElementById('btnViewRoom');
-    const zoomBox = document.getElementById('zoomContainer');
-    const roomBox = document.getElementById('roomSimWrap');
-
-    if (mode === 'detail') {
-      btnDetail.classList.add('active'); btnRoom.classList.remove('active');
-      zoomBox.style.display = 'flex'; roomBox.style.display = 'none';
-    } else {
-      btnRoom.classList.add('active'); btnDetail.classList.remove('active');
-      zoomBox.style.display = 'none'; roomBox.style.display = 'flex';
     }
   }
 
@@ -1869,7 +2090,6 @@
     document.getElementById('modalDesc').textContent = (art.desc && (art.desc[currentLang] || art.desc.fr)) || '';
 
     renderModalCarousel();
-    switchModalView('detail');
 
     const actions = document.getElementById('modalActionsWrap');
     if (art.status === 'available') {
@@ -1912,10 +2132,8 @@
     const dynamicAlt = `${currentModalArtwork.title} (Vue ${currentModalImageIndex + 1}) – Eloísa Rodríguez`;
 
     const modalImg = document.getElementById('modalArtImg');
-    const roomImg = document.getElementById('roomArtImg');
     modalImg.src = activeSrc; modalImg.alt = dynamicAlt;
-    roomImg.src = activeSrc; roomImg.alt = `${dynamicAlt} - Vue en salon`;
-    modalImg.classList.add('loaded'); roomImg.classList.add('loaded');
+    modalImg.classList.add('loaded');
     resetZoom();
 
     document.querySelectorAll('#modalCarouselThumbs .carousel-thumb-btn').forEach((btn, idx) => {
