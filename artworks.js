@@ -12,7 +12,7 @@ window.ERG_ARTWORKS = [
       es: "Técnica mixta sobre lienzo"
     },
     year: "2025",
-    priceChf: 1850,
+    priceChf: 2150,
     status: "available",
     images: [
       "images/paintings/original-nebuleuse-en-bleu-eloisa-rodriguez.webp"
@@ -37,7 +37,7 @@ window.ERG_ARTWORKS = [
       es: "Técnica mixta sobre lienzo"
     },
     year: "2024",
-    priceChf: 1400,
+    priceChf: 1600,
     status: "available",
     images: [
       "images/paintings/original-sedimentum-iv-eloisa-rodriguez.webp"
@@ -62,7 +62,7 @@ window.ERG_ARTWORKS = [
       es: "Técnica mixta sobre lienzo"
     },
     year: "2023",
-    priceChf: 2800,
+    priceChf: 1600,
     status: "available",
     images: [
       "images/paintings/original-nebula-genesis-eloisa-rodriguez.webp"
@@ -87,7 +87,7 @@ window.ERG_ARTWORKS = [
       es: "Técnica mixta sobre lienzo"
     },
     year: "2023",
-    priceChf: 2600,
+    priceChf: 1700,
     status: "available",
     images: [
       "images/paintings/original-tectonic-memory-eloisa-rodriguez.webp"
@@ -112,7 +112,7 @@ window.ERG_ARTWORKS = [
       es: "Técnica mixta sobre lienzo"
     },
     year: "2025",
-    priceChf: 1850,
+    priceChf: 2150,
     status: "available",
     images: [
       "images/paintings/original-sedimentum-quadrata-eloisa-rodriguez.webp"
@@ -129,7 +129,7 @@ window.ERG_ARTWORKS = [
     title: "Horizontal Sediment",
     category: "original",
     series: "nebula-sediment",
-    dimensions: "80 × 40 cm",
+    dimensions: "120 × 60 cm",
     medium: {
       fr: "Technique mixte sur toile",
       en: "Mixed media on canvas",
@@ -137,7 +137,7 @@ window.ERG_ARTWORKS = [
       es: "Técnica mixta sobre lienzo"
     },
     year: "2024",
-    priceChf: 1250,
+    priceChf: 1700,
     status: "available",
     images: [
       "images/paintings/original-horizontal-sediment-eloisa-rodriguez.webp"
@@ -154,7 +154,7 @@ window.ERG_ARTWORKS = [
     title: "Cosmic Mineral Harmony",
     category: "original",
     series: "nebula-sediment",
-    dimensions: "75 × 60 cm",
+    dimensions: "116 × 89 cm",
     medium: {
       fr: "Technique mixte sur toile",
       en: "Mixed media on canvas",
@@ -162,7 +162,7 @@ window.ERG_ARTWORKS = [
       es: "Técnica mixta sobre lienzo"
     },
     year: "2023",
-    priceChf: 3100,
+    priceChf: 2900,
     status: "reserved",
     images: [
       "images/paintings/original-cosmic-harmony-eloisa-rodriguez.webp"
@@ -186,7 +186,7 @@ window.ERG_ARTWORKS = [
       it: "Tecnica mista su tela",
       es: "Técnica mixta sobre lienzo"
     },
-    year: "2024",
+    year: "2026",
     priceChf: 3900,
     status: "available",
     images: [
@@ -201,10 +201,10 @@ window.ERG_ARTWORKS = [
   },
   {
     id: "art-10",
-    title: "Eternal Stop",
+    title: "Luz de tránsito",
     category: "original",
     series: "otras",
-    dimensions: "130 × 95 cm",
+    dimensions: "116 × 89 cm",
     medium: {
       fr: "Technique mixte sur toile",
       en: "Mixed media on canvas",
@@ -229,7 +229,7 @@ window.ERG_ARTWORKS = [
     title: "Infinite Desert",
     category: "original",
     series: "nebula-sediment",
-    dimensions: "130 × 100 cm",
+    dimensions: "116 × 89 cm",
     medium: {
       fr: "Technique mixte sur toile",
       en: "Mixed media on canvas",
@@ -237,7 +237,7 @@ window.ERG_ARTWORKS = [
       es: "Técnica mixta sobre lienzo"
     },
     year: "2025",
-    priceChf: 2100,
+    priceChf: 2450,
     status: "available",
     images: [
       "images/paintings/original-infinite-desert-eloisa-rodriguez.webp"
@@ -262,7 +262,7 @@ window.ERG_ARTWORKS = [
       es: "Giclée sobre papel de algodón Hahnemühle 310g"
     },
     year: "2023",
-    priceChf: 420,
+    priceChf: 320,
     status: "available",
     images: [
       "images/paintings/print-cosmic-harmony-1-eloisa-rodriguez.webp",
@@ -328,7 +328,7 @@ window.ERG_ARTWORKS = [
   },
   {
     id: "art-15",
-    title: "Cosmos Éthéré",
+    title: "Regard Profond",
     category: "original",
     series: "portrait",
     dimensions: "80 × 80 cm",
@@ -342,13 +342,13 @@ window.ERG_ARTWORKS = [
     priceChf: 1600,
     status: "available",
     images: [
-      "images/paintings/original-cosmos-ethere-eloisa-rodriguez.webp"
+      "images/paintings/original-regard-profond-eloisa-rodriguez.webp"
     ],
     desc: {
-      fr: "Où le portrait humain se dissout dans la poussière d'étoiles. Les pigments indigo rappellent que nous sommes faits de la même matière que les nébuleuses lointaines.",
-      en: "Where the human portrait dissolves into stardust. Indigo pigments remind us that we are made of the same matter as distant nebulae.",
-      it: "Dove il ritratto umano si dissolve nella polvere di stelle. I pigmenti indaco ci ricordano che siamo fatti della stessa materia delle nebulose lontane.",
-      es: "Donde el retrato humano se disuelve en el polvo de estrellas. Los pigmentos índigo nos recuerdan que estamos hechos de la misma materia que las nebulosas lejanas."
+      fr: "Étude de visage aux contrastes vibrants et touches texturées. Une présence intense qui capture l'expressivité du regard et la force du trait.",
+      en: "Facial study with vibrant contrasts and textured touches. An intense presence capturing the expressiveness of the gaze and the strength of the stroke.",
+      it: "Studio di volto dai forti contrasti e tocchi strutturati. Una presenza intensa che cattura l'espressività dello sguardo e la forza del tratto.",
+      es: "Estudio de rostro con contrastes vibrantes y pinceladas texturizadas. Una presencia intensa que captura la expresividad de la mirada y la fuerza del trazo."
     }
   },
   {
@@ -439,7 +439,7 @@ window.ERG_ARTWORKS = [
       es: "Técnica mixta sobre lienzo"
     },
     year: "2023",
-    priceChf: 1850,
+    priceChf: 1950,
     status: "available",
     images: [
       "images/paintings/original-anima-en-movimiento-eloisa-rodriguez.webp"
@@ -464,7 +464,7 @@ window.ERG_ARTWORKS = [
       es: "Técnica mixta sobre lienzo"
     },
     year: "2023",
-    priceChf: 1850,
+    priceChf: 2050,
     status: "available",
     images: [
       "images/paintings/original-vortex-reti-eloisa-rodriguez.webp"
@@ -474,6 +474,82 @@ window.ERG_ARTWORKS = [
       en: "A network of golden fissures scarring the darkness, tracing the secret lines of force uniting earth's faults with constellations.",
       it: "Una rete di fratture dorate che sfregia l'oscurità, rintracciando le linee di forza segrete che uniscono le faglie della terra alle costellazioni.",
       es: "Una red de fisuras doradas que cicatriza la oscuridad, trazando las líneas de fuerza secretas que unen las fallas de la tierra con las constelaciones."
+    }
+  },
+  {
+    id: "art-21",
+    title: "Strate Terrestre",
+    category: "original",
+    series: "nebula-sediment",
+    dimensions: "116 × 89 cm",
+    medium: {
+      fr: "Technique mixte sur toile",
+      en: "Mixed media on canvas",
+      it: "Tecnica mista su tela",
+      es: "Técnica mixta sobre lienzo"
+    },
+    year: "2023",
+    priceChf: 2100,
+    status: "available",
+    images: [
+      "images/paintings/original-strato-terrestre-eloisa-rodriguez.webp"
+    ],
+    desc: {
+      fr: "Dialogue entre la profondeur tellurique des sédiments ocres et l'immensité atmosphérique du ciel azuréen. Une exploration des strates géologiques primaires.",
+      en: "A dialogue between the telluric depth of ochre sediments and the atmospheric immensity of the azure sky. An exploration of primary geological strata.",
+      it: "Un dialogo tra la profondità tellurica dei sedimenti ocra e l'immensità atmosferica del cielo azzurro.",
+      es: "Un dialogo entre la profundidad telúrica de los sedimentos ocres y la inmensidad atmosférica del cielo azul. Una exploración de los estratos geológicos primarios."
+    }
+  },
+  {
+    id: "art-22",
+    title: "Magna Mori (Print)",
+    category: "print",
+    series: "nebula-sediment",
+    dimensions: "60 × 36 cm",
+    medium: {
+      fr: "Giclée sur toile",
+      en: "Giclée on canvas",
+      it: "Giclée su tela",
+      es: "Giclée sobre lienzo"
+    },
+    year: "2023",
+    priceChf: 390,
+    status: "available",
+    images: [
+      "images/paintings/print-magna-mori-eloisa-rodriguez.webp"
+    ],
+    desc: {
+      fr: "Une transition cosmique où les brumes turquoises et les sédiments pourpres se dissolvent dans un silence infini, révélant la respiration cachée de la matière.",
+      en: "A cosmic transition where turquoise mists and purple sediments dissolve into infinite silence, revealing the hidden breath of matter.",
+      it: "Una transizione cosmica in cui nebbie turchesi e sedimenti porpora si dissolvono in un silenzio infinito, rivelando il respiro nascosto della materia.",
+      es: "Una transición cósmica donde brumas turquesas y sedimentos púrpuras se disuelven en un silencio infinito, revelando la respiración oculta de la materia."
+    }
+  },
+  {
+    id: "art-23",
+    title: "Sedimentum Quadrata",
+    category: "print",
+    series: "nebula-sediment",
+    dimensions: "30 × 30 cm",
+    medium: {
+      fr: "Giclée sur papier coton Hahnemühle 310g",
+      en: "Giclée on 310g Hahnemühle cotton paper",
+      it: "Giclée su carta cotone Hahnemühle 310g",
+      es: "Giclée sobre papel de algodón Hahnemühle 310g"
+    },
+    year: "2023",
+    priceChf: 320,
+    status: "available",
+    images: [
+      "images/paintings/print-sedimentum-quadrata-1-eloisa-rodriguez.webp",
+      "images/paintings/print-sedimentum-quadrata-2-eloisa-rodriguez.webp"
+    ],
+    desc: {
+      fr: "Dans un format carré rigoureux, la texture brute se déploie en couches sédimentaires pour révéler l'ordre secret qui habite le désordre de la terre.",
+      en: "Within a rigorous square format, raw texture unfolds in sedimentary layers to reveal the secret order dwelling within earth's disorder.",
+      it: "In un rigoroso formato quadrato, la consistenza grezza si dispiega in strati sedimentari per rivelare l'ordine segreto che abita il disordine della terra.",
+      es: "En un riguroso formato cuadrado, la textura en bruto se despliega en capas sedimentarias para revelar el orden secreto que habita el desorden de la tierra."
     }
   }
 ];

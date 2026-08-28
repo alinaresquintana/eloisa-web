@@ -234,17 +234,17 @@
         .mobile-menu-toolbar { display: none !important; }
 
         /* Estilos del Modal para el Manifiesto Íntegro */
-        .manifesto-modal-card {
-            background: var(--bg-modal);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            max-width: 780px;
-            width: 90%;
-            max-height: 85vh;
-            overflow-y: auto;
-            position: relative;
-            padding: 50px 44px;
-            box-shadow: var(--card-shadow);
+        .manifesto-modal-card { 
+            background: var(--bg-modal); 
+            border: 1px solid var(--border-color); 
+            border-radius: var(--radius-md); 
+            max-width: 780px; 
+            width: 90%; 
+            max-height: 85vh; 
+            overflow-y: auto; 
+            position: relative; 
+            padding: 50px 44px; 
+            box-shadow: var(--card-shadow); 
             margin: auto;
         }
         .manifesto-content h3 { font-size: 28px; margin-bottom: 24px; color: var(--text-heading); font-family: var(--font-serif); }
@@ -523,10 +523,10 @@
         .art-card-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--border-color); }
         .art-card-price { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--text-heading); }
 
-        /* Tarjeta Teaser */
+        /* Tarjeta Teaser (Estilo Editorial Minimalista sin Círculo) */
         .art-card-teaser {
             background: var(--bg-card);
-            border: 2px dashed rgba(212, 175, 55, 0.4);
+            border: 1px solid var(--border-color);
             border-radius: var(--radius-md);
             position: relative;
             overflow: hidden;
@@ -534,17 +534,14 @@
             min-height: 440px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 30px 24px;
+            justify-content: flex-end;
+            padding: 36px 28px;
             transition: var(--transition);
             box-shadow: var(--card-shadow);
         }
         .art-card-teaser:hover {
             border-color: var(--accent-gold);
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
         }
         .teaser-bg-blur {
             position: absolute;
@@ -552,53 +549,50 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: blur(14px) brightness(0.35);
-            transform: scale(1.12);
-            transition: transform 0.5s ease, filter 0.5s ease;
+            filter: blur(12px) brightness(0.3);
+            transform: scale(1.1);
+            transition: transform 0.6s ease, filter 0.6s ease;
             z-index: 1;
         }
         .art-card-teaser:hover .teaser-bg-blur {
-            filter: blur(10px) brightness(0.45);
-            transform: scale(1.18);
+            filter: blur(8px) brightness(0.4);
+            transform: scale(1.15);
         }
         .teaser-content {
             position: relative;
             z-index: 2;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 10px;
+            align-items: flex-start;
+            gap: 8px;
         }
         .teaser-tag {
             font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.18em;
+            letter-spacing: 0.2em;
             color: var(--accent-gold);
         }
         .teaser-title {
-            font-size: 24px;
+            font-size: 28px;
             color: #ffffff;
-            line-height: 1.25;
-            margin: 4px 0 8px;
+            line-height: 1.15;
+            margin-bottom: 8px;
         }
-        .teaser-arrow-btn {
+        .teaser-action-link {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: var(--accent-gold);
-            color: #0c0f15;
-            font-size: 20px;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            transition: var(--transition);
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-top: 4px;
+            transition: transform 0.3s ease;
         }
-        .art-card-teaser:hover .teaser-arrow-btn {
-            background: var(--accent-gold-hover);
-            transform: scale(1.12) translateX(4px);
+        .art-card-teaser:hover .teaser-action-link {
+            transform: translateX(6px);
         }
 
         .artwork-window-banner { padding: 95px 0; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; }
@@ -626,22 +620,24 @@
         .modal-overlay { position: fixed; inset: 0; background: rgba(8, 10, 14, 0.88); backdrop-filter: blur(14px); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 24px; opacity: 0; pointer-events: none; transition: var(--transition); }
         .modal-overlay.open { display: flex; opacity: 1; pointer-events: auto; }
         .modal-card { background: var(--bg-modal); border: 1px solid var(--border-color); border-radius: var(--radius-md); max-width: 1200px; width: 100%; max-height: 95vh; overflow-y: auto; display: grid; grid-template-columns: 1.4fr 1fr; position: relative; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7); }
-        .modal-close {
-            position: absolute;
-            top: 12px;
-            right: 14px;
-            width: 36px;
-            height: 36px;
+        
+        /* Botón de cierre circular flotante y seguro */
+        .modal-close { 
+            position: absolute; 
+            top: 14px; 
+            right: 16px; 
+            width: 38px; 
+            height: 38px;
             border-radius: 50%;
-            background: rgba(12, 15, 21, 0.75);
+            background: rgba(12, 15, 21, 0.8);
             border: 1px solid var(--border-color);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            color: var(--text-main);
-            z-index: 50;
-            cursor: pointer;
+            font-size: 20px; 
+            color: var(--text-main); 
+            z-index: 50; 
+            cursor: pointer; 
             backdrop-filter: blur(8px);
             transition: var(--transition);
         }
@@ -651,6 +647,7 @@
             border-color: var(--accent-gold);
             transform: scale(1.08);
         }
+
         .modal-visual-wrap { display: flex; flex-direction: column; background: rgba(0, 0, 0, 0.35); border-right: 1px solid var(--border-color); }
         .modal-visual { padding: 24px 24px 12px; display: flex; align-items: center; justify-content: center; position: relative; min-height: 480px; flex-grow: 1; }
         .zoom-box-container { width: 100%; height: 480px; overflow: hidden; position: relative; cursor: crosshair; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-sm); background: #080a0e; box-shadow: 0 10px 30px rgba(0,0,0,0.5); touch-action: none; }
@@ -728,7 +725,7 @@
            ======================================================= */
         @media (max-width: 991px) {
             .container-wide { padding: 0 12px; }
-
+            
             .nav-inner {
                 height: 64px;
                 padding: 0 8px;
@@ -1398,7 +1395,7 @@
 
             <div style="display: flex; align-items: center; gap: 14px;">
                 <span class="footer-version-tag" id="footerVersionTag">Edition v2.6.5</span>
-                <span style="font-size: 11px; color: var(--text-muted); letter-spacing: 0.04em;">Web design & architecture by <span style="color: var(--accent-gold); font-weight: 600;">Antonio Linares</span></span>
+                <span style="font-size: 11px; color: var(--text-muted); letter-spacing: 0.04em;">Web design & architecture by <a href="#contact" onclick="fillWebDesignInquiry(event)" style="color: var(--accent-gold); font-weight: 600; text-decoration: none; border-bottom: 1px dotted var(--accent-gold);">Antonio Linares</a></span>
             </div>
         </div>
     </div>
@@ -1722,6 +1719,39 @@
     if (e.target.id === 'privacyModal') closePrivacyModal();
   }
 
+  function fillWebDesignInquiry(e) {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const subjects = {
+      fr: "Consultation sur le design et l'architecture web",
+      en: "Inquiry regarding web design and architecture",
+      it: "Richiesta di informazioni sul design e l'architettura web",
+      es: "Consulta sobre el diseño y la arquitectura de la web"
+    };
+
+    const messages = {
+      fr: "Bonjour Antonio,\n\nJ'adore le design et l'architecture de cette web. J'aimerais discuter d'un projet similaire ou d'une collaboration potentielle.\n\nPourriez-vous me recontacter ?",
+      en: "Hello Antonio,\n\nI love the design and architecture of this website. I would love to discuss a similar project or potential collaboration.\n\nCould you please get back to me?",
+      it: "Buongiorno Antonio,\n\nAdoro il design e l'architettura di questo sito web. Mi piacerebbe discutere di un progetto simile o di una potenziale collaborazione.\n\nPotrebbe ricontattarmi?",
+      es: "Hola Antonio,\n\nMe encanta el diseño y la arquitectura de esta web. Me gustaría hablar sobre un proyecto similar o una posible colaboración.\n\n¿Podrías ponerte en contacto conmigo?"
+    };
+
+    const subjectInput = document.getElementById('contactSubjectInput');
+    const messageInput = document.getElementById('contactMessageInput');
+    const nameInput = document.querySelector('form[name="contact"] input[name="name"]');
+
+    if (subjectInput) subjectInput.value = subjects[currentLang] || subjects.fr;
+    if (messageInput) messageInput.value = messages[currentLang] || messages.fr;
+    
+    if (nameInput) {
+      setTimeout(() => nameInput.focus(), 600);
+    }
+  }
+
   function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('erg_lang', lang);
@@ -2007,13 +2037,20 @@
         const nextSeriesName = getSeriesName(nextSeries);
         const tagText = i18n[currentLang]?.teaser_next_series_tag || '◈ Série Suivante';
 
+        const actionText = {
+          fr: "Découvrir la série →",
+          en: "Discover series →",
+          it: "Scopri la serie →",
+          es: "Descubrir la serie →"
+        };
+
         const teaserCard = `
           <div class="art-card-teaser" onclick="filterGallery('${nextSeries}', true)" role="button" aria-label="Explorer ${nextSeriesName}">
             <img src="${nextImg}" class="teaser-bg-blur" alt="" decoding="async">
             <div class="teaser-content">
               <span class="teaser-tag">${tagText}</span>
               <h4 class="teaser-title serif-font">${nextSeriesName}</h4>
-              <div class="teaser-arrow-btn">→</div>
+              <span class="teaser-action-link">${actionText[currentLang] || actionText.fr}</span>
             </div>
           </div>
         `;
@@ -2401,3 +2438,4 @@
 </script>
 </body>
 </html>
+```[cite: 5]
